@@ -1,0 +1,59 @@
+data:
+  dataset: VCTK
+  rootdir : '/ssd/data/VCTK/wav'
+  dataset_yaml : '/home/dzbz0373/Voice/Expe/data/VCTK.yaml'
+  file_extention : flac
+  sliding_window : False
+  window_len : 3.
+  window_shift : 1.5
+  sample_rate_target : 16000
+  sample_rate_source : 48000
+  mic1 : True
+  mic2 : False
+  do_validation : True
+
+  train :
+    duration : 2.04
+    users : [0,99]
+    batch_size : 64
+    shuffle : False
+    examples_per_speaker : 2
+    chunk_per_segment : 1
+    overlap: 0.0
+
+    
+  val :
+    users : [0,99]
+    batch_size : 64
+    shuffle : False
+    chunk_per_segment : 1
+    overlap: 0.0
+
+  test :
+    duration : 5
+    users : [100, 109]
+    batch_size : 1
+    shuffle : False
+
+  num_workers : 0
+    
+
+model:
+  encoder_dir : 'models/fast_aam_93_2s_asp_ss2_noisy.pt'
+  dim_neck : 16
+  dim_emb : 256
+  dim_pre : 512
+  freq : 16
+  lambda_cd : 0.2
+  from_loading : False
+
+
+training :
+  num_epoch : 50
+  epoch_before_cd : 0
+  epoch_before_emb : 50
+  len_crop : 128
+  lr : 0.0001
+  savedir : "/home/dzbz0373/Voice/Expe/models/"
+  log_step : 100
+

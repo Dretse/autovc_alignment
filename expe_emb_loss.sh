@@ -1,0 +1,1 @@
+nohup bash launch.sh 300ep_neck8_emb1 300ep_neck8_emb01 300ep_neck8_emb001

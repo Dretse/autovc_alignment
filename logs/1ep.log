@@ -1,0 +1,741 @@
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Error : set_name is val not in {test, train, val} options
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Data loaded from : VCTK Size of loaders 100, 61, 3281
+Config loaded from :configs/1ep.yaml
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Data loaded from : VCTK Size of loaders 100 users, 61 users, 3281 segments
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Size of loaders: 100 users, 61 users, 3281 segments
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Size of loaders: 100 users, 61 users, 3281 segments
+(2000, 256) (2000,) 	Embeddings extracted : 17 s.
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on train set : 4.505894485281861 %
+(2000, 256) (2000,) 	Embeddings extracted : 13 s.
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on val set : 3.1167495981410673 %
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Size of loaders: 100 users, 61 users, 3281 segments
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on train set : 4.505894485281861 %
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on val set : 3.1167495981410673 %
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Size of loaders: 100 users, 61 users, 3281 segments
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on train set : 4.505894485281861 %
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on val set : 3.1167495981410673 %
+(2000, 256) (2000,) 	Embeddings extracted : 54 s.
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Size of loaders: 100 users, 61 users, 3281 segments
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on train set : 4.505894485281861 %
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on val set : 3.1167495981410673 %
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Size of loaders: 100 users, 61 users, 3281 segments
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on train set : 4.505894485281861 %
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on val set : 3.1167495981410673 %
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+device used : cuda
+solver initialized
+EER target valid : 4.418676211160571 %
+EER source valid : 49.84893134751734 %
+EER target test : 1.2345679012345678 %
+EER source test : 52.77777777777778 %
+time taken for eers computation : 36
+Start training...
+Saved at models/1ep/1ep.ckpt
+Elapsed [0:01:44], Epoch [1/1]	, G/loss_id: 0.8294, G/loss_id_psnt: 0.4609, G/loss_cd: 0.0514, G/loss_emb: 0.0055
+EER target valid : 45.24693783156376 %
+EER source valid : 13.51350286528965 %
+EER target test : 40.4320987654321 %
+EER source test : 24.365569272976682 %
+time taken for eers computation : 35
+	Validation [1/1]	, G/loss_id: 0.8242, G/loss_id_psnt: 0.4337, G/loss_cd: 0.0516, G/loss_emb: 0.0055
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Size of loaders: 100 users, 61 users, 3281 segments
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on train set : 4.505894485281861 %
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on val set : 3.1167495981410673 %
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+device used : cuda
+solver initialized
+EER target valid : 4.416031491702071 %
+EER source valid : 49.84621694502576 %
+EER target test : 1.2345679012345678 %
+EER source test : 52.77777777777778 %
+time taken for eers computation : 36
+Start training...
+Saved at models/1ep/1ep.ckpt
+Elapsed [0:01:43], Epoch [1/1]	, G/loss_id: 0.8295, G/loss_id_psnt: 0.4609, G/loss_cd: 0.0514, G/loss_emb: 0.0055
+EER target valid : 45.22016039999586 %
+EER source valid : 13.570397443908455 %
+EER target test : 40.99794238683128 %
+EER source test : 23.491083676268858 %
+time taken for eers computation : 35
+	Validation [1/1]	, G/loss_id: 0.8242, G/loss_id_psnt: 0.4336, G/loss_cd: 0.0515, G/loss_emb: 0.0055
+Last epoch saved at models/1ep/1ep.ckpt
+EER target train : 42.94908278702948 %
+EER source train : 12.200989795856538 %
+EER target valid : 45.220369510925686 %
+EER source valid : 13.524267564545223 %
+EER target test : 40.75788751714677 %
+EER source test : 23.765432098765434 %
+### Training Finished ###
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on train set : 4.505894485281861 %
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on val set : 3.1167495981410673 %
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on train set : 4.505894485281861 %
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on val set : 3.1167495981410673 %
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+device used : cuda
+solver initialized
+EER target valid : 4.416031491702071 %
+EER source valid : 49.84621694502576 %
+EER target test : 1.2345679012345678 %
+EER source test : 52.77777777777778 %
+time taken for eers computation : 36
+Start training...
+Saved at models/1ep/1ep.ckpt
+Elapsed [0:01:44], Epoch [1/1]	, G/loss_id: 0.8295, G/loss_id_psnt: 0.4609, G/loss_cd: 0.0514, G/loss_emb: 0.0055
+EER target valid : 45.22016039999586 %
+EER source valid : 13.570397443908455 %
+EER target test : 40.99794238683128 %
+EER source test : 23.491083676268858 %
+time taken for eers computation : 35
+	Validation [1/1]	, G/loss_id: 0.8242, G/loss_id_psnt: 0.4336, G/loss_cd: 0.0515, G/loss_emb: 0.0055
+Last epoch saved at models/1ep/1ep.ckpt
+EER target train : 42.94908278702948 %
+EER source train : 12.200989795856538 %
+EER target valid : 45.220369510925686 %
+EER source valid : 13.524267564545223 %
+EER target test : 40.75788751714677 %
+EER source test : 23.765432098765434 %
+### Training Finished ###
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on train set : 4.505894485281861 %
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on val set : 3.1167495981410673 %
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+device used : cuda
+solver initialized
+EER target valid : 4.416031491702071 %
+EER source valid : 49.84621694502576 %
+EER target test : 1.2345679012345678 %
+EER source test : 52.77777777777778 %
+time taken for eers computation : 58
+Start training...
+Saved at /home/dzbz0373/Voice/Expe/models/1ep/1ep.ckpt
+Elapsed [0:02:54], Epoch [1/1]	, G/loss_id: 0.8295, G/loss_id_psnt: 0.4608, G/loss_cd: 0.0514, G/loss_emb: 0.0055
+EER target valid : 45.26448200361989 %
+EER source valid : 13.534738321352426 %
+EER target test : 39.81481481481482 %
+EER source test : 24.00548696844993 %
+time taken for eers computation : 57
+	Validation [1/1]	, G/loss_id: 0.8243, G/loss_id_psnt: 0.4335, G/loss_cd: 0.0515, G/loss_emb: 0.0055
+Last epoch saved at /home/dzbz0373/Voice/Expe/models/1ep/1ep.ckpt
+EER target train : 42.99401657495753 %
+EER source train : 12.16965130989469 %
+EER target valid : 45.269222881871784 %
+EER source valid : 13.489391361059885 %
+EER target test : 39.50617283950617 %
+EER source test : 23.456790123456788 %
+### Training Finished ###
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on train set : 4.505894485281861 %
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on val set : 3.1167495981410673 %
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on train set : 4.505894485281861 %
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on val set : 3.1167495981410673 %
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+Test data loaded from : voxceleb1_dev Size of test loader 13678
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on train set : 4.505894485281861 %
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on val set : 3.1167495981410673 %
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+Test data loaded from : voxceleb1_dev Size of test loader 13678
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on train set : 4.505894485281861 %
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on val set : 3.1167495981410673 %
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on train set : 4.505894485281861 %
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on val set : 3.1167495981410673 %
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+Error : set_name is None not in {test, train, valid} options
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on train set : 4.505894485281861 %
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on val set : 3.1167495981410673 %
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+Error : set_name is eval not in {test, train, valid} options
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on train set : 4.505894485281861 %
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on val set : 3.1167495981410673 %
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+device used : cuda
+solver initialized
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on train set : 4.505894485281861 %
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on val set : 3.1167495981410673 %
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+device used : cuda
+solver initialized
+EER target valid : 4.416031491702071 %
+EER source valid : 49.84621694502576 %
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on train set : 4.505894485281861 %
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on val set : 3.1167495981410673 %
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+device used : cuda
+solver initialized
+EER target valid : 4.423212018078759 %
+EER source valid : 49.84847171979745 %
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on train set : 4.505894485281861 %
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on val set : 3.1167495981410673 %
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+device used : cuda
+solver initialized
+EER target valid : 4.416031491702071 %
+EER source valid : 49.84621694502576 %
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on train set : 4.505894485281861 %
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on val set : 3.1167495981410673 %
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+############################voxceleb1_dev
+Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+device used : cuda
+solver initialized
+EER target valid : 4.416031491702071 %
+EER source valid : 49.84621694502576 %
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on train set : 4.505894485281861 %
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+EER on val set : 3.1167495981410673 %
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+New test set added
+device used : cuda
+solver initialized
+EER target valid : 4.416031491702071 %
+EER source valid : 49.84621694502576 %
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Initiation Scorers for VCTK
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+EER on test set : 1.5659320243759198 %
+New test set added
+device used : cuda
+solver initialized
+EER target valid : 4.416031491702071 %
+EER source valid : 49.84621694502576 %
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Initiating Scorers for VCTK
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+New Test data loaded from : voxceleb1_dev Size of test loader 13678
+(2000, 256) (2000,) 	Embeddings extracted : 165 s.
+Masks dimensions : (1999000,)  (52326,)  (52326,)
+EER on test set : 2.1971402933819872 %
+New test set added
+device used : cuda
+solver initialized
+EER target valid : 6.444238363211712 %
+EER source valid : 48.68934267156051 %
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Initiating Scorers for VCTK
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+New Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (52326,)  (52326,)
+EER on test set : 2.1971402933819872 %
+New test set added
+device used : cuda
+solver initialized
+EER target valid : 4.416031491702071 %
+EER source valid : 49.84621694502576 %
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Initiating Scorers for VCTK
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+New Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (52326,)  (52326,)
+EER on test set : 2.1971402933819872 %
+New test set added
+device used : cuda
+solver initialized
+EER target valid : 4.416031491702071 %
+EER source valid : 49.84621694502576 %
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Initiating Scorers for VCTK
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+New Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (52326,)  (52326,)
+EER on test set : 2.1971402933819872 %
+New test set added
+device used : cuda
+solver initialized
+EER target valid : 4.416031491702071 %
+EER source valid : 49.84621694502576 %
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Initiating Scorers for VCTK
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+New Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (52326,)  (52326,)
+EER on test set : 2.1971402933819872 %
+New test set added
+device used : cuda
+solver initialized
+EER target valid : 4.416031491702071 %
+EER source valid : 49.84621694502576 %
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Initiating Scorers for VCTK
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+New Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (52326,)  (52326,)
+EER on test set : 2.1971402933819872 %
+New test set added
+device used : cuda
+solver initialized
+EER target valid : 4.423212018078759 %
+EER source valid : 49.84847171979745 %
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Initiating Scorers for VCTK
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+New Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (52326,)  (52326,)
+EER on test set : 2.1971402933819872 %
+New test set added
+device used : cuda
+solver initialized
+EER target valid : 4.416031491702071 %
+EER source valid : 49.84621694502576 %
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Initiating Scorers for VCTK
+(2000, 256) (2000,) 	Embeddings extracted : 19 s.
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+(2000, 256) (2000,) 	Embeddings extracted : 16 s.
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+(2000, 256) (2000,) 	Embeddings extracted : 104 s.
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+New Test data loaded from : voxceleb1_dev Size of test loader 13678
+(2000, 256) (2000,) 	Embeddings extracted : 115 s.
+Masks dimensions : (1999000,)  (52326,)  (52326,)
+EER on test set : 2.1955003848133003 %
+Masks dimensions : (13041,)  (13041,)
+New test set added
+device used : cuda
+solver initialized
+EER target valid : 0.9024942898453909 %
+EER source valid : 49.60420486506698 %
+EER target test : 0.5492253309265944 %
+EER source test : 50.9254216089728 %
+time taken for eers computation : 196
+Start training...
+Saved at /home/dzbz0373/Voice/Expe/models/1ep/1ep.ckpt
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Initiating Scorers for VCTK
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+New Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (52326,)  (52326,)
+EER on test set : 2.1955003848133003 %
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Initiating Scorers for VCTK
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+New Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (52326,)  (52326,)
+EER on test set : 2.1955003848133003 %
+Masks dimensions : (13041,)  (13041,)
+New test set added
+device used : cuda
+solver initialized
+EER target valid : 4.415997155135042 %
+EER source valid : 49.845560325164406 %
+EER target test : 1.571462595266747 %
+EER source test : 51.344761155491 %
+time taken for eers computation : 172
+Start training...
+Saved at /home/dzbz0373/Voice/Expe/models/1ep/1ep.ckpt
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Initiating Scorers for VCTK
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+New Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (52326,)  (52326,)
+EER on test set : 2.1955003848133003 %
+Masks dimensions : (13041,)  (13041,)
+New test set added
+device used : cuda
+solver initialized
+EER target valid : 4.418470129927838 %
+EER source valid : 49.847042279855714 %
+EER target test : 1.563440132370638 %
+EER source test : 51.41107883482612 %
+time taken for eers computation : 85
+Start training...
+Saved at /home/dzbz0373/Voice/Expe/models/1ep/1ep.ckpt
+Elapsed [0:01:48], Epoch [1/1]	, G/loss_id: 0.8293, G/loss_id_psnt: 0.4616, G/loss_cd: 0.0514, G/loss_emb: 0.0055
+EER target valid : 45.265512409783554 %
+EER source valid : 13.477221459439301 %
+EER target test : 40.97147011632571 %
+EER source test : 20.98765432098765 %
+time taken for eers computation : 90
+	Validation [1/1]	, G/loss_id: 0.8242, G/loss_id_psnt: 0.4356, G/loss_cd: 0.0520, G/loss_emb: 0.0055
+Last epoch saved at /home/dzbz0373/Voice/Expe/models/1ep/1ep.ckpt
+EER target valid : 45.26160898514999 %
+EER source valid : 13.463809011028138 %
+EER target test : 40.80042870036101 %
+EER source test : 20.917049947551035 %
+### Training Finished ###

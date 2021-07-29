@@ -1,0 +1,10 @@
+models/*
+data/*.csv
+sidekit/*
+csv_for_github/*
+data/*.yaml
+data/*.npy
+launch.sh
+configs/old/*
+h5f/*
+
