@@ -1,7 +1,13 @@
 #!/bin/bash
+declare x
+if [ $# -eq 0 ]; then
+    x=0
+else
+    x=$1
+fi
 
-echo starting resnet training 1
-nohup env CUDA_VISIBLE_DEVICES=0 python training_halfresnet.py --num_expe 0 &
+echo starting resnet training $x
+nohup env CUDA_VISIBLE_DEVICES=0 python training_halfresnet.py --num_expe $x &
 
 #echo starting resnet training 2
 #nohup env CUDA_VISIBLE_DEVICES=1 python training_halfresnet.py --num_expe 1 &
