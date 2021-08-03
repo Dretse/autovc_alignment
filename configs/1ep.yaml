@@ -3,7 +3,7 @@ testing_dataset : voxceleb1_dev
 
 
 model:
-  encoder_dir : 'models/fast_aam_93_2s_asp_ss2_noisy.pt'
+  encoder_dir : 'models/best_model_2s_cuda_0.pt'
   dim_neck : 16
   dim_emb : 256
   dim_pre : 512

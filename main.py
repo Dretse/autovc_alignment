@@ -53,6 +53,7 @@ if __name__ == "__main__":
     checkpoint = torch.load(config["model"]["encoder_dir"], map_location=device)
     speaker_number = checkpoint["speaker_number"]
     model_archi = checkpoint["model_archi"]
+    model_archi = model_archi["model_type"]
     Encoder = sidekit.nnet.xvector.Xtractor(speaker_number, model_archi=model_archi, loss=checkpoint["loss"])
     Encoder.load_state_dict(checkpoint["model_state_dict"])
     Encoder = Encoder.eval().cuda().to(device)

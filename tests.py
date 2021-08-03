@@ -5,7 +5,7 @@ import torch
 import sidekit
 from loader import Loader
 from solver_encoder import Solver
-from scoring import Scoring
+from scoring import Scoring, Multi_scoring
 import numpy as np
 import logging
 import logging.config
@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     # Loading params
     parser = argparse.ArgumentParser()
-    parser.add_argument('--config', type=str, default='configs/800ep_neck16_meanemb_bs2.yaml', help='yaml conf file for the experiment')
+    parser.add_argument('--config', type=str, default='configs/1ep.yaml', help='yaml conf file for the experiment')
     #parser.add_argument('--logging', type=str, default='logs/300ep_neck8_f.log', help='log file for the experiment')
     args = parser.parse_args()
 
@@ -50,46 +50,48 @@ if __name__ == "__main__":
     logging.info("Config loaded from :"+args.config)
     config["EXPE_NAME"]=EXPE_NAME
 
+    with open("data/"+config["dataset"]+".yaml", "r") as ymlfile:
+        dataset = yaml.full_load(ymlfile)
+    logging.info("Dataset loaded :"+config["dataset"])
+
     # Loading model encoder
     device = torch.device("cuda")
     checkpoint = torch.load(config["model"]["encoder_dir"], map_location=device)
     speaker_number = checkpoint["speaker_number"]
-    model_archi = checkpoint["model_archi"]
+    model_archi = checkpoint["model_archi"]["model_type"]
     Encoder = sidekit.nnet.xvector.Xtractor(speaker_number, model_archi=model_archi, loss=checkpoint["loss"])
     Encoder.load_state_dict(checkpoint["model_state_dict"])
     Encoder = Encoder.eval().cuda().to(device)
     logging.info("Encoder loaded from : "+config["model"]["encoder_dir"] )
 
 
-    # Generating Dataloader
-    """config["data"]["dataset"]="voxceleb1_dev"
-    config["data"]["rootdir"]="/ssd/data/VoxCeleb/vox1_dev_wav/wav"
-    config["data"]["dataset_yaml"]="/home/dzbz0373/Voice/Expe/data/VoxCeleb1_DS_5s_clean.yaml"
-    config["data"]["file_extention"]="wav"
-    #config["data"]["train"]["users"]=[0,1089]
-    #config["data"]["val"]["users"]=[0,1089]
-    config["data"]["test"]["users"]=[1089,1210]"""
-    loader =  Loader(config["data"])
-    train_loader, val_loader, test_loader = loader.get_dataloader("train"), loader.get_dataloader("val"), loader.get_dataloader("test")
-    logging.info("Data loaded from : "+config["data"]["dataset"]+" Size of loaders {}, {}, {}".format(train_loader.__len__(),val_loader.__len__(), test_loader.__len__()))
+     # Generating Dataloader
+    loader =  Loader(dataset)
+    scorers = Multi_scoring(loader, Encoder, device, dataset_name=config["dataset"])
 
-    #Initiating scoring modules
-    test_scorer = Scoring(test_loader, loader.get_dataset("test"), device, name="test", dataset_name=config["data"]["dataset"], n_uttrs=1)
-    test_scorer.extract_embeddings(Encoder)
-    logging.info("EER on test set : "+str(test_scorer.compute_EER())+" %")
-    
-    train_scorer = Scoring(train_loader, loader.get_dataset("train"), device, name="train", dataset_name=config["data"]["dataset"])
-    train_scorer.extract_embeddings(Encoder)
-    logging.info("EER on train set : "+str(train_scorer.compute_EER())+" %")
+    try :
+        test_dataset_config = config["testing_dataset"]
+    except :
+        test_dataset_config = config["dataset"]
+    if(test_dataset_config != config["dataset"]):
+	    #for using Vox1 as a test set
+        with open("data/"+test_dataset_config+".yaml", "r") as ymlfile:
+            test_dataset = yaml.full_load(ymlfile)
+        test_loader = Loader(test_dataset)
+        logging.info("New Test data loaded from : "+test_dataset_config+" Size of test loader {}".format(test_loader.get_dataloader("test").__len__()))
+        scorers.change_test(test_loader, test_dataset_config)
 
-    val_scorer = Scoring(val_loader, loader.get_dataset("val"), device, name="val", dataset_name=config["data"]["dataset"], n_uttrs=1)
-    val_scorer.extract_embeddings(Encoder)
-    logging.info("EER on val set : "+str(val_scorer.compute_EER())+" %")
-    
+
     # Initiating Solver
     config["model"]["from_loading"] = True
-    solver = Solver((train_loader, val_loader, test_loader), config, Encoder, scorers = (train_scorer, val_scorer, test_scorer), charge_iteration=0)
+    solver = Solver(loader.get_loaders(), config, dataset, Encoder, scorers = scorers)
     logging.info("solver initialized")
+
+    #EER of sets
+    logging.info("EER on test set : "+str(scorers.back_test_scorer.compute_EER())+" %")
+    logging.info("EER on train set : "+str(scorers.val_scorer.compute_EER())+" %")
+    logging.info("EER on val set : "+str(scorers.train_scorer.compute_EER())+" %")
+    
 
     """solver.tar_eval("train", 0.01)
     solver.tar_eval("val", 0.01)
@@ -117,7 +119,7 @@ if __name__ == "__main__":
 
     #solver.evaluation("train")
     #solver.evaluation("val")
-    solver.evaluation("eval")
+    scorers.EER_post_generator_evaluation("eval", Encoder, solver.G )
     logging.info("### Evaluation Finished ###")
 
 

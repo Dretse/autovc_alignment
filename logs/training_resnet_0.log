@@ -300,3 +300,109 @@ validation_frequency: 1
 2021-07-30 13:44:54,503 - INFO - Epoch: 1 [462/1498 (31%)]	Loss: 14.638782	Accuracy: 0.032
 2021-07-30 13:47:50,272 - INFO - Epoch: 1 [923/1498 (62%)]	Loss: 14.051380	Accuracy: 0.041
 2021-07-30 13:50:46,120 - INFO - Epoch: 1 [1384/1498 (92%)]	Loss: 13.864758	Accuracy: 0.036
+2021-07-30 13:58:45,485 - INFO - 
+*********************************
+Dataset options
+*********************************
+
+2021-07-30 13:58:45,488 - INFO - batch_size: 128
+data_file_extension: .wav
+data_path: /ssd/data/VoxCeleb/vox2_dev_wav/wav
+dataset_csv: data/voxceleb2_dev_fixed_half1.csv
+sample_rate: 16000
+stratify: false
+test:
+  data_path: /ssd/data/VoxCeleb/vox1_test_wav/wav
+  idmap: h5f/vox1_test_cleaned_idmap.h5
+  key: h5f/vox1_test_cleaned_key.h5
+  ndx: h5f/vox1_test_cleaned_ndx.h5
+train:
+  chunk_per_segment: -1
+  duration: 2
+  overlap: 2
+  sampler:
+    augmentation_replica: 1
+    examples_per_speaker: 1
+    samples_per_speaker: 128
+  transform_number: 1
+  transformation:
+    add_noise:
+      data_path: /ssd/data/musan_original
+      noise_db_csv: data/musan_original.csv
+    add_reverb:
+      data_path: /ssd/data/simulated_rirs
+      rir_db_csv: data/simulated_rirs.csv
+    pipeline: add_reverb,add_noise,phone_filtering,codec
+valid:
+  duration: 2
+  transformation:
+    add_noise:
+      data_path: /ssd/data/musan_original
+      noise_db_csv: data/musan_original.csv
+    add_reverb:
+      data_path: ''
+      noise_db_csv: ''
+    pipeline: ''
+validation_ratio: 0.02
+
+2021-07-30 13:58:45,488 - INFO - 
+*********************************
+Model options
+*********************************
+
+2021-07-30 13:58:45,488 - INFO - freeze_parts: []
+initial_model_name: null
+loss:
+  aam_margin: O.2
+  aam_s: 30
+  type: aam
+model_type: halfresnet34
+preprocessor:
+  feature_size: 80
+  type: mel_spec
+reset_parts: []
+speaker_number: 2997
+
+2021-07-30 13:58:45,489 - INFO - 
+*********************************
+Training options
+*********************************
+
+2021-07-30 13:58:45,490 - INFO - best_model_name: models/best_model_2s_cuda_0.pt
+checkpoint_frequency: 10
+clipping: false
+compute_test_eer: true
+deterministic: false
+epochs: 64
+log_file: logs/training_resnet_0.log
+log_interval: 461
+lr: 0.001
+mixed_precision: true
+multi_gpu: false
+num_cpu: 5
+numpy_seed: 0
+optimizer:
+  options: null
+  type: adam
+patience: 100
+random_seed: 0
+scheduler:
+  options: null
+  type: CyclicLR
+tmp_model_name: models/tmp_model_2s_cuda_0.pt
+torch_seed: 0
+validation_frequency: 1
+
+2021-07-30 14:01:39,048 - INFO - Start training process
+2021-07-30 14:01:39,049 - INFO - Use 	2 	gpus
+2021-07-30 14:01:39,049 - INFO - Use 	5 	cpus
+2021-07-30 14:01:39,049 - INFO - Validation EER will be measured using
+2021-07-30 14:01:39,169 - INFO - 	 32937 target trials and
+2021-07-30 14:01:39,289 - INFO - 	 32858 non-target trials
+2021-07-30 14:01:44,391 - INFO - Epoch: 1 [1/1498 (0%)]	Loss: 15.395390	Accuracy: 0.000
+2021-07-30 14:04:39,206 - INFO - Epoch: 1 [462/1498 (31%)]	Loss: 14.638546	Accuracy: 0.034
+2021-07-30 14:07:34,741 - INFO - Epoch: 1 [923/1498 (62%)]	Loss: 14.051926	Accuracy: 0.029
+2021-07-30 14:10:30,352 - INFO - Epoch: 1 [1384/1498 (92%)]	Loss: 13.873408	Accuracy: 0.044
+2021-07-30 14:14:22,551 - CRITICAL - ***Validation metrics - Cross validation accuracy = 0.10844026748599313 %, EER = 32.55566268869453 %
+2021-07-30 14:14:22,551 - CRITICAL - ***Test metrics - Test EER = 32.166172009725166 %
+2021-07-30 14:14:25,466 - INFO - Epoch: 2 [1/1498 (0%)]	Loss: 13.619722	Accuracy: 0.000

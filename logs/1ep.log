@@ -739,3 +739,74 @@ EER source valid : 13.463809011028138 %
 EER target test : 40.80042870036101 %
 EER source test : 20.917049947551035 %
 ### Training Finished ###
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Initiating Scorers for VCTK
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+New Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (52326,)  (52326,)
+EER on test set : 2.1955003848133003 %
+Masks dimensions : (13041,)  (13041,)
+New test set added
+device used : cuda
+solver initialized
+EER target valid : 4.415997155135042 %
+EER source valid : 49.845560325164406 %
+EER target test : 1.571462595266747 %
+EER source test : 51.344761155491 %
+time taken for eers computation : 36
+Start training...
+Saved at /home/dzbz0373/Voice/Expe/models/1ep/1ep.ckpt
+Elapsed [0:01:45], Epoch [1/1]	, G/loss_id: 0.8291, G/loss_id_psnt: 0.4616, G/loss_cd: 0.0514, G/loss_emb: 0.0055
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/best_model_2s_cuda_0.pt
+only use mic1 sequences
+Initiating Scorers for VCTK
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+New Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (52326,)  (52326,)
+EER on test set : 2.1955003848133003 %
+Masks dimensions : (13041,)  (13041,)
+New test set added
+device used : cuda
+solver initialized
+EER target valid : 0.4561537084461071 %
+EER source valid : 48.763966295588546 %
+EER target test : 0.5492253309265944 %
+EER source test : 50.40547083030743 %
+time taken for eers computation : 55
+Start training...
+Saved at /home/dzbz0373/Voice/Expe/models/1ep/1ep.ckpt
+Elapsed [0:02:15], Epoch [1/1]	, G/loss_id: 0.8297, G/loss_id_psnt: 0.4617, G/loss_cd: 0.0486, G/loss_emb: 0.0065
+EER target valid : 45.81302776756543 %
+EER source valid : 10.22820059776954 %
+EER target test : 43.78434616927397 %
+EER source test : 19.100500282417492 %
+time taken for eers computation : 54
+	Validation [1/1]	, G/loss_id: 0.8230, G/loss_id_psnt: 0.4348, G/loss_cd: 0.0498, G/loss_emb: 0.0064
+Last epoch saved at /home/dzbz0373/Voice/Expe/models/1ep/1ep.ckpt
+EER target valid : 45.78562805270321 %
+EER source valid : 10.143065820973096 %
+EER target test : 43.91928650220618 %
+EER source test : 19.100500282417492 %
+### Training Finished ###
