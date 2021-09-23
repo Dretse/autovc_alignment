@@ -54,7 +54,7 @@ def extract_from_file(filename, no_eer_tr=True):
 if __name__=="__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--logfile', type=str, default='100emb_neck0_emb10_nocs', help='log file for the experiment')
+    parser.add_argument('--logfile', type=str, default='800ep_model1', help='log file for the experiment')
     args = parser.parse_args()
     no_eer_tr = True
     EERs, losses = extract_from_file("logs/"+args.logfile+".log", no_eer_tr=no_eer_tr)

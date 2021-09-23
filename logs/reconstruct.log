@@ -1,0 +1,184 @@
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+device used : cuda
+model archi : halfresnet34
+Encoder loaded from : models/best_model_2s_cuda_0.pt
+only use mic1 sequences
+Initiating Scorers for VCTK
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+New Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (52326,)  (52326,)
+EER on test set : 2.1955003848133003 %
+Masks dimensions : (13041,)  (13041,)
+New test set added
+Solver Initialized !
+starting of the training
+epoch 1 MSE loss : 0.011042415769770742
+epoch 2 MSE loss : 0.005786574985831976
+epoch 3 MSE loss : 0.005191157865338028
+epoch 4 MSE loss : 0.004924509935081005
+epoch 5 MSE loss : 0.004716184069402516
+epoch 6 MSE loss : 0.004653570204973221
+epoch 7 MSE loss : 0.004517837837338448
+epoch 8 MSE loss : 0.004456342319026589
+epoch 9 MSE loss : 0.004467873217072338
+epoch 10 MSE loss : 0.004402848654426634
+epoch 11 MSE loss : 0.004356837712693959
+epoch 12 MSE loss : 0.0043824103707447645
+epoch 13 MSE loss : 0.004371967618353665
+epoch 14 MSE loss : 0.004351238613016903
+epoch 15 MSE loss : 0.004278092058375478
+epoch 16 MSE loss : 0.004283387216273696
+epoch 17 MSE loss : 0.004317698427475989
+epoch 18 MSE loss : 0.0042602399573661385
+epoch 19 MSE loss : 0.004343564966693521
+epoch 20 MSE loss : 0.004333614395000041
+epoch 21 MSE loss : 0.004214914599433541
+epoch 22 MSE loss : 0.004228059165179729
+epoch 23 MSE loss : 0.004313245967496187
+epoch 24 MSE loss : 0.004228676459752024
+epoch 25 MSE loss : 0.0042054406949318945
+training finished
+torch.Size([64, 32640])
+torch.Size([64, 32640])
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+device used : cuda
+model archi : halfresnet34
+Encoder loaded from : models/best_model_2s_cuda_0.pt
+only use mic1 sequences
+Initiating Scorers for VCTK
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+New Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (52326,)  (52326,)
+EER on test set : 2.1955003848133003 %
+Masks dimensions : (13041,)  (13041,)
+New test set added
+Solver Initialized !
+starting of the training
+epoch 1 MSE loss : 0.005742272497154772
+epoch 2 MSE loss : 0.004433992526028305
+epoch 3 MSE loss : 0.004365014876239002
+epoch 4 MSE loss : 0.004346311634872108
+epoch 5 MSE loss : 0.004265118264593184
+epoch 6 MSE loss : 0.004292338916566223
+epoch 7 MSE loss : 0.004222317398525775
+epoch 8 MSE loss : 0.004207031868863851
+epoch 9 MSE loss : 0.004255676486063748
+epoch 10 MSE loss : 0.004222566024400294
+epoch 11 MSE loss : 0.004199248331133276
+epoch 12 MSE loss : 0.004245290099643171
+epoch 13 MSE loss : 0.004254336452577263
+epoch 14 MSE loss : 0.004248763213399798
+epoch 15 MSE loss : 0.004191857045516372
+epoch 16 MSE loss : 0.00420711959246546
+epoch 17 MSE loss : 0.004252105543855578
+epoch 18 MSE loss : 0.0042009400739334525
+epoch 19 MSE loss : 0.004292605607770383
+epoch 20 MSE loss : 0.0042880526464432476
+epoch 21 MSE loss : 0.00417476496193558
+epoch 22 MSE loss : 0.004192003670614213
+epoch 23 MSE loss : 0.004281216203235089
+epoch 24 MSE loss : 0.004199940946418792
+epoch 25 MSE loss : 0.004179940565954894
+training finished
+torch.Size([64, 32640])
+torch.Size([64, 32640])
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+device used : cuda
+model archi : halfresnet34
+Encoder loaded from : models/best_model_2s_cuda_0.pt
+only use mic1 sequences
+Initiating Scorers for VCTK
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+New Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (52326,)  (52326,)
+EER on test set : 2.1955003848133003 %
+Masks dimensions : (13041,)  (13041,)
+New test set added
+Solver Initialized !
+starting of the training
+epoch 1 MSE loss : 0.0044463172764517365
+epoch 2 MSE loss : 0.0042133342614397405
+epoch 3 MSE loss : 0.004263518631923944
+epoch 4 MSE loss : 0.004281067138072104
+epoch 5 MSE loss : 0.004219354542437941
+epoch 6 MSE loss : 0.004259693762287497
+epoch 7 MSE loss : 0.004198140995576978
+epoch 8 MSE loss : 0.004187889671884477
+epoch 9 MSE loss : 0.004239876747597009
+epoch 10 MSE loss : 0.004209472259972245
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+device used : cuda
+model archi : halfresnet34
+Encoder loaded from : models/best_model_2s_cuda_0.pt
+only use mic1 sequences
+Initiating Scorers for VCTK
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+New Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (52326,)  (52326,)
+EER on test set : 2.1955003848133003 %
+Masks dimensions : (13041,)  (13041,)
+New test set added
+Solver Initialized !
+starting of the training
+epoch 1 MSE loss : 0.00653668490704149
+epoch 2 MSE loss : 0.004913542876020074
+epoch 3 MSE loss : 0.004543211662676186
+epoch 4 MSE loss : 0.004442345777060836
+epoch 5 MSE loss : 0.004337327156681567
+epoch 6 MSE loss : 0.004351275649387389
+epoch 7 MSE loss : 0.004270937244873494
+epoch 8 MSE loss : 0.004247546626720578
+epoch 9 MSE loss : 0.004289437655825168
+epoch 10 MSE loss : 0.004250262633431703
+epoch 11 MSE loss : 0.004222834745887667
+epoch 12 MSE loss : 0.004265490700490772
+epoch 13 MSE loss : 0.004271717637311667
+epoch 14 MSE loss : 0.004264167298097163
+epoch 15 MSE loss : 0.004205241033341736
+epoch 16 MSE loss : 0.004219221705570817
+epoch 17 MSE loss : 0.004262650071177631
+epoch 18 MSE loss : 0.004210696450900287
+epoch 19 MSE loss : 0.004301190886180848
+epoch 20 MSE loss : 0.004295905497856438
+epoch 21 MSE loss : 0.004181924373842776
+epoch 22 MSE loss : 0.004198660964611918
+epoch 23 MSE loss : 0.0042873580637387936
+epoch 24 MSE loss : 0.004205667530186474
+epoch 25 MSE loss : 0.004185231914743781
+training finished
+torch.Size([64, 32640])
+torch.Size([64, 32640])
+Config loaded from :configs/1ep.yaml
+Dataset loaded :VCTK
+device used : cuda
+model archi : halfresnet34
+Encoder loaded from : models/best_model_2s_cuda_0.pt
+only use mic1 sequences
+Initiating Scorers for VCTK
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+New Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (52326,)  (52326,)
+EER on test set : 2.1955003848133003 %
+Masks dimensions : (13041,)  (13041,)
+New test set added
+Solver Initialized !
+starting of the training

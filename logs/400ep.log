@@ -1,0 +1,3251 @@
+Config loaded from :configs/400ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Config loaded from :configs/400ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Config loaded from :configs/400ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Config loaded from :configs/400ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Config loaded from :configs/400ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Initiating Scorers for VCTK
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Config loaded from :configs/400ep.yaml
+Dataset loaded :VCTK
+Experiment launched on Orange PC
+Encoder loaded from : models/fast_aam_93_2s_asp_ss2_noisy.pt
+only use mic1 sequences
+Initiating Scorers for VCTK
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (49995000,)  (49995000,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+Masks dimensions : (1999000,)  (3240,)  (3240,)
+New Test data loaded from : voxceleb1_dev Size of test loader 13678
+Masks dimensions : (1999000,)  (52326,)  (52326,)
+EER on test set : 2.1955003848133003 %
+Masks dimensions : (13041,)  (13041,)
+New test set added
+device used : cuda
+solver initialized
+EER target valid : 4.415997155135042 %
+EER source valid : 49.845560325164406 %
+EER target test : 1.563440132370638 %
+EER source test : 51.41107883482612 %
+time taken for eers computation : 36
+Start training...
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:01:43], Epoch [1/400]	, G/loss_id: 0.8337, G/loss_id_psnt: 0.4698, G/loss_cd: 0.0521, G/loss_emb: 0.0044
+EER target valid : 40.4329008657143 %
+EER source valid : 15.234178973316858 %
+EER target test : 33.85448004412355 %
+EER source test : 20.352214960058095 %
+time taken for eers computation : 35
+	Validation [1/400]	, G/loss_id: 0.8283, G/loss_id_psnt: 0.4367, G/loss_cd: 0.0514, G/loss_emb: 0.0045
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:04:02], Epoch [2/400]	, G/loss_id: 0.7047, G/loss_id_psnt: 0.3737, G/loss_cd: 0.0365, G/loss_emb: 0.0040
+EER target valid : 46.51141074609238 %
+EER source valid : 19.19253743561739 %
+EER target test : 42.709962896109104 %
+EER source test : 30.211611393528603 %
+time taken for eers computation : 35
+	Validation [2/400]	, G/loss_id: 0.7078, G/loss_id_psnt: 0.3536, G/loss_cd: 0.0352, G/loss_emb: 0.0042
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:06:21], Epoch [3/400]	, G/loss_id: 0.6743, G/loss_id_psnt: 0.3582, G/loss_cd: 0.0305, G/loss_emb: 0.0038
+EER target valid : 46.7973615542816 %
+EER source valid : 21.57616973822304 %
+EER target test : 46.90721520256719 %
+EER source test : 25.789003873154204 %
+time taken for eers computation : 35
+	Validation [3/400]	, G/loss_id: 0.6566, G/loss_id_psnt: 0.3239, G/loss_cd: 0.0298, G/loss_emb: 0.0039
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:08:39], Epoch [4/400]	, G/loss_id: 0.6372, G/loss_id_psnt: 0.3063, G/loss_cd: 0.0256, G/loss_emb: 0.0037
+EER target valid : 45.82003755917545 %
+EER source valid : 22.529993403504417 %
+EER target test : 45.6377231247493 %
+EER source test : 29.92062051157912 %
+time taken for eers computation : 35
+	Validation [4/400]	, G/loss_id: 0.6331, G/loss_id_psnt: 0.3019, G/loss_cd: 0.0268, G/loss_emb: 0.0037
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:10:58], Epoch [5/400]	, G/loss_id: 0.6245, G/loss_id_psnt: 0.3192, G/loss_cd: 0.0240, G/loss_emb: 0.0035
+EER target valid : 43.688474920971274 %
+EER source valid : 23.557570922426525 %
+EER target test : 43.748245086241475 %
+EER source test : 30.061829258452356 %
+time taken for eers computation : 35
+	Validation [5/400]	, G/loss_id: 0.6031, G/loss_id_psnt: 0.2864, G/loss_cd: 0.0246, G/loss_emb: 0.0034
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:13:17], Epoch [6/400]	, G/loss_id: 0.5795, G/loss_id_psnt: 0.2809, G/loss_cd: 0.0207, G/loss_emb: 0.0031
+EER target valid : 43.44996218237284 %
+EER source valid : 24.563839200826088 %
+EER target test : 43.57720367027677 %
+EER source test : 31.2257927862503 %
+time taken for eers computation : 35
+	Validation [6/400]	, G/loss_id: 0.5683, G/loss_id_psnt: 0.2741, G/loss_cd: 0.0210, G/loss_emb: 0.0032
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:15:36], Epoch [7/400]	, G/loss_id: 0.5689, G/loss_id_psnt: 0.2774, G/loss_cd: 0.0193, G/loss_emb: 0.0032
+EER target valid : 40.69575037785682 %
+EER source valid : 23.997561361774235 %
+EER target test : 40.4503234055355 %
+EER source test : 27.014998386185752 %
+time taken for eers computation : 35
+	Validation [7/400]	, G/loss_id: 0.5581, G/loss_id_psnt: 0.2635, G/loss_cd: 0.0202, G/loss_emb: 0.0031
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:17:55], Epoch [8/400]	, G/loss_id: 0.5576, G/loss_id_psnt: 0.2773, G/loss_cd: 0.0197, G/loss_emb: 0.0030
+EER target valid : 37.777571696545046 %
+EER source valid : 26.06161424899106 %
+EER target test : 36.985371540312876 %
+EER source test : 29.12682562737029 %
+time taken for eers computation : 35
+	Validation [8/400]	, G/loss_id: 0.5341, G/loss_id_psnt: 0.2553, G/loss_cd: 0.0182, G/loss_emb: 0.0030
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:20:14], Epoch [9/400]	, G/loss_id: 0.5339, G/loss_id_psnt: 0.2585, G/loss_cd: 0.0173, G/loss_emb: 0.0028
+EER target valid : 36.6089467532179 %
+EER source valid : 25.318515682557162 %
+EER target test : 36.82235258724429 %
+EER source test : 29.92062051157912 %
+time taken for eers computation : 35
+	Validation [9/400]	, G/loss_id: 0.5291, G/loss_id_psnt: 0.2457, G/loss_cd: 0.0185, G/loss_emb: 0.0028
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:22:33], Epoch [10/400]	, G/loss_id: 0.5123, G/loss_id_psnt: 0.2360, G/loss_cd: 0.0169, G/loss_emb: 0.0028
+EER target valid : 32.02228606020705 %
+EER source valid : 27.100790891089975 %
+EER target test : 33.71953971119134 %
+EER source test : 30.780733075123052 %
+time taken for eers computation : 35
+	Validation [10/400]	, G/loss_id: 0.5061, G/loss_id_psnt: 0.2433, G/loss_cd: 0.0173, G/loss_emb: 0.0027
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:24:52], Epoch [11/400]	, G/loss_id: 0.5193, G/loss_id_psnt: 0.2588, G/loss_cd: 0.0169, G/loss_emb: 0.0027
+EER target valid : 30.794269325891577 %
+EER source valid : 27.77861523139611 %
+EER target test : 32.98723926995588 %
+EER source test : 28.611161542806425 %
+time taken for eers computation : 35
+	Validation [11/400]	, G/loss_id: 0.5029, G/loss_id_psnt: 0.2349, G/loss_cd: 0.0168, G/loss_emb: 0.0027
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:27:12], Epoch [12/400]	, G/loss_id: 0.4958, G/loss_id_psnt: 0.2438, G/loss_cd: 0.0158, G/loss_emb: 0.0026
+EER target valid : 29.856730117592235 %
+EER source valid : 27.683158214780462 %
+EER target test : 32.98723926995588 %
+EER source test : 27.39374041797789 %
+time taken for eers computation : 35
+	Validation [12/400]	, G/loss_id: 0.4842, G/loss_id_psnt: 0.2304, G/loss_cd: 0.0159, G/loss_emb: 0.0026
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:29:31], Epoch [13/400]	, G/loss_id: 0.4934, G/loss_id_psnt: 0.2426, G/loss_cd: 0.0155, G/loss_emb: 0.0025
+EER target valid : 27.8812618634797 %
+EER source valid : 29.016314753952944 %
+EER target test : 31.72978088648215 %
+EER source test : 28.68176591624304 %
+time taken for eers computation : 35
+	Validation [13/400]	, G/loss_id: 0.4742, G/loss_id_psnt: 0.2236, G/loss_cd: 0.0155, G/loss_emb: 0.0026
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:31:50], Epoch [14/400]	, G/loss_id: 0.4789, G/loss_id_psnt: 0.2177, G/loss_cd: 0.0156, G/loss_emb: 0.0025
+EER target valid : 27.798622279254726 %
+EER source valid : 29.72150043295814 %
+EER target test : 29.689317589249896 %
+EER source test : 26.790325183571372 %
+time taken for eers computation : 35
+	Validation [14/400]	, G/loss_id: 0.4707, G/loss_id_psnt: 0.2177, G/loss_cd: 0.0153, G/loss_emb: 0.0026
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:34:09], Epoch [15/400]	, G/loss_id: 0.4609, G/loss_id_psnt: 0.2217, G/loss_cd: 0.0145, G/loss_emb: 0.0025
+EER target valid : 27.162234405314358 %
+EER source valid : 29.12038779628119 %
+EER target test : 32.49015994785399 %
+EER source test : 25.709826111514566 %
+time taken for eers computation : 35
+	Validation [15/400]	, G/loss_id: 0.4535, G/loss_id_psnt: 0.2164, G/loss_cd: 0.0150, G/loss_emb: 0.0025
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:36:28], Epoch [16/400]	, G/loss_id: 0.4423, G/loss_id_psnt: 0.2076, G/loss_cd: 0.0132, G/loss_emb: 0.0025
+EER target valid : 26.52566468771799 %
+EER source valid : 28.68233388984953 %
+EER target test : 32.983228038507825 %
+EER source test : 24.56300936012265 %
+time taken for eers computation : 35
+	Validation [16/400]	, G/loss_id: 0.4481, G/loss_id_psnt: 0.2100, G/loss_cd: 0.0147, G/loss_emb: 0.0025
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:38:47], Epoch [17/400]	, G/loss_id: 0.4465, G/loss_id_psnt: 0.2233, G/loss_cd: 0.0135, G/loss_emb: 0.0024
+EER target valid : 26.612245062840657 %
+EER source valid : 29.60028831174602 %
+EER target test : 32.30307360609707 %
+EER source test : 25.709826111514566 %
+time taken for eers computation : 35
+	Validation [17/400]	, G/loss_id: 0.4386, G/loss_id_psnt: 0.2033, G/loss_cd: 0.0146, G/loss_emb: 0.0024
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:41:06], Epoch [18/400]	, G/loss_id: 0.4505, G/loss_id_psnt: 0.2033, G/loss_cd: 0.0133, G/loss_emb: 0.0023
+EER target valid : 26.163884065075255 %
+EER source valid : 30.726860564807257 %
+EER target test : 29.168170878459687 %
+EER source test : 28.033466473008957 %
+time taken for eers computation : 35
+	Validation [18/400]	, G/loss_id: 0.4399, G/loss_id_psnt: 0.1977, G/loss_cd: 0.0147, G/loss_emb: 0.0024
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:43:25], Epoch [19/400]	, G/loss_id: 0.4271, G/loss_id_psnt: 0.1811, G/loss_cd: 0.0131, G/loss_emb: 0.0023
+EER target valid : 25.50546266751597 %
+EER source valid : 31.802926757464423 %
+EER target test : 30.043434115523464 %
+EER source test : 27.089889453723874 %
+time taken for eers computation : 35
+	Validation [19/400]	, G/loss_id: 0.4259, G/loss_id_psnt: 0.1929, G/loss_cd: 0.0136, G/loss_emb: 0.0023
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:45:44], Epoch [20/400]	, G/loss_id: 0.4154, G/loss_id_psnt: 0.2023, G/loss_cd: 0.0125, G/loss_emb: 0.0022
+EER target valid : 25.443001875815312 %
+EER source valid : 31.119356380218495 %
+EER target test : 31.42379913758524 %
+EER source test : 26.071421366900672 %
+time taken for eers computation : 35
+	Validation [20/400]	, G/loss_id: 0.4086, G/loss_id_psnt: 0.1919, G/loss_cd: 0.0128, G/loss_emb: 0.0023
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:48:03], Epoch [21/400]	, G/loss_id: 0.4171, G/loss_id_psnt: 0.2002, G/loss_cd: 0.0128, G/loss_emb: 0.0022
+EER target valid : 24.854477362618592 %
+EER source valid : 31.688311255497815 %
+EER target test : 28.99311823104693 %
+EER source test : 26.216916807875414 %
+time taken for eers computation : 35
+	Validation [21/400]	, G/loss_id: 0.4114, G/loss_id_psnt: 0.1850, G/loss_cd: 0.0133, G/loss_emb: 0.0023
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:50:23], Epoch [22/400]	, G/loss_id: 0.4150, G/loss_id_psnt: 0.2070, G/loss_cd: 0.0124, G/loss_emb: 0.0022
+EER target valid : 25.273345516425472 %
+EER source valid : 31.263913244974173 %
+EER target test : 29.860359005214598 %
+EER source test : 27.089889453723874 %
+time taken for eers computation : 35
+	Validation [22/400]	, G/loss_id: 0.3987, G/loss_id_psnt: 0.1842, G/loss_cd: 0.0133, G/loss_emb: 0.0022
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:52:43], Epoch [23/400]	, G/loss_id: 0.3879, G/loss_id_psnt: 0.1824, G/loss_cd: 0.0121, G/loss_emb: 0.0022
+EER target valid : 24.88497233556793 %
+EER source valid : 31.193567841781057 %
+EER target test : 30.178374448455674 %
+EER source test : 26.199770031469384 %
+time taken for eers computation : 35
+	Validation [23/400]	, G/loss_id: 0.3866, G/loss_id_psnt: 0.1820, G/loss_cd: 0.0125, G/loss_emb: 0.0022
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:55:02], Epoch [24/400]	, G/loss_id: 0.3979, G/loss_id_psnt: 0.2067, G/loss_cd: 0.0124, G/loss_emb: 0.0021
+EER target valid : 23.5060819211132 %
+EER source valid : 34.35234734129241 %
+EER target test : 29.168170878459687 %
+EER source test : 27.010711692084243 %
+time taken for eers computation : 35
+	Validation [24/400]	, G/loss_id: 0.3790, G/loss_id_psnt: 0.1806, G/loss_cd: 0.0129, G/loss_emb: 0.0022
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:57:21], Epoch [25/400]	, G/loss_id: 0.3900, G/loss_id_psnt: 0.2021, G/loss_cd: 0.0123, G/loss_emb: 0.0022
+EER target valid : 24.03261637921849 %
+EER source valid : 32.050711131737785 %
+EER target test : 30.206453068592054 %
+EER source test : 25.343944162026954 %
+time taken for eers computation : 35
+	Validation [25/400]	, G/loss_id: 0.3749, G/loss_id_psnt: 0.1740, G/loss_cd: 0.0125, G/loss_emb: 0.0021
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [0:59:40], Epoch [26/400]	, G/loss_id: 0.3680, G/loss_id_psnt: 0.1763, G/loss_cd: 0.0111, G/loss_emb: 0.0019
+EER target valid : 24.420104641203277 %
+EER source valid : 31.541950154599053 %
+EER target test : 31.769893200962695 %
+EER source test : 25.343944162026954 %
+time taken for eers computation : 35
+	Validation [26/400]	, G/loss_id: 0.3666, G/loss_id_psnt: 0.1715, G/loss_cd: 0.0120, G/loss_emb: 0.0021
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:01:59], Epoch [27/400]	, G/loss_id: 0.3613, G/loss_id_psnt: 0.1709, G/loss_cd: 0.0117, G/loss_emb: 0.0020
+EER target valid : 24.18965734785428 %
+EER source valid : 31.483405916219354 %
+EER target test : 31.21665663858805 %
+EER source test : 25.070100056483497 %
+time taken for eers computation : 36
+	Validation [27/400]	, G/loss_id: 0.3566, G/loss_id_psnt: 0.1677, G/loss_cd: 0.0118, G/loss_emb: 0.0021
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:04:19], Epoch [28/400]	, G/loss_id: 0.3682, G/loss_id_psnt: 0.1906, G/loss_cd: 0.0122, G/loss_emb: 0.0021
+EER target valid : 23.641517686980023 %
+EER source valid : 32.25187267226002 %
+EER target test : 28.304941335740075 %
+EER source test : 25.94307270233196 %
+time taken for eers computation : 36
+	Validation [28/400]	, G/loss_id: 0.3520, G/loss_id_psnt: 0.1661, G/loss_cd: 0.0117, G/loss_emb: 0.0021
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:06:39], Epoch [29/400]	, G/loss_id: 0.3525, G/loss_id_psnt: 0.1734, G/loss_cd: 0.0113, G/loss_emb: 0.0019
+EER target valid : 23.769144583781657 %
+EER source valid : 32.36693366336009 %
+EER target test : 31.74181458082631 %
+EER source test : 22.82135076252723 %
+time taken for eers computation : 36
+	Validation [29/400]	, G/loss_id: 0.3451, G/loss_id_psnt: 0.1630, G/loss_cd: 0.0118, G/loss_emb: 0.0020
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:08:59], Epoch [30/400]	, G/loss_id: 0.3471, G/loss_id_psnt: 0.1739, G/loss_cd: 0.0112, G/loss_emb: 0.0021
+EER target valid : 23.67140754491856 %
+EER source valid : 30.71968306812767 %
+EER target test : 29.52629863618131 %
+EER source test : 23.602285564431536 %
+time taken for eers computation : 36
+	Validation [30/400]	, G/loss_id: 0.3414, G/loss_id_psnt: 0.1625, G/loss_cd: 0.0125, G/loss_emb: 0.0020
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:11:19], Epoch [31/400]	, G/loss_id: 0.3304, G/loss_id_psnt: 0.1815, G/loss_cd: 0.0106, G/loss_emb: 0.0019
+EER target valid : 23.55184508346733 %
+EER source valid : 30.507318408509597 %
+EER target test : 31.077705074207785 %
+EER source test : 23.227830226740902 %
+time taken for eers computation : 35
+	Validation [31/400]	, G/loss_id: 0.3280, G/loss_id_psnt: 0.1609, G/loss_cd: 0.0116, G/loss_emb: 0.0020
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:13:39], Epoch [32/400]	, G/loss_id: 0.3260, G/loss_id_psnt: 0.1621, G/loss_cd: 0.0113, G/loss_emb: 0.0019
+EER target valid : 22.835946210057102 %
+EER source valid : 32.21933607506493 %
+EER target test : 31.077705074207785 %
+EER source test : 23.095194868070685 %
+time taken for eers computation : 36
+	Validation [32/400]	, G/loss_id: 0.3264, G/loss_id_psnt: 0.1557, G/loss_cd: 0.0112, G/loss_emb: 0.0019
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:15:58], Epoch [33/400]	, G/loss_id: 0.3126, G/loss_id_psnt: 0.1618, G/loss_cd: 0.0108, G/loss_emb: 0.0019
+EER target valid : 23.71284300138529 %
+EER source valid : 30.53411704795714 %
+EER target test : 31.598851784997994 %
+EER source test : 22.57524408940531 %
+time taken for eers computation : 36
+	Validation [33/400]	, G/loss_id: 0.3115, G/loss_id_psnt: 0.1536, G/loss_cd: 0.0106, G/loss_emb: 0.0019
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:18:17], Epoch [34/400]	, G/loss_id: 0.3067, G/loss_id_psnt: 0.1498, G/loss_cd: 0.0105, G/loss_emb: 0.0019
+EER target valid : 23.360543125347306 %
+EER source valid : 30.9569158936714 %
+EER target test : 30.556558363417572 %
+EER source test : 22.292826595658838 %
+time taken for eers computation : 36
+	Validation [34/400]	, G/loss_id: 0.3115, G/loss_id_psnt: 0.1511, G/loss_cd: 0.0115, G/loss_emb: 0.0019
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:20:36], Epoch [35/400]	, G/loss_id: 0.2988, G/loss_id_psnt: 0.1528, G/loss_cd: 0.0106, G/loss_emb: 0.0018
+EER target valid : 23.621315666778003 %
+EER source valid : 29.393115069008463 %
+EER target test : 31.598851784997994 %
+EER source test : 20.842158880012914 %
+time taken for eers computation : 36
+	Validation [35/400]	, G/loss_id: 0.3040, G/loss_id_psnt: 0.1491, G/loss_cd: 0.0113, G/loss_emb: 0.0019
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:22:55], Epoch [36/400]	, G/loss_id: 0.2976, G/loss_id_psnt: 0.1558, G/loss_cd: 0.0102, G/loss_emb: 0.0019
+EER target valid : 23.657771846991146 %
+EER source valid : 30.23044325375288 %
+EER target test : 31.248746490172486 %
+EER source test : 22.151617848785605 %
+time taken for eers computation : 36
+	Validation [36/400]	, G/loss_id: 0.2920, G/loss_id_psnt: 0.1512, G/loss_cd: 0.0109, G/loss_emb: 0.0019
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:25:15], Epoch [37/400]	, G/loss_id: 0.3027, G/loss_id_psnt: 0.1478, G/loss_cd: 0.0104, G/loss_emb: 0.0018
+EER target valid : 23.133581034772227 %
+EER source valid : 29.657183900263856 %
+EER target test : 29.017185619735265 %
+EER source test : 21.261498426531105 %
+time taken for eers computation : 36
+	Validation [37/400]	, G/loss_id: 0.2990, G/loss_id_psnt: 0.1445, G/loss_cd: 0.0111, G/loss_emb: 0.0019
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:27:34], Epoch [38/400]	, G/loss_id: 0.2797, G/loss_id_psnt: 0.1468, G/loss_cd: 0.0101, G/loss_emb: 0.0017
+EER target valid : 23.596165677192328 %
+EER source valid : 28.92331455374561 %
+EER target test : 28.953005916566386 %
+EER source test : 22.367717663196967 %
+time taken for eers computation : 35
+	Validation [38/400]	, G/loss_id: 0.2830, G/loss_id_psnt: 0.1447, G/loss_cd: 0.0107, G/loss_emb: 0.0019
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:29:53], Epoch [39/400]	, G/loss_id: 0.2753, G/loss_id_psnt: 0.1501, G/loss_cd: 0.0103, G/loss_emb: 0.0016
+EER target valid : 23.515159594343757 %
+EER source valid : 29.726826228240235 %
+EER target test : 30.556558363417572 %
+EER source test : 19.374344387960946 %
+time taken for eers computation : 36
+	Validation [39/400]	, G/loss_id: 0.2713, G/loss_id_psnt: 0.1452, G/loss_cd: 0.0109, G/loss_emb: 0.0018
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:32:12], Epoch [40/400]	, G/loss_id: 0.2746, G/loss_id_psnt: 0.1407, G/loss_cd: 0.0099, G/loss_emb: 0.0019
+EER target valid : 23.77056190493503 %
+EER source valid : 27.58730115448772 %
+EER target test : 29.84832531087044 %
+EER source test : 19.607590978778344 %
+time taken for eers computation : 36
+	Validation [40/400]	, G/loss_id: 0.2748, G/loss_id_psnt: 0.1370, G/loss_cd: 0.0101, G/loss_emb: 0.0018
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:34:31], Epoch [41/400]	, G/loss_id: 0.2769, G/loss_id_psnt: 0.1642, G/loss_cd: 0.0106, G/loss_emb: 0.0018
+EER target valid : 23.74706258500928 %
+EER source valid : 29.033395258693055 %
+EER target test : 28.777953269153628 %
+EER source test : 22.384864439603003 %
+time taken for eers computation : 36
+	Validation [41/400]	, G/loss_id: 0.2641, G/loss_id_psnt: 0.1380, G/loss_cd: 0.0101, G/loss_emb: 0.0018
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:36:51], Epoch [42/400]	, G/loss_id: 0.2698, G/loss_id_psnt: 0.1446, G/loss_cd: 0.0099, G/loss_emb: 0.0017
+EER target valid : 23.622146051103115 %
+EER source valid : 29.018346279208394 %
+EER target test : 27.636820597673484 %
+EER source test : 22.37629105139998 %
+time taken for eers computation : 36
+	Validation [42/400]	, G/loss_id: 0.2624, G/loss_id_psnt: 0.1355, G/loss_cd: 0.0102, G/loss_emb: 0.0018
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:39:11], Epoch [43/400]	, G/loss_id: 0.2639, G/loss_id_psnt: 0.1427, G/loss_cd: 0.0099, G/loss_emb: 0.0016
+EER target valid : 23.678832528691128 %
+EER source valid : 29.310451247206753 %
+EER target test : 29.17218210990774 %
+EER source test : 21.1331497619624 %
+time taken for eers computation : 36
+	Validation [43/400]	, G/loss_id: 0.2572, G/loss_id_psnt: 0.1351, G/loss_cd: 0.0105, G/loss_emb: 0.0017
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:41:30], Epoch [44/400]	, G/loss_id: 0.2528, G/loss_id_psnt: 0.1282, G/loss_cd: 0.0097, G/loss_emb: 0.0016
+EER target valid : 23.540300494838156 %
+EER source valid : 28.47454139351474 %
+EER target test : 28.15395607701564 %
+EER source test : 20.335068183652062 %
+time taken for eers computation : 36
+	Validation [44/400]	, G/loss_id: 0.2537, G/loss_id_psnt: 0.1312, G/loss_cd: 0.0101, G/loss_emb: 0.0017
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:43:49], Epoch [45/400]	, G/loss_id: 0.2572, G/loss_id_psnt: 0.1363, G/loss_cd: 0.0095, G/loss_emb: 0.0017
+EER target valid : 23.48933884631031 %
+EER source valid : 28.389404596920237 %
+EER target test : 29.83228038507822 %
+EER source test : 18.156923263132413 %
+time taken for eers computation : 36
+	Validation [45/400]	, G/loss_id: 0.2510, G/loss_id_psnt: 0.1280, G/loss_cd: 0.0102, G/loss_emb: 0.0018
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:46:08], Epoch [46/400]	, G/loss_id: 0.2406, G/loss_id_psnt: 0.1392, G/loss_cd: 0.0096, G/loss_emb: 0.0017
+EER target valid : 23.258258160777658 %
+EER source valid : 29.884148010637002 %
+EER target test : 27.759727236261533 %
+EER source test : 22.160191236988624 %
+time taken for eers computation : 36
+	Validation [46/400]	, G/loss_id: 0.2394, G/loss_id_psnt: 0.1294, G/loss_cd: 0.0100, G/loss_emb: 0.0017
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:48:27], Epoch [47/400]	, G/loss_id: 0.2479, G/loss_id_psnt: 0.1309, G/loss_cd: 0.0097, G/loss_emb: 0.0015
+EER target valid : 23.572219858234085 %
+EER source valid : 28.74747474747475 %
+EER target test : 27.779783393501805 %
+EER source test : 20.480563624626807 %
+time taken for eers computation : 36
+	Validation [47/400]	, G/loss_id: 0.2399, G/loss_id_psnt: 0.1248, G/loss_cd: 0.0099, G/loss_emb: 0.0017
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:50:47], Epoch [48/400]	, G/loss_id: 0.2381, G/loss_id_psnt: 0.1422, G/loss_cd: 0.0103, G/loss_emb: 0.0017
+EER target valid : 23.346146726127873 %
+EER source valid : 29.443207957048045 %
+EER target test : 28.99311823104693 %
+EER source test : 19.986333010570483 %
+time taken for eers computation : 36
+	Validation [48/400]	, G/loss_id: 0.2296, G/loss_id_psnt: 0.1282, G/loss_cd: 0.0100, G/loss_emb: 0.0017
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:53:06], Epoch [49/400]	, G/loss_id: 0.2380, G/loss_id_psnt: 0.1343, G/loss_cd: 0.0095, G/loss_emb: 0.0016
+EER target valid : 22.764624935247955 %
+EER source valid : 30.967222985005137 %
+EER target test : 27.29473776574408 %
+EER source test : 22.292826595658838 %
+time taken for eers computation : 36
+	Validation [49/400]	, G/loss_id: 0.2292, G/loss_id_psnt: 0.1217, G/loss_cd: 0.0095, G/loss_emb: 0.0016
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:55:26], Epoch [50/400]	, G/loss_id: 0.2191, G/loss_id_psnt: 0.1286, G/loss_cd: 0.0099, G/loss_emb: 0.0016
+EER target valid : 22.105530759442836 %
+EER source valid : 30.95257505909661 %
+EER target test : 25.548222523064577 %
+EER source test : 22.949699427095943 %
+time taken for eers computation : 36
+	Validation [50/400]	, G/loss_id: 0.2192, G/loss_id_psnt: 0.1245, G/loss_cd: 0.0101, G/loss_emb: 0.0016
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [1:57:45], Epoch [51/400]	, G/loss_id: 0.2107, G/loss_id_psnt: 0.1251, G/loss_cd: 0.0093, G/loss_emb: 0.0014
+EER target valid : 20.907648340461776 %
+EER source valid : 29.83078004065235 %
+EER target test : 26.21634326113117 %
+EER source test : 21.049685306221257 %
+time taken for eers computation : 36
+	Validation [51/400]	, G/loss_id: 0.2122, G/loss_id_psnt: 0.1245, G/loss_cd: 0.0102, G/loss_emb: 0.0015
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:00:05], Epoch [52/400]	, G/loss_id: 0.2214, G/loss_id_psnt: 0.1349, G/loss_cd: 0.0100, G/loss_emb: 0.0013
+EER target valid : 18.865182477831375 %
+EER source valid : 30.769738589903127 %
+EER target test : 23.264515643802646 %
+EER source test : 24.18426732833051 %
+time taken for eers computation : 36
+	Validation [52/400]	, G/loss_id: 0.2133, G/loss_id_psnt: 0.1178, G/loss_cd: 0.0097, G/loss_emb: 0.0014
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:02:24], Epoch [53/400]	, G/loss_id: 0.2131, G/loss_id_psnt: 0.1239, G/loss_cd: 0.0096, G/loss_emb: 0.0014
+EER target valid : 16.339513750517266 %
+EER source valid : 33.01855337034015 %
+EER target test : 17.735033092659446 %
+EER source test : 29.775125070604375 %
+time taken for eers computation : 36
+	Validation [53/400]	, G/loss_id: 0.2120, G/loss_id_psnt: 0.1160, G/loss_cd: 0.0096, G/loss_emb: 0.0014
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:04:44], Epoch [54/400]	, G/loss_id: 0.2111, G/loss_id_psnt: 0.1155, G/loss_cd: 0.0094, G/loss_emb: 0.0012
+EER target valid : 14.174603318874466 %
+EER source valid : 34.32591339905591 %
+EER target test : 19.270394604893703 %
+EER source test : 30.436284596142983 %
+time taken for eers computation : 36
+	Validation [54/400]	, G/loss_id: 0.2054, G/loss_id_psnt: 0.1144, G/loss_cd: 0.0098, G/loss_emb: 0.0013
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:07:03], Epoch [55/400]	, G/loss_id: 0.2055, G/loss_id_psnt: 0.1188, G/loss_cd: 0.0092, G/loss_emb: 0.0012
+EER target valid : 14.119563471350258 %
+EER source valid : 36.1146387296443 %
+EER target test : 16.49361963497794 %
+EER source test : 33.050915839586864 %
+time taken for eers computation : 36
+	Validation [55/400]	, G/loss_id: 0.1997, G/loss_id_psnt: 0.1148, G/loss_cd: 0.0096, G/loss_emb: 0.0013
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:09:22], Epoch [56/400]	, G/loss_id: 0.1958, G/loss_id_psnt: 0.1131, G/loss_cd: 0.0087, G/loss_emb: 0.0010
+EER target valid : 9.961451700589588 %
+EER source valid : 38.47289173375385 %
+EER target test : 12.503509827517048 %
+EER source test : 36.07631324134593 %
+time taken for eers computation : 36
+	Validation [56/400]	, G/loss_id: 0.1956, G/loss_id_psnt: 0.1100, G/loss_cd: 0.0091, G/loss_emb: 0.0012
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:11:42], Epoch [57/400]	, G/loss_id: 0.2094, G/loss_id_psnt: 0.1246, G/loss_cd: 0.0096, G/loss_emb: 0.0011
+EER target valid : 7.658421397559284 %
+EER source valid : 40.641285348372506 %
+EER target test : 11.11111111111111 %
+EER source test : 37.18253247801178 %
+time taken for eers computation : 36
+	Validation [57/400]	, G/loss_id: 0.1945, G/loss_id_psnt: 0.1106, G/loss_cd: 0.0094, G/loss_emb: 0.0011
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:14:03], Epoch [58/400]	, G/loss_id: 0.1883, G/loss_id_psnt: 0.1143, G/loss_cd: 0.0088, G/loss_emb: 0.0010
+EER target valid : 6.298701587243878 %
+EER source valid : 41.83096289420739 %
+EER target test : 9.026524267950261 %
+EER source test : 38.70809126119583 %
+time taken for eers computation : 36
+	Validation [58/400]	, G/loss_id: 0.1881, G/loss_id_psnt: 0.1118, G/loss_cd: 0.0098, G/loss_emb: 0.0011
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:16:23], Epoch [59/400]	, G/loss_id: 0.1888, G/loss_id_psnt: 0.1147, G/loss_cd: 0.0085, G/loss_emb: 0.0009
+EER target valid : 3.7962958016518735 %
+EER source valid : 44.4192722370801 %
+EER target test : 6.424801945447252 %
+EER source test : 45.171921649318165 %
+time taken for eers computation : 36
+	Validation [59/400]	, G/loss_id: 0.1819, G/loss_id_psnt: 0.1073, G/loss_cd: 0.0090, G/loss_emb: 0.0010
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:18:42], Epoch [60/400]	, G/loss_id: 0.1881, G/loss_id_psnt: 0.1110, G/loss_cd: 0.0096, G/loss_emb: 0.0010
+EER target valid : 10.237064110575123 %
+EER source valid : 39.447533643137376 %
+EER target test : 13.541792017649417 %
+EER source test : 38.84930000806907 %
+time taken for eers computation : 36
+	Validation [60/400]	, G/loss_id: 0.1849, G/loss_id_psnt: 0.1099, G/loss_cd: 0.0102, G/loss_emb: 0.0011
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:21:02], Epoch [61/400]	, G/loss_id: 0.1838, G/loss_id_psnt: 0.1137, G/loss_cd: 0.0089, G/loss_emb: 0.0008
+EER target valid : 6.7578171852745506 %
+EER source valid : 43.65672831214009 %
+EER target test : 10.936058463698355 %
+EER source test : 43.13927216977326 %
+time taken for eers computation : 36
+	Validation [61/400]	, G/loss_id: 0.1766, G/loss_id_psnt: 0.1048, G/loss_cd: 0.0094, G/loss_emb: 0.0010
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:23:22], Epoch [62/400]	, G/loss_id: 0.1818, G/loss_id_psnt: 0.1087, G/loss_cd: 0.0082, G/loss_emb: 0.0008
+EER target valid : 3.0086584414718787 %
+EER source valid : 45.39766501451307 %
+EER target test : 9.201576915363017 %
+EER source test : 44.66483095295731 %
+time taken for eers computation : 36
+	Validation [62/400]	, G/loss_id: 0.1731, G/loss_id_psnt: 0.1033, G/loss_cd: 0.0090, G/loss_emb: 0.0009
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:25:41], Epoch [63/400]	, G/loss_id: 0.1829, G/loss_id_psnt: 0.1183, G/loss_cd: 0.0124, G/loss_emb: 0.0015
+EER target valid : 17.198955240903995 %
+EER source valid : 37.2710786228654 %
+EER target test : 22.918421580425193 %
+EER source test : 31.79062777374324 %
+time taken for eers computation : 35
+	Validation [63/400]	, G/loss_id: 0.1778, G/loss_id_psnt: 0.1122, G/loss_cd: 0.0127, G/loss_emb: 0.0016
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:28:00], Epoch [64/400]	, G/loss_id: 0.1871, G/loss_id_psnt: 0.1205, G/loss_cd: 0.0114, G/loss_emb: 0.0014
+EER target valid : 15.119975633815724 %
+EER source valid : 39.06390437022882 %
+EER target test : 24.49389540713999 %
+EER source test : 28.540557169369805 %
+time taken for eers computation : 35
+	Validation [64/400]	, G/loss_id: 0.1708, G/loss_id_psnt: 0.1091, G/loss_cd: 0.0115, G/loss_emb: 0.0013
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:30:20], Epoch [65/400]	, G/loss_id: 0.1799, G/loss_id_psnt: 0.1239, G/loss_cd: 0.0098, G/loss_emb: 0.0010
+EER target valid : 9.618017357155244 %
+EER source valid : 42.20986441755145 %
+EER target test : 20.479718210990775 %
+EER source test : 36.613410796417334 %
+time taken for eers computation : 35
+	Validation [65/400]	, G/loss_id: 0.1638, G/loss_id_psnt: 0.1014, G/loss_cd: 0.0098, G/loss_emb: 0.0010
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:32:39], Epoch [66/400]	, G/loss_id: 0.1797, G/loss_id_psnt: 0.1169, G/loss_cd: 0.0111, G/loss_emb: 0.0013
+EER target valid : 19.58792646747913 %
+EER source valid : 31.415634477722058 %
+EER target test : 23.435557059767348 %
+EER source test : 25.11927095941257 %
+time taken for eers computation : 37
+	Validation [66/400]	, G/loss_id: 0.1655, G/loss_id_psnt: 0.1058, G/loss_cd: 0.0118, G/loss_emb: 0.0013
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:35:00], Epoch [67/400]	, G/loss_id: 0.1698, G/loss_id_psnt: 0.1170, G/loss_cd: 0.0100, G/loss_emb: 0.0008
+EER target valid : 6.319934013609564 %
+EER source valid : 42.90765439985596 %
+EER target test : 9.547670978740474 %
+EER source test : 42.18712176228516 %
+time taken for eers computation : 35
+	Validation [67/400]	, G/loss_id: 0.1590, G/loss_id_psnt: 0.1000, G/loss_cd: 0.0098, G/loss_emb: 0.0009
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:37:19], Epoch [68/400]	, G/loss_id: 0.1684, G/loss_id_psnt: 0.1117, G/loss_cd: 0.0097, G/loss_emb: 0.0008
+EER target valid : 4.377447845825599 %
+EER source valid : 44.56650512816422 %
+EER target test : 7.080888989169676 %
+EER source test : 44.14488017429194 %
+time taken for eers computation : 36
+	Validation [68/400]	, G/loss_id: 0.1516, G/loss_id_psnt: 0.0989, G/loss_cd: 0.0094, G/loss_emb: 0.0009
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:39:38], Epoch [69/400]	, G/loss_id: 0.1528, G/loss_id_psnt: 0.0986, G/loss_cd: 0.0084, G/loss_emb: 0.0007
+EER target valid : 3.326124529783798 %
+EER source valid : 45.68666260563595 %
+EER target test : 6.7708960088247085 %
+EER source test : 45.22966594045026 %
+time taken for eers computation : 35
+	Validation [69/400]	, G/loss_id: 0.1478, G/loss_id_psnt: 0.0980, G/loss_cd: 0.0095, G/loss_emb: 0.0009
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:41:57], Epoch [70/400]	, G/loss_id: 0.1574, G/loss_id_psnt: 0.1040, G/loss_cd: 0.0086, G/loss_emb: 0.0007
+EER target valid : 2.9734074417851946 %
+EER source valid : 45.90579259946816 %
+EER target test : 13.195697954271962 %
+EER source test : 45.69187242798354 %
+time taken for eers computation : 36
+	Validation [70/400]	, G/loss_id: 0.1459, G/loss_id_psnt: 0.0963, G/loss_cd: 0.0090, G/loss_emb: 0.0008
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:44:17], Epoch [71/400]	, G/loss_id: 0.1479, G/loss_id_psnt: 0.0964, G/loss_cd: 0.0081, G/loss_emb: 0.0006
+EER target valid : 2.3426100185034113 %
+EER source valid : 46.22304654715316 %
+EER target test : 8.505377557160049 %
+EER source test : 46.69748043250222 %
+time taken for eers computation : 35
+	Validation [71/400]	, G/loss_id: 0.1412, G/loss_id_psnt: 0.0950, G/loss_cd: 0.0086, G/loss_emb: 0.0008
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:46:36], Epoch [72/400]	, G/loss_id: 0.1846, G/loss_id_psnt: 0.1394, G/loss_cd: 0.0175, G/loss_emb: 0.0022
+EER target valid : 23.998969593836332 %
+EER source valid : 36.49492424747373 %
+EER target test : 30.747655936622543 %
+EER source test : 22.874808359557814 %
+time taken for eers computation : 35
+	Validation [72/400]	, G/loss_id: 0.1731, G/loss_id_psnt: 0.1276, G/loss_cd: 0.0173, G/loss_emb: 0.0022
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:48:55], Epoch [73/400]	, G/loss_id: 0.1504, G/loss_id_psnt: 0.1013, G/loss_cd: 0.0102, G/loss_emb: 0.0011
+EER target valid : 17.21748134397033 %
+EER source valid : 42.40424042587896 %
+EER target test : 23.948681307661452 %
+EER source test : 36.164064391188575 %
+time taken for eers computation : 35
+	Validation [73/400]	, G/loss_id: 0.1443, G/loss_id_psnt: 0.0981, G/loss_cd: 0.0104, G/loss_emb: 0.0012
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:51:14], Epoch [74/400]	, G/loss_id: 0.1559, G/loss_id_psnt: 0.1141, G/loss_cd: 0.0143, G/loss_emb: 0.0019
+EER target valid : 24.3626059574727 %
+EER source valid : 26.256864067301976 %
+EER target test : 29.514264941837144 %
+EER source test : 19.5241265230372 %
+time taken for eers computation : 35
+	Validation [74/400]	, G/loss_id: 0.1464, G/loss_id_psnt: 0.1064, G/loss_cd: 0.0141, G/loss_emb: 0.0019
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:53:33], Epoch [75/400]	, G/loss_id: 0.1280, G/loss_id_psnt: 0.0910, G/loss_cd: 0.0097, G/loss_emb: 0.0014
+EER target valid : 18.617829454105056 %
+EER source valid : 32.375593114731 %
+EER target test : 28.268840252707584 %
+EER source test : 21.34924957637376 %
+time taken for eers computation : 35
+	Validation [75/400]	, G/loss_id: 0.1349, G/loss_id_psnt: 0.0970, G/loss_cd: 0.0101, G/loss_emb: 0.0014
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:55:52], Epoch [76/400]	, G/loss_id: 0.1431, G/loss_id_psnt: 0.1082, G/loss_cd: 0.0090, G/loss_emb: 0.0011
+EER target valid : 13.197678357546383 %
+EER source valid : 38.06579646758754 %
+EER target test : 22.548260128359406 %
+EER source test : 29.92062051157912 %
+time taken for eers computation : 35
+	Validation [76/400]	, G/loss_id: 0.1322, G/loss_id_psnt: 0.0925, G/loss_cd: 0.0093, G/loss_emb: 0.0011
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [2:58:11], Epoch [77/400]	, G/loss_id: 0.1355, G/loss_id_psnt: 0.0971, G/loss_cd: 0.0085, G/loss_emb: 0.0009
+EER target valid : 8.012368913560104 %
+EER source valid : 43.09359117663171 %
+EER target test : 14.930179502607299 %
+EER source test : 38.9241910756072 %
+time taken for eers computation : 35
+	Validation [77/400]	, G/loss_id: 0.1308, G/loss_id_psnt: 0.0928, G/loss_cd: 0.0094, G/loss_emb: 0.0009
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:00:30], Epoch [78/400]	, G/loss_id: 0.1313, G/loss_id_psnt: 0.0899, G/loss_cd: 0.0084, G/loss_emb: 0.0007
+EER target valid : 6.25170092759432 %
+EER source valid : 44.74273386922286 %
+EER target test : 10.936058463698355 %
+EER source test : 41.53882231905107 %
+time taken for eers computation : 36
+	Validation [78/400]	, G/loss_id: 0.1278, G/loss_id_psnt: 0.0898, G/loss_cd: 0.0089, G/loss_emb: 0.0008
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:02:49], Epoch [79/400]	, G/loss_id: 0.1294, G/loss_id_psnt: 0.1008, G/loss_cd: 0.0085, G/loss_emb: 0.0007
+EER target valid : 5.557861835177801 %
+EER source valid : 45.21995431876313 %
+EER target test : 9.241689229843562 %
+EER source test : 43.57147179859599 %
+time taken for eers computation : 35
+	Validation [79/400]	, G/loss_id: 0.1232, G/loss_id_psnt: 0.0886, G/loss_cd: 0.0086, G/loss_emb: 0.0008
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:05:08], Epoch [80/400]	, G/loss_id: 0.1359, G/loss_id_psnt: 0.0947, G/loss_cd: 0.0082, G/loss_emb: 0.0006
+EER target valid : 4.81694533078542 %
+EER source valid : 45.91238921871367 %
+EER target test : 9.70667870036101 %
+EER source test : 45.88225207778584 %
+time taken for eers computation : 35
+	Validation [80/400]	, G/loss_id: 0.1232, G/loss_id_psnt: 0.0897, G/loss_cd: 0.0091, G/loss_emb: 0.0008
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:07:27], Epoch [81/400]	, G/loss_id: 0.1177, G/loss_id_psnt: 0.0865, G/loss_cd: 0.0086, G/loss_emb: 0.0006
+EER target valid : 3.644195733106523 %
+EER source valid : 46.72378752449881 %
+EER target test : 7.1169900722021655 %
+EER source test : 47.87001734850318 %
+time taken for eers computation : 36
+	Validation [81/400]	, G/loss_id: 0.1201, G/loss_id_psnt: 0.0867, G/loss_cd: 0.0085, G/loss_emb: 0.0007
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:09:47], Epoch [82/400]	, G/loss_id: 0.1273, G/loss_id_psnt: 0.1031, G/loss_cd: 0.0082, G/loss_emb: 0.0006
+EER target valid : 2.739641640832831 %
+EER source valid : 47.14325069432619 %
+EER target test : 7.602035699959889 %
+EER source test : 47.495562010812556 %
+time taken for eers computation : 35
+	Validation [82/400]	, G/loss_id: 0.1172, G/loss_id_psnt: 0.0858, G/loss_cd: 0.0082, G/loss_emb: 0.0007
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:12:06], Epoch [83/400]	, G/loss_id: 0.1375, G/loss_id_psnt: 0.1041, G/loss_cd: 0.0082, G/loss_emb: 0.0006
+EER target valid : 2.3133373943640465 %
+EER source valid : 47.34632049059164 %
+EER target test : 7.813189430405135 %
+EER source test : 46.768084805938834 %
+time taken for eers computation : 35
+	Validation [83/400]	, G/loss_id: 0.1159, G/loss_id_psnt: 0.0855, G/loss_cd: 0.0082, G/loss_emb: 0.0007
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:14:25], Epoch [84/400]	, G/loss_id: 0.1135, G/loss_id_psnt: 0.0855, G/loss_cd: 0.0074, G/loss_emb: 0.0006
+EER target valid : 1.94246798960142 %
+EER source valid : 47.575551494524845 %
+EER target test : 6.424801945447252 %
+EER source test : 46.842975873476966 %
+time taken for eers computation : 35
+	Validation [84/400]	, G/loss_id: 0.1120, G/loss_id_psnt: 0.0845, G/loss_cd: 0.0080, G/loss_emb: 0.0007
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:16:44], Epoch [85/400]	, G/loss_id: 0.1098, G/loss_id_psnt: 0.0820, G/loss_cd: 0.0077, G/loss_emb: 0.0006
+EER target valid : 2.348951071463712 %
+EER source valid : 47.38672453099568 %
+EER target test : 11.807310469314078 %
+EER source test : 46.11549866860324 %
+time taken for eers computation : 35
+	Validation [85/400]	, G/loss_id: 0.1118, G/loss_id_psnt: 0.0841, G/loss_cd: 0.0082, G/loss_emb: 0.0007
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:19:03], Epoch [86/400]	, G/loss_id: 0.1125, G/loss_id_psnt: 0.0835, G/loss_cd: 0.0075, G/loss_emb: 0.0005
+EER target valid : 1.4904146979303377 %
+EER source valid : 48.01116979242783 %
+EER target test : 8.15928349378259 %
+EER source test : 48.800734285483735 %
+time taken for eers computation : 35
+	Validation [86/400]	, G/loss_id: 0.1096, G/loss_id_psnt: 0.0833, G/loss_cd: 0.0080, G/loss_emb: 0.0007
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:21:22], Epoch [87/400]	, G/loss_id: 0.1160, G/loss_id_psnt: 0.0859, G/loss_cd: 0.0072, G/loss_emb: 0.0005
+EER target valid : 1.4656768708101298 %
+EER source valid : 48.03880083599854 %
+EER target test : 16.664661050942637 %
+EER source test : 45.67901234567901 %
+time taken for eers computation : 35
+	Validation [87/400]	, G/loss_id: 0.1065, G/loss_id_psnt: 0.0818, G/loss_cd: 0.0075, G/loss_emb: 0.0007
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:23:42], Epoch [88/400]	, G/loss_id: 0.1145, G/loss_id_psnt: 0.0925, G/loss_cd: 0.0077, G/loss_emb: 0.0005
+EER target valid : 1.3428231690293564 %
+EER source valid : 48.395795134933024 %
+EER target test : 16.147525571600482 %
+EER source test : 44.96868191721133 %
+time taken for eers computation : 35
+	Validation [88/400]	, G/loss_id: 0.1069, G/loss_id_psnt: 0.0823, G/loss_cd: 0.0077, G/loss_emb: 0.0007
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:26:01], Epoch [89/400]	, G/loss_id: 0.1147, G/loss_id_psnt: 0.0886, G/loss_cd: 0.0074, G/loss_emb: 0.0005
+EER target valid : 1.2079652508995211 %
+EER source valid : 48.287363079847445 %
+EER target test : 12.153404532691535 %
+EER source test : 48.95908980876301 %
+time taken for eers computation : 36
+	Validation [89/400]	, G/loss_id: 0.1058, G/loss_id_psnt: 0.0823, G/loss_cd: 0.0079, G/loss_emb: 0.0007
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:28:20], Epoch [90/400]	, G/loss_id: 0.1183, G/loss_id_psnt: 0.0883, G/loss_cd: 0.0071, G/loss_emb: 0.0005
+EER target valid : 1.1170894866584302 %
+EER source valid : 48.47495759557633 %
+EER target test : 11.453193943040512 %
+EER source test : 49.74431130476882 %
+time taken for eers computation : 35
+	Validation [90/400]	, G/loss_id: 0.1030, G/loss_id_psnt: 0.0805, G/loss_cd: 0.0076, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:30:39], Epoch [91/400]	, G/loss_id: 0.1116, G/loss_id_psnt: 0.0855, G/loss_cd: 0.0069, G/loss_emb: 0.0005
+EER target valid : 1.2871569986147071 %
+EER source valid : 48.25912187177077 %
+EER target test : 12.702629863618132 %
+EER source test : 48.439139030097635 %
+time taken for eers computation : 35
+	Validation [91/400]	, G/loss_id: 0.1014, G/loss_id_psnt: 0.0803, G/loss_cd: 0.0076, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:32:59], Epoch [92/400]	, G/loss_id: 0.0996, G/loss_id_psnt: 0.0780, G/loss_cd: 0.0075, G/loss_emb: 0.0005
+EER target valid : 1.5464849516182106 %
+EER source valid : 48.37600527719646 %
+EER target test : 20.137635379061372 %
+EER source test : 46.459947147583314 %
+time taken for eers computation : 35
+	Validation [92/400]	, G/loss_id: 0.1002, G/loss_id_psnt: 0.0804, G/loss_cd: 0.0077, G/loss_emb: 0.0007
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:35:18], Epoch [93/400]	, G/loss_id: 0.1105, G/loss_id_psnt: 0.0869, G/loss_cd: 0.0070, G/loss_emb: 0.0005
+EER target valid : 0.9551035783360747 %
+EER source valid : 48.59117731184747 %
+EER target test : 20.137635379061372 %
+EER source test : 48.148148148148145 %
+time taken for eers computation : 35
+	Validation [93/400]	, G/loss_id: 0.0989, G/loss_id_psnt: 0.0801, G/loss_cd: 0.0077, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:37:38], Epoch [94/400]	, G/loss_id: 0.1052, G/loss_id_psnt: 0.0847, G/loss_cd: 0.0072, G/loss_emb: 0.0005
+EER target valid : 0.6052393108267649 %
+EER source valid : 48.75036089463204 %
+EER target test : 11.457205174488568 %
+EER source test : 50.326293068667795 %
+time taken for eers computation : 35
+	Validation [94/400]	, G/loss_id: 0.0976, G/loss_id_psnt: 0.0792, G/loss_cd: 0.0077, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:39:56], Epoch [95/400]	, G/loss_id: 0.1050, G/loss_id_psnt: 0.0881, G/loss_cd: 0.0073, G/loss_emb: 0.0005
+EER target valid : 0.8142652648608601 %
+EER source valid : 48.802341840434224 %
+EER target test : 21.876128158844764 %
+EER source test : 47.71166182522391 %
+time taken for eers computation : 35
+	Validation [95/400]	, G/loss_id: 0.0967, G/loss_id_psnt: 0.0787, G/loss_cd: 0.0076, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:42:15], Epoch [96/400]	, G/loss_id: 0.1014, G/loss_id_psnt: 0.0802, G/loss_cd: 0.0071, G/loss_emb: 0.0005
+EER target valid : 1.3147799629931776 %
+EER source valid : 48.69018719447205 %
+EER target test : 24.827955776173287 %
+EER source test : 46.842975873476966 %
+time taken for eers computation : 35
+	Validation [96/400]	, G/loss_id: 0.0954, G/loss_id_psnt: 0.0780, G/loss_cd: 0.0075, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:44:35], Epoch [97/400]	, G/loss_id: 0.1277, G/loss_id_psnt: 0.1077, G/loss_cd: 0.0068, G/loss_emb: 0.0005
+EER target valid : 1.4269224901669841 %
+EER source valid : 48.77715953407958 %
+EER target test : 26.21634326113117 %
+EER source test : 47.504135399015574 %
+time taken for eers computation : 35
+	Validation [97/400]	, G/loss_id: 0.0933, G/loss_id_psnt: 0.0761, G/loss_cd: 0.0069, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:46:54], Epoch [98/400]	, G/loss_id: 0.0984, G/loss_id_psnt: 0.0799, G/loss_cd: 0.0066, G/loss_emb: 0.0004
+EER target valid : 0.5334977943599076 %
+EER source valid : 48.93836353323027 %
+EER target test : 10.936058463698355 %
+EER source test : 49.324971758250626 %
+time taken for eers computation : 35
+	Validation [98/400]	, G/loss_id: 0.0929, G/loss_id_psnt: 0.0772, G/loss_cd: 0.0072, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:49:13], Epoch [99/400]	, G/loss_id: 0.0962, G/loss_id_psnt: 0.0779, G/loss_cd: 0.0066, G/loss_emb: 0.0004
+EER target valid : 0.9958773654463089 %
+EER source valid : 48.97076171242767 %
+EER target test : 25.86623796630566 %
+EER source test : 47.76940611635601 %
+time taken for eers computation : 36
+	Validation [99/400]	, G/loss_id: 0.0916, G/loss_id_psnt: 0.0765, G/loss_cd: 0.0073, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:51:32], Epoch [100/400]	, G/loss_id: 0.0993, G/loss_id_psnt: 0.0822, G/loss_cd: 0.0075, G/loss_emb: 0.0004
+EER target valid : 1.0616364667697258 %
+EER source valid : 48.981029417699226 %
+EER target test : 25.695196550340953 %
+EER source test : 46.913580246913575 %
+time taken for eers computation : 36
+	Validation [100/400]	, G/loss_id: 0.0906, G/loss_id_psnt: 0.0763, G/loss_cd: 0.0072, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:53:52], Epoch [101/400]	, G/loss_id: 0.1157, G/loss_id_psnt: 0.1032, G/loss_cd: 0.0107, G/loss_emb: 0.0024
+EER target valid : 17.599257905582355 %
+EER source valid : 35.71861428580085 %
+EER target test : 24.111700260730046 %
+EER source test : 27.098462841926896 %
+time taken for eers computation : 36
+	Validation [101/400]	, G/loss_id: 0.1030, G/loss_id_psnt: 0.0910, G/loss_cd: 0.0108, G/loss_emb: 0.0023
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:56:13], Epoch [102/400]	, G/loss_id: 0.0935, G/loss_id_psnt: 0.0804, G/loss_cd: 0.0077, G/loss_emb: 0.0010
+EER target valid : 7.414735420262886 %
+EER source valid : 44.00783310664191 %
+EER target test : 15.125288307260329 %
+EER source test : 37.689623174372635 %
+time taken for eers computation : 36
+	Validation [102/400]	, G/loss_id: 0.0910, G/loss_id_psnt: 0.0775, G/loss_cd: 0.0077, G/loss_emb: 0.0010
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [3:58:33], Epoch [103/400]	, G/loss_id: 0.0924, G/loss_id_psnt: 0.0789, G/loss_cd: 0.0078, G/loss_emb: 0.0006
+EER target valid : 3.3861406238645073 %
+EER source valid : 47.2745830137209 %
+EER target test : 6.21765944645006 %
+EER source test : 46.68462035019769 %
+time taken for eers computation : 36
+	Validation [103/400]	, G/loss_id: 0.0891, G/loss_id_psnt: 0.0766, G/loss_cd: 0.0076, G/loss_emb: 0.0008
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:00:54], Epoch [104/400]	, G/loss_id: 0.0896, G/loss_id_psnt: 0.0756, G/loss_cd: 0.0070, G/loss_emb: 0.0005
+EER target valid : 2.5390640074417603 %
+EER source valid : 48.09526810366642 %
+EER target test : 4.555380064179703 %
+EER source test : 48.655238844509 %
+time taken for eers computation : 36
+	Validation [104/400]	, G/loss_id: 0.0878, G/loss_id_psnt: 0.0751, G/loss_cd: 0.0072, G/loss_emb: 0.0007
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:03:14], Epoch [105/400]	, G/loss_id: 0.1009, G/loss_id_psnt: 0.0860, G/loss_cd: 0.0065, G/loss_emb: 0.0005
+EER target valid : 2.0214778936606 %
+EER source valid : 48.31395563806225 %
+EER target test : 5.72459135579623 %
+EER source test : 49.23722060840797 %
+time taken for eers computation : 36
+	Validation [105/400]	, G/loss_id: 0.0866, G/loss_id_psnt: 0.0749, G/loss_cd: 0.0071, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:05:34], Epoch [106/400]	, G/loss_id: 0.0817, G/loss_id_psnt: 0.0702, G/loss_cd: 0.0067, G/loss_emb: 0.0005
+EER target valid : 1.745000762782921 %
+EER source valid : 48.48938328186764 %
+EER target test : 6.249749298034497 %
+EER source test : 48.655238844509 %
+time taken for eers computation : 36
+	Validation [106/400]	, G/loss_id: 0.0869, G/loss_id_psnt: 0.0754, G/loss_cd: 0.0073, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:07:55], Epoch [107/400]	, G/loss_id: 0.0859, G/loss_id_psnt: 0.0734, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+EER target valid : 0.820655802873645 %
+EER source valid : 48.9314052464708 %
+EER target test : 5.593662254312074 %
+EER source test : 49.0788650851287 %
+time taken for eers computation : 36
+	Validation [107/400]	, G/loss_id: 0.0861, G/loss_id_psnt: 0.0754, G/loss_cd: 0.0071, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:10:14], Epoch [108/400]	, G/loss_id: 0.0886, G/loss_id_psnt: 0.0766, G/loss_cd: 0.0067, G/loss_emb: 0.0005
+EER target valid : 0.7487496110342969 %
+EER source valid : 49.018603865291674 %
+EER target test : 7.984230846369836 %
+EER source test : 49.54107157266199 %
+time taken for eers computation : 36
+	Validation [108/400]	, G/loss_id: 0.0840, G/loss_id_psnt: 0.0731, G/loss_cd: 0.0067, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:12:33], Epoch [109/400]	, G/loss_id: 0.1096, G/loss_id_psnt: 0.0963, G/loss_cd: 0.0069, G/loss_emb: 0.0005
+EER target valid : 1.0002060812327331 %
+EER source valid : 48.99113547729539 %
+EER target test : 8.505377557160049 %
+EER source test : 49.02112079399661 %
+time taken for eers computation : 36
+	Validation [109/400]	, G/loss_id: 0.0854, G/loss_id_psnt: 0.0752, G/loss_cd: 0.0073, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:14:54], Epoch [110/400]	, G/loss_id: 0.0864, G/loss_id_psnt: 0.0743, G/loss_cd: 0.0071, G/loss_emb: 0.0004
+EER target valid : 0.9952591217481096 %
+EER source valid : 49.030302020404 %
+EER target test : 11.41709286000802 %
+EER source test : 50.02244210441378 %
+time taken for eers computation : 36
+	Validation [110/400]	, G/loss_id: 0.0847, G/loss_id_psnt: 0.0749, G/loss_cd: 0.0074, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:17:14], Epoch [111/400]	, G/loss_id: 0.0849, G/loss_id_psnt: 0.0723, G/loss_cd: 0.0061, G/loss_emb: 0.0004
+EER target valid : 0.5409197484353881 %
+EER source valid : 49.18679543827371 %
+EER target test : 7.789122041716806 %
+EER source test : 49.96469781328169 %
+time taken for eers computation : 36
+	Validation [111/400]	, G/loss_id: 0.0832, G/loss_id_psnt: 0.0738, G/loss_cd: 0.0071, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:19:34], Epoch [112/400]	, G/loss_id: 0.0950, G/loss_id_psnt: 0.0849, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+EER target valid : 0.38198062304669556 %
+EER source valid : 49.30818435364669 %
+EER target test : 8.334336141195347 %
+EER source test : 50.471788509642536 %
+time taken for eers computation : 36
+	Validation [112/400]	, G/loss_id: 0.0824, G/loss_id_psnt: 0.0733, G/loss_cd: 0.0072, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:21:54], Epoch [113/400]	, G/loss_id: 0.1020, G/loss_id_psnt: 0.0923, G/loss_cd: 0.0066, G/loss_emb: 0.0004
+EER target valid : 0.6392497835209293 %
+EER source valid : 49.2479904555061 %
+EER target test : 11.286163758523868 %
+EER source test : 49.382716049382715 %
+time taken for eers computation : 36
+	Validation [113/400]	, G/loss_id: 0.0814, G/loss_id_psnt: 0.0725, G/loss_cd: 0.0069, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:24:16], Epoch [114/400]	, G/loss_id: 0.0898, G/loss_id_psnt: 0.0794, G/loss_cd: 0.0071, G/loss_emb: 0.0004
+EER target valid : 0.6404862709173276 %
+EER source valid : 49.28241612036282 %
+EER target test : 7.638136782992379 %
+EER source test : 50.176510933591544 %
+time taken for eers computation : 36
+	Validation [114/400]	, G/loss_id: 0.0820, G/loss_id_psnt: 0.0734, G/loss_cd: 0.0072, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:26:35], Epoch [115/400]	, G/loss_id: 0.0866, G/loss_id_psnt: 0.0762, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+EER target valid : 0.4221806020160635 %
+EER source valid : 49.376398251580355 %
+EER target test : 6.118820196550341 %
+EER source test : 50.11876664245945 %
+time taken for eers computation : 36
+	Validation [115/400]	, G/loss_id: 0.0810, G/loss_id_psnt: 0.0730, G/loss_cd: 0.0071, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:28:54], Epoch [116/400]	, G/loss_id: 0.0829, G/loss_id_psnt: 0.0741, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+EER target valid : 0.37291304880644155 %
+EER source valid : 49.439308572010596 %
+EER target test : 3.9540087244284 %
+EER source test : 50.18079762769305 %
+time taken for eers computation : 36
+	Validation [116/400]	, G/loss_id: 0.0804, G/loss_id_psnt: 0.0727, G/loss_cd: 0.0070, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:31:14], Epoch [117/400]	, G/loss_id: 0.0783, G/loss_id_psnt: 0.0702, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+EER target valid : 0.807874726848075 %
+EER source valid : 49.3275660885139 %
+EER target test : 16.99471018852788 %
+EER source test : 49.9069535221496 %
+time taken for eers computation : 36
+	Validation [117/400]	, G/loss_id: 0.0805, G/loss_id_psnt: 0.0731, G/loss_cd: 0.0070, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:33:34], Epoch [118/400]	, G/loss_id: 0.0834, G/loss_id_psnt: 0.0750, G/loss_cd: 0.0066, G/loss_emb: 0.0004
+EER target valid : 0.35291710983715435 %
+EER source valid : 49.41867621116057 %
+EER target test : 3.9941210389089448 %
+EER source test : 50.48893528604857 %
+time taken for eers computation : 36
+	Validation [118/400]	, G/loss_id: 0.0802, G/loss_id_psnt: 0.0731, G/loss_cd: 0.0071, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:35:54], Epoch [119/400]	, G/loss_id: 0.0827, G/loss_id_psnt: 0.0742, G/loss_cd: 0.0066, G/loss_emb: 0.0004
+EER target valid : 0.6848068646423261 %
+EER source valid : 49.34677102922025 %
+EER target test : 10.068817689530686 %
+EER source test : 50.25997538933269 %
+time taken for eers computation : 36
+	Validation [119/400]	, G/loss_id: 0.0792, G/loss_id_psnt: 0.0721, G/loss_cd: 0.0069, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:38:14], Epoch [120/400]	, G/loss_id: 0.0930, G/loss_id_psnt: 0.0846, G/loss_cd: 0.0070, G/loss_emb: 0.0004
+EER target valid : 0.8907446298825166 %
+EER source valid : 49.37311913003918 %
+EER target test : 10.414911752908143 %
+EER source test : 49.96469781328169 %
+time taken for eers computation : 36
+	Validation [120/400]	, G/loss_id: 0.0801, G/loss_id_psnt: 0.0735, G/loss_cd: 0.0073, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:40:33], Epoch [121/400]	, G/loss_id: 0.1132, G/loss_id_psnt: 0.1088, G/loss_cd: 0.0179, G/loss_emb: 0.0028
+EER target valid : 15.91115273131727 %
+EER source valid : 32.11462964055303 %
+EER target test : 21.167895106297635 %
+EER source test : 25.19844872105221 %
+time taken for eers computation : 35
+	Validation [121/400]	, G/loss_id: 0.1053, G/loss_id_psnt: 0.1009, G/loss_cd: 0.0176, G/loss_emb: 0.0028
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:42:53], Epoch [122/400]	, G/loss_id: 0.0920, G/loss_id_psnt: 0.0861, G/loss_cd: 0.0107, G/loss_emb: 0.0020
+EER target valid : 9.404853620082003 %
+EER source valid : 33.565244403191095 %
+EER target test : 16.85976985559567 %
+EER source test : 23.876129669974986 %
+time taken for eers computation : 35
+	Validation [122/400]	, G/loss_id: 0.0873, G/loss_id_psnt: 0.0825, G/loss_cd: 0.0110, G/loss_emb: 0.0020
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:45:12], Epoch [123/400]	, G/loss_id: 0.0874, G/loss_id_psnt: 0.0820, G/loss_cd: 0.0102, G/loss_emb: 0.0018
+EER target valid : 7.524998978765368 %
+EER source valid : 36.47186132759018 %
+EER target test : 15.62637886081027 %
+EER source test : 33.90674170902929 %
+time taken for eers computation : 36
+	Validation [123/400]	, G/loss_id: 0.0856, G/loss_id_psnt: 0.0808, G/loss_cd: 0.0104, G/loss_emb: 0.0017
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:47:31], Epoch [124/400]	, G/loss_id: 0.1062, G/loss_id_psnt: 0.0996, G/loss_cd: 0.0105, G/loss_emb: 0.0009
+EER target valid : 3.5334977943599077 %
+EER source valid : 46.09276483190272 %
+EER target test : 11.497317488969113 %
+EER source test : 42.91888566126039 %
+time taken for eers computation : 36
+	Validation [124/400]	, G/loss_id: 0.0858, G/loss_id_psnt: 0.0797, G/loss_cd: 0.0098, G/loss_emb: 0.0010
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:49:50], Epoch [125/400]	, G/loss_id: 0.0864, G/loss_id_psnt: 0.0788, G/loss_cd: 0.0081, G/loss_emb: 0.0005
+EER target valid : 0.942738704372092 %
+EER source valid : 48.36051181847737 %
+EER target test : 10.243870336943441 %
+EER source test : 45.167634955216656 %
+time taken for eers computation : 36
+	Validation [125/400]	, G/loss_id: 0.0808, G/loss_id_psnt: 0.0745, G/loss_cd: 0.0086, G/loss_emb: 0.0007
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:52:10], Epoch [126/400]	, G/loss_id: 0.0888, G/loss_id_psnt: 0.0812, G/loss_cd: 0.0082, G/loss_emb: 0.0004
+EER target valid : 0.4116674294495873 %
+EER source valid : 48.7111933416244 %
+EER target test : 9.746791014841556 %
+EER source test : 45.67901234567901 %
+time taken for eers computation : 36
+	Validation [126/400]	, G/loss_id: 0.0788, G/loss_id_psnt: 0.0726, G/loss_cd: 0.0080, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:54:29], Epoch [127/400]	, G/loss_id: 0.0830, G/loss_id_psnt: 0.0759, G/loss_cd: 0.0077, G/loss_emb: 0.0004
+EER target valid : 0.10762085884204317 %
+EER source valid : 49.03298309622759 %
+EER target test : 7.813189430405135 %
+EER source test : 48.002652707173404 %
+time taken for eers computation : 36
+	Validation [127/400]	, G/loss_id: 0.0790, G/loss_id_psnt: 0.0728, G/loss_cd: 0.0079, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:56:49], Epoch [128/400]	, G/loss_id: 0.0971, G/loss_id_psnt: 0.0899, G/loss_cd: 0.0074, G/loss_emb: 0.0004
+EER target valid : 0.14425888271119228 %
+EER source valid : 49.10265875087197 %
+EER target test : 10.610020557561171 %
+EER source test : 47.998366013071895 %
+time taken for eers computation : 36
+	Validation [128/400]	, G/loss_id: 0.0778, G/loss_id_psnt: 0.0720, G/loss_cd: 0.0076, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [4:59:10], Epoch [129/400]	, G/loss_id: 0.0826, G/loss_id_psnt: 0.0751, G/loss_cd: 0.0070, G/loss_emb: 0.0004
+EER target valid : 0.08245673066994516 %
+EER source valid : 49.222428303454954 %
+EER target test : 10.936058463698355 %
+EER source test : 47.20457112886307 %
+time taken for eers computation : 36
+	Validation [129/400]	, G/loss_id: 0.0768, G/loss_id_psnt: 0.0709, G/loss_cd: 0.0072, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:01:30], Epoch [130/400]	, G/loss_id: 0.0767, G/loss_id_psnt: 0.0702, G/loss_cd: 0.0067, G/loss_emb: 0.0004
+EER target valid : 0.15625602976704184 %
+EER source valid : 49.26180193769533 %
+EER target test : 10.936058463698355 %
+EER source test : 48.07754377471153 %
+time taken for eers computation : 36
+	Validation [130/400]	, G/loss_id: 0.0775, G/loss_id_psnt: 0.0719, G/loss_cd: 0.0076, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:03:49], Epoch [131/400]	, G/loss_id: 0.0785, G/loss_id_psnt: 0.0720, G/loss_cd: 0.0075, G/loss_emb: 0.0004
+EER target valid : 0.12244860860851949 %
+EER source valid : 49.389227802759386 %
+EER target test : 13.195697954271962 %
+EER source test : 48.800734285483735 %
+time taken for eers computation : 35
+	Validation [131/400]	, G/loss_id: 0.0766, G/loss_id_psnt: 0.0712, G/loss_cd: 0.0071, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:06:09], Epoch [132/400]	, G/loss_id: 0.0724, G/loss_id_psnt: 0.0671, G/loss_cd: 0.0069, G/loss_emb: 0.0004
+EER target valid : 0.09997969484643576 %
+EER source valid : 49.36119267591545 %
+EER target test : 12.499498596068994 %
+EER source test : 47.56616638424917 %
+time taken for eers computation : 36
+	Validation [132/400]	, G/loss_id: 0.0761, G/loss_id_psnt: 0.0706, G/loss_cd: 0.0072, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:08:28], Epoch [133/400]	, G/loss_id: 0.0717, G/loss_id_psnt: 0.0663, G/loss_cd: 0.0070, G/loss_emb: 0.0004
+EER target valid : 0.14615501966603175 %
+EER source valid : 49.35167961254173 %
+EER target test : 17.205863918973126 %
+EER source test : 46.551984991527476 %
+time taken for eers computation : 35
+	Validation [133/400]	, G/loss_id: 0.0754, G/loss_id_psnt: 0.0703, G/loss_cd: 0.0068, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:10:47], Epoch [134/400]	, G/loss_id: 0.0810, G/loss_id_psnt: 0.0753, G/loss_cd: 0.0069, G/loss_emb: 0.0004
+EER target valid : 0.06843916724797691 %
+EER source valid : 49.46531419339715 %
+EER target test : 12.356535800240675 %
+EER source test : 49.09172516743323 %
+time taken for eers computation : 36
+	Validation [134/400]	, G/loss_id: 0.0755, G/loss_id_psnt: 0.0705, G/loss_cd: 0.0068, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:13:06], Epoch [135/400]	, G/loss_id: 0.0766, G/loss_id_psnt: 0.0707, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+EER target valid : 0.09169705947493247 %
+EER source valid : 49.48876503816944 %
+EER target test : 14.062938728439631 %
+EER source test : 49.0125474057936 %
+time taken for eers computation : 36
+	Validation [135/400]	, G/loss_id: 0.0749, G/loss_id_psnt: 0.0698, G/loss_cd: 0.0067, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:15:25], Epoch [136/400]	, G/loss_id: 0.0836, G/loss_id_psnt: 0.0783, G/loss_cd: 0.0068, G/loss_emb: 0.0004
+EER target valid : 0.11713594201382357 %
+EER source valid : 49.556173799253756 %
+EER target test : 15.447314981949459 %
+EER source test : 49.16661623497136 %
+time taken for eers computation : 36
+	Validation [136/400]	, G/loss_id: 0.0752, G/loss_id_psnt: 0.0703, G/loss_cd: 0.0067, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:17:45], Epoch [137/400]	, G/loss_id: 0.0822, G/loss_id_psnt: 0.0759, G/loss_cd: 0.0067, G/loss_emb: 0.0003
+EER target valid : 0.5341170479571371 %
+EER source valid : 49.381364399146555 %
+EER target test : 21.7371765944645 %
+EER source test : 46.9841846203502 %
+time taken for eers computation : 36
+	Validation [137/400]	, G/loss_id: 0.0747, G/loss_id_psnt: 0.0699, G/loss_cd: 0.0067, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:20:05], Epoch [138/400]	, G/loss_id: 0.0837, G/loss_id_psnt: 0.0789, G/loss_cd: 0.0084, G/loss_emb: 0.0005
+EER target valid : 1.182848587981847 %
+EER source valid : 48.90107898849008 %
+EER target test : 8.71252005615724 %
+EER source test : 45.67901234567901 %
+time taken for eers computation : 36
+	Validation [138/400]	, G/loss_id: 0.0787, G/loss_id_psnt: 0.0741, G/loss_cd: 0.0084, G/loss_emb: 0.0007
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:22:25], Epoch [139/400]	, G/loss_id: 0.0821, G/loss_id_psnt: 0.0768, G/loss_cd: 0.0078, G/loss_emb: 0.0004
+EER target valid : 0.43764174396619343 %
+EER source valid : 49.51473935268605 %
+EER target test : 10.606009326113117 %
+EER source test : 48.002652707173404 %
+time taken for eers computation : 36
+	Validation [139/400]	, G/loss_id: 0.0759, G/loss_id_psnt: 0.0716, G/loss_cd: 0.0075, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:24:44], Epoch [140/400]	, G/loss_id: 0.0768, G/loss_id_psnt: 0.0715, G/loss_cd: 0.0068, G/loss_emb: 0.0003
+EER target valid : 0.4603177488600404 %
+EER source valid : 49.53349779435991 %
+EER target test : 11.978351885278782 %
+EER source test : 47.42067094327443 %
+time taken for eers computation : 36
+	Validation [140/400]	, G/loss_id: 0.0746, G/loss_id_psnt: 0.0701, G/loss_cd: 0.0071, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:27:04], Epoch [141/400]	, G/loss_id: 0.0729, G/loss_id_psnt: 0.0681, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+EER target valid : 0.4153779015378124 %
+EER source valid : 49.579055885380335 %
+EER target test : 12.324445948656237 %
+EER source test : 48.21446582748325 %
+time taken for eers computation : 36
+	Validation [141/400]	, G/loss_id: 0.0746, G/loss_id_psnt: 0.0703, G/loss_cd: 0.0072, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:29:30], Epoch [142/400]	, G/loss_id: 0.0744, G/loss_id_psnt: 0.0694, G/loss_cd: 0.0063, G/loss_emb: 0.0003
+EER target valid : 0.4689711408367677 %
+EER source valid : 49.58359068239949 %
+EER target test : 13.716844665062174 %
+EER source test : 48.148148148148145 %
+time taken for eers computation : 35
+	Validation [142/400]	, G/loss_id: 0.0743, G/loss_id_psnt: 0.0698, G/loss_cd: 0.0068, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:31:49], Epoch [143/400]	, G/loss_id: 0.0771, G/loss_id_psnt: 0.0717, G/loss_cd: 0.0062, G/loss_emb: 0.0003
+EER target valid : 0.32550022669141704 %
+EER source valid : 49.66419268197484 %
+EER target test : 13.34668321299639 %
+EER source test : 48.81788106188978 %
+time taken for eers computation : 35
+	Validation [143/400]	, G/loss_id: 0.0742, G/loss_id_psnt: 0.0701, G/loss_cd: 0.0069, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:34:08], Epoch [144/400]	, G/loss_id: 0.0826, G/loss_id_psnt: 0.0766, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+EER target valid : 0.8567301175922309 %
+EER source valid : 49.49103294162854 %
+EER target test : 13.366739370236663 %
+EER source test : 48.50974340353426 %
+time taken for eers computation : 35
+	Validation [144/400]	, G/loss_id: 0.0736, G/loss_id_psnt: 0.0696, G/loss_cd: 0.0069, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:36:27], Epoch [145/400]	, G/loss_id: 0.0872, G/loss_id_psnt: 0.0823, G/loss_cd: 0.0062, G/loss_emb: 0.0003
+EER target valid : 0.15996751175429724 %
+EER source valid : 49.65821430642752 %
+EER target test : 13.020645306859208 %
+EER source test : 48.71726982974259 %
+time taken for eers computation : 35
+	Validation [145/400]	, G/loss_id: 0.0746, G/loss_id_psnt: 0.0709, G/loss_cd: 0.0071, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:38:46], Epoch [146/400]	, G/loss_id: 0.0767, G/loss_id_psnt: 0.0718, G/loss_cd: 0.0062, G/loss_emb: 0.0003
+EER target valid : 0.3405481962770505 %
+EER source valid : 49.640280189684596 %
+EER target test : 13.744923285198556 %
+EER source test : 48.87562535302187 %
+time taken for eers computation : 36
+	Validation [146/400]	, G/loss_id: 0.0741, G/loss_id_psnt: 0.0703, G/loss_cd: 0.0072, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:41:06], Epoch [147/400]	, G/loss_id: 0.0938, G/loss_id_psnt: 0.0885, G/loss_cd: 0.0068, G/loss_emb: 0.0003
+EER target valid : 0.1463611008987648 %
+EER source valid : 49.707688950768905 %
+EER target test : 12.336479643000402 %
+EER source test : 48.50974340353426 %
+time taken for eers computation : 37
+	Validation [147/400]	, G/loss_id: 0.0732, G/loss_id_psnt: 0.0692, G/loss_cd: 0.0067, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:43:26], Epoch [148/400]	, G/loss_id: 0.0734, G/loss_id_psnt: 0.0684, G/loss_cd: 0.0058, G/loss_emb: 0.0003
+EER target valid : 0.375378954306026 %
+EER source valid : 49.682551079971596 %
+EER target test : 15.415225130365023 %
+EER source test : 47.857157266198655 %
+time taken for eers computation : 36
+	Validation [148/400]	, G/loss_id: 0.0723, G/loss_id_psnt: 0.0684, G/loss_cd: 0.0066, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:45:46], Epoch [149/400]	, G/loss_id: 0.0738, G/loss_id_psnt: 0.0693, G/loss_cd: 0.0066, G/loss_emb: 0.0003
+EER target valid : 0.3360133992578932 %
+EER source valid : 49.731223617160715 %
+EER target test : 15.62637886081027 %
+EER source test : 49.23722060840797 %
+time taken for eers computation : 36
+	Validation [149/400]	, G/loss_id: 0.0724, G/loss_id_psnt: 0.0685, G/loss_cd: 0.0066, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:48:05], Epoch [150/400]	, G/loss_id: 0.0815, G/loss_id_psnt: 0.0761, G/loss_cd: 0.0063, G/loss_emb: 0.0003
+EER target valid : 0.4677760593006116 %
+EER source valid : 49.71819505404217 %
+EER target test : 15.62637886081027 %
+EER source test : 48.36424796255951 %
+time taken for eers computation : 36
+	Validation [150/400]	, G/loss_id: 0.0718, G/loss_id_psnt: 0.0682, G/loss_cd: 0.0066, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:50:24], Epoch [151/400]	, G/loss_id: 0.0766, G/loss_id_psnt: 0.0724, G/loss_cd: 0.0070, G/loss_emb: 0.0003
+EER target valid : 0.21088472472481382 %
+EER source valid : 49.75095389085448 %
+EER target test : 16.147525571600482 %
+EER source test : 48.36853465666102 %
+time taken for eers computation : 36
+	Validation [151/400]	, G/loss_id: 0.0724, G/loss_id_psnt: 0.0686, G/loss_cd: 0.0067, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:52:44], Epoch [152/400]	, G/loss_id: 0.0773, G/loss_id_psnt: 0.0727, G/loss_cd: 0.0064, G/loss_emb: 0.0003
+EER target valid : 0.3141617192949783 %
+EER source valid : 49.73488359429743 %
+EER target test : 16.1194469514641 %
+EER source test : 49.23722060840797 %
+time taken for eers computation : 36
+	Validation [152/400]	, G/loss_id: 0.0737, G/loss_id_psnt: 0.0706, G/loss_cd: 0.0073, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:55:03], Epoch [153/400]	, G/loss_id: 0.0783, G/loss_id_psnt: 0.0738, G/loss_cd: 0.0064, G/loss_emb: 0.0003
+EER target valid : 0.20366885188206635 %
+EER source valid : 49.79406324465884 %
+EER target test : 17.84590603690333 %
+EER source test : 46.896433470507546 %
+time taken for eers computation : 35
+	Validation [153/400]	, G/loss_id: 0.0722, G/loss_id_psnt: 0.0687, G/loss_cd: 0.0066, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:57:22], Epoch [154/400]	, G/loss_id: 0.0685, G/loss_id_psnt: 0.0644, G/loss_cd: 0.0060, G/loss_emb: 0.0003
+EER target valid : 0.29066138947019915 %
+EER source valid : 49.811997361401765 %
+EER target test : 17.869973425591656 %
+EER source test : 48.36424796255951 %
+time taken for eers computation : 35
+	Validation [154/400]	, G/loss_id: 0.0716, G/loss_id_psnt: 0.0679, G/loss_cd: 0.0066, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [5:59:41], Epoch [155/400]	, G/loss_id: 0.0718, G/loss_id_psnt: 0.0677, G/loss_cd: 0.0060, G/loss_emb: 0.0003
+EER target valid : 0.4564011955390822 %
+EER source valid : 49.793445000960645 %
+EER target test : 17.706954472523066 %
+EER source test : 48.588921165173886 %
+time taken for eers computation : 35
+	Validation [155/400]	, G/loss_id: 0.0714, G/loss_id_psnt: 0.0678, G/loss_cd: 0.0065, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:02:00], Epoch [156/400]	, G/loss_id: 0.0906, G/loss_id_psnt: 0.0863, G/loss_cd: 0.0102, G/loss_emb: 0.0011
+EER target valid : 2.6724389609812524 %
+EER source valid : 45.602968377670585 %
+EER target test : 17.185807761732853 %
+EER source test : 34.06081053820705 %
+time taken for eers computation : 36
+	Validation [156/400]	, G/loss_id: 0.0834, G/loss_id_psnt: 0.0804, G/loss_cd: 0.0103, G/loss_emb: 0.0012
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:04:20], Epoch [157/400]	, G/loss_id: 0.0757, G/loss_id_psnt: 0.0718, G/loss_cd: 0.0080, G/loss_emb: 0.0004
+EER target valid : 1.1688310245598788 %
+EER source valid : 49.24774599811021 %
+EER target test : 8.473287705575611 %
+EER source test : 48.08183046881304 %
+time taken for eers computation : 36
+	Validation [157/400]	, G/loss_id: 0.0742, G/loss_id_psnt: 0.0707, G/loss_cd: 0.0078, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:06:43], Epoch [158/400]	, G/loss_id: 0.0783, G/loss_id_psnt: 0.0737, G/loss_cd: 0.0081, G/loss_emb: 0.0003
+EER target valid : 0.7268605648072612 %
+EER source valid : 49.55041766332366 %
+EER target test : 6.595843361411954 %
+EER source test : 49.02112079399661 %
+time taken for eers computation : 36
+	Validation [158/400]	, G/loss_id: 0.0725, G/loss_id_psnt: 0.0690, G/loss_cd: 0.0072, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:09:02], Epoch [159/400]	, G/loss_id: 0.0836, G/loss_id_psnt: 0.0787, G/loss_cd: 0.0071, G/loss_emb: 0.0003
+EER target valid : 0.6691406513584935 %
+EER source valid : 49.65285518447743 %
+EER target test : 7.096933914961894 %
+EER source test : 49.96469781328169 %
+time taken for eers computation : 36
+	Validation [159/400]	, G/loss_id: 0.0724, G/loss_id_psnt: 0.0693, G/loss_cd: 0.0075, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:11:22], Epoch [160/400]	, G/loss_id: 0.0689, G/loss_id_psnt: 0.0653, G/loss_cd: 0.0070, G/loss_emb: 0.0003
+EER target valid : 0.6895487527932467 %
+EER source valid : 49.68522003700683 %
+EER target test : 8.15928349378259 %
+EER source test : 49.673706931332205 %
+time taken for eers computation : 36
+	Validation [160/400]	, G/loss_id: 0.0714, G/loss_id_psnt: 0.0680, G/loss_cd: 0.0070, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:13:42], Epoch [161/400]	, G/loss_id: 0.0865, G/loss_id_psnt: 0.0818, G/loss_cd: 0.0066, G/loss_emb: 0.0003
+EER target valid : 0.6569778190311227 %
+EER source valid : 49.72975176145971 %
+EER target test : 7.328143802647413 %
+EER source test : 49.81062898410393 %
+time taken for eers computation : 36
+	Validation [161/400]	, G/loss_id: 0.0709, G/loss_id_psnt: 0.0677, G/loss_cd: 0.0070, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:16:02], Epoch [162/400]	, G/loss_id: 0.0680, G/loss_id_psnt: 0.0645, G/loss_cd: 0.0064, G/loss_emb: 0.0003
+EER target valid : 0.6829521335477288 %
+EER source valid : 49.75822530814389 %
+EER target test : 8.334336141195347 %
+EER source test : 49.74859799887033 %
+time taken for eers computation : 36
+	Validation [162/400]	, G/loss_id: 0.0721, G/loss_id_psnt: 0.0691, G/loss_cd: 0.0072, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:18:21], Epoch [163/400]	, G/loss_id: 0.0762, G/loss_id_psnt: 0.0720, G/loss_cd: 0.0068, G/loss_emb: 0.0003
+EER target valid : 0.6757372706040116 %
+EER source valid : 49.77303689952589 %
+EER target test : 7.817200661853188 %
+EER source test : 50.05244896312434 %
+time taken for eers computation : 36
+	Validation [163/400]	, G/loss_id: 0.0708, G/loss_id_psnt: 0.0677, G/loss_cd: 0.0067, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:20:41], Epoch [164/400]	, G/loss_id: 0.0853, G/loss_id_psnt: 0.0814, G/loss_cd: 0.0065, G/loss_emb: 0.0003
+EER target valid : 0.7344401249620206 %
+EER source valid : 49.764135010557155 %
+EER target test : 9.344539711191334 %
+EER source test : 49.827775760509965 %
+time taken for eers computation : 36
+	Validation [164/400]	, G/loss_id: 0.0715, G/loss_id_psnt: 0.0684, G/loss_cd: 0.0070, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:23:01], Epoch [165/400]	, G/loss_id: 0.0713, G/loss_id_psnt: 0.0673, G/loss_cd: 0.0061, G/loss_emb: 0.0003
+EER target valid : 0.7083071944671053 %
+EER source valid : 49.79513707648081 %
+EER target test : 10.40287805856398 %
+EER source test : 49.673706931332205 %
+time taken for eers computation : 35
+	Validation [165/400]	, G/loss_id: 0.0697, G/loss_id_psnt: 0.0666, G/loss_cd: 0.0064, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:25:20], Epoch [166/400]	, G/loss_id: 0.0924, G/loss_id_psnt: 0.0881, G/loss_cd: 0.0068, G/loss_emb: 0.0003
+EER target valid : 0.36611034832819045 %
+EER source valid : 49.87569565039786 %
+EER target test : 5.7486587444845565 %
+EER source test : 50.11876664245945 %
+time taken for eers computation : 36
+	Validation [166/400]	, G/loss_id: 0.0706, G/loss_id_psnt: 0.0676, G/loss_cd: 0.0068, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:27:39], Epoch [167/400]	, G/loss_id: 0.0734, G/loss_id_psnt: 0.0692, G/loss_cd: 0.0061, G/loss_emb: 0.0003
+EER target valid : 0.5914247989404386 %
+EER source valid : 49.85758372959504 %
+EER target test : 7.9601634576815075 %
+EER source test : 49.59024247559106 %
+time taken for eers computation : 36
+	Validation [167/400]	, G/loss_id: 0.0699, G/loss_id_psnt: 0.0669, G/loss_cd: 0.0065, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:29:58], Epoch [168/400]	, G/loss_id: 0.0732, G/loss_id_psnt: 0.0693, G/loss_cd: 0.0064, G/loss_emb: 0.0003
+EER target valid : 0.6114207379097258 %
+EER source valid : 49.877551391391485 %
+EER target test : 8.505377557160049 %
+EER source test : 49.59452916969257 %
+time taken for eers computation : 36
+	Validation [168/400]	, G/loss_id: 0.0701, G/loss_id_psnt: 0.0672, G/loss_cd: 0.0067, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:32:18], Epoch [169/400]	, G/loss_id: 0.0756, G/loss_id_psnt: 0.0714, G/loss_cd: 0.0068, G/loss_emb: 0.0003
+EER target valid : 0.7081011132343723 %
+EER source valid : 49.83343687889922 %
+EER target test : 10.765017047733656 %
+EER source test : 50.255688695231186 %
+time taken for eers computation : 35
+	Validation [169/400]	, G/loss_id: 0.0702, G/loss_id_psnt: 0.0674, G/loss_cd: 0.0069, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:34:37], Epoch [170/400]	, G/loss_id: 0.0994, G/loss_id_psnt: 0.0953, G/loss_cd: 0.0063, G/loss_emb: 0.0003
+EER target valid : 0.7515973820284387 %
+EER source valid : 49.85736552957395 %
+EER target test : 10.414911752908143 %
+EER source test : 49.382716049382715 %
+time taken for eers computation : 35
+	Validation [170/400]	, G/loss_id: 0.0702, G/loss_id_psnt: 0.0674, G/loss_cd: 0.0069, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:36:56], Epoch [171/400]	, G/loss_id: 0.0696, G/loss_id_psnt: 0.0657, G/loss_cd: 0.0061, G/loss_emb: 0.0003
+EER target valid : 0.6070910122242713 %
+EER source valid : 49.92329233596695 %
+EER target test : 10.414911752908143 %
+EER source test : 49.686567013636726 %
+time taken for eers computation : 35
+	Validation [171/400]	, G/loss_id: 0.0693, G/loss_id_psnt: 0.0663, G/loss_cd: 0.0064, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:39:15], Epoch [172/400]	, G/loss_id: 0.0766, G/loss_id_psnt: 0.0722, G/loss_cd: 0.0057, G/loss_emb: 0.0003
+EER target valid : 0.22634485677591343 %
+EER source valid : 49.98206588325708 %
+EER target test : 7.157102386682713 %
+EER source test : 50.0353021867183 %
+time taken for eers computation : 35
+	Validation [172/400]	, G/loss_id: 0.0695, G/loss_id_psnt: 0.0668, G/loss_cd: 0.0066, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:41:34], Epoch [173/400]	, G/loss_id: 0.0742, G/loss_id_psnt: 0.0705, G/loss_cd: 0.0067, G/loss_emb: 0.0003
+EER target valid : 0.6336835704390765 %
+EER source valid : 49.931608298006445 %
+EER target test : 10.765017047733656 %
+EER source test : 49.31639837004761 %
+time taken for eers computation : 35
+	Validation [173/400]	, G/loss_id: 0.0710, G/loss_id_psnt: 0.0685, G/loss_cd: 0.0071, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:43:53], Epoch [174/400]	, G/loss_id: 0.0741, G/loss_id_psnt: 0.0704, G/loss_cd: 0.0062, G/loss_emb: 0.0003
+EER target valid : 0.7346936714491775 %
+EER source valid : 49.92311352200803 %
+EER target test : 14.40903279181709 %
+EER source test : 49.24150730250948 %
+time taken for eers computation : 36
+	Validation [174/400]	, G/loss_id: 0.0691, G/loss_id_psnt: 0.0663, G/loss_cd: 0.0062, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:46:12], Epoch [175/400]	, G/loss_id: 0.0657, G/loss_id_psnt: 0.0627, G/loss_cd: 0.0059, G/loss_emb: 0.0003
+EER target valid : 0.7536592042547995 %
+EER source valid : 49.92210230392594 %
+EER target test : 16.839713698355396 %
+EER source test : 49.02969418219963 %
+time taken for eers computation : 36
+	Validation [175/400]	, G/loss_id: 0.0691, G/loss_id_psnt: 0.0663, G/loss_cd: 0.0066, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:48:32], Epoch [176/400]	, G/loss_id: 0.0689, G/loss_id_psnt: 0.0658, G/loss_cd: 0.0062, G/loss_emb: 0.0003
+EER target valid : 0.7961240569861703 %
+EER source valid : 49.92375297358586 %
+EER target test : 15.805442739671077 %
+EER source test : 47.636770757685795 %
+time taken for eers computation : 35
+	Validation [176/400]	, G/loss_id: 0.0690, G/loss_id_psnt: 0.0665, G/loss_cd: 0.0067, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:50:51], Epoch [177/400]	, G/loss_id: 0.0879, G/loss_id_psnt: 0.0842, G/loss_cd: 0.0070, G/loss_emb: 0.0003
+EER target valid : 0.7948875695897719 %
+EER source valid : 49.94083650802307 %
+EER target test : 17.1817965302848 %
+EER source test : 48.439139030097635 %
+time taken for eers computation : 36
+	Validation [177/400]	, G/loss_id: 0.0700, G/loss_id_psnt: 0.0675, G/loss_cd: 0.0070, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:53:11], Epoch [178/400]	, G/loss_id: 0.0823, G/loss_id_psnt: 0.0786, G/loss_cd: 0.0063, G/loss_emb: 0.0003
+EER target valid : 0.8532257267367388 %
+EER source valid : 49.941455761620304 %
+EER target test : 17.88200711993582 %
+EER source test : 48.07754377471153 %
+time taken for eers computation : 35
+	Validation [178/400]	, G/loss_id: 0.0685, G/loss_id_psnt: 0.0659, G/loss_cd: 0.0066, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:55:30], Epoch [179/400]	, G/loss_id: 0.0670, G/loss_id_psnt: 0.0640, G/loss_cd: 0.0062, G/loss_emb: 0.0003
+EER target valid : 0.8084929705462741 %
+EER source valid : 49.9562976499732 %
+EER target test : 18.749247894103487 %
+EER source test : 48.5932078592754 %
+time taken for eers computation : 35
+	Validation [179/400]	, G/loss_id: 0.0696, G/loss_id_psnt: 0.0671, G/loss_cd: 0.0069, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [6:57:49], Epoch [180/400]	, G/loss_id: 0.0770, G/loss_id_psnt: 0.0737, G/loss_cd: 0.0068, G/loss_emb: 0.0003
+EER target valid : 1.6336835704390766 %
+EER source valid : 49.74644434131108 %
+EER target test : 19.970605194544728 %
+EER source test : 47.87001734850318 %
+time taken for eers computation : 35
+	Validation [180/400]	, G/loss_id: 0.0710, G/loss_id_psnt: 0.0689, G/loss_cd: 0.0073, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:00:08], Epoch [181/400]	, G/loss_id: 0.0792, G/loss_id_psnt: 0.0755, G/loss_cd: 0.0063, G/loss_emb: 0.0003
+EER target valid : 0.9740256854833939 %
+EER source valid : 49.898356506806245 %
+EER target test : 20.137635379061372 %
+EER source test : 48.601781247478414 %
+time taken for eers computation : 36
+	Validation [181/400]	, G/loss_id: 0.0682, G/loss_id_psnt: 0.0656, G/loss_cd: 0.0065, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:02:27], Epoch [182/400]	, G/loss_id: 0.0775, G/loss_id_psnt: 0.0745, G/loss_cd: 0.0073, G/loss_emb: 0.0003
+EER target valid : 0.8373534322201732 %
+EER source valid : 49.800453782671624 %
+EER target test : 13.020645306859208 %
+EER source test : 49.52821149035746 %
+time taken for eers computation : 35
+	Validation [182/400]	, G/loss_id: 0.0701, G/loss_id_psnt: 0.0674, G/loss_cd: 0.0071, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:04:46], Epoch [183/400]	, G/loss_id: 0.0674, G/loss_id_psnt: 0.0641, G/loss_cd: 0.0059, G/loss_emb: 0.0003
+EER target valid : 0.8680686249886694 %
+EER source valid : 49.96556322625395 %
+EER target test : 11.958295728038507 %
+EER source test : 49.81920237230695 %
+time taken for eers computation : 35
+	Validation [183/400]	, G/loss_id: 0.0685, G/loss_id_psnt: 0.0660, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:07:05], Epoch [184/400]	, G/loss_id: 0.0630, G/loss_id_psnt: 0.0602, G/loss_cd: 0.0058, G/loss_emb: 0.0003
+EER target valid : 0.8307568129746552 %
+EER source valid : 49.96742906623788 %
+EER target test : 11.807310469314078 %
+EER source test : 50.0353021867183 %
+time taken for eers computation : 36
+	Validation [184/400]	, G/loss_id: 0.0680, G/loss_id_psnt: 0.0655, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:09:25], Epoch [185/400]	, G/loss_id: 0.0693, G/loss_id_psnt: 0.0660, G/loss_cd: 0.0058, G/loss_emb: 0.0003
+EER target valid : 2.1564621109997746 %
+EER source valid : 49.770808382128976 %
+EER target test : 12.324445948656237 %
+EER source test : 50.754206003389015 %
+time taken for eers computation : 36
+	Validation [185/400]	, G/loss_id: 0.0677, G/loss_id_psnt: 0.0652, G/loss_cd: 0.0063, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:11:44], Epoch [186/400]	, G/loss_id: 0.0832, G/loss_id_psnt: 0.0795, G/loss_cd: 0.0066, G/loss_emb: 0.0003
+EER target valid : 1.20861682126572 %
+EER source valid : 49.88868280765616 %
+EER target test : 13.672721119133573 %
+EER source test : 50.54667957718066 %
+time taken for eers computation : 36
+	Validation [186/400]	, G/loss_id: 0.0683, G/loss_id_psnt: 0.0659, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:14:04], Epoch [187/400]	, G/loss_id: 0.0733, G/loss_id_psnt: 0.0701, G/loss_cd: 0.0068, G/loss_emb: 0.0002
+EER target valid : 1.273963760123671 %
+EER source valid : 49.89734124912803 %
+EER target test : 14.970291817087844 %
+EER source test : 50.11019325425643 %
+time taken for eers computation : 36
+	Validation [187/400]	, G/loss_id: 0.0699, G/loss_id_psnt: 0.0677, G/loss_cd: 0.0071, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:16:23], Epoch [188/400]	, G/loss_id: 0.0686, G/loss_id_psnt: 0.0655, G/loss_cd: 0.0062, G/loss_emb: 0.0003
+EER target valid : 1.4483609977654026 %
+EER source valid : 49.87713922892601 %
+EER target test : 16.49361963497794 %
+EER source test : 49.89838013394659 %
+time taken for eers computation : 36
+	Validation [188/400]	, G/loss_id: 0.0677, G/loss_id_psnt: 0.0656, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:18:43], Epoch [189/400]	, G/loss_id: 0.0718, G/loss_id_psnt: 0.0681, G/loss_cd: 0.0060, G/loss_emb: 0.0003
+EER target valid : 1.0546276850587417 %
+EER source valid : 49.94083650802307 %
+EER target test : 16.147525571600482 %
+EER source test : 50.11019325425643 %
+time taken for eers computation : 36
+	Validation [189/400]	, G/loss_id: 0.0675, G/loss_id_psnt: 0.0651, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:21:02], Epoch [190/400]	, G/loss_id: 0.0634, G/loss_id_psnt: 0.0608, G/loss_cd: 0.0064, G/loss_emb: 0.0003
+EER target valid : 1.4786640280684331 %
+EER source valid : 49.90579259946814 %
+EER target test : 15.451326213397515 %
+EER source test : 49.74431130476882 %
+time taken for eers computation : 35
+	Validation [190/400]	, G/loss_id: 0.0681, G/loss_id_psnt: 0.0658, G/loss_cd: 0.0066, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:23:21], Epoch [191/400]	, G/loss_id: 0.0682, G/loss_id_psnt: 0.0649, G/loss_cd: 0.0061, G/loss_emb: 0.0003
+EER target valid : 1.0377239744794806 %
+EER source valid : 49.973993368714424 %
+EER target test : 14.062938728439631 %
+EER source test : 50.163650851287024 %
+time taken for eers computation : 36
+	Validation [191/400]	, G/loss_id: 0.0682, G/loss_id_psnt: 0.0658, G/loss_cd: 0.0068, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:25:41], Epoch [192/400]	, G/loss_id: 0.0612, G/loss_id_psnt: 0.0585, G/loss_cd: 0.0058, G/loss_emb: 0.0003
+EER target valid : 1.2589157905380375 %
+EER source valid : 49.93650779223665 %
+EER target test : 15.451326213397515 %
+EER source test : 50.11019325425643 %
+time taken for eers computation : 36
+	Validation [192/400]	, G/loss_id: 0.0676, G/loss_id_psnt: 0.0652, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:28:00], Epoch [193/400]	, G/loss_id: 0.0697, G/loss_id_psnt: 0.0666, G/loss_cd: 0.0059, G/loss_emb: 0.0003
+EER target valid : 4.02209815715686 %
+EER source valid : 48.69693738020073 %
+EER target test : 20.31669925792218 %
+EER source test : 38.9241910756072 %
+time taken for eers computation : 36
+	Validation [193/400]	, G/loss_id: 0.0678, G/loss_id_psnt: 0.0655, G/loss_cd: 0.0066, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:30:19], Epoch [194/400]	, G/loss_id: 0.0691, G/loss_id_psnt: 0.0660, G/loss_cd: 0.0060, G/loss_emb: 0.0003
+EER target valid : 1.1783137909626897 %
+EER source valid : 49.98206588325708 %
+EER target test : 17.71096570397112 %
+EER source test : 48.36424796255951 %
+time taken for eers computation : 36
+	Validation [194/400]	, G/loss_id: 0.0678, G/loss_id_psnt: 0.0655, G/loss_cd: 0.0067, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:32:38], Epoch [195/400]	, G/loss_id: 0.0709, G/loss_id_psnt: 0.0674, G/loss_cd: 0.0058, G/loss_emb: 0.0003
+EER target valid : 0.8068443206844099 %
+EER source valid : 50.03417413816762 %
+EER target test : 16.815646309667066 %
+EER source test : 48.800734285483735 %
+time taken for eers computation : 36
+	Validation [195/400]	, G/loss_id: 0.0670, G/loss_id_psnt: 0.0648, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:34:58], Epoch [196/400]	, G/loss_id: 0.0838, G/loss_id_psnt: 0.0806, G/loss_cd: 0.0063, G/loss_emb: 0.0002
+EER target valid : 0.8243662749618703 %
+EER source valid : 50.02535607081842 %
+EER target test : 16.998721419975933 %
+EER source test : 48.94622972645849 %
+time taken for eers computation : 36
+	Validation [196/400]	, G/loss_id: 0.0680, G/loss_id_psnt: 0.0659, G/loss_cd: 0.0068, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:37:17], Epoch [197/400]	, G/loss_id: 0.0676, G/loss_id_psnt: 0.0646, G/loss_cd: 0.0059, G/loss_emb: 0.0003
+EER target valid : 0.804576417225316 %
+EER source valid : 50.04037475333216 %
+EER target test : 18.749247894103487 %
+EER source test : 48.742989994351646 %
+time taken for eers computation : 36
+	Validation [197/400]	, G/loss_id: 0.0669, G/loss_id_psnt: 0.0646, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:39:36], Epoch [198/400]	, G/loss_id: 0.0665, G/loss_id_psnt: 0.0634, G/loss_cd: 0.0059, G/loss_emb: 0.0003
+EER target valid : 0.6064727685260721 %
+EER source valid : 50.041640527800446 %
+EER target test : 17.01476634576815 %
+EER source test : 48.58463447107238 %
+time taken for eers computation : 36
+	Validation [198/400]	, G/loss_id: 0.0667, G/loss_id_psnt: 0.0644, G/loss_cd: 0.0065, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:41:56], Epoch [199/400]	, G/loss_id: 0.0716, G/loss_id_psnt: 0.0682, G/loss_cd: 0.0063, G/loss_emb: 0.0003
+EER target valid : 1.2069671615048254 %
+EER source valid : 49.98412669558441 %
+EER target test : 17.88200711993582 %
+EER source test : 48.730129912047126 %
+time taken for eers computation : 36
+	Validation [199/400]	, G/loss_id: 0.0667, G/loss_id_psnt: 0.0644, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:44:15], Epoch [200/400]	, G/loss_id: 0.0773, G/loss_id_psnt: 0.0742, G/loss_cd: 0.0059, G/loss_emb: 0.0003
+EER target valid : 1.0282412080766694 %
+EER source valid : 50.01072430329436 %
+EER target test : 19.79555254713197 %
+EER source test : 48.50974340353426 %
+time taken for eers computation : 36
+	Validation [200/400]	, G/loss_id: 0.0671, G/loss_id_psnt: 0.0650, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:46:35], Epoch [201/400]	, G/loss_id: 0.0688, G/loss_id_psnt: 0.0658, G/loss_cd: 0.0064, G/loss_emb: 0.0002
+EER target valid : 1.3034424654957693 %
+EER source valid : 49.955061162576804 %
+EER target test : 20.31268802647413 %
+EER source test : 49.00397401759057 %
+time taken for eers computation : 36
+	Validation [201/400]	, G/loss_id: 0.0666, G/loss_id_psnt: 0.0645, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:48:55], Epoch [202/400]	, G/loss_id: 0.0777, G/loss_id_psnt: 0.0744, G/loss_cd: 0.0057, G/loss_emb: 0.0003
+EER target valid : 1.505256586283238 %
+EER source valid : 49.93052941668933 %
+EER target test : 22.600406137184116 %
+EER source test : 48.49688332122973 %
+time taken for eers computation : 36
+	Validation [202/400]	, G/loss_id: 0.0675, G/loss_id_psnt: 0.0656, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:51:15], Epoch [203/400]	, G/loss_id: 0.0624, G/loss_id_psnt: 0.0598, G/loss_cd: 0.0064, G/loss_emb: 0.0003
+EER target valid : 1.2488147804370273 %
+EER source valid : 49.952381096652246 %
+EER target test : 18.924300541516246 %
+EER source test : 48.800734285483735 %
+time taken for eers computation : 36
+	Validation [203/400]	, G/loss_id: 0.0666, G/loss_id_psnt: 0.0646, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:53:34], Epoch [204/400]	, G/loss_id: 0.0753, G/loss_id_psnt: 0.0718, G/loss_cd: 0.0067, G/loss_emb: 0.0002
+EER target valid : 1.2304674913296045 %
+EER source valid : 49.97134561955884 %
+EER target test : 22.743368933012437 %
+EER source test : 48.434852335996126 %
+time taken for eers computation : 36
+	Validation [204/400]	, G/loss_id: 0.0660, G/loss_id_psnt: 0.0639, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:55:55], Epoch [205/400]	, G/loss_id: 0.0810, G/loss_id_psnt: 0.0786, G/loss_cd: 0.0117, G/loss_emb: 0.0019
+EER target valid : 4.685012945875059 %
+EER source valid : 40.04947464434139 %
+EER target test : 13.704810970718013 %
+EER source test : 30.66095779875736 %
+time taken for eers computation : 36
+	Validation [205/400]	, G/loss_id: 0.0777, G/loss_id_psnt: 0.0762, G/loss_cd: 0.0119, G/loss_emb: 0.0017
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [7:58:16], Epoch [206/400]	, G/loss_id: 0.0854, G/loss_id_psnt: 0.0823, G/loss_cd: 0.0088, G/loss_emb: 0.0008
+EER target valid : 0.8550814677303665 %
+EER source valid : 48.07915943094622 %
+EER target test : 9.376629562775772 %
+EER source test : 43.588618575002016 %
+time taken for eers computation : 36
+	Validation [206/400]	, G/loss_id: 0.0721, G/loss_id_psnt: 0.0703, G/loss_cd: 0.0089, G/loss_emb: 0.0008
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:00:36], Epoch [207/400]	, G/loss_id: 0.0716, G/loss_id_psnt: 0.0684, G/loss_cd: 0.0078, G/loss_emb: 0.0004
+EER target valid : 0.4788206242486815 %
+EER source valid : 48.72175599924336 %
+EER target test : 9.376629562775772 %
+EER source test : 45.321703784394415 %
+time taken for eers computation : 36
+	Validation [207/400]	, G/loss_id: 0.0682, G/loss_id_psnt: 0.0660, G/loss_cd: 0.0076, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:02:55], Epoch [208/400]	, G/loss_id: 0.0761, G/loss_id_psnt: 0.0728, G/loss_cd: 0.0070, G/loss_emb: 0.0004
+EER target valid : 0.5493710987755036 %
+EER source valid : 48.95279325911771 %
+EER target test : 10.920013537906136 %
+EER source test : 45.957143145323975 %
+time taken for eers computation : 36
+	Validation [208/400]	, G/loss_id: 0.0686, G/loss_id_psnt: 0.0664, G/loss_cd: 0.0076, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:05:15], Epoch [209/400]	, G/loss_id: 0.0701, G/loss_id_psnt: 0.0669, G/loss_cd: 0.0073, G/loss_emb: 0.0003
+EER target valid : 0.2949911151556537 %
+EER source valid : 49.25458707475161 %
+EER target test : 9.22163307260329 %
+EER source test : 47.12110667312193 %
+time taken for eers computation : 35
+	Validation [209/400]	, G/loss_id: 0.0678, G/loss_id_psnt: 0.0656, G/loss_cd: 0.0074, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:07:34], Epoch [210/400]	, G/loss_id: 0.0709, G/loss_id_psnt: 0.0676, G/loss_cd: 0.0067, G/loss_emb: 0.0003
+EER target valid : 0.28384556030455427 %
+EER source valid : 49.34116643997525 %
+EER target test : 11.286163758523868 %
+EER source test : 46.04060760106512 %
+time taken for eers computation : 35
+	Validation [210/400]	, G/loss_id: 0.0673, G/loss_id_psnt: 0.0651, G/loss_cd: 0.0072, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:09:53], Epoch [211/400]	, G/loss_id: 0.0636, G/loss_id_psnt: 0.0608, G/loss_cd: 0.0063, G/loss_emb: 0.0003
+EER target valid : 0.07318105539889753 %
+EER source valid : 49.42403634300969 %
+EER target test : 11.44116024869635 %
+EER source test : 46.406489550552735 %
+time taken for eers computation : 35
+	Validation [211/400]	, G/loss_id: 0.0667, G/loss_id_psnt: 0.0645, G/loss_cd: 0.0071, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:12:13], Epoch [212/400]	, G/loss_id: 0.0651, G/loss_id_psnt: 0.0620, G/loss_cd: 0.0063, G/loss_emb: 0.0003
+EER target valid : 0.081632405739013 %
+EER source valid : 49.464234302181 %
+EER target test : 11.270118832731649 %
+EER source test : 46.97989792624869 %
+time taken for eers computation : 35
+	Validation [212/400]	, G/loss_id: 0.0662, G/loss_id_psnt: 0.0639, G/loss_cd: 0.0068, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:14:32], Epoch [213/400]	, G/loss_id: 0.0640, G/loss_id_psnt: 0.0614, G/loss_cd: 0.0066, G/loss_emb: 0.0003
+EER target valid : 0.07421146156256277 %
+EER source valid : 49.59101263647497 %
+EER target test : 12.499498596068994 %
+EER source test : 46.03632090696361 %
+time taken for eers computation : 35
+	Validation [213/400]	, G/loss_id: 0.0670, G/loss_id_psnt: 0.0649, G/loss_cd: 0.0068, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:16:51], Epoch [214/400]	, G/loss_id: 0.0621, G/loss_id_psnt: 0.0595, G/loss_cd: 0.0064, G/loss_emb: 0.0003
+EER target valid : 0.07462362402802887 %
+EER source valid : 49.61801735715524 %
+EER target test : 12.153404532691535 %
+EER source test : 46.896433470507546 %
+time taken for eers computation : 36
+	Validation [214/400]	, G/loss_id: 0.0668, G/loss_id_psnt: 0.0648, G/loss_cd: 0.0068, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:19:12], Epoch [215/400]	, G/loss_id: 0.0727, G/loss_id_psnt: 0.0697, G/loss_cd: 0.0066, G/loss_emb: 0.0003
+EER target valid : 0.299525912174811 %
+EER source valid : 49.57266534736755 %
+EER target test : 12.348513337344565 %
+EER source test : 46.11549866860324 %
+time taken for eers computation : 36
+	Validation [215/400]	, G/loss_id: 0.0674, G/loss_id_psnt: 0.0652, G/loss_cd: 0.0070, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:21:33], Epoch [216/400]	, G/loss_id: 0.0648, G/loss_id_psnt: 0.0621, G/loss_cd: 0.0060, G/loss_emb: 0.0003
+EER target valid : 0.08018983710988167 %
+EER source valid : 49.66394822457896 %
+EER target test : 14.568040513437625 %
+EER source test : 46.24813402727346 %
+time taken for eers computation : 36
+	Validation [216/400]	, G/loss_id: 0.0658, G/loss_id_psnt: 0.0636, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:23:53], Epoch [217/400]	, G/loss_id: 0.0674, G/loss_id_psnt: 0.0645, G/loss_cd: 0.0060, G/loss_emb: 0.0003
+EER target valid : 0.04225978139766811 %
+EER source valid : 49.73797683258648 %
+EER target test : 12.30037855996791 %
+EER source test : 47.49984870491406 %
+time taken for eers computation : 36
+	Validation [217/400]	, G/loss_id: 0.0665, G/loss_id_psnt: 0.0645, G/loss_cd: 0.0067, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:26:14], Epoch [218/400]	, G/loss_id: 0.0663, G/loss_id_psnt: 0.0636, G/loss_cd: 0.0071, G/loss_emb: 0.0003
+EER target valid : 0.05050303070698991 %
+EER source valid : 49.75633624048227 %
+EER target test : 11.632257821901323 %
+EER source test : 47.48270192850803 %
+time taken for eers computation : 36
+	Validation [218/400]	, G/loss_id: 0.0662, G/loss_id_psnt: 0.0641, G/loss_cd: 0.0066, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:28:33], Epoch [219/400]	, G/loss_id: 0.0673, G/loss_id_psnt: 0.0641, G/loss_cd: 0.0064, G/loss_emb: 0.0003
+EER target valid : 0.02066265782094045 %
+EER source valid : 49.80070732915878 %
+EER target test : 13.195697954271962 %
+EER source test : 46.61830267086258 %
+time taken for eers computation : 36
+	Validation [219/400]	, G/loss_id: 0.0662, G/loss_id_psnt: 0.0641, G/loss_cd: 0.0066, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:30:53], Epoch [220/400]	, G/loss_id: 0.0686, G/loss_id_psnt: 0.0656, G/loss_cd: 0.0064, G/loss_emb: 0.0003
+EER target valid : 0.033807421158522366 %
+EER source valid : 49.80708978797932 %
+EER target test : 13.0567463898917 %
+EER source test : 47.6410574517873 %
+time taken for eers computation : 36
+	Validation [220/400]	, G/loss_id: 0.0659, G/loss_id_psnt: 0.0639, G/loss_cd: 0.0067, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:33:12], Epoch [221/400]	, G/loss_id: 0.0662, G/loss_id_psnt: 0.0633, G/loss_cd: 0.0058, G/loss_emb: 0.0003
+EER target valid : 0.25870970930530446 %
+EER source valid : 49.72089228825025 %
+EER target test : 8.15928349378259 %
+EER source test : 48.655238844509 %
+time taken for eers computation : 36
+	Validation [221/400]	, G/loss_id: 0.0656, G/loss_id_psnt: 0.0634, G/loss_cd: 0.0064, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:35:32], Epoch [222/400]	, G/loss_id: 0.0719, G/loss_id_psnt: 0.0688, G/loss_cd: 0.0066, G/loss_emb: 0.0003
+EER target valid : 0.1344053597031573 %
+EER source valid : 49.86641896522778 %
+EER target test : 8.374448455675893 %
+EER source test : 47.43781771968047 %
+time taken for eers computation : 36
+	Validation [222/400]	, G/loss_id: 0.0659, G/loss_id_psnt: 0.0641, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:37:51], Epoch [223/400]	, G/loss_id: 0.0675, G/loss_id_psnt: 0.0645, G/loss_cd: 0.0060, G/loss_emb: 0.0003
+EER target valid : 0.08060199957534776 %
+EER source valid : 49.90661692439908 %
+EER target test : 11.286163758523868 %
+EER source test : 48.002652707173404 %
+time taken for eers computation : 36
+	Validation [223/400]	, G/loss_id: 0.0655, G/loss_id_psnt: 0.0634, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:40:11], Epoch [224/400]	, G/loss_id: 0.0654, G/loss_id_psnt: 0.0624, G/loss_cd: 0.0061, G/loss_emb: 0.0003
+EER target valid : 0.060193898140594525 %
+EER source valid : 49.94411764936232 %
+EER target test : 11.807310469314078 %
+EER source test : 48.655238844509 %
+time taken for eers computation : 36
+	Validation [224/400]	, G/loss_id: 0.0657, G/loss_id_psnt: 0.0637, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:42:30], Epoch [225/400]	, G/loss_id: 0.0652, G/loss_id_psnt: 0.0624, G/loss_cd: 0.0057, G/loss_emb: 0.0003
+EER target valid : 0.059781735675128414 %
+EER source valid : 49.958762545573755 %
+EER target test : 10.414911752908143 %
+EER source test : 48.730129912047126 %
+time taken for eers computation : 36
+	Validation [225/400]	, G/loss_id: 0.0652, G/loss_id_psnt: 0.0632, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:44:49], Epoch [226/400]	, G/loss_id: 0.0847, G/loss_id_psnt: 0.0814, G/loss_cd: 0.0065, G/loss_emb: 0.0003
+EER target valid : 0.07977767464441558 %
+EER source valid : 49.9705212946279 %
+EER target test : 12.153404532691535 %
+EER source test : 48.293643589122894 %
+time taken for eers computation : 36
+	Validation [226/400]	, G/loss_id: 0.0658, G/loss_id_psnt: 0.0640, G/loss_cd: 0.0067, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:47:08], Epoch [227/400]	, G/loss_id: 0.0906, G/loss_id_psnt: 0.0875, G/loss_cd: 0.0059, G/loss_emb: 0.0003
+EER target valid : 0.060193898140594525 %
+EER source valid : 49.98190019798555 %
+EER target test : 12.67455124348175 %
+EER source test : 48.439139030097635 %
+time taken for eers computation : 36
+	Validation [227/400]	, G/loss_id: 0.0659, G/loss_id_psnt: 0.0640, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:49:28], Epoch [228/400]	, G/loss_id: 0.0654, G/loss_id_psnt: 0.0625, G/loss_cd: 0.0059, G/loss_emb: 0.0003
+EER target valid : 0.08018983710988167 %
+EER source valid : 49.97649967017522 %
+EER target test : 12.53158844765343 %
+EER source test : 48.58463447107238 %
+time taken for eers computation : 36
+	Validation [228/400]	, G/loss_id: 0.0645, G/loss_id_psnt: 0.0626, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:51:47], Epoch [229/400]	, G/loss_id: 0.0625, G/loss_id_psnt: 0.0598, G/loss_cd: 0.0061, G/loss_emb: 0.0003
+EER target valid : 0.09049692844362482 %
+EER source valid : 49.92166590388375 %
+EER target test : 13.521735860409144 %
+EER source test : 47.42067094327443 %
+time taken for eers computation : 36
+	Validation [229/400]	, G/loss_id: 0.0647, G/loss_id_psnt: 0.0626, G/loss_cd: 0.0062, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:54:06], Epoch [230/400]	, G/loss_id: 0.0664, G/loss_id_psnt: 0.0636, G/loss_cd: 0.0060, G/loss_emb: 0.0003
+EER target valid : 0.02040810143475325 %
+EER source valid : 50.015825839161174 %
+EER target test : 9.416741877256317 %
+EER source test : 49.10458524973775 %
+time taken for eers computation : 36
+	Validation [230/400]	, G/loss_id: 0.0659, G/loss_id_psnt: 0.0641, G/loss_cd: 0.0068, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:56:26], Epoch [231/400]	, G/loss_id: 0.0640, G/loss_id_psnt: 0.0615, G/loss_cd: 0.0067, G/loss_emb: 0.0003
+EER target valid : 0.019997958767347744 %
+EER source valid : 50.024324654755716 %
+EER target test : 7.638136782992379 %
+EER source test : 49.228647220204955 %
+time taken for eers computation : 36
+	Validation [231/400]	, G/loss_id: 0.0651, G/loss_id_psnt: 0.0632, G/loss_cd: 0.0068, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [8:58:46], Epoch [232/400]	, G/loss_id: 0.0674, G/loss_id_psnt: 0.0644, G/loss_cd: 0.0064, G/loss_emb: 0.0002
+EER target valid : 0.0958560503937143 %
+EER source valid : 49.971924477194854 %
+EER target test : 12.499498596068994 %
+EER source test : 49.09601186153474 %
+time taken for eers computation : 36
+	Validation [232/400]	, G/loss_id: 0.0651, G/loss_id_psnt: 0.0633, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:01:05], Epoch [233/400]	, G/loss_id: 0.0626, G/loss_id_psnt: 0.0597, G/loss_cd: 0.0056, G/loss_emb: 0.0002
+EER target valid : 0.019995938969287155 %
+EER source valid : 50.00758359975088 %
+EER target test : 11.632257821901323 %
+EER source test : 49.14946945856532 %
+time taken for eers computation : 36
+	Validation [233/400]	, G/loss_id: 0.0649, G/loss_id_psnt: 0.0631, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:03:24], Epoch [234/400]	, G/loss_id: 0.0664, G/loss_id_psnt: 0.0637, G/loss_cd: 0.0063, G/loss_emb: 0.0003
+EER target valid : 0.02020000040395961 %
+EER source valid : 50.01317909990461 %
+EER target test : 13.195697954271962 %
+EER source test : 48.293643589122894 %
+time taken for eers computation : 36
+	Validation [234/400]	, G/loss_id: 0.0659, G/loss_id_psnt: 0.0642, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:05:43], Epoch [235/400]	, G/loss_id: 0.0605, G/loss_id_psnt: 0.0583, G/loss_cd: 0.0062, G/loss_emb: 0.0003
+EER target valid : 0.04019795917130736 %
+EER source valid : 50.03463174608945 %
+EER target test : 12.845592659446448 %
+EER source test : 47.93204833373679 %
+time taken for eers computation : 36
+	Validation [235/400]	, G/loss_id: 0.0644, G/loss_id_psnt: 0.0625, G/loss_cd: 0.0061, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:08:03], Epoch [236/400]	, G/loss_id: 0.0691, G/loss_id_psnt: 0.0662, G/loss_cd: 0.0059, G/loss_emb: 0.0003
+EER target valid : 0.48196233769119196 %
+EER source valid : 49.85957687868734 %
+EER target test : 19.791541315683915 %
+EER source test : 45.163348261115146 %
+time taken for eers computation : 36
+	Validation [236/400]	, G/loss_id: 0.0657, G/loss_id_psnt: 0.0640, G/loss_cd: 0.0066, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:10:22], Epoch [237/400]	, G/loss_id: 0.0707, G/loss_id_psnt: 0.0680, G/loss_cd: 0.0063, G/loss_emb: 0.0003
+EER target valid : 0.18161210058544877 %
+EER source valid : 49.9977320965409 %
+EER target test : 13.020645306859208 %
+EER source test : 48.21875252158476 %
+time taken for eers computation : 36
+	Validation [237/400]	, G/loss_id: 0.0646, G/loss_id_psnt: 0.0628, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:12:42], Epoch [238/400]	, G/loss_id: 0.0744, G/loss_id_psnt: 0.0714, G/loss_cd: 0.0061, G/loss_emb: 0.0002
+EER target valid : 0.2016080395547359 %
+EER source valid : 50.01381148218924 %
+EER target test : 13.366739370236663 %
+EER source test : 48.884198741224886 %
+time taken for eers computation : 36
+	Validation [238/400]	, G/loss_id: 0.0648, G/loss_id_psnt: 0.0630, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:15:01], Epoch [239/400]	, G/loss_id: 0.0601, G/loss_id_psnt: 0.0579, G/loss_cd: 0.0060, G/loss_emb: 0.0002
+EER target valid : 0.06060606060606061 %
+EER source valid : 50.05440342564347 %
+EER target test : 13.052735158443642 %
+EER source test : 48.07754377471153 %
+time taken for eers computation : 36
+	Validation [239/400]	, G/loss_id: 0.0645, G/loss_id_psnt: 0.0627, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:17:21], Epoch [240/400]	, G/loss_id: 0.0608, G/loss_id_psnt: 0.0583, G/loss_cd: 0.0057, G/loss_emb: 0.0003
+EER target valid : 0.18058169442178354 %
+EER source valid : 49.99200120808656 %
+EER target test : 14.237991375852388 %
+EER source test : 48.293643589122894 %
+time taken for eers computation : 36
+	Validation [240/400]	, G/loss_id: 0.0650, G/loss_id_psnt: 0.0632, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:19:40], Epoch [241/400]	, G/loss_id: 0.0664, G/loss_id_psnt: 0.0636, G/loss_cd: 0.0065, G/loss_emb: 0.0002
+EER target valid : 0.060812141838793646 %
+EER source valid : 50.05788963831641 %
+EER target test : 13.541792017649417 %
+EER source test : 48.002652707173404 %
+time taken for eers computation : 36
+	Validation [241/400]	, G/loss_id: 0.0649, G/loss_id_psnt: 0.0633, G/loss_cd: 0.0066, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:22:00], Epoch [242/400]	, G/loss_id: 0.0661, G/loss_id_psnt: 0.0633, G/loss_cd: 0.0061, G/loss_emb: 0.0002
+EER target valid : 0.14203238511234056 %
+EER source valid : 50.021850670063884 %
+EER target test : 13.716844665062174 %
+EER source test : 48.50974340353426 %
+time taken for eers computation : 36
+	Validation [242/400]	, G/loss_id: 0.0640, G/loss_id_psnt: 0.0622, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:24:20], Epoch [243/400]	, G/loss_id: 0.0741, G/loss_id_psnt: 0.0713, G/loss_cd: 0.0064, G/loss_emb: 0.0003
+EER target valid : 0.060812141838793646 %
+EER source valid : 50.06019389814059 %
+EER target test : 11.286163758523868 %
+EER source test : 49.02969418219963 %
+time taken for eers computation : 36
+	Validation [243/400]	, G/loss_id: 0.0645, G/loss_id_psnt: 0.0627, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:26:39], Epoch [244/400]	, G/loss_id: 0.0614, G/loss_id_psnt: 0.0589, G/loss_cd: 0.0060, G/loss_emb: 0.0002
+EER target valid : 0.060812141838793646 %
+EER source valid : 50.076067202556196 %
+EER target test : 15.451326213397515 %
+EER source test : 49.09172516743323 %
+time taken for eers computation : 36
+	Validation [244/400]	, G/loss_id: 0.0639, G/loss_id_psnt: 0.0620, G/loss_cd: 0.0061, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:28:58], Epoch [245/400]	, G/loss_id: 0.0601, G/loss_id_psnt: 0.0575, G/loss_cd: 0.0058, G/loss_emb: 0.0002
+EER target valid : 0.16264656777982686 %
+EER source valid : 50.05525602774724 %
+EER target test : 14.755126855194545 %
+EER source test : 48.293643589122894 %
+time taken for eers computation : 36
+	Validation [245/400]	, G/loss_id: 0.0644, G/loss_id_psnt: 0.0626, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:31:17], Epoch [246/400]	, G/loss_id: 0.0798, G/loss_id_psnt: 0.0772, G/loss_cd: 0.0059, G/loss_emb: 0.0003
+EER target valid : 0.020198990504929317 %
+EER source valid : 50.11257791731697 %
+EER target test : 12.324445948656237 %
+EER source test : 49.83206245461147 %
+time taken for eers computation : 36
+	Validation [246/400]	, G/loss_id: 0.0650, G/loss_id_psnt: 0.0633, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:33:37], Epoch [247/400]	, G/loss_id: 0.0720, G/loss_id_psnt: 0.0695, G/loss_cd: 0.0063, G/loss_emb: 0.0003
+EER target valid : 0.059781735675128414 %
+EER source valid : 50.06291839962249 %
+EER target test : 14.743093160850382 %
+EER source test : 48.21875252158476 %
+time taken for eers computation : 36
+	Validation [247/400]	, G/loss_id: 0.0644, G/loss_id_psnt: 0.0627, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:35:56], Epoch [248/400]	, G/loss_id: 0.0662, G/loss_id_psnt: 0.0633, G/loss_cd: 0.0065, G/loss_emb: 0.0002
+EER target valid : 0.02040810143475325 %
+EER source valid : 50.08431247166357 %
+EER target test : 15.276273565984757 %
+EER source test : 47.26231541999516 %
+time taken for eers computation : 36
+	Validation [248/400]	, G/loss_id: 0.0646, G/loss_id_psnt: 0.0629, G/loss_cd: 0.0067, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:38:15], Epoch [249/400]	, G/loss_id: 0.0716, G/loss_id_psnt: 0.0686, G/loss_cd: 0.0072, G/loss_emb: 0.0002
+EER target valid : 0.08410639043083983 %
+EER source valid : 50.08600757688083 %
+EER target test : 15.141333233052546 %
+EER source test : 47.56616638424917 %
+time taken for eers computation : 36
+	Validation [249/400]	, G/loss_id: 0.0643, G/loss_id_psnt: 0.0627, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:40:34], Epoch [250/400]	, G/loss_id: 0.0600, G/loss_id_psnt: 0.0576, G/loss_cd: 0.0065, G/loss_emb: 0.0002
+EER target valid : 0.10204050717376625 %
+EER source valid : 50.082690079176494 %
+EER target test : 12.845592659446448 %
+EER source test : 48.87562535302187 %
+time taken for eers computation : 36
+	Validation [250/400]	, G/loss_id: 0.0643, G/loss_id_psnt: 0.0626, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:42:54], Epoch [251/400]	, G/loss_id: 0.0649, G/loss_id_psnt: 0.0624, G/loss_cd: 0.0062, G/loss_emb: 0.0002
+EER target valid : 0.15337089250877922 %
+EER source valid : 50.05915137318857 %
+EER target test : 13.716844665062174 %
+EER source test : 49.382716049382715 %
+time taken for eers computation : 36
+	Validation [251/400]	, G/loss_id: 0.0641, G/loss_id_psnt: 0.0624, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:45:14], Epoch [252/400]	, G/loss_id: 0.0635, G/loss_id_psnt: 0.0607, G/loss_cd: 0.0062, G/loss_emb: 0.0005
+EER target valid : 0.6806498935216049 %
+EER source valid : 49.94825846209855 %
+EER target test : 19.111386883273163 %
+EER source test : 47.42067094327443 %
+time taken for eers computation : 36
+	Validation [252/400]	, G/loss_id: 0.0647, G/loss_id_psnt: 0.0631, G/loss_cd: 0.0068, G/loss_emb: 0.0007
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:47:33], Epoch [253/400]	, G/loss_id: 0.0696, G/loss_id_psnt: 0.0668, G/loss_cd: 0.0061, G/loss_emb: 0.0003
+EER target valid : 0.34219785603794517 %
+EER source valid : 49.94869385224171 %
+EER target test : 18.57820647813879 %
+EER source test : 48.439139030097635 %
+time taken for eers computation : 36
+	Validation [253/400]	, G/loss_id: 0.0645, G/loss_id_psnt: 0.0628, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:49:53], Epoch [254/400]	, G/loss_id: 0.0670, G/loss_id_psnt: 0.0643, G/loss_cd: 0.0062, G/loss_emb: 0.0002
+EER target valid : 0.34199177480521215 %
+EER source valid : 50.02803512684394 %
+EER target test : 14.755126855194545 %
+EER source test : 49.3121116759461 %
+time taken for eers computation : 36
+	Validation [254/400]	, G/loss_id: 0.0633, G/loss_id_psnt: 0.0616, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:52:12], Epoch [255/400]	, G/loss_id: 0.0627, G/loss_id_psnt: 0.0602, G/loss_cd: 0.0058, G/loss_emb: 0.0002
+EER target valid : 0.10204050717376625 %
+EER source valid : 50.06947058331068 %
+EER target test : 15.105232150020054 %
+EER source test : 49.88980674574356 %
+time taken for eers computation : 36
+	Validation [255/400]	, G/loss_id: 0.0641, G/loss_id_psnt: 0.0625, G/loss_cd: 0.0067, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:54:31], Epoch [256/400]	, G/loss_id: 0.0624, G/loss_id_psnt: 0.0599, G/loss_cd: 0.0059, G/loss_emb: 0.0002
+EER target valid : 0.24180599872604328 %
+EER source valid : 50.07257897008518 %
+EER target test : 16.664661050942637 %
+EER source test : 49.673706931332205 %
+time taken for eers computation : 36
+	Validation [256/400]	, G/loss_id: 0.0638, G/loss_id_psnt: 0.0621, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:56:51], Epoch [257/400]	, G/loss_id: 0.0647, G/loss_id_psnt: 0.0621, G/loss_cd: 0.0060, G/loss_emb: 0.0003
+EER target valid : 0.10513273556379223 %
+EER source valid : 50.097115765467805 %
+EER target test : 16.31856698756518 %
+EER source test : 49.09601186153474 %
+time taken for eers computation : 36
+	Validation [257/400]	, G/loss_id: 0.0646, G/loss_id_psnt: 0.0629, G/loss_cd: 0.0066, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [9:59:10], Epoch [258/400]	, G/loss_id: 0.0690, G/loss_id_psnt: 0.0663, G/loss_cd: 0.0069, G/loss_emb: 0.0002
+EER target valid : 0.163264811478026 %
+EER source valid : 50.09710364667945 %
+EER target test : 15.105232150020054 %
+EER source test : 49.75288469297185 %
+time taken for eers computation : 36
+	Validation [258/400]	, G/loss_id: 0.0639, G/loss_id_psnt: 0.0623, G/loss_cd: 0.0066, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:01:29], Epoch [259/400]	, G/loss_id: 0.0648, G/loss_id_psnt: 0.0622, G/loss_cd: 0.0060, G/loss_emb: 0.0002
+EER target valid : 0.22449012568131602 %
+EER source valid : 50.093176994368186 %
+EER target test : 16.49361963497794 %
+EER source test : 49.23722060840797 %
+time taken for eers computation : 36
+	Validation [259/400]	, G/loss_id: 0.0635, G/loss_id_psnt: 0.0617, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:03:48], Epoch [260/400]	, G/loss_id: 0.0578, G/loss_id_psnt: 0.0553, G/loss_cd: 0.0057, G/loss_emb: 0.0002
+EER target valid : 0.20428810547929582 %
+EER source valid : 50.08658037512267 %
+EER target test : 17.360860409145605 %
+EER source test : 47.42067094327443 %
+time taken for eers computation : 36
+	Validation [260/400]	, G/loss_id: 0.0635, G/loss_id_psnt: 0.0617, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:06:08], Epoch [261/400]	, G/loss_id: 0.0595, G/loss_id_psnt: 0.0572, G/loss_cd: 0.0062, G/loss_emb: 0.0002
+EER target valid : 0.1426506288105397 %
+EER source valid : 50.102818376749305 %
+EER target test : 15.276273565984757 %
+EER source test : 49.90266682804809 %
+time taken for eers computation : 35
+	Validation [261/400]	, G/loss_id: 0.0640, G/loss_id_psnt: 0.0624, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:08:28], Epoch [262/400]	, G/loss_id: 0.0723, G/loss_id_psnt: 0.0699, G/loss_cd: 0.0061, G/loss_emb: 0.0002
+EER target valid : 0.22449012568131602 %
+EER source valid : 50.11255367974024 %
+EER target test : 16.839713698355396 %
+EER source test : 48.87562535302187 %
+time taken for eers computation : 36
+	Validation [262/400]	, G/loss_id: 0.0631, G/loss_id_psnt: 0.0614, G/loss_cd: 0.0061, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:10:47], Epoch [263/400]	, G/loss_id: 0.0601, G/loss_id_psnt: 0.0577, G/loss_cd: 0.0056, G/loss_emb: 0.0002
+EER target valid : 1.1020405071737662 %
+EER source valid : 49.85757161080668 %
+EER target test : 22.743368933012437 %
+EER source test : 44.3609799887033 %
+time taken for eers computation : 36
+	Validation [263/400]	, G/loss_id: 0.0630, G/loss_id_psnt: 0.0613, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:13:06], Epoch [264/400]	, G/loss_id: 0.0601, G/loss_id_psnt: 0.0579, G/loss_cd: 0.0058, G/loss_emb: 0.0002
+EER target valid : 0.4291893837270477 %
+EER source valid : 50.0698413399159 %
+EER target test : 14.930179502607299 %
+EER source test : 49.88980674574356 %
+time taken for eers computation : 35
+	Validation [264/400]	, G/loss_id: 0.0632, G/loss_id_psnt: 0.0615, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:15:25], Epoch [265/400]	, G/loss_id: 0.0639, G/loss_id_psnt: 0.0616, G/loss_cd: 0.0063, G/loss_emb: 0.0002
+EER target valid : 0.32364448569778936 %
+EER source valid : 50.115603492370994 %
+EER target test : 16.64460489370237 %
+EER source test : 49.97327120148471 %
+time taken for eers computation : 35
+	Validation [265/400]	, G/loss_id: 0.0642, G/loss_id_psnt: 0.0629, G/loss_cd: 0.0067, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:17:44], Epoch [266/400]	, G/loss_id: 0.0744, G/loss_id_psnt: 0.0719, G/loss_cd: 0.0062, G/loss_emb: 0.0003
+EER target valid : 0.38837318085754113 %
+EER source valid : 50.05570959607295 %
+EER target test : 19.96659396309667 %
+EER source test : 47.42067094327443 %
+time taken for eers computation : 35
+	Validation [266/400]	, G/loss_id: 0.0633, G/loss_id_psnt: 0.0616, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:20:03], Epoch [267/400]	, G/loss_id: 0.0652, G/loss_id_psnt: 0.0627, G/loss_cd: 0.0063, G/loss_emb: 0.0002
+EER target valid : 0.32653063285508227 %
+EER source valid : 50.080569682806384 %
+EER target test : 15.79742027677497 %
+EER source test : 49.15804284676833 %
+time taken for eers computation : 35
+	Validation [267/400]	, G/loss_id: 0.0635, G/loss_id_psnt: 0.0619, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:22:22], Epoch [268/400]	, G/loss_id: 0.0660, G/loss_id_psnt: 0.0633, G/loss_cd: 0.0064, G/loss_emb: 0.0002
+EER target valid : 0.4071326324304301 %
+EER source valid : 50.088847268682734 %
+EER target test : 19.78753008423586 %
+EER source test : 46.53912490922295 %
+time taken for eers computation : 35
+	Validation [268/400]	, G/loss_id: 0.0635, G/loss_id_psnt: 0.0619, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:24:41], Epoch [269/400]	, G/loss_id: 0.0640, G/loss_id_psnt: 0.0617, G/loss_cd: 0.0063, G/loss_emb: 0.0002
+EER target valid : 0.36611034832819045 %
+EER source valid : 50.11168390935295 %
+EER target test : 15.276273565984757 %
+EER source test : 49.16661623497136 %
+time taken for eers computation : 35
+	Validation [269/400]	, G/loss_id: 0.0628, G/loss_id_psnt: 0.0610, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:27:00], Epoch [270/400]	, G/loss_id: 0.0589, G/loss_id_psnt: 0.0568, G/loss_cd: 0.0059, G/loss_emb: 0.0002
+EER target valid : 0.18367392281180953 %
+EER source valid : 50.12735820182903 %
+EER target test : 13.752945748094664 %
+EER source test : 49.46189381102235 %
+time taken for eers computation : 35
+	Validation [270/400]	, G/loss_id: 0.0637, G/loss_id_psnt: 0.0623, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:29:19], Epoch [271/400]	, G/loss_id: 0.0688, G/loss_id_psnt: 0.0663, G/loss_cd: 0.0058, G/loss_emb: 0.0003
+EER target valid : 0.38651844976294375 %
+EER source valid : 50.096063141525484 %
+EER target test : 20.463673285198556 %
+EER source test : 48.01979948357944 %
+time taken for eers computation : 35
+	Validation [271/400]	, G/loss_id: 0.0631, G/loss_id_psnt: 0.0614, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:31:39], Epoch [272/400]	, G/loss_id: 0.0838, G/loss_id_psnt: 0.0807, G/loss_cd: 0.0063, G/loss_emb: 0.0002
+EER target valid : 0.36796507942278794 %
+EER source valid : 50.09664704865664 %
+EER target test : 17.010755114320098 %
+EER source test : 49.885520051642054 %
+time taken for eers computation : 35
+	Validation [272/400]	, G/loss_id: 0.0631, G/loss_id_psnt: 0.0616, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:33:58], Epoch [273/400]	, G/loss_id: 0.0676, G/loss_id_psnt: 0.0650, G/loss_cd: 0.0059, G/loss_emb: 0.0002
+EER target valid : 0.3663164295609235 %
+EER source valid : 50.117119783629335 %
+EER target test : 16.648616125150422 %
+EER source test : 49.677993625433714 %
+time taken for eers computation : 35
+	Validation [273/400]	, G/loss_id: 0.0632, G/loss_id_psnt: 0.0616, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:36:17], Epoch [274/400]	, G/loss_id: 0.0603, G/loss_id_psnt: 0.0579, G/loss_cd: 0.0059, G/loss_emb: 0.0002
+EER target valid : 0.4293964748588109 %
+EER source valid : 50.092192033660886 %
+EER target test : 18.749247894103487 %
+EER source test : 48.00693940127492 %
+time taken for eers computation : 35
+	Validation [274/400]	, G/loss_id: 0.0634, G/loss_id_psnt: 0.0618, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:38:36], Epoch [275/400]	, G/loss_id: 0.0621, G/loss_id_psnt: 0.0597, G/loss_cd: 0.0055, G/loss_emb: 0.0002
+EER target valid : 0.5099974645351285 %
+EER source valid : 50.09461956299732 %
+EER target test : 18.729191736863214 %
+EER source test : 48.50974340353426 %
+time taken for eers computation : 35
+	Validation [275/400]	, G/loss_id: 0.0628, G/loss_id_psnt: 0.0612, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:40:55], Epoch [276/400]	, G/loss_id: 0.0599, G/loss_id_psnt: 0.0576, G/loss_cd: 0.0056, G/loss_emb: 0.0002
+EER target valid : 0.46732653057102447 %
+EER source valid : 50.09936145114824 %
+EER target test : 17.53591305655836 %
+EER source test : 48.42627894779311 %
+time taken for eers computation : 35
+	Validation [276/400]	, G/loss_id: 0.0626, G/loss_id_psnt: 0.0610, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:43:14], Epoch [277/400]	, G/loss_id: 0.0631, G/loss_id_psnt: 0.0606, G/loss_cd: 0.0056, G/loss_emb: 0.0002
+EER target valid : 0.612038981607925 %
+EER source valid : 50.08034441349207 %
+EER target test : 19.270394604893703 %
+EER source test : 46.97989792624869 %
+time taken for eers computation : 36
+	Validation [277/400]	, G/loss_id: 0.0624, G/loss_id_psnt: 0.0608, G/loss_cd: 0.0060, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:45:33], Epoch [278/400]	, G/loss_id: 0.0596, G/loss_id_psnt: 0.0574, G/loss_cd: 0.0059, G/loss_emb: 0.0002
+EER target valid : 0.7076889507689063 %
+EER source valid : 50.01669762934653 %
+EER target test : 20.31268802647413 %
+EER source test : 45.6747256515775 %
+time taken for eers computation : 36
+	Validation [278/400]	, G/loss_id: 0.0626, G/loss_id_psnt: 0.0611, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:47:54], Epoch [279/400]	, G/loss_id: 0.0655, G/loss_id_psnt: 0.0629, G/loss_cd: 0.0059, G/loss_emb: 0.0003
+EER target valid : 0.5734896722984819 %
+EER source valid : 50.0702949082416 %
+EER target test : 18.24013487765744 %
+EER source test : 49.39557613168724 %
+time taken for eers computation : 36
+	Validation [279/400]	, G/loss_id: 0.0628, G/loss_id_psnt: 0.0612, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:50:14], Epoch [280/400]	, G/loss_id: 0.0733, G/loss_id_psnt: 0.0709, G/loss_cd: 0.0084, G/loss_emb: 0.0005
+EER target valid : 1.6755311893712785 %
+EER source valid : 49.08554895905997 %
+EER target test : 9.722723626153229 %
+EER source test : 49.02112079399661 %
+time taken for eers computation : 36
+	Validation [280/400]	, G/loss_id: 0.0680, G/loss_id_psnt: 0.0666, G/loss_cd: 0.0082, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:52:35], Epoch [281/400]	, G/loss_id: 0.0654, G/loss_id_psnt: 0.0632, G/loss_cd: 0.0068, G/loss_emb: 0.0003
+EER target valid : 0.44836099776540256 %
+EER source valid : 49.85612399268239 %
+EER target test : 11.274130064179703 %
+EER source test : 50.54667957718066 %
+time taken for eers computation : 35
+	Validation [281/400]	, G/loss_id: 0.0636, G/loss_id_psnt: 0.0621, G/loss_cd: 0.0069, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:54:54], Epoch [282/400]	, G/loss_id: 0.0605, G/loss_id_psnt: 0.0582, G/loss_cd: 0.0061, G/loss_emb: 0.0003
+EER target valid : 0.09564996916098124 %
+EER source valid : 50.044567070918944 %
+EER target test : 8.533456177296431 %
+EER source test : 50.617283950617285 %
+time taken for eers computation : 35
+	Validation [282/400]	, G/loss_id: 0.0629, G/loss_id_psnt: 0.0613, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:57:13], Epoch [283/400]	, G/loss_id: 0.0740, G/loss_id_psnt: 0.0711, G/loss_cd: 0.0059, G/loss_emb: 0.0003
+EER target valid : 0.11564590813026841 %
+EER source valid : 50.086786456355405 %
+EER target test : 10.936058463698355 %
+EER source test : 50.10590656015492 %
+time taken for eers computation : 35
+	Validation [283/400]	, G/loss_id: 0.0624, G/loss_id_psnt: 0.0608, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [10:59:32], Epoch [284/400]	, G/loss_id: 0.0631, G/loss_id_psnt: 0.0607, G/loss_cd: 0.0071, G/loss_emb: 0.0002
+EER target valid : 0.12615908069674459 %
+EER source valid : 50.110452471451694 %
+EER target test : 11.11111111111111 %
+EER source test : 49.89838013394659 %
+time taken for eers computation : 35
+	Validation [284/400]	, G/loss_id: 0.0626, G/loss_id_psnt: 0.0609, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:01:51], Epoch [285/400]	, G/loss_id: 0.0553, G/loss_id_psnt: 0.0532, G/loss_cd: 0.0055, G/loss_emb: 0.0002
+EER target valid : 0.02040810143475325 %
+EER source valid : 50.124716512067614 %
+EER target test : 9.030535499398315 %
+EER source test : 50.18079762769305 %
+time taken for eers computation : 35
+	Validation [285/400]	, G/loss_id: 0.0627, G/loss_id_psnt: 0.0612, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:04:10], Epoch [286/400]	, G/loss_id: 0.0726, G/loss_id_psnt: 0.0703, G/loss_cd: 0.0057, G/loss_emb: 0.0002
+EER target valid : 0.040610121636773445 %
+EER source valid : 50.14018775300805 %
+EER target test : 10.589964400320898 %
+EER source test : 50.916848220769786 %
+time taken for eers computation : 35
+	Validation [286/400]	, G/loss_id: 0.0622, G/loss_id_psnt: 0.0607, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:06:29], Epoch [287/400]	, G/loss_id: 0.0584, G/loss_id_psnt: 0.0562, G/loss_cd: 0.0056, G/loss_emb: 0.0002
+EER target valid : 0.040610121636773445 %
+EER source valid : 50.15874718274238 %
+EER target test : 6.074696650621741 %
+EER source test : 50.617283950617285 %
+time taken for eers computation : 36
+	Validation [287/400]	, G/loss_id: 0.0624, G/loss_id_psnt: 0.0609, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:08:49], Epoch [288/400]	, G/loss_id: 0.0597, G/loss_id_psnt: 0.0573, G/loss_cd: 0.0060, G/loss_emb: 0.0002
+EER target valid : 0.019995938969287155 %
+EER source valid : 50.16223440531435 %
+EER target test : 3.6440157440834344 %
+EER source test : 51.120087952876624 %
+time taken for eers computation : 35
+	Validation [288/400]	, G/loss_id: 0.0628, G/loss_id_psnt: 0.0614, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:11:08], Epoch [289/400]	, G/loss_id: 0.0650, G/loss_id_psnt: 0.0623, G/loss_cd: 0.0057, G/loss_emb: 0.0002
+EER target valid : 0.02040810143475325 %
+EER source valid : 50.16759453716348 %
+EER target test : 7.467095367027678 %
+EER source test : 50.83338376502864 %
+time taken for eers computation : 36
+	Validation [289/400]	, G/loss_id: 0.0630, G/loss_id_psnt: 0.0614, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:13:27], Epoch [290/400]	, G/loss_id: 0.0702, G/loss_id_psnt: 0.0679, G/loss_cd: 0.0066, G/loss_emb: 0.0002
+EER target valid : 0.05957565444239538 %
+EER source valid : 50.124304349602156 %
+EER target test : 13.565859406337744 %
+EER source test : 49.88980674574356 %
+time taken for eers computation : 35
+	Validation [290/400]	, G/loss_id: 0.0625, G/loss_id_psnt: 0.0610, G/loss_cd: 0.0061, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:15:46], Epoch [291/400]	, G/loss_id: 0.0587, G/loss_id_psnt: 0.0563, G/loss_cd: 0.0063, G/loss_emb: 0.0003
+EER target valid : 0.0404040404040404 %
+EER source valid : 50.13687934439499 %
+EER target test : 14.42106648616125 %
+EER source test : 50.326293068667795 %
+time taken for eers computation : 35
+	Validation [291/400]	, G/loss_id: 0.0622, G/loss_id_psnt: 0.0606, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:18:05], Epoch [292/400]	, G/loss_id: 0.0775, G/loss_id_psnt: 0.0749, G/loss_cd: 0.0061, G/loss_emb: 0.0002
+EER target valid : 0.040610121636773445 %
+EER source valid : 50.14779256063857 %
+EER target test : 13.541792017649417 %
+EER source test : 50.326293068667795 %
+time taken for eers computation : 35
+	Validation [292/400]	, G/loss_id: 0.0622, G/loss_id_psnt: 0.0607, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:20:25], Epoch [293/400]	, G/loss_id: 0.0790, G/loss_id_psnt: 0.0765, G/loss_cd: 0.0059, G/loss_emb: 0.0002
+EER target valid : 0.0404040404040404 %
+EER source valid : 50.160157434602546 %
+EER target test : 9.376629562775772 %
+EER source test : 50.33057976276931 %
+time taken for eers computation : 35
+	Validation [293/400]	, G/loss_id: 0.0626, G/loss_id_psnt: 0.0611, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:22:44], Epoch [294/400]	, G/loss_id: 0.0721, G/loss_id_psnt: 0.0698, G/loss_cd: 0.0059, G/loss_emb: 0.0003
+EER target valid : 0.060812141838793646 %
+EER source valid : 50.17295365911356 %
+EER target test : 12.845592659446448 %
+EER source test : 50.46750181554103 %
+time taken for eers computation : 36
+	Validation [294/400]	, G/loss_id: 0.0623, G/loss_id_psnt: 0.0609, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:25:03], Epoch [295/400]	, G/loss_id: 0.0669, G/loss_id_psnt: 0.0646, G/loss_cd: 0.0057, G/loss_emb: 0.0002
+EER target valid : 0.08122024327354689 %
+EER source valid : 50.15316380137702 %
+EER target test : 14.39298786602487 %
+EER source test : 49.74431130476882 %
+time taken for eers computation : 35
+	Validation [295/400]	, G/loss_id: 0.0620, G/loss_id_psnt: 0.0606, G/loss_cd: 0.0061, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:27:22], Epoch [296/400]	, G/loss_id: 0.0617, G/loss_id_psnt: 0.0591, G/loss_cd: 0.0056, G/loss_emb: 0.0002
+EER target valid : 0.02040810143475325 %
+EER source valid : 50.17114437347534 %
+EER target test : 14.755126855194545 %
+EER source test : 50.11019325425643 %
+time taken for eers computation : 35
+	Validation [296/400]	, G/loss_id: 0.0629, G/loss_id_psnt: 0.0614, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:29:41], Epoch [297/400]	, G/loss_id: 0.0666, G/loss_id_psnt: 0.0643, G/loss_cd: 0.0060, G/loss_emb: 0.0002
+EER target valid : 0.06122430430425974 %
+EER source valid : 50.17043624876344 %
+EER target test : 15.62637886081027 %
+EER source test : 50.617283950617285 %
+time taken for eers computation : 35
+	Validation [297/400]	, G/loss_id: 0.0624, G/loss_id_psnt: 0.0609, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:32:00], Epoch [298/400]	, G/loss_id: 0.0588, G/loss_id_psnt: 0.0565, G/loss_cd: 0.0057, G/loss_emb: 0.0002
+EER target valid : 0.02020000040395961 %
+EER source valid : 50.175427643805406 %
+EER target test : 5.382508523866828 %
+EER source test : 50.916848220769786 %
+time taken for eers computation : 35
+	Validation [298/400]	, G/loss_id: 0.0621, G/loss_id_psnt: 0.0607, G/loss_cd: 0.0061, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:34:19], Epoch [299/400]	, G/loss_id: 0.0600, G/loss_id_psnt: 0.0575, G/loss_cd: 0.0060, G/loss_emb: 0.0002
+EER target valid : 0.019995938969287155 %
+EER source valid : 50.171916183656684 %
+EER target test : 10.936058463698355 %
+EER source test : 50.25997538933269 %
+time taken for eers computation : 35
+	Validation [299/400]	, G/loss_id: 0.0624, G/loss_id_psnt: 0.0610, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:36:38], Epoch [300/400]	, G/loss_id: 0.0580, G/loss_id_psnt: 0.0558, G/loss_cd: 0.0059, G/loss_emb: 0.0002
+EER target valid : 0.02040810143475325 %
+EER source valid : 50.177901628497224 %
+EER target test : 12.67455124348175 %
+EER source test : 50.46750181554103 %
+time taken for eers computation : 35
+	Validation [300/400]	, G/loss_id: 0.0617, G/loss_id_psnt: 0.0602, G/loss_cd: 0.0061, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:38:57], Epoch [301/400]	, G/loss_id: 0.0817, G/loss_id_psnt: 0.0807, G/loss_cd: 0.0112, G/loss_emb: 0.0022
+EER target valid : 9.548752855077304 %
+EER source valid : 47.590599464110475 %
+EER target test : 28.27686271560369 %
+EER source test : 33.11723351892197 %
+time taken for eers computation : 35
+	Validation [301/400]	, G/loss_id: 0.0795, G/loss_id_psnt: 0.0790, G/loss_cd: 0.0110, G/loss_emb: 0.0018
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:41:16], Epoch [302/400]	, G/loss_id: 0.0886, G/loss_id_psnt: 0.0877, G/loss_cd: 0.0117, G/loss_emb: 0.0021
+EER target valid : 4.6124511440733915 %
+EER source valid : 35.318078272615935 %
+EER target test : 13.358716907340554 %
+EER source test : 33.33333333333333 %
+time taken for eers computation : 35
+	Validation [302/400]	, G/loss_id: 0.0757, G/loss_id_psnt: 0.0751, G/loss_cd: 0.0112, G/loss_emb: 0.0021
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:43:35], Epoch [303/400]	, G/loss_id: 0.0728, G/loss_id_psnt: 0.0717, G/loss_cd: 0.0095, G/loss_emb: 0.0017
+EER target valid : 3.2545688965690682 %
+EER source valid : 35.823356066778814 %
+EER target test : 12.475431207380666 %
+EER source test : 32.535251755023 %
+time taken for eers computation : 35
+	Validation [303/400]	, G/loss_id: 0.0717, G/loss_id_psnt: 0.0713, G/loss_cd: 0.0101, G/loss_emb: 0.0018
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:45:55], Epoch [304/400]	, G/loss_id: 0.0744, G/loss_id_psnt: 0.0726, G/loss_cd: 0.0082, G/loss_emb: 0.0015
+EER target valid : 2.3873427746938756 %
+EER source valid : 37.89280544220985 %
+EER target test : 13.195697954271962 %
+EER source test : 32.098765432098766 %
+time taken for eers computation : 36
+	Validation [304/400]	, G/loss_id: 0.0679, G/loss_id_psnt: 0.0671, G/loss_cd: 0.0087, G/loss_emb: 0.0016
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:48:14], Epoch [305/400]	, G/loss_id: 0.0705, G/loss_id_psnt: 0.0686, G/loss_cd: 0.0077, G/loss_emb: 0.0013
+EER target valid : 1.4714491651247157 %
+EER source valid : 42.319149074740814 %
+EER target test : 11.978351885278782 %
+EER source test : 33.47454208020657 %
+time taken for eers computation : 36
+	Validation [305/400]	, G/loss_id: 0.0653, G/loss_id_psnt: 0.0641, G/loss_cd: 0.0077, G/loss_emb: 0.0013
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:50:33], Epoch [306/400]	, G/loss_id: 0.0670, G/loss_id_psnt: 0.0645, G/loss_cd: 0.0071, G/loss_emb: 0.0008
+EER target valid : 0.2782934858091255 %
+EER source valid : 47.25314349622345 %
+EER target test : 7.638136782992379 %
+EER source test : 38.9241910756072 %
+time taken for eers computation : 35
+	Validation [306/400]	, G/loss_id: 0.0653, G/loss_id_psnt: 0.0639, G/loss_cd: 0.0075, G/loss_emb: 0.0009
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:52:52], Epoch [307/400]	, G/loss_id: 0.0691, G/loss_id_psnt: 0.0666, G/loss_cd: 0.0071, G/loss_emb: 0.0004
+EER target valid : 0.07441754279529582 %
+EER source valid : 49.235234626956284 %
+EER target test : 7.4911627557160045 %
+EER source test : 45.22966594045026 %
+time taken for eers computation : 35
+	Validation [307/400]	, G/loss_id: 0.0650, G/loss_id_psnt: 0.0635, G/loss_cd: 0.0073, G/loss_emb: 0.0006
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:55:11], Epoch [308/400]	, G/loss_id: 0.0606, G/loss_id_psnt: 0.0584, G/loss_cd: 0.0065, G/loss_emb: 0.0003
+EER target valid : 0.03197389794356116 %
+EER source valid : 49.566078827112335 %
+EER target test : 9.90178750501404 %
+EER source test : 44.823186476236586 %
+time taken for eers computation : 35
+	Validation [308/400]	, G/loss_id: 0.0637, G/loss_id_psnt: 0.0621, G/loss_cd: 0.0072, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:57:30], Epoch [309/400]	, G/loss_id: 0.0561, G/loss_id_psnt: 0.0539, G/loss_cd: 0.0064, G/loss_emb: 0.0003
+EER target valid : 0.07400538032982973 %
+EER source valid : 49.727890970970925 %
+EER target test : 12.706641095066185 %
+EER source test : 43.42597635762124 %
+time taken for eers computation : 35
+	Validation [309/400]	, G/loss_id: 0.0625, G/loss_id_psnt: 0.0609, G/loss_cd: 0.0065, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [11:59:49], Epoch [310/400]	, G/loss_id: 0.0698, G/loss_id_psnt: 0.0675, G/loss_cd: 0.0061, G/loss_emb: 0.0003
+EER target valid : 0.2624201813935296 %
+EER source valid : 49.74273386922285 %
+EER target test : 16.99471018852788 %
+EER source test : 41.177227063664965 %
+time taken for eers computation : 35
+	Validation [310/400]	, G/loss_id: 0.0626, G/loss_id_psnt: 0.0610, G/loss_cd: 0.0066, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:02:08], Epoch [311/400]	, G/loss_id: 0.0628, G/loss_id_psnt: 0.0605, G/loss_cd: 0.0063, G/loss_emb: 0.0003
+EER target valid : 0.20078371462380373 %
+EER source valid : 49.82604320199658 %
+EER target test : 15.447314981949459 %
+EER source test : 41.32272250463972 %
+time taken for eers computation : 35
+	Validation [311/400]	, G/loss_id: 0.0624, G/loss_id_psnt: 0.0608, G/loss_cd: 0.0067, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:04:28], Epoch [312/400]	, G/loss_id: 0.0664, G/loss_id_psnt: 0.0638, G/loss_cd: 0.0061, G/loss_emb: 0.0002
+EER target valid : 0.5897751391795439 %
+EER source valid : 49.723189478781215 %
+EER target test : 16.30653329322102 %
+EER source test : 39.131717501815544 %
+time taken for eers computation : 35
+	Validation [312/400]	, G/loss_id: 0.0623, G/loss_id_psnt: 0.0608, G/loss_cd: 0.0064, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:06:47], Epoch [313/400]	, G/loss_id: 0.0612, G/loss_id_psnt: 0.0589, G/loss_cd: 0.0059, G/loss_emb: 0.0003
+EER target valid : 0.34524564887063813 %
+EER source valid : 49.870768888893835 %
+EER target test : 16.847736161251504 %
+EER source test : 42.702785846849025 %
+time taken for eers computation : 36
+	Validation [313/400]	, G/loss_id: 0.0618, G/loss_id_psnt: 0.0604, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:09:06], Epoch [314/400]	, G/loss_id: 0.0639, G/loss_id_psnt: 0.0616, G/loss_cd: 0.0068, G/loss_emb: 0.0003
+EER target valid : 0.5495771800082366 %
+EER source valid : 49.855699711428564 %
+EER target test : 19.42940232651424 %
+EER source test : 40.15875897684177 %
+time taken for eers computation : 36
+	Validation [314/400]	, G/loss_id: 0.0621, G/loss_id_psnt: 0.0606, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:11:25], Epoch [315/400]	, G/loss_id: 0.0796, G/loss_id_psnt: 0.0768, G/loss_cd: 0.0060, G/loss_emb: 0.0002
+EER target valid : 1.010513172566476 %
+EER source valid : 49.737749543474116 %
+EER target test : 21.526022864019257 %
+EER source test : 39.144577584120064 %
+time taken for eers computation : 35
+	Validation [315/400]	, G/loss_id: 0.0617, G/loss_id_psnt: 0.0601, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:13:47], Epoch [316/400]	, G/loss_id: 0.0793, G/loss_id_psnt: 0.0764, G/loss_cd: 0.0061, G/loss_emb: 0.0003
+EER target valid : 0.8163260771881904 %
+EER source valid : 49.82888592349557 %
+EER target test : 19.095341957480947 %
+EER source test : 38.70809126119583 %
+time taken for eers computation : 36
+	Validation [316/400]	, G/loss_id: 0.0619, G/loss_id_psnt: 0.0604, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:16:06], Epoch [317/400]	, G/loss_id: 0.0596, G/loss_id_psnt: 0.0574, G/loss_cd: 0.0066, G/loss_emb: 0.0002
+EER target valid : 0.6097710781488311 %
+EER source valid : 49.87966067887226 %
+EER target test : 19.059240874448456 %
+EER source test : 39.35639070442992 %
+time taken for eers computation : 35
+	Validation [317/400]	, G/loss_id: 0.0629, G/loss_id_psnt: 0.0615, G/loss_cd: 0.0070, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:18:25], Epoch [318/400]	, G/loss_id: 0.0611, G/loss_id_psnt: 0.0589, G/loss_cd: 0.0060, G/loss_emb: 0.0003
+EER target valid : 0.13584792833228862 %
+EER source valid : 49.09520649982558 %
+EER target test : 14.755126855194545 %
+EER source test : 41.031731622690224 %
+time taken for eers computation : 36
+	Validation [318/400]	, G/loss_id: 0.0619, G/loss_id_psnt: 0.0604, G/loss_cd: 0.0061, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:20:44], Epoch [319/400]	, G/loss_id: 0.0698, G/loss_id_psnt: 0.0671, G/loss_cd: 0.0058, G/loss_emb: 0.0002
+EER target valid : 0.04736636675963096 %
+EER source valid : 50.06477616041418 %
+EER target test : 15.451326213397515 %
+EER source test : 45.84165456305979 %
+time taken for eers computation : 35
+	Validation [319/400]	, G/loss_id: 0.0622, G/loss_id_psnt: 0.0608, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:23:03], Epoch [320/400]	, G/loss_id: 0.0707, G/loss_id_psnt: 0.0682, G/loss_cd: 0.0062, G/loss_emb: 0.0002
+EER target valid : 0.1574935270624704 %
+EER source valid : 50.05339119766234 %
+EER target test : 14.270081227436823 %
+EER source test : 46.32731178891309 %
+time taken for eers computation : 35
+	Validation [320/400]	, G/loss_id: 0.0624, G/loss_id_psnt: 0.0611, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:25:22], Epoch [321/400]	, G/loss_id: 0.0600, G/loss_id_psnt: 0.0577, G/loss_cd: 0.0059, G/loss_emb: 0.0002
+EER target valid : 0.36359596767515184 %
+EER source valid : 49.99588645453758 %
+EER target test : 16.664661050942637 %
+EER source test : 42.97662995239248 %
+time taken for eers computation : 35
+	Validation [321/400]	, G/loss_id: 0.0616, G/loss_id_psnt: 0.0602, G/loss_cd: 0.0061, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:27:42], Epoch [322/400]	, G/loss_id: 0.0703, G/loss_id_psnt: 0.0677, G/loss_cd: 0.0059, G/loss_emb: 0.0003
+EER target valid : 0.24679335417187848 %
+EER source valid : 50.060812141838795 %
+EER target test : 17.360860409145605 %
+EER source test : 45.09703058178004 %
+time taken for eers computation : 35
+	Validation [322/400]	, G/loss_id: 0.0618, G/loss_id_psnt: 0.0604, G/loss_cd: 0.0061, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:30:01], Epoch [323/400]	, G/loss_id: 0.0737, G/loss_id_psnt: 0.0712, G/loss_cd: 0.0060, G/loss_emb: 0.0002
+EER target valid : 0.5850342609276536 %
+EER source valid : 49.978767573634315 %
+EER target test : 19.445447252306458 %
+EER source test : 42.3283305091584 %
+time taken for eers computation : 35
+	Validation [323/400]	, G/loss_id: 0.0612, G/loss_id_psnt: 0.0596, G/loss_cd: 0.0059, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:32:20], Epoch [324/400]	, G/loss_id: 0.0590, G/loss_id_psnt: 0.0565, G/loss_cd: 0.0052, G/loss_emb: 0.0002
+EER target valid : 0.6227582354071343 %
+EER source valid : 49.90393685847452 %
+EER target test : 16.668672282390695 %
+EER source test : 42.3946481884935 %
+time taken for eers computation : 35
+	Validation [324/400]	, G/loss_id: 0.0615, G/loss_id_psnt: 0.0601, G/loss_cd: 0.0060, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:34:39], Epoch [325/400]	, G/loss_id: 0.0627, G/loss_id_psnt: 0.0605, G/loss_cd: 0.0059, G/loss_emb: 0.0002
+EER target valid : 0.20428810547929582 %
+EER source valid : 50.05730775098329 %
+EER target test : 15.411213898916968 %
+EER source test : 44.73543532639393 %
+time taken for eers computation : 35
+	Validation [325/400]	, G/loss_id: 0.0614, G/loss_id_psnt: 0.0599, G/loss_cd: 0.0061, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:36:58], Epoch [326/400]	, G/loss_id: 0.0571, G/loss_id_psnt: 0.0547, G/loss_cd: 0.0052, G/loss_emb: 0.0002
+EER target valid : 0.4895893631003752 %
+EER source valid : 49.971758791923335 %
+EER target test : 16.648616125150422 %
+EER source test : 44.440157750342934 %
+time taken for eers computation : 36
+	Validation [326/400]	, G/loss_id: 0.0611, G/loss_id_psnt: 0.0597, G/loss_cd: 0.0059, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:39:17], Epoch [327/400]	, G/loss_id: 0.0610, G/loss_id_psnt: 0.0585, G/loss_cd: 0.0057, G/loss_emb: 0.0002
+EER target valid : 0.5518450834673305 %
+EER source valid : 49.95360243556319 %
+EER target test : 19.791541315683915 %
+EER source test : 43.79185830710885 %
+time taken for eers computation : 35
+	Validation [327/400]	, G/loss_id: 0.0614, G/loss_id_psnt: 0.0601, G/loss_cd: 0.0060, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:41:36], Epoch [328/400]	, G/loss_id: 0.0693, G/loss_id_psnt: 0.0668, G/loss_cd: 0.0054, G/loss_emb: 0.0002
+EER target valid : 0.5797114953426549 %
+EER source valid : 49.94825846209855 %
+EER target test : 20.137635379061372 %
+EER source test : 41.91327765674171 %
+time taken for eers computation : 36
+	Validation [328/400]	, G/loss_id: 0.0612, G/loss_id_psnt: 0.0598, G/loss_cd: 0.0058, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:43:56], Epoch [329/400]	, G/loss_id: 0.0680, G/loss_id_psnt: 0.0654, G/loss_cd: 0.0058, G/loss_emb: 0.0003
+EER target valid : 0.09029084721089177 %
+EER source valid : 50.08822902498453 %
+EER target test : 14.556006819093462 %
+EER source test : 48.148148148148145 %
+time taken for eers computation : 36
+	Validation [329/400]	, G/loss_id: 0.0617, G/loss_id_psnt: 0.0603, G/loss_cd: 0.0061, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:46:15], Epoch [330/400]	, G/loss_id: 0.0637, G/loss_id_psnt: 0.0613, G/loss_cd: 0.0057, G/loss_emb: 0.0002
+EER target valid : 0.23207271553316633 %
+EER source valid : 50.06720267985158 %
+EER target test : 20.121590453269157 %
+EER source test : 42.33690389736141 %
+time taken for eers computation : 36
+	Validation [330/400]	, G/loss_id: 0.0618, G/loss_id_psnt: 0.0604, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:48:34], Epoch [331/400]	, G/loss_id: 0.0587, G/loss_id_psnt: 0.0564, G/loss_cd: 0.0059, G/loss_emb: 0.0003
+EER target valid : 0.4601116676273074 %
+EER source valid : 50.03689964954855 %
+EER target test : 20.31268802647413 %
+EER source test : 42.27915960622932 %
+time taken for eers computation : 35
+	Validation [331/400]	, G/loss_id: 0.0612, G/loss_id_psnt: 0.0598, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:50:53], Epoch [332/400]	, G/loss_id: 0.0589, G/loss_id_psnt: 0.0566, G/loss_cd: 0.0061, G/loss_emb: 0.0002
+EER target valid : 0.768913255073166 %
+EER source valid : 49.91321758324072 %
+EER target test : 18.57820647813879 %
+EER source test : 42.48239933833616 %
+time taken for eers computation : 36
+	Validation [332/400]	, G/loss_id: 0.0611, G/loss_id_psnt: 0.0598, G/loss_cd: 0.0060, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:53:13], Epoch [333/400]	, G/loss_id: 0.0640, G/loss_id_psnt: 0.0615, G/loss_cd: 0.0058, G/loss_emb: 0.0002
+EER target valid : 0.7015044939888543 %
+EER source valid : 49.9541944218866 %
+EER target test : 19.620499899719213 %
+EER source test : 42.3283305091584 %
+time taken for eers computation : 36
+	Validation [333/400]	, G/loss_id: 0.0614, G/loss_id_psnt: 0.0601, G/loss_cd: 0.0060, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:55:32], Epoch [334/400]	, G/loss_id: 0.0767, G/loss_id_psnt: 0.0753, G/loss_cd: 0.0114, G/loss_emb: 0.0019
+EER target valid : 4.0066360053076995 %
+EER source valid : 36.52463428155433 %
+EER target test : 10.756994584837546 %
+EER source test : 34.35180142015654 %
+time taken for eers computation : 36
+	Validation [334/400]	, G/loss_id: 0.0754, G/loss_id_psnt: 0.0746, G/loss_cd: 0.0111, G/loss_emb: 0.0019
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [12:57:51], Epoch [335/400]	, G/loss_id: 0.0662, G/loss_id_psnt: 0.0643, G/loss_cd: 0.0090, G/loss_emb: 0.0007
+EER target valid : 1.6705832199876247 %
+EER source valid : 47.67491193577405 %
+EER target test : 10.243870336943441 %
+EER source test : 39.43556846606956 %
+time taken for eers computation : 36
+	Validation [335/400]	, G/loss_id: 0.0706, G/loss_id_psnt: 0.0693, G/loss_cd: 0.0099, G/loss_emb: 0.0007
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:00:10], Epoch [336/400]	, G/loss_id: 0.0643, G/loss_id_psnt: 0.0619, G/loss_cd: 0.0072, G/loss_emb: 0.0003
+EER target valid : 0.593073448802303 %
+EER source valid : 49.206750981281786 %
+EER target test : 6.58380966706779 %
+EER source test : 47.495562010812556 %
+time taken for eers computation : 36
+	Validation [336/400]	, G/loss_id: 0.0648, G/loss_id_psnt: 0.0633, G/loss_cd: 0.0076, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:02:33], Epoch [337/400]	, G/loss_id: 0.0729, G/loss_id_psnt: 0.0702, G/loss_cd: 0.0067, G/loss_emb: 0.0003
+EER target valid : 0.5854464233931198 %
+EER source valid : 49.3873003589346 %
+EER target test : 9.722723626153229 %
+EER source test : 46.34445856531914 %
+time taken for eers computation : 36
+	Validation [337/400]	, G/loss_id: 0.0633, G/loss_id_psnt: 0.0619, G/loss_cd: 0.0072, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:04:52], Epoch [338/400]	, G/loss_id: 0.0614, G/loss_id_psnt: 0.0589, G/loss_cd: 0.0066, G/loss_emb: 0.0003
+EER target valid : 0.32859245508144297 %
+EER source valid : 49.621315666778 %
+EER target test : 7.292042719614922 %
+EER source test : 48.293643589122894 %
+time taken for eers computation : 36
+	Validation [338/400]	, G/loss_id: 0.0631, G/loss_id_psnt: 0.0617, G/loss_cd: 0.0071, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:07:12], Epoch [339/400]	, G/loss_id: 0.0691, G/loss_id_psnt: 0.0662, G/loss_cd: 0.0060, G/loss_emb: 0.0003
+EER target valid : 0.15955433938980088 %
+EER source valid : 49.76440976492395 %
+EER target test : 7.984230846369836 %
+EER source test : 48.655238844509 %
+time taken for eers computation : 36
+	Validation [339/400]	, G/loss_id: 0.0618, G/loss_id_psnt: 0.0603, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:09:31], Epoch [340/400]	, G/loss_id: 0.0544, G/loss_id_psnt: 0.0522, G/loss_cd: 0.0058, G/loss_emb: 0.0002
+EER target valid : 0.18202426305091488 %
+EER source valid : 49.78068109321858 %
+EER target test : 7.984230846369836 %
+EER source test : 48.80930767368676 %
+time taken for eers computation : 36
+	Validation [340/400]	, G/loss_id: 0.0618, G/loss_id_psnt: 0.0603, G/loss_cd: 0.0066, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:11:51], Epoch [341/400]	, G/loss_id: 0.0758, G/loss_id_psnt: 0.0735, G/loss_cd: 0.0062, G/loss_emb: 0.0003
+EER target valid : 0.2014019583220029 %
+EER source valid : 49.83820603432395 %
+EER target test : 7.984230846369836 %
+EER source test : 48.148148148148145 %
+time taken for eers computation : 36
+	Validation [341/400]	, G/loss_id: 0.0616, G/loss_id_psnt: 0.0602, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:14:11], Epoch [342/400]	, G/loss_id: 0.0768, G/loss_id_psnt: 0.0743, G/loss_cd: 0.0060, G/loss_emb: 0.0002
+EER target valid : 0.1766641312017951 %
+EER source valid : 49.856524036359495 %
+EER target test : 7.984230846369836 %
+EER source test : 49.3121116759461 %
+time taken for eers computation : 36
+	Validation [342/400]	, G/loss_id: 0.0614, G/loss_id_psnt: 0.0601, G/loss_cd: 0.0061, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:16:31], Epoch [343/400]	, G/loss_id: 0.0631, G/loss_id_psnt: 0.0604, G/loss_cd: 0.0061, G/loss_emb: 0.0002
+EER target valid : 0.28138571419915154 %
+EER source valid : 49.855081467730365 %
+EER target test : 7.992253309265945 %
+EER source test : 49.033980876301136 %
+time taken for eers computation : 36
+	Validation [343/400]	, G/loss_id: 0.0613, G/loss_id_psnt: 0.0598, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:18:50], Epoch [344/400]	, G/loss_id: 0.0694, G/loss_id_psnt: 0.0669, G/loss_cd: 0.0060, G/loss_emb: 0.0003
+EER target valid : 0.1886208822964329 %
+EER source valid : 49.907029086864554 %
+EER target test : 7.1169900722021655 %
+EER source test : 49.51106471395143 %
+time taken for eers computation : 36
+	Validation [344/400]	, G/loss_id: 0.0615, G/loss_id_psnt: 0.0601, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:21:10], Epoch [345/400]	, G/loss_id: 0.0627, G/loss_id_psnt: 0.0601, G/loss_cd: 0.0057, G/loss_emb: 0.0002
+EER target valid : 0.18532257267367389 %
+EER source valid : 49.93980610185941 %
+EER target test : 9.165475832330525 %
+EER source test : 49.0788650851287 %
+time taken for eers computation : 36
+	Validation [345/400]	, G/loss_id: 0.0614, G/loss_id_psnt: 0.0600, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:23:29], Epoch [346/400]	, G/loss_id: 0.0666, G/loss_id_psnt: 0.0640, G/loss_cd: 0.0055, G/loss_emb: 0.0002
+EER target valid : 0.15790568952793652 %
+EER source valid : 49.94763920850132 %
+EER target test : 11.11111111111111 %
+EER source test : 48.5932078592754 %
+time taken for eers computation : 36
+	Validation [346/400]	, G/loss_id: 0.0611, G/loss_id_psnt: 0.0596, G/loss_cd: 0.0061, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:25:49], Epoch [347/400]	, G/loss_id: 0.0627, G/loss_id_psnt: 0.0602, G/loss_cd: 0.0059, G/loss_emb: 0.0003
+EER target valid : 0.17645804996906206 %
+EER source valid : 49.96475001021234 %
+EER target test : 10.243870336943441 %
+EER source test : 48.50117001533123 %
+time taken for eers computation : 36
+	Validation [347/400]	, G/loss_id: 0.0616, G/loss_id_psnt: 0.0602, G/loss_cd: 0.0065, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:28:08], Epoch [348/400]	, G/loss_id: 0.0704, G/loss_id_psnt: 0.0680, G/loss_cd: 0.0055, G/loss_emb: 0.0003
+EER target valid : 0.11935638021849351 %
+EER source valid : 49.99753914399557 %
+EER target test : 11.632257821901323 %
+EER source test : 49.51535140805293 %
+time taken for eers computation : 35
+	Validation [348/400]	, G/loss_id: 0.0611, G/loss_id_psnt: 0.0597, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:30:27], Epoch [349/400]	, G/loss_id: 0.0576, G/loss_id_psnt: 0.0554, G/loss_cd: 0.0054, G/loss_emb: 0.0002
+EER target valid : 0.06101822307152669 %
+EER source valid : 50.04743302009563 %
+EER target test : 8.15928349378259 %
+EER source test : 50.40118413620592 %
+time taken for eers computation : 35
+	Validation [349/400]	, G/loss_id: 0.0607, G/loss_id_psnt: 0.0594, G/loss_cd: 0.0060, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:32:46], Epoch [350/400]	, G/loss_id: 0.0557, G/loss_id_psnt: 0.0534, G/loss_cd: 0.0056, G/loss_emb: 0.0002
+EER target valid : 0.11976955258298991 %
+EER source valid : 50.017109791812 %
+EER target test : 10.040739069394304 %
+EER source test : 49.3121116759461 %
+time taken for eers computation : 36
+	Validation [350/400]	, G/loss_id: 0.0613, G/loss_id_psnt: 0.0599, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:35:05], Epoch [351/400]	, G/loss_id: 0.0562, G/loss_id_psnt: 0.0541, G/loss_cd: 0.0057, G/loss_emb: 0.0002
+EER target valid : 0.05854423837969985 %
+EER source valid : 50.07362856433042 %
+EER target test : 6.110797733654231 %
+EER source test : 50.55525296538368 %
+time taken for eers computation : 36
+	Validation [351/400]	, G/loss_id: 0.0612, G/loss_id_psnt: 0.0598, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:37:25], Epoch [352/400]	, G/loss_id: 0.0632, G/loss_id_psnt: 0.0606, G/loss_cd: 0.0056, G/loss_emb: 0.0002
+EER target valid : 0.10183442594103317 %
+EER source valid : 50.070088827008874 %
+EER target test : 8.680430204572803 %
+EER source test : 49.81920237230695 %
+time taken for eers computation : 36
+	Validation [352/400]	, G/loss_id: 0.0608, G/loss_id_psnt: 0.0594, G/loss_cd: 0.0060, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:39:44], Epoch [353/400]	, G/loss_id: 0.0544, G/loss_id_psnt: 0.0525, G/loss_cd: 0.0062, G/loss_emb: 0.0002
+EER target valid : 0.12203644614305338 %
+EER source valid : 50.05524592875694 %
+EER target test : 11.270118832731649 %
+EER source test : 50.11019325425643 %
+time taken for eers computation : 36
+	Validation [353/400]	, G/loss_id: 0.0612, G/loss_id_psnt: 0.0598, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:42:04], Epoch [354/400]	, G/loss_id: 0.0598, G/loss_id_psnt: 0.0574, G/loss_cd: 0.0060, G/loss_emb: 0.0002
+EER target valid : 0.06101822307152669 %
+EER source valid : 50.079983755877144 %
+EER target test : 9.722723626153229 %
+EER source test : 50.326293068667795 %
+time taken for eers computation : 36
+	Validation [354/400]	, G/loss_id: 0.0614, G/loss_id_psnt: 0.0600, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:44:23], Epoch [355/400]	, G/loss_id: 0.0597, G/loss_id_psnt: 0.0575, G/loss_cd: 0.0060, G/loss_emb: 0.0002
+EER target valid : 0.023262941722107033 %
+EER source valid : 50.11978975056359 %
+EER target test : 6.782929703168872 %
+EER source test : 50.54239288307916 %
+time taken for eers computation : 35
+	Validation [355/400]	, G/loss_id: 0.0612, G/loss_id_psnt: 0.0599, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:46:42], Epoch [356/400]	, G/loss_id: 0.0874, G/loss_id_psnt: 0.0848, G/loss_cd: 0.0065, G/loss_emb: 0.0003
+EER target valid : 0.06101822307152669 %
+EER source valid : 50.10121618224284 %
+EER target test : 4.8613618130766145 %
+EER source test : 50.74563261518599 %
+time taken for eers computation : 35
+	Validation [356/400]	, G/loss_id: 0.0613, G/loss_id_psnt: 0.0600, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:49:01], Epoch [357/400]	, G/loss_id: 0.0638, G/loss_id_psnt: 0.0613, G/loss_cd: 0.0058, G/loss_emb: 0.0003
+EER target valid : 0.06101822307152669 %
+EER source valid : 50.096681385223675 %
+EER target test : 10.936058463698355 %
+EER source test : 49.9689845073832 %
+time taken for eers computation : 35
+	Validation [357/400]	, G/loss_id: 0.0608, G/loss_id_psnt: 0.0595, G/loss_cd: 0.0060, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:51:20], Epoch [358/400]	, G/loss_id: 0.0616, G/loss_id_psnt: 0.0590, G/loss_cd: 0.0061, G/loss_emb: 0.0002
+EER target valid : 0.08142632450627994 %
+EER source valid : 50.079812011211445 %
+EER target test : 10.414911752908143 %
+EER source test : 50.18079762769305 %
+time taken for eers computation : 35
+	Validation [358/400]	, G/loss_id: 0.0609, G/loss_id_psnt: 0.0596, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:53:39], Epoch [359/400]	, G/loss_id: 0.0597, G/loss_id_psnt: 0.0572, G/loss_cd: 0.0062, G/loss_emb: 0.0002
+EER target valid : 0.08142632450627994 %
+EER source valid : 50.08348814673265 %
+EER target test : 10.577930705976735 %
+EER source test : 50.11019325425643 %
+time taken for eers computation : 35
+	Validation [359/400]	, G/loss_id: 0.0615, G/loss_id_psnt: 0.0602, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:55:58], Epoch [360/400]	, G/loss_id: 0.0578, G/loss_id_psnt: 0.0554, G/loss_cd: 0.0058, G/loss_emb: 0.0002
+EER target valid : 0.08142632450627994 %
+EER source valid : 50.107403668719975 %
+EER target test : 9.555693441636581 %
+EER source test : 50.026728798515286 %
+time taken for eers computation : 36
+	Validation [360/400]	, G/loss_id: 0.0609, G/loss_id_psnt: 0.0595, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [13:58:18], Epoch [361/400]	, G/loss_id: 0.0621, G/loss_id_psnt: 0.0598, G/loss_cd: 0.0053, G/loss_emb: 0.0002
+EER target valid : 0.08142632450627994 %
+EER source valid : 50.1047528898673 %
+EER target test : 13.692777276373846 %
+EER source test : 49.96469781328169 %
+time taken for eers computation : 36
+	Validation [361/400]	, G/loss_id: 0.0610, G/loss_id_psnt: 0.0597, G/loss_cd: 0.0061, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:00:38], Epoch [362/400]	, G/loss_id: 0.0569, G/loss_id_psnt: 0.0547, G/loss_cd: 0.0058, G/loss_emb: 0.0003
+EER target valid : 0.3098330035085541 %
+EER source valid : 49.9243459698083 %
+EER target test : 12.67455124348175 %
+EER source test : 48.143861454046636 %
+time taken for eers computation : 35
+	Validation [362/400]	, G/loss_id: 0.0606, G/loss_id_psnt: 0.0592, G/loss_cd: 0.0059, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:02:57], Epoch [363/400]	, G/loss_id: 0.0601, G/loss_id_psnt: 0.0577, G/loss_cd: 0.0059, G/loss_emb: 0.0002
+EER target valid : 0.16285264901255989 %
+EER source valid : 50.005360131849116 %
+EER target test : 12.153404532691535 %
+EER source test : 49.09172516743323 %
+time taken for eers computation : 36
+	Validation [363/400]	, G/loss_id: 0.0607, G/loss_id_psnt: 0.0594, G/loss_cd: 0.0060, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:05:22], Epoch [364/400]	, G/loss_id: 0.0570, G/loss_id_psnt: 0.0549, G/loss_cd: 0.0054, G/loss_emb: 0.0002
+EER target valid : 0.19769148623377777 %
+EER source valid : 49.997320943974465 %
+EER target test : 11.608190433212997 %
+EER source test : 50.326293068667795 %
+time taken for eers computation : 35
+	Validation [364/400]	, G/loss_id: 0.0613, G/loss_id_psnt: 0.0599, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:07:41], Epoch [365/400]	, G/loss_id: 0.0626, G/loss_id_psnt: 0.0601, G/loss_cd: 0.0059, G/loss_emb: 0.0002
+EER target valid : 0.17151109048443866 %
+EER source valid : 50.045558091020425 %
+EER target test : 13.34668321299639 %
+EER source test : 49.81920237230695 %
+time taken for eers computation : 35
+	Validation [365/400]	, G/loss_id: 0.0614, G/loss_id_psnt: 0.0602, G/loss_cd: 0.0066, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:10:00], Epoch [366/400]	, G/loss_id: 0.0595, G/loss_id_psnt: 0.0571, G/loss_cd: 0.0057, G/loss_emb: 0.0002
+EER target valid : 0.17460331887446465 %
+EER source valid : 50.0437023500268 %
+EER target test : 12.67455124348175 %
+EER source test : 49.682280319535224 %
+time taken for eers computation : 35
+	Validation [366/400]	, G/loss_id: 0.0603, G/loss_id_psnt: 0.0590, G/loss_cd: 0.0060, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:12:19], Epoch [367/400]	, G/loss_id: 0.0570, G/loss_id_psnt: 0.0547, G/loss_cd: 0.0059, G/loss_emb: 0.0002
+EER target valid : 0.18326075044731313 %
+EER source valid : 50.06060606060606 %
+EER target test : 10.589964400320898 %
+EER source test : 49.46618050512386 %
+time taken for eers computation : 35
+	Validation [367/400]	, G/loss_id: 0.0604, G/loss_id_psnt: 0.0591, G/loss_cd: 0.0060, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:14:38], Epoch [368/400]	, G/loss_id: 0.0631, G/loss_id_psnt: 0.0607, G/loss_cd: 0.0060, G/loss_emb: 0.0002
+EER target valid : 0.17048068432077346 %
+EER source valid : 50.05978173567514 %
+EER target test : 13.020645306859208 %
+EER source test : 49.29496489954006 %
+time taken for eers computation : 36
+	Validation [368/400]	, G/loss_id: 0.0607, G/loss_id_psnt: 0.0595, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:16:57], Epoch [369/400]	, G/loss_id: 0.0556, G/loss_id_psnt: 0.0534, G/loss_cd: 0.0055, G/loss_emb: 0.0002
+EER target valid : 0.1634719026097893 %
+EER source valid : 50.1003918573119 %
+EER target test : 14.584085439229844 %
+EER source test : 50.163650851287024 %
+time taken for eers computation : 35
+	Validation [369/400]	, G/loss_id: 0.0604, G/loss_id_psnt: 0.0591, G/loss_cd: 0.0060, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:19:16], Epoch [370/400]	, G/loss_id: 0.0750, G/loss_id_psnt: 0.0724, G/loss_cd: 0.0062, G/loss_emb: 0.0002
+EER target valid : 0.21954215629766233 %
+EER source valid : 50.06081719133395 %
+EER target test : 12.324445948656237 %
+EER source test : 50.90827483256677 %
+time taken for eers computation : 35
+	Validation [370/400]	, G/loss_id: 0.0603, G/loss_id_psnt: 0.0590, G/loss_cd: 0.0060, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:21:35], Epoch [371/400]	, G/loss_id: 0.0658, G/loss_id_psnt: 0.0632, G/loss_cd: 0.0063, G/loss_emb: 0.0002
+EER target valid : 0.15728744582973736 %
+EER source valid : 49.9301485610938 %
+EER target test : 11.294186221419976 %
+EER source test : 46.11549866860324 %
+time taken for eers computation : 35
+	Validation [371/400]	, G/loss_id: 0.0612, G/loss_id_psnt: 0.0599, G/loss_cd: 0.0065, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:23:54], Epoch [372/400]	, G/loss_id: 0.0557, G/loss_id_psnt: 0.0534, G/loss_cd: 0.0054, G/loss_emb: 0.0002
+EER target valid : 0.10121618224283406 %
+EER source valid : 50.09029084721088 %
+EER target test : 11.787254312073806 %
+EER source test : 46.26099410957799 %
+time taken for eers computation : 35
+	Validation [372/400]	, G/loss_id: 0.0604, G/loss_id_psnt: 0.0591, G/loss_cd: 0.0060, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:26:13], Epoch [373/400]	, G/loss_id: 0.0733, G/loss_id_psnt: 0.0707, G/loss_cd: 0.0063, G/loss_emb: 0.0003
+EER target valid : 0.1014222634755671 %
+EER source valid : 50.13502562319941 %
+EER target test : 11.990385579622945 %
+EER source test : 46.406489550552735 %
+time taken for eers computation : 35
+	Validation [373/400]	, G/loss_id: 0.0605, G/loss_id_psnt: 0.0592, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:28:32], Epoch [374/400]	, G/loss_id: 0.0577, G/loss_id_psnt: 0.0555, G/loss_cd: 0.0056, G/loss_emb: 0.0002
+EER target valid : 0.10698847655741991 %
+EER source valid : 50.13731473453815 %
+EER target test : 11.632257821901323 %
+EER source test : 46.32731178891309 %
+time taken for eers computation : 35
+	Validation [374/400]	, G/loss_id: 0.0606, G/loss_id_psnt: 0.0593, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:30:51], Epoch [375/400]	, G/loss_id: 0.0560, G/loss_id_psnt: 0.0537, G/loss_cd: 0.0055, G/loss_emb: 0.0002
+EER target valid : 0.10946246124924676 %
+EER source valid : 50.13131313131313 %
+EER target test : 11.807310469314078 %
+EER source test : 47.12968006132494 %
+time taken for eers computation : 36
+	Validation [375/400]	, G/loss_id: 0.0609, G/loss_id_psnt: 0.0596, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:33:10], Epoch [376/400]	, G/loss_id: 0.0595, G/loss_id_psnt: 0.0572, G/loss_cd: 0.0053, G/loss_emb: 0.0002
+EER target valid : 0.16244048654709378 %
+EER source valid : 50.11666823510169 %
+EER target test : 12.352524568792619 %
+EER source test : 47.27517550229969 %
+time taken for eers computation : 35
+	Validation [376/400]	, G/loss_id: 0.0603, G/loss_id_psnt: 0.0590, G/loss_cd: 0.0059, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:35:29], Epoch [377/400]	, G/loss_id: 0.0593, G/loss_id_psnt: 0.0568, G/loss_cd: 0.0057, G/loss_emb: 0.0002
+EER target valid : 0.11997563381572293 %
+EER source valid : 50.13992309763155 %
+EER target test : 12.153404532691535 %
+EER source test : 48.36424796255951 %
+time taken for eers computation : 35
+	Validation [377/400]	, G/loss_id: 0.0601, G/loss_id_psnt: 0.0588, G/loss_cd: 0.0060, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:37:48], Epoch [378/400]	, G/loss_id: 0.0567, G/loss_id_psnt: 0.0545, G/loss_cd: 0.0055, G/loss_emb: 0.0002
+EER target valid : 0.03899378854387853 %
+EER source valid : 50.17663484412991 %
+EER target test : 12.877682511030885 %
+EER source test : 48.730129912047126 %
+time taken for eers computation : 35
+	Validation [378/400]	, G/loss_id: 0.0603, G/loss_id_psnt: 0.0590, G/loss_cd: 0.0061, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:40:07], Epoch [379/400]	, G/loss_id: 0.0586, G/loss_id_psnt: 0.0561, G/loss_cd: 0.0055, G/loss_emb: 0.0002
+EER target valid : 0.0874168188419624 %
+EER source valid : 50.14508421754116 %
+EER target test : 11.982363116726836 %
+EER source test : 48.72584321794562 %
+time taken for eers computation : 36
+	Validation [379/400]	, G/loss_id: 0.0601, G/loss_id_psnt: 0.0588, G/loss_cd: 0.0060, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:42:26], Epoch [380/400]	, G/loss_id: 0.0580, G/loss_id_psnt: 0.0556, G/loss_cd: 0.0056, G/loss_emb: 0.0002
+EER target valid : 0.11543982689753536 %
+EER source valid : 50.121006039979385 %
+EER target test : 13.366739370236663 %
+EER source test : 46.9841846203502 %
+time taken for eers computation : 35
+	Validation [380/400]	, G/loss_id: 0.0608, G/loss_id_psnt: 0.0594, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:44:46], Epoch [381/400]	, G/loss_id: 0.0601, G/loss_id_psnt: 0.0576, G/loss_cd: 0.0055, G/loss_emb: 0.0002
+EER target valid : 0.060812141838793646 %
+EER source valid : 50.13626615019193 %
+EER target test : 12.153404532691535 %
+EER source test : 48.36853465666102 %
+time taken for eers computation : 36
+	Validation [381/400]	, G/loss_id: 0.0612, G/loss_id_psnt: 0.0601, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:47:05], Epoch [382/400]	, G/loss_id: 0.0627, G/loss_id_psnt: 0.0603, G/loss_cd: 0.0057, G/loss_emb: 0.0002
+EER target valid : 0.08060199957534776 %
+EER source valid : 50.1566944496073 %
+EER target test : 12.499498596068994 %
+EER source test : 48.87562535302187 %
+time taken for eers computation : 35
+	Validation [382/400]	, G/loss_id: 0.0602, G/loss_id_psnt: 0.0589, G/loss_cd: 0.0061, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:49:25], Epoch [383/400]	, G/loss_id: 0.0587, G/loss_id_psnt: 0.0563, G/loss_cd: 0.0059, G/loss_emb: 0.0002
+EER target valid : 0.10059793854463493 %
+EER source valid : 50.132755699942265 %
+EER target test : 13.75695697954272 %
+EER source test : 48.293643589122894 %
+time taken for eers computation : 35
+	Validation [383/400]	, G/loss_id: 0.0612, G/loss_id_psnt: 0.0600, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:51:44], Epoch [384/400]	, G/loss_id: 0.0573, G/loss_id_psnt: 0.0550, G/loss_cd: 0.0057, G/loss_emb: 0.0002
+EER target valid : 0.08060199957534776 %
+EER source valid : 50.169243187025344 %
+EER target test : 14.42908894905736 %
+EER source test : 49.0788650851287 %
+time taken for eers computation : 36
+	Validation [384/400]	, G/loss_id: 0.0606, G/loss_id_psnt: 0.0593, G/loss_cd: 0.0061, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:54:03], Epoch [385/400]	, G/loss_id: 0.0553, G/loss_id_psnt: 0.0531, G/loss_cd: 0.0054, G/loss_emb: 0.0002
+EER target valid : 0.10410232940012698 %
+EER source valid : 50.13749758809318 %
+EER target test : 15.451326213397515 %
+EER source test : 49.07457839102719 %
+time taken for eers computation : 35
+	Validation [385/400]	, G/loss_id: 0.0601, G/loss_id_psnt: 0.0588, G/loss_cd: 0.0059, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:56:22], Epoch [386/400]	, G/loss_id: 0.0687, G/loss_id_psnt: 0.0663, G/loss_cd: 0.0064, G/loss_emb: 0.0002
+EER target valid : 0.06122430430425974 %
+EER source valid : 50.1605857554525 %
+EER target test : 14.437111411953468 %
+EER source test : 48.87562535302187 %
+time taken for eers computation : 35
+	Validation [386/400]	, G/loss_id: 0.0615, G/loss_id_psnt: 0.0603, G/loss_cd: 0.0068, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [14:58:41], Epoch [387/400]	, G/loss_id: 0.0577, G/loss_id_psnt: 0.0554, G/loss_cd: 0.0060, G/loss_emb: 0.0002
+EER target valid : 0.10595706049472439 %
+EER source valid : 50.15623987138256 %
+EER target test : 13.366739370236663 %
+EER source test : 48.439139030097635 %
+time taken for eers computation : 36
+	Validation [387/400]	, G/loss_id: 0.0597, G/loss_id_psnt: 0.0585, G/loss_cd: 0.0059, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [15:01:01], Epoch [388/400]	, G/loss_id: 0.0591, G/loss_id_psnt: 0.0566, G/loss_cd: 0.0057, G/loss_emb: 0.0003
+EER target valid : 0.2993198309420779 %
+EER source valid : 50.022426498002815 %
+EER target test : 18.749247894103487 %
+EER source test : 43.342511901880094 %
+time taken for eers computation : 36
+	Validation [388/400]	, G/loss_id: 0.0609, G/loss_id_psnt: 0.0597, G/loss_cd: 0.0063, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [15:03:20], Epoch [389/400]	, G/loss_id: 0.0630, G/loss_id_psnt: 0.0609, G/loss_cd: 0.0062, G/loss_emb: 0.0002
+EER target valid : 0.14285671004327272 %
+EER source valid : 50.14862900435786 %
+EER target test : 12.495487364620939 %
+EER source test : 50.18508432179456 %
+time taken for eers computation : 36
+	Validation [389/400]	, G/loss_id: 0.0611, G/loss_id_psnt: 0.0600, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [15:05:39], Epoch [390/400]	, G/loss_id: 0.0549, G/loss_id_psnt: 0.0527, G/loss_cd: 0.0058, G/loss_emb: 0.0002
+EER target valid : 0.1630587302452929 %
+EER source valid : 50.13605400956502 %
+EER target test : 14.755126855194545 %
+EER source test : 49.382716049382715 %
+time taken for eers computation : 36
+	Validation [390/400]	, G/loss_id: 0.0601, G/loss_id_psnt: 0.0588, G/loss_cd: 0.0060, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [15:07:59], Epoch [391/400]	, G/loss_id: 0.0707, G/loss_id_psnt: 0.0682, G/loss_cd: 0.0060, G/loss_emb: 0.0002
+EER target valid : 0.18346683168004618 %
+EER source valid : 50.12389218713669 %
+EER target test : 15.471382370637787 %
+EER source test : 47.645344145888814 %
+time taken for eers computation : 36
+	Validation [391/400]	, G/loss_id: 0.0599, G/loss_id_psnt: 0.0586, G/loss_cd: 0.0060, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [15:10:19], Epoch [392/400]	, G/loss_id: 0.0583, G/loss_id_psnt: 0.0561, G/loss_cd: 0.0071, G/loss_emb: 0.0003
+EER target valid : 0.6134815502370563 %
+EER source valid : 49.06555302009068 %
+EER target test : 9.897776273565984 %
+EER source test : 47.93204833373679 %
+time taken for eers computation : 36
+	Validation [392/400]	, G/loss_id: 0.0629, G/loss_id_psnt: 0.0617, G/loss_cd: 0.0073, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [15:12:38], Epoch [393/400]	, G/loss_id: 0.0625, G/loss_id_psnt: 0.0599, G/loss_cd: 0.0063, G/loss_emb: 0.0003
+EER target valid : 0.02020000040395961 %
+EER source valid : 49.710130618691764 %
+EER target test : 6.074696650621741 %
+EER source test : 48.747276688453155 %
+time taken for eers computation : 36
+	Validation [393/400]	, G/loss_id: 0.0608, G/loss_id_psnt: 0.0595, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [15:14:57], Epoch [394/400]	, G/loss_id: 0.0591, G/loss_id_psnt: 0.0569, G/loss_cd: 0.0061, G/loss_emb: 0.0003
+EER target valid : 0.12904522785403752 %
+EER source valid : 49.85116491440941 %
+EER target test : 7.984230846369836 %
+EER source test : 49.17090292907286 %
+time taken for eers computation : 36
+	Validation [394/400]	, G/loss_id: 0.0606, G/loss_id_psnt: 0.0594, G/loss_cd: 0.0065, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [15:17:16], Epoch [395/400]	, G/loss_id: 0.0633, G/loss_id_psnt: 0.0606, G/loss_cd: 0.0062, G/loss_emb: 0.0002
+EER target valid : 0.02021413899038374 %
+EER source valid : 49.90825244557355 %
+EER target test : 9.042569193742478 %
+EER source test : 49.16232954086984 %
+time taken for eers computation : 35
+	Validation [395/400]	, G/loss_id: 0.0609, G/loss_id_psnt: 0.0597, G/loss_cd: 0.0064, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [15:19:35], Epoch [396/400]	, G/loss_id: 0.0555, G/loss_id_psnt: 0.0534, G/loss_cd: 0.0062, G/loss_emb: 0.0002
+EER target valid : 0.019995938969287155 %
+EER source valid : 49.998969593836335 %
+EER target test : 7.984230846369836 %
+EER source test : 49.382716049382715 %
+time taken for eers computation : 36
+	Validation [396/400]	, G/loss_id: 0.0606, G/loss_id_psnt: 0.0594, G/loss_cd: 0.0063, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [15:21:55], Epoch [397/400]	, G/loss_id: 0.0550, G/loss_id_psnt: 0.0528, G/loss_cd: 0.0059, G/loss_emb: 0.0002
+EER target valid : 0.3343354623241503 %
+EER source valid : 49.927644279431064 %
+EER target test : 9.567727135980746 %
+EER source test : 48.143861454046636 %
+time taken for eers computation : 36
+	Validation [397/400]	, G/loss_id: 0.0602, G/loss_id_psnt: 0.0589, G/loss_cd: 0.0063, G/loss_emb: 0.0005
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [15:24:14], Epoch [398/400]	, G/loss_id: 0.0570, G/loss_id_psnt: 0.0546, G/loss_cd: 0.0057, G/loss_emb: 0.0003
+EER target valid : 0.07606720255619047 %
+EER source valid : 50.088847268682734 %
+EER target test : 5.036414460489371 %
+EER source test : 49.16661623497136 %
+time taken for eers computation : 36
+	Validation [398/400]	, G/loss_id: 0.0603, G/loss_id_psnt: 0.0590, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [15:26:33], Epoch [399/400]	, G/loss_id: 0.0557, G/loss_id_psnt: 0.0534, G/loss_cd: 0.0056, G/loss_emb: 0.0002
+EER target valid : 0.0404040404040404 %
+EER source valid : 50.12185157278996 %
+EER target test : 4.209286000802246 %
+EER source test : 49.39986282578875 %
+time taken for eers computation : 36
+	Validation [399/400]	, G/loss_id: 0.0606, G/loss_id_psnt: 0.0594, G/loss_cd: 0.0062, G/loss_emb: 0.0004
+Saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+Elapsed [15:28:52], Epoch [400/400]	, G/loss_id: 0.0575, G/loss_id_psnt: 0.0552, G/loss_cd: 0.0058, G/loss_emb: 0.0002
+EER target valid : 0.0404040404040404 %
+EER source valid : 50.13481752216862 %
+EER target test : 5.2074558764540715 %
+EER source test : 49.3121116759461 %
+time taken for eers computation : 35
+	Validation [400/400]	, G/loss_id: 0.0599, G/loss_id_psnt: 0.0587, G/loss_cd: 0.0060, G/loss_emb: 0.0004
+Last epoch saved at /home/dzbz0373/Voice/Expe/models/400ep/400ep.ckpt
+EER target valid : 0.0404040404040404 %
+EER source valid : 50.13521756584572 %
+EER target test : 5.239545728038508 %
+EER source test : 49.45332042281934 %
+### Training Finished ###

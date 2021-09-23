@@ -1,4 +1,4 @@
-dataset_description : "configs/resnet_training_files/VoxCeleb2_ssd.yaml"
+dataset_description : "configs/resnet_training_files/VoxCeleb_ssd.yaml"
 model_description : "configs/resnet_training_files/model.yaml"
 training_description : "configs/resnet_training_files/training.yaml"
 

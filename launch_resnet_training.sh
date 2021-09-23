@@ -7,7 +7,7 @@ else
 fi
 
 echo starting resnet training $x
-nohup env CUDA_VISIBLE_DEVICES=0 python training_halfresnet.py --num_expe $x &
+nohup env CUDA_VISIBLE_DEVICES=0 python training_fastresnet_half.py --num_expe $x &
 
 #echo starting resnet training 2
 #nohup env CUDA_VISIBLE_DEVICES=1 python training_halfresnet.py --num_expe 1 &

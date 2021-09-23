@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     # Loading params
     parser = argparse.ArgumentParser()
-    parser.add_argument('--config', type=str, default='configs/1ep.yaml', help='yaml conf file for the experiment')
+    parser.add_argument('--config', type=str, default='configs/800ep_model0.yaml', help='yaml conf file for the experiment')
     #parser.add_argument('--logging', type=str, default='logs/300ep_neck8_f.log', help='log file for the experiment')
     args = parser.parse_args()
 
@@ -56,13 +56,13 @@ if __name__ == "__main__":
 
     # Loading model encoder
     device = torch.device("cuda")
-    checkpoint = torch.load(config["model"]["encoder_dir"], map_location=device)
+    checkpoint = torch.load("models/best"+config["model"]["encoder_dir"][10:], map_location=device)
     speaker_number = checkpoint["speaker_number"]
     model_archi = checkpoint["model_archi"]["model_type"]
     Encoder = sidekit.nnet.xvector.Xtractor(speaker_number, model_archi=model_archi, loss=checkpoint["loss"])
     Encoder.load_state_dict(checkpoint["model_state_dict"])
     Encoder = Encoder.eval().cuda().to(device)
-    logging.info("Encoder loaded from : "+config["model"]["encoder_dir"] )
+    logging.info("Encoder loaded from : "+"best"+config["model"]["encoder_dir"][10:] )
 
 
      # Generating Dataloader
@@ -117,9 +117,16 @@ if __name__ == "__main__":
     solver.tar_eval("val", 0.001)
     solver.tar_eval("eval", 0.001)"""
 
-    #solver.evaluation("train")
-    #solver.evaluation("val")
+    scorers.EER_post_generator_evaluation("train", Encoder, solver.G )
+    scorers.EER_post_generator_evaluation("valid", Encoder, solver.G )
     scorers.EER_post_generator_evaluation("eval", Encoder, solver.G )
+
+    scorers.compute_TAR("train", Encoder, solver.G, 0.01)
+    exit()
+    scorers.compute_full_TAR(Encoder, solver.G, 0.01)
+    scorers.compute_full_TAR(Encoder, solver.G, 0.02)
+    scorers.compute_full_TAR(Encoder, solver.G, 0.05)
+    scorers.compute_full_TAR(Encoder, solver.G, 0.1)
     logging.info("### Evaluation Finished ###")
 
 

@@ -2,25 +2,25 @@
 
 
 # General options
-data_path: /ssd/data/VoxCeleb/vox2_dev_wav/wav
+data_path: /ssd/data/VoxCeleb
 data_file_extension: .wav
-dataset_csv: data/voxceleb2_dev_fixed.csv
+dataset_csv: data/voxceleb_dev_half1.csv
 sample_rate: 16000
 
 
 validation_ratio: 0.02
-batch_size: 640
+batch_size: 128
 
 
 # Training set
 train:
-    duration: 0.5
+    duration: 2
     chunk_per_segment: -1
-    overlap: 0.5
+    overlap: 2
 
     sampler:
-        examples_per_speaker: 2
-        samples_per_speaker: 320
+        examples_per_speaker: 1
+        samples_per_speaker: 128
         augmentation_replica: 1
 
     transform_number: 1
@@ -32,7 +32,7 @@ train:
 
         add_noise:
             noise_db_csv: data/musan_original.csv
-            data_path: /ssd/data/musan_original/
+            data_path: /ssd/data/musan_original
     
         add_reverb:
             rir_db_csv: data/simulated_rirs.csv
@@ -40,7 +40,7 @@ train:
 
 # Validation set
 valid:
-    duration: 0.5
+    duration: 2
 
     transformation:
         pipeline: 

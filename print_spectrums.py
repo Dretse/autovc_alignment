@@ -13,13 +13,22 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def print_spectrum(spectrums, post_spectrums, filename="graphs/spectrums/noname"):
-    fig, axes = plt.subplots(nrows=spectrums.shape[0], ncols=2)
-    for row in range(spectrums.shape[0]):
-        axe_1, axe_2 = axes[row]
+    if(len(spectrums.shape)==3):
+        fig, axes = plt.subplots(nrows=spectrums.shape[0], ncols=2)
+        for row in range(spectrums.shape[0]):
+            axe_1, axe_2 = axes[row]
 
-        axe_1.imshow(spectrums[row].T)
+            axe_1.imshow(spectrums[row].T)
+            axe_1.set_title("Spectrum before reconstruction")
+            axe_2.imshow(post_spectrums[row].T)
+            axe_2.set_title("Spectrum after reconstruction")
+    
+    else:
+        fig, (axe_1, axe_2) = plt.subplots(nrows=1, ncols=2)
+
+        axe_1.imshow(spectrums.T)
         axe_1.set_title("Spectrum before reconstruction")
-        axe_2.imshow(post_spectrums[row].T)
+        axe_2.imshow(post_spectrums.T)
         axe_2.set_title("Spectrum after reconstruction")
     
     fig.savefig(filename+".png")

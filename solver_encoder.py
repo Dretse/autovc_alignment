@@ -21,7 +21,7 @@ class Solver(object):
         self.len_crop = config["training"]["len_crop"]
         self.lambda_cd = config["model"]["lambda_cd"]
         try:   self.lambda_emb = config["model"]["lambda_emb"]
-        except: self.lambda_emb = 0.1
+        except: self.lambda_emb = 10
         self.dim_neck = config["model"]["dim_neck"]
         self.dim_emb = config["model"]["dim_emb"]
         self.dim_pre = config["model"]["dim_pre"]
@@ -91,15 +91,17 @@ class Solver(object):
         #loading directory
         if(config["model"]["from_loading"]):
             try:
-                self.loaddir = os.path.join(config["training"]["savedir"],config["model"]["load_dir"])
+                self.loaddir = os.path.join(config["training"]["savedir"],config["model"]["load_dir"], config["model"]["load_dir"])+".ckpt"
+                logging.info("loading model from dir :"+self.loaddir)
                 if(charge_iteration!=0): self.loaddir = self.loaddir[:-5]+"_"+str(charge_iteration)+".ckpt"
                 self.load(self.loaddir)
-                logging.info("loading model from dir :"+self.loaddir)
+                
             except:
+                logging.error("No loading dir found. Using "+str(self.loaddir)+" by default")
                 self.loaddir = os.path.join(self.savedir, config["EXPE_NAME"]+".ckpt")
                 if(charge_iteration!=0): self.loaddir = self.loaddir[:-5]+"_"+str(charge_iteration)+".ckpt"
                 self.load(self.loaddir)
-                logging.error("No loading dir included. Using "+str(self.loaddir)+" by default")
+                
 
             
             logging.info("Model loaded successfully")
@@ -211,17 +213,12 @@ class Solver(object):
         # EER computation
         t = time.time()
         self.scorers.EER_post_generator_evaluation("valid", self.C, self.G)
-        self.scorers.EER_post_generator_evaluation("eval", self.C, self.G)
+        best_eer_tgt, _ = self.scorers.EER_post_generator_evaluation("eval", self.C, self.G)
         logging.info("time taken for eers computation : "+str(int(time.time() - t)))
         # Start training.
         logging.info('Start training...')
         start_time = time.time()
         for epoch in range(self.num_iters):
-            # Saving network
-            if(self.save_model or (epoch+1)%100==0):
-                self.save(self.savedir[:-5]+"_"+str(epoch+1)+self.savedir[-5:])
-            self.save(self.savedir)
-            logging.info("Saved at "+self.savedir)
 
             for data in data_loader:
                 # =================================================================================== #
@@ -258,12 +255,11 @@ class Solver(object):
             # EER computation
             t = time.time()
             self.scorers.EER_post_generator_evaluation("valid", self.C, self.G)
-            self.scorers.EER_post_generator_evaluation("eval", self.C, self.G)
+            eer_tgt, _ = self.scorers.EER_post_generator_evaluation("eval", self.C, self.G)
             #self.scorers.EER_post_generator_evaluation("train", self.C, self.G)
             logging.info("time taken for eers computation : "+str(int(time.time() - t)))
 
-            # Do a validation loop every epoch
-            if(True):
+            if(True): #Validation Loss
                 for val_data in val_loader:
                     voice, speaker = val_data
                     if(self.use_mean_emb): emb_org = torch.from_numpy(self.val_scorer.mean_embeddings[speaker]).float().to(self.device)
@@ -317,6 +313,17 @@ class Solver(object):
                 self.print_spectrum("train", epoch)
                 self.print_spectrum("valid",   epoch)
                 #self.print_spectrum("eval",  epoch)"""
+
+            # Saving network
+            if(self.save_model or (epoch+1)%100==0):
+                self.save(self.savedir[:-5]+"_"+str(epoch+1)+self.savedir[-5:])
+            if(eer_tgt <= best_eer_tgt):
+                best_eer_tgt = eer_tgt
+                self.save(self.savedir[:-5]+"_best"+self.savedir[-5:])
+            self.save(self.savedir)
+            logging.info("Saved at "+self.savedir)
+
+
         #self.test_zeros()
         self.save(self.savedir)
         logging.info("Last epoch saved at "+self.savedir)

@@ -1,0 +1,27 @@
+dataset: VCTK
+testing_dataset : voxceleb1_dev
+
+
+model:
+  encoder_dir : 'models/tmp_model_2s_cuda_0_.pt'
+  dim_neck : 16
+  dim_emb : 256
+  dim_pre : 512
+  freq : 16
+  lambda_cd : 0.05
+  lambda_emb : 10
+  from_loading : False
+  save_model : False
+  load_dir : None
+
+
+training :
+  num_epoch : 800
+  epoch_before_cd : 0
+  epoch_before_emb : 0
+  len_crop : 128
+  lr : 0.00001
+  savedir : "/home/dzbz0373/Voice/Expe/models/"
+  log_step : 100
+  use_mean_embs : True
+

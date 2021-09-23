@@ -1,0 +1,61 @@
+# Dataset description                                                                                                                                                                                      
+
+
+# General options
+data_path: /ssd/data/VoxCeleb
+data_file_extension: .wav
+dataset_csv: data/voxceleb_dev_half2.csv
+sample_rate: 16000
+
+
+validation_ratio: 0.02
+batch_size: 128
+
+
+# Training set
+train:
+    duration: 2
+    chunk_per_segment: -1
+    overlap: 2
+
+    sampler:
+        examples_per_speaker: 1
+        samples_per_speaker: 128
+        augmentation_replica: 1
+
+    transform_number: 1
+
+    transformation:
+        pipeline: add_reverb,add_noise,phone_filtering,codec
+        spec_aug: 0.5
+        temp_aug: 0.5
+
+        add_noise:
+            noise_db_csv: data/musan_original.csv
+            data_path: /ssd/data/musan_original
+    
+        add_reverb:
+            rir_db_csv: data/simulated_rirs.csv
+            data_path: /ssd/data/simulated_rirs
+
+# Validation set
+valid:
+    duration: 2
+
+    transformation:
+        pipeline: 
+        spec_aug: 0.5
+        temp_aug: 0.5
+
+        add_noise:
+            noise_db_csv: data/musan_original.csv
+            data_path: /ssd/data/musan_original
+
+# Test set
+test:
+    idmap: h5f/vox1_test_cleaned_idmap.h5
+    ndx: h5f/vox1_test_cleaned_ndx.h5
+    key: h5f/vox1_test_cleaned_key.h5
+    data_path: /ssd/data/VoxCeleb/vox1_test_wav/wav
+
+

@@ -1,6 +1,6 @@
 # Model description
 
-speaker_number: 2997
+speaker_number: 3603
 
 loss:
     type: aam
@@ -14,6 +14,6 @@ freeze_parts: []
 
 # Model can be fastresnet34, resnet34, xvector of custom
 # if custom, then need more options
-model_type: halfresnet34
+model_type: fastresnet34
 
 feature_size: 80
