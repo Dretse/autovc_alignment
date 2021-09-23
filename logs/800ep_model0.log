@@ -6375,3 +6375,11 @@ EER source test : 47.660493827160494 %
 time taken for eers computation : 3
 	Validation [794/800]	, G/loss_id: 0.0593, G/loss_id_psnt: 0.0587, G/loss_cd: 0.0054, G/loss_emb: 0.0009
 Saved at /home/dzbz0373/Voice/Expe/models/800ep_model0/800ep_model0.ckpt
+Elapsed [23:46:17], Epoch [795/800]	, G/loss_id: 0.0532, G/loss_id_psnt: 0.0511, G/loss_cd: 0.0053, G/loss_emb: 0.0007
+EER target valid : 0 %
+EER source valid : 52.68888888888888 %
+EER target test : 12.339642005493676 %
+EER source test : 49.93827160493827 %
+time taken for eers computation : 3
+	Validation [795/800]	, G/loss_id: 0.0596, G/loss_id_psnt: 0.0590, G/loss_cd: 0.0055, G/loss_emb: 0.0009
+Saved at /home/dzbz0373/Voice/Expe/models/800ep_model0/800ep_model0.ckpt

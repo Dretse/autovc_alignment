@@ -9,3 +9,4 @@ configs/old/*
 h5f/*
 griffin_lim/*.png
 griffin_lim/*.wav
+graphs/spectrums/*
