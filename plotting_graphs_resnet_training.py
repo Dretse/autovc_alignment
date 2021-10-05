@@ -33,7 +33,7 @@ def extract_from_file(filename, no_eer_tr=True):
 if __name__=="__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--logfile', type=str, default='training_resnet_0', help='log file for the experiment')
+    parser.add_argument('--logfile', type=str, default='training_resnet', help='log file for the experiment')
     args = parser.parse_args()
     no_eer_tr = True
     arguments = extract_from_file("logs/"+args.logfile+".log", no_eer_tr=no_eer_tr)

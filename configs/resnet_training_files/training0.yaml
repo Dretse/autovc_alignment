@@ -33,4 +33,4 @@ validation_frequency: 1
 # Save options
 tmp_model_name: models/tmp_model_2s_cuda_0_.pt
 best_model_name: models/best_model_2s_cuda_0_.pt
-checkpoint_frequency: 10
+checkpoint_frequency: 1

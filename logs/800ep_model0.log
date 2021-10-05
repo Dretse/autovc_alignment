@@ -6383,3 +6383,49 @@ EER source test : 49.93827160493827 %
 time taken for eers computation : 3
 	Validation [795/800]	, G/loss_id: 0.0596, G/loss_id_psnt: 0.0590, G/loss_cd: 0.0055, G/loss_emb: 0.0009
 Saved at /home/dzbz0373/Voice/Expe/models/800ep_model0/800ep_model0.ckpt
+Elapsed [23:48:05], Epoch [796/800]	, G/loss_id: 0.0465, G/loss_id_psnt: 0.0449, G/loss_cd: 0.0046, G/loss_emb: 0.0007
+EER target valid : 0 %
+EER source valid : 52.43333333333333 %
+EER target test : 12.339642005493676 %
+EER source test : 50.11728395061728 %
+time taken for eers computation : 3
+	Validation [796/800]	, G/loss_id: 0.0598, G/loss_id_psnt: 0.0592, G/loss_cd: 0.0056, G/loss_emb: 0.0009
+Saved at /home/dzbz0373/Voice/Expe/models/800ep_model0/800ep_model0.ckpt
+Elapsed [23:49:53], Epoch [797/800]	, G/loss_id: 0.0469, G/loss_id_psnt: 0.0453, G/loss_cd: 0.0051, G/loss_emb: 0.0007
+EER target valid : 0 %
+EER source valid : 52.44444444444445 %
+EER target test : 17.28093211385795 %
+EER source test : 48.888888888888886 %
+time taken for eers computation : 3
+	Validation [797/800]	, G/loss_id: 0.0597, G/loss_id_psnt: 0.0591, G/loss_cd: 0.0057, G/loss_emb: 0.0008
+Saved at /home/dzbz0373/Voice/Expe/models/800ep_model0/800ep_model0.ckpt
+Elapsed [23:51:41], Epoch [798/800]	, G/loss_id: 0.0532, G/loss_id_psnt: 0.0514, G/loss_cd: 0.0050, G/loss_emb: 0.0007
+EER target valid : 0 %
+EER source valid : 52.44444444444445 %
+EER target test : 7.41193516254641 %
+EER source test : 50.6141975308642 %
+time taken for eers computation : 3
+	Validation [798/800]	, G/loss_id: 0.0600, G/loss_id_psnt: 0.0595, G/loss_cd: 0.0055, G/loss_emb: 0.0009
+Saved at /home/dzbz0373/Voice/Expe/models/800ep_model0/800ep_model0.ckpt
+Elapsed [23:53:29], Epoch [799/800]	, G/loss_id: 0.0636, G/loss_id_psnt: 0.0616, G/loss_cd: 0.0051, G/loss_emb: 0.0007
+EER target valid : 0 %
+EER source valid : 52.93333333333333 %
+EER target test : 8.944202964170364 %
+EER source test : 51.35956790123457 %
+time taken for eers computation : 3
+	Validation [799/800]	, G/loss_id: 0.0595, G/loss_id_psnt: 0.0589, G/loss_cd: 0.0055, G/loss_emb: 0.0009
+Saved at /home/dzbz0373/Voice/Expe/models/800ep_model0/800ep_model0.ckpt
+Elapsed [23:55:17], Epoch [800/800]	, G/loss_id: 0.0689, G/loss_id_psnt: 0.0671, G/loss_cd: 0.0055, G/loss_emb: 0.0007
+EER target valid : 0 %
+EER source valid : 52.44444444444445 %
+EER target test : 9.56526004407015 %
+EER source test : 51.55246913580247 %
+time taken for eers computation : 3
+	Validation [800/800]	, G/loss_id: 0.0598, G/loss_id_psnt: 0.0593, G/loss_cd: 0.0056, G/loss_emb: 0.0009
+Saved at /home/dzbz0373/Voice/Expe/models/800ep_model0/800ep_model0.ckpt
+Last epoch saved at /home/dzbz0373/Voice/Expe/models/800ep_model0/800ep_model0.ckpt
+EER target valid : 0 %
+EER source valid : 52.46666666666666 %
+EER target test : 9.56526004407015 %
+EER source test : 50.86265432098765 %
+### Training Finished ###

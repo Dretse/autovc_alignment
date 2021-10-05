@@ -2729,3 +2729,468 @@ validation_frequency: 1
 |===========================================================================|
 
 2021-09-21 04:22:13,332 - CRITICAL - Best accuracy 0.0
+2021-09-27 10:33:39,051 - INFO - 
+*********************************
+Dataset options
+*********************************
+
+2021-09-27 10:33:39,054 - INFO - batch_size: 128
+data_file_extension: .wav
+data_path: /ssd/data/VoxCeleb
+dataset_csv: data/voxceleb_dev_half1.csv
+sample_rate: 16000
+stratify: false
+test:
+  data_path: /ssd/data/VoxCeleb/vox1_test_wav/wav
+  idmap: h5f/vox1_test_cleaned_idmap.h5
+  key: h5f/vox1_test_cleaned_key.h5
+  ndx: h5f/vox1_test_cleaned_ndx.h5
+train:
+  chunk_per_segment: -1
+  duration: 2
+  overlap: 2
+  sampler:
+    augmentation_replica: 1
+    examples_per_speaker: 1
+    samples_per_speaker: 128
+  transform_number: 1
+  transformation:
+    add_noise:
+      data_path: /ssd/data/musan_original
+      noise_db_csv: data/musan_original.csv
+    add_reverb:
+      data_path: /ssd/data/simulated_rirs
+      rir_db_csv: data/simulated_rirs.csv
+    pipeline: add_reverb,add_noise,phone_filtering,codec
+valid:
+  duration: 2
+  transformation:
+    add_noise:
+      data_path: /ssd/data/musan_original
+      noise_db_csv: data/musan_original.csv
+    add_reverb:
+      data_path: ''
+      noise_db_csv: ''
+    pipeline: ''
+validation_ratio: 0.02
+
+2021-09-27 10:33:39,054 - INFO - 
+*********************************
+Model options
+*********************************
+
+2021-09-27 10:33:39,055 - INFO - freeze_parts: []
+initial_model_name: null
+loss:
+  aam_margin: 0.2
+  aam_s: 30
+  type: aam
+model_type: fastresnet
+preprocessor:
+  feature_size: 80
+  type: mel_spec
+reset_parts: []
+speaker_number: null
+
+2021-09-27 10:33:39,055 - INFO - 
+*********************************
+Training options
+*********************************
+
+2021-09-27 10:33:39,057 - INFO - best_model_name: models/best_model_2s_cuda_0_.pt
+checkpoint_frequency: 1
+clipping: false
+compute_test_eer: true
+deterministic: false
+epochs: 64
+log_file: logs/training_resnet_0.log
+log_interval: 461
+lr: 0.001
+mixed_precision: true
+multi_gpu: false
+num_cpu: 5
+numpy_seed: 0
+optimizer:
+  options: null
+  type: adam
+patience: 100
+random_seed: 0
+scheduler:
+  options: null
+  type: CyclicLR
+tmp_model_name: models/tmp_model_2s_cuda_0_.pt
+torch_seed: 0
+validation_frequency: 1
+
+2021-09-27 10:44:15,624 - INFO - 
+*********************************
+Dataset options
+*********************************
+
+2021-09-27 10:44:15,626 - INFO - batch_size: 128
+data_file_extension: .wav
+data_path: /ssd/data/VoxCeleb
+dataset_csv: data/voxceleb_dev_half1.csv
+sample_rate: 16000
+stratify: false
+test:
+  data_path: /ssd/data/VoxCeleb/vox1_test_wav/wav
+  idmap: h5f/vox1_test_cleaned_idmap.h5
+  key: h5f/vox1_test_cleaned_key.h5
+  ndx: h5f/vox1_test_cleaned_ndx.h5
+train:
+  chunk_per_segment: -1
+  duration: 2
+  overlap: 2
+  sampler:
+    augmentation_replica: 1
+    examples_per_speaker: 1
+    samples_per_speaker: 128
+  transform_number: 1
+  transformation:
+    add_noise:
+      data_path: /ssd/data/musan_original
+      noise_db_csv: data/musan_original.csv
+    add_reverb:
+      data_path: /ssd/data/simulated_rirs
+      rir_db_csv: data/simulated_rirs.csv
+    pipeline: add_reverb,add_noise,phone_filtering,codec
+valid:
+  duration: 2
+  transformation:
+    add_noise:
+      data_path: /ssd/data/musan_original
+      noise_db_csv: data/musan_original.csv
+    add_reverb:
+      data_path: ''
+      noise_db_csv: ''
+    pipeline: ''
+validation_ratio: 0.02
+
+2021-09-27 10:44:15,629 - INFO - 
+*********************************
+Model options
+*********************************
+
+2021-09-27 10:44:15,632 - INFO - freeze_parts: []
+initial_model_name: null
+loss:
+  aam_margin: 0.2
+  aam_s: 30
+  type: aam
+model_type: fastresnet
+preprocessor:
+  feature_size: 80
+  type: mel_spec
+reset_parts: []
+speaker_number: null
+
+2021-09-27 10:44:15,632 - INFO - 
+*********************************
+Training options
+*********************************
+
+2021-09-27 10:44:15,636 - INFO - best_model_name: models/best_model_2s_cuda_0_.pt
+checkpoint_frequency: 1
+clipping: false
+compute_test_eer: true
+deterministic: false
+epochs: 64
+log_file: logs/training_resnet_0.log
+log_interval: 461
+lr: 0.001
+mixed_precision: true
+multi_gpu: false
+num_cpu: 5
+numpy_seed: 0
+optimizer:
+  options: null
+  type: adam
+patience: 100
+random_seed: 0
+scheduler:
+  options: null
+  type: CyclicLR
+tmp_model_name: models/tmp_model_2s_cuda_0_.pt
+torch_seed: 0
+validation_frequency: 1
+
+2021-09-27 10:45:57,549 - INFO - 
+*********************************
+Dataset options
+*********************************
+
+2021-09-27 10:45:57,552 - INFO - batch_size: 128
+data_file_extension: .wav
+data_path: /ssd/data/VoxCeleb
+dataset_csv: data/voxceleb_dev_half1.csv
+sample_rate: 16000
+stratify: false
+test:
+  data_path: /ssd/data/VoxCeleb/vox1_test_wav/wav
+  idmap: h5f/vox1_test_cleaned_idmap.h5
+  key: h5f/vox1_test_cleaned_key.h5
+  ndx: h5f/vox1_test_cleaned_ndx.h5
+train:
+  chunk_per_segment: -1
+  duration: 2
+  overlap: 2
+  sampler:
+    augmentation_replica: 1
+    examples_per_speaker: 1
+    samples_per_speaker: 128
+  transform_number: 1
+  transformation:
+    add_noise:
+      data_path: /ssd/data/musan_original
+      noise_db_csv: data/musan_original.csv
+    add_reverb:
+      data_path: /ssd/data/simulated_rirs
+      rir_db_csv: data/simulated_rirs.csv
+    pipeline: add_reverb,add_noise,phone_filtering,codec
+valid:
+  duration: 2
+  transformation:
+    add_noise:
+      data_path: /ssd/data/musan_original
+      noise_db_csv: data/musan_original.csv
+    add_reverb:
+      data_path: ''
+      noise_db_csv: ''
+    pipeline: ''
+validation_ratio: 0.02
+
+2021-09-27 10:45:57,552 - INFO - 
+*********************************
+Model options
+*********************************
+
+2021-09-27 10:45:57,553 - INFO - freeze_parts: []
+initial_model_name: null
+loss:
+  aam_margin: 0.2
+  aam_s: 30
+  type: aam
+model_type: fastresnet
+preprocessor:
+  feature_size: 80
+  type: mel_spec
+reset_parts: []
+speaker_number: null
+
+2021-09-27 10:45:57,553 - INFO - 
+*********************************
+Training options
+*********************************
+
+2021-09-27 10:45:57,554 - INFO - best_model_name: models/best_model_2s_cuda_0_.pt
+checkpoint_frequency: 1
+clipping: false
+compute_test_eer: true
+deterministic: false
+epochs: 64
+log_file: logs/training_resnet_0.log
+log_interval: 461
+lr: 0.001
+mixed_precision: true
+multi_gpu: false
+num_cpu: 5
+numpy_seed: 0
+optimizer:
+  options: null
+  type: adam
+patience: 100
+random_seed: 0
+scheduler:
+  options: null
+  type: CyclicLR
+tmp_model_name: models/tmp_model_2s_cuda_0_.pt
+torch_seed: 0
+validation_frequency: 1
+
+2021-09-27 10:47:37,398 - INFO - 
+*********************************
+Dataset options
+*********************************
+
+2021-09-27 10:47:37,401 - INFO - batch_size: 128
+data_file_extension: .wav
+data_path: /ssd/data/VoxCeleb
+dataset_csv: data/voxceleb_dev_half1.csv
+sample_rate: 16000
+stratify: false
+test:
+  data_path: /ssd/data/VoxCeleb/vox1_test_wav/wav
+  idmap: h5f/vox1_test_cleaned_idmap.h5
+  key: h5f/vox1_test_cleaned_key.h5
+  ndx: h5f/vox1_test_cleaned_ndx.h5
+train:
+  chunk_per_segment: -1
+  duration: 2
+  overlap: 2
+  sampler:
+    augmentation_replica: 1
+    examples_per_speaker: 1
+    samples_per_speaker: 128
+  transform_number: 1
+  transformation:
+    add_noise:
+      data_path: /ssd/data/musan_original
+      noise_db_csv: data/musan_original.csv
+    add_reverb:
+      data_path: /ssd/data/simulated_rirs
+      rir_db_csv: data/simulated_rirs.csv
+    pipeline: add_reverb,add_noise,phone_filtering,codec
+valid:
+  duration: 2
+  transformation:
+    add_noise:
+      data_path: /ssd/data/musan_original
+      noise_db_csv: data/musan_original.csv
+    add_reverb:
+      data_path: ''
+      noise_db_csv: ''
+    pipeline: ''
+validation_ratio: 0.02
+
+2021-09-27 10:47:37,401 - INFO - 
+*********************************
+Model options
+*********************************
+
+2021-09-27 10:47:37,402 - INFO - freeze_parts: []
+initial_model_name: null
+loss:
+  aam_margin: 0.2
+  aam_s: 30
+  type: aam
+model_type: fastresnet
+preprocessor:
+  feature_size: 80
+  type: mel_spec
+reset_parts: []
+speaker_number: null
+
+2021-09-27 10:47:37,402 - INFO - 
+*********************************
+Training options
+*********************************
+
+2021-09-27 10:47:37,403 - INFO - best_model_name: models/best_model_2s_cuda_0_.pt
+checkpoint_frequency: 1
+clipping: false
+compute_test_eer: true
+deterministic: false
+epochs: 64
+log_file: logs/training_resnet_0.log
+log_interval: 461
+lr: 0.001
+mixed_precision: true
+multi_gpu: false
+num_cpu: 5
+numpy_seed: 0
+optimizer:
+  options: null
+  type: adam
+patience: 100
+random_seed: 0
+scheduler:
+  options: null
+  type: CyclicLR
+tmp_model_name: models/tmp_model_2s_cuda_0_.pt
+torch_seed: 0
+validation_frequency: 1
+
+2021-09-27 10:48:08,239 - INFO - 
+*********************************
+Dataset options
+*********************************
+
+2021-09-27 10:48:08,242 - INFO - batch_size: 128
+data_file_extension: .wav
+data_path: /ssd/data/VoxCeleb
+dataset_csv: data/voxceleb_dev_half1.csv
+sample_rate: 16000
+stratify: false
+test:
+  data_path: /ssd/data/VoxCeleb/vox1_test_wav/wav
+  idmap: h5f/vox1_test_cleaned_idmap.h5
+  key: h5f/vox1_test_cleaned_key.h5
+  ndx: h5f/vox1_test_cleaned_ndx.h5
+train:
+  chunk_per_segment: -1
+  duration: 2
+  overlap: 2
+  sampler:
+    augmentation_replica: 1
+    examples_per_speaker: 1
+    samples_per_speaker: 128
+  transform_number: 1
+  transformation:
+    add_noise:
+      data_path: /ssd/data/musan_original
+      noise_db_csv: data/musan_original.csv
+    add_reverb:
+      data_path: /ssd/data/simulated_rirs
+      rir_db_csv: data/simulated_rirs.csv
+    pipeline: add_reverb,add_noise,phone_filtering,codec
+valid:
+  duration: 2
+  transformation:
+    add_noise:
+      data_path: /ssd/data/musan_original
+      noise_db_csv: data/musan_original.csv
+    add_reverb:
+      data_path: ''
+      noise_db_csv: ''
+    pipeline: ''
+validation_ratio: 0.02
+
+2021-09-27 10:48:08,242 - INFO - 
+*********************************
+Model options
+*********************************
+
+2021-09-27 10:48:08,243 - INFO - freeze_parts: []
+initial_model_name: null
+loss:
+  aam_margin: O.2
+  aam_s: 30
+  type: aam
+model_type: fastresnet34
+preprocessor:
+  feature_size: 80
+  type: mel_spec
+reset_parts: []
+speaker_number: 3603
+
+2021-09-27 10:48:08,243 - INFO - 
+*********************************
+Training options
+*********************************
+
+2021-09-27 10:48:08,245 - INFO - best_model_name: models/best_model_2s_cuda_0_.pt
+checkpoint_frequency: 1
+clipping: false
+compute_test_eer: true
+deterministic: false
+epochs: 64
+log_file: logs/training_resnet_0.log
+log_interval: 461
+lr: 0.001
+mixed_precision: true
+multi_gpu: false
+num_cpu: 5
+numpy_seed: 0
+optimizer:
+  options: null
+  type: adam
+patience: 100
+random_seed: 0
+scheduler:
+  options: null
+  type: CyclicLR
+tmp_model_name: models/tmp_model_2s_cuda_0_.pt
+torch_seed: 0
+validation_frequency: 1
+

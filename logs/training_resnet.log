@@ -1,0 +1,1460 @@
+2021-09-28 11:19:32,044 - INFO - 
+*********************************
+Dataset options
+*********************************
+
+2021-09-28 11:19:32,047 - INFO - batch_size: 128
+data_file_extension: .wav
+data_path: /ssd/data/VoxCeleb
+dataset_csv: data/voxceleb_dev.csv
+sample_rate: 16000
+stratify: false
+test:
+  data_path: /ssd/data/VoxCeleb/vox1_test_wav/wav
+  idmap: h5f/vox1_test_cleaned_idmap.h5
+  key: h5f/vox1_test_cleaned_key.h5
+  ndx: h5f/vox1_test_cleaned_ndx.h5
+train:
+  chunk_per_segment: -1
+  duration: 2
+  overlap: 2
+  sampler:
+    augmentation_replica: 1
+    examples_per_speaker: 1
+    samples_per_speaker: 128
+  transform_number: 1
+  transformation:
+    add_noise:
+      data_path: /ssd/data/musan_original
+      noise_db_csv: data/musan_original.csv
+    add_reverb:
+      data_path: /ssd/data/simulated_rirs
+      rir_db_csv: data/simulated_rirs.csv
+    pipeline: add_reverb,add_noise,phone_filtering,codec
+valid:
+  duration: 2
+  transformation:
+    add_noise:
+      data_path: /ssd/data/musan_original
+      noise_db_csv: data/musan_original.csv
+    add_reverb:
+      data_path: ''
+      noise_db_csv: ''
+    pipeline: ''
+validation_ratio: 0.02
+
+2021-09-28 11:19:32,047 - INFO - 
+*********************************
+Model options
+*********************************
+
+2021-09-28 11:19:32,047 - INFO - freeze_parts: []
+initial_model_name: null
+loss:
+  aam_margin: O.2
+  aam_s: 30
+  type: aam
+model_type: fastresnet34
+preprocessor:
+  feature_size: 80
+  type: mel_spec
+reset_parts: []
+speaker_number: 7205
+
+2021-09-28 11:19:32,047 - INFO - 
+*********************************
+Training options
+*********************************
+
+2021-09-28 11:19:32,049 - INFO - best_model_name: models/best_model_2s_cuda_.pt
+checkpoint_frequency: 1
+clipping: false
+compute_test_eer: true
+deterministic: false
+epochs: 128
+log_file: logs/training_resnet.log
+log_interval: 461
+lr: 0.001
+mixed_precision: true
+multi_gpu: false
+num_cpu: 5
+numpy_seed: 0
+optimizer:
+  options: null
+  type: adam
+patience: 100
+random_seed: 0
+scheduler:
+  options: null
+  type: CyclicLR
+tmp_model_name: models/tmp_model_2s_cuda_.pt
+torch_seed: 0
+validation_frequency: 1
+
+2021-09-28 11:26:14,952 - INFO - Start training process
+2021-09-28 11:26:14,952 - INFO - Use 	2 	gpus
+2021-09-28 11:26:14,952 - INFO - Use 	5 	cpus
+2021-09-28 11:26:14,952 - INFO - Validation EER will be measured using
+2021-09-28 11:26:15,561 - INFO - 	 69899 target trials and
+2021-09-28 11:26:16,160 - INFO - 	 69449 non-target trials
+2021-09-28 11:26:21,740 - INFO - Epoch: 1 [1/3602 (0%)]	Loss: 16.322485	Accuracy: 0.000
+2021-09-28 11:27:48,867 - INFO - Epoch: 1 [462/3602 (13%)]	Loss: 15.909573	Accuracy: 0.010
+2021-09-28 11:29:16,186 - INFO - Epoch: 1 [923/3602 (26%)]	Loss: 15.086072	Accuracy: 0.008
+2021-09-28 11:30:43,174 - INFO - Epoch: 1 [1384/3602 (38%)]	Loss: 14.991300	Accuracy: 0.003
+2021-09-28 11:32:11,183 - INFO - Epoch: 1 [1845/3602 (51%)]	Loss: 15.014092	Accuracy: 0.002
+2021-09-28 11:33:38,724 - INFO - Epoch: 1 [2306/3602 (64%)]	Loss: 15.030426	Accuracy: 0.003
+2021-09-28 11:35:05,748 - INFO - Epoch: 1 [2767/3602 (77%)]	Loss: 14.895110	Accuracy: 0.005
+2021-09-28 11:36:33,898 - INFO - Epoch: 1 [3228/3602 (90%)]	Loss: 14.679663	Accuracy: 0.007
+2021-09-28 11:40:07,343 - CRITICAL - ***Validation metrics - Cross validation accuracy = 0.04432981381478198 %, EER = 32.15702079045503 %
+2021-09-28 11:40:07,343 - CRITICAL - ***Test metrics - Test EER = 31.628076412081562 %
+2021-09-28 11:40:11,725 - INFO - Epoch: 2 [1/3602 (0%)]	Loss: 14.261985	Accuracy: 0.000
+2021-09-28 11:41:38,773 - INFO - Epoch: 2 [462/3602 (13%)]	Loss: 14.434283	Accuracy: 0.014
+2021-09-28 11:43:06,096 - INFO - Epoch: 2 [923/3602 (26%)]	Loss: 14.278056	Accuracy: 0.054
+2021-09-28 11:44:33,193 - INFO - Epoch: 2 [1384/3602 (38%)]	Loss: 14.071074	Accuracy: 0.154
+2021-09-28 11:46:00,745 - INFO - Epoch: 2 [1845/3602 (51%)]	Loss: 13.726195	Accuracy: 0.336
+2021-09-28 11:47:28,141 - INFO - Epoch: 2 [2306/3602 (64%)]	Loss: 13.430550	Accuracy: 0.603
+2021-09-28 11:48:55,452 - INFO - Epoch: 2 [2767/3602 (77%)]	Loss: 13.126848	Accuracy: 1.120
+2021-09-28 11:50:23,493 - INFO - Epoch: 2 [3228/3602 (90%)]	Loss: 12.869516	Accuracy: 1.869
+2021-09-28 11:52:48,998 - CRITICAL - ***Validation metrics - Cross validation accuracy = 3.3045861207382927 %, EER = 19.4280666009149 %
+2021-09-28 11:52:48,998 - CRITICAL - ***Test metrics - Test EER = 15.550731033678264 %
+2021-09-28 11:52:53,262 - INFO - Epoch: 3 [1/3602 (0%)]	Loss: 12.544764	Accuracy: 2.344
+2021-09-28 11:54:20,496 - INFO - Epoch: 3 [462/3602 (13%)]	Loss: 12.360601	Accuracy: 3.579
+2021-09-28 11:55:48,647 - INFO - Epoch: 3 [923/3602 (26%)]	Loss: 12.132467	Accuracy: 4.882
+2021-09-28 11:57:17,288 - INFO - Epoch: 3 [1384/3602 (38%)]	Loss: 11.894793	Accuracy: 6.043
+2021-09-28 11:58:45,011 - INFO - Epoch: 3 [1845/3602 (51%)]	Loss: 11.670948	Accuracy: 7.343
+2021-09-28 12:00:13,051 - INFO - Epoch: 3 [2306/3602 (64%)]	Loss: 11.495055	Accuracy: 8.465
+2021-09-28 12:01:41,029 - INFO - Epoch: 3 [2767/3602 (77%)]	Loss: 11.275332	Accuracy: 10.282
+2021-09-28 12:03:09,069 - INFO - Epoch: 3 [3228/3602 (90%)]	Loss: 11.090659	Accuracy: 11.588
+2021-09-28 12:05:32,902 - CRITICAL - ***Validation metrics - Cross validation accuracy = 15.24542596921093 %, EER = 16.00860557952847 %
+2021-09-28 12:05:32,909 - CRITICAL - ***Test metrics - Test EER = 12.010250762265697 %
+2021-09-28 12:05:37,191 - INFO - Epoch: 4 [1/3602 (0%)]	Loss: 11.497906	Accuracy: 10.938
+2021-09-28 12:07:04,692 - INFO - Epoch: 4 [462/3602 (13%)]	Loss: 10.759892	Accuracy: 14.146
+2021-09-28 12:08:32,193 - INFO - Epoch: 4 [923/3602 (26%)]	Loss: 10.515370	Accuracy: 16.005
+2021-09-28 12:09:59,837 - INFO - Epoch: 4 [1384/3602 (38%)]	Loss: 10.356890	Accuracy: 17.077
+2021-09-28 12:11:27,343 - INFO - Epoch: 4 [1845/3602 (51%)]	Loss: 10.116104	Accuracy: 19.450
+2021-09-28 12:12:55,027 - INFO - Epoch: 4 [2306/3602 (64%)]	Loss: 9.973840	Accuracy: 20.775
+2021-09-28 12:14:22,306 - INFO - Epoch: 4 [2767/3602 (77%)]	Loss: 9.764329	Accuracy: 22.577
+2021-09-28 12:15:49,654 - INFO - Epoch: 4 [3228/3602 (90%)]	Loss: 9.582161	Accuracy: 24.165
+2021-09-28 12:18:15,502 - CRITICAL - ***Validation metrics - Cross validation accuracy = 30.74877085516241 %, EER = 13.304717566005811 %
+2021-09-28 12:18:15,502 - CRITICAL - ***Test metrics - Test EER = 9.975694295143466 %
+2021-09-28 12:18:22,460 - INFO - Epoch: 5 [1/3602 (0%)]	Loss: 9.615011	Accuracy: 25.000
+2021-09-28 12:19:50,238 - INFO - Epoch: 5 [462/3602 (13%)]	Loss: 9.268212	Accuracy: 27.215
+2021-09-28 12:21:18,291 - INFO - Epoch: 5 [923/3602 (26%)]	Loss: 9.123046	Accuracy: 28.830
+2021-09-28 12:22:45,671 - INFO - Epoch: 5 [1384/3602 (38%)]	Loss: 8.961819	Accuracy: 30.484
+2021-09-28 12:24:13,684 - INFO - Epoch: 5 [1845/3602 (51%)]	Loss: 8.772626	Accuracy: 32.406
+2021-09-28 12:25:41,483 - INFO - Epoch: 5 [2306/3602 (64%)]	Loss: 8.700853	Accuracy: 33.096
+2021-09-28 12:27:09,109 - INFO - Epoch: 5 [2767/3602 (77%)]	Loss: 8.564745	Accuracy: 34.853
+2021-09-28 12:28:36,695 - INFO - Epoch: 5 [3228/3602 (90%)]	Loss: 8.413113	Accuracy: 36.407
+2021-09-28 12:31:03,785 - CRITICAL - ***Validation metrics - Cross validation accuracy = 47.31200128959458 %, EER = 11.47082484368343 %
+2021-09-28 12:31:03,785 - CRITICAL - ***Test metrics - Test EER = 7.062480826260353 %
+2021-09-28 12:31:08,208 - INFO - Epoch: 6 [1/3602 (0%)]	Loss: 9.722299	Accuracy: 25.000
+2021-09-28 12:32:36,851 - INFO - Epoch: 6 [462/3602 (13%)]	Loss: 8.233155	Accuracy: 38.620
+2021-09-28 12:34:04,691 - INFO - Epoch: 6 [923/3602 (26%)]	Loss: 8.143333	Accuracy: 39.674
+2021-09-28 12:35:32,674 - INFO - Epoch: 6 [1384/3602 (38%)]	Loss: 8.066650	Accuracy: 40.820
+2021-09-28 12:37:00,358 - INFO - Epoch: 6 [1845/3602 (51%)]	Loss: 7.954921	Accuracy: 42.398
+2021-09-28 12:38:29,192 - INFO - Epoch: 6 [2306/3602 (64%)]	Loss: 7.885843	Accuracy: 43.120
+2021-09-28 12:39:56,887 - INFO - Epoch: 6 [2767/3602 (77%)]	Loss: 7.807506	Accuracy: 44.031
+2021-09-28 12:41:24,359 - INFO - Epoch: 6 [3228/3602 (90%)]	Loss: 7.760593	Accuracy: 44.960
+2021-09-28 12:43:51,732 - CRITICAL - ***Validation metrics - Cross validation accuracy = 56.87918110743935 %, EER = 10.890875991688937 %
+2021-09-28 12:43:51,739 - CRITICAL - ***Test metrics - Test EER = 6.7060598157726306 %
+2021-09-28 12:43:56,368 - INFO - Epoch: 7 [1/3602 (0%)]	Loss: 8.066979	Accuracy: 44.531
+2021-09-28 12:45:23,936 - INFO - Epoch: 7 [462/3602 (13%)]	Loss: 7.566364	Accuracy: 47.287
+2021-09-28 12:46:52,015 - INFO - Epoch: 7 [923/3602 (26%)]	Loss: 7.572721	Accuracy: 46.980
+2021-09-28 12:48:20,140 - INFO - Epoch: 7 [1384/3602 (38%)]	Loss: 7.468501	Accuracy: 48.534
+2021-09-28 12:49:47,885 - INFO - Epoch: 7 [1845/3602 (51%)]	Loss: 7.453996	Accuracy: 48.563
+2021-09-28 12:51:15,993 - INFO - Epoch: 7 [2306/3602 (64%)]	Loss: 7.374436	Accuracy: 49.539
+2021-09-28 12:52:43,233 - INFO - Epoch: 7 [2767/3602 (77%)]	Loss: 7.352821	Accuracy: 49.934
+2021-09-28 12:54:11,252 - INFO - Epoch: 7 [3228/3602 (90%)]	Loss: 7.278183	Accuracy: 50.813
+2021-09-28 12:56:36,499 - CRITICAL - ***Validation metrics - Cross validation accuracy = 62.12218908680583 %, EER = 10.336787308944768 %
+2021-09-28 12:56:36,500 - CRITICAL - ***Test metrics - Test EER = 6.052897098967643 %
+2021-09-28 12:56:41,231 - INFO - Epoch: 8 [1/3602 (0%)]	Loss: 6.511972	Accuracy: 57.031
+2021-09-28 12:58:08,180 - INFO - Epoch: 8 [462/3602 (13%)]	Loss: 7.219481	Accuracy: 51.459
+2021-09-28 12:59:36,339 - INFO - Epoch: 8 [923/3602 (26%)]	Loss: 7.154723	Accuracy: 52.420
+2021-09-28 13:01:03,723 - INFO - Epoch: 8 [1384/3602 (38%)]	Loss: 7.104018	Accuracy: 52.830
+2021-09-28 13:02:31,839 - INFO - Epoch: 8 [1845/3602 (51%)]	Loss: 7.059180	Accuracy: 53.389
+2021-09-28 13:03:59,857 - INFO - Epoch: 8 [2306/3602 (64%)]	Loss: 7.089450	Accuracy: 53.225
+2021-09-28 13:05:27,481 - INFO - Epoch: 8 [2767/3602 (77%)]	Loss: 7.029042	Accuracy: 53.886
+2021-09-28 13:06:54,913 - INFO - Epoch: 8 [3228/3602 (90%)]	Loss: 6.979924	Accuracy: 54.469
+2021-09-28 13:09:21,587 - CRITICAL - ***Validation metrics - Cross validation accuracy = 66.7002498589506 %, EER = 9.691626442187905 %
+2021-09-28 13:09:21,587 - CRITICAL - ***Test metrics - Test EER = 5.175146248921115 %
+2021-09-28 13:09:30,947 - INFO - Epoch: 9 [1/3602 (0%)]	Loss: 6.086815	Accuracy: 63.281
+2021-09-28 13:10:58,675 - INFO - Epoch: 9 [462/3602 (13%)]	Loss: 6.895892	Accuracy: 55.520
+2021-09-28 13:12:26,800 - INFO - Epoch: 9 [923/3602 (26%)]	Loss: 6.878376	Accuracy: 55.879
+2021-09-28 13:13:54,618 - INFO - Epoch: 9 [1384/3602 (38%)]	Loss: 6.771293	Accuracy: 56.696
+2021-09-28 13:15:23,156 - INFO - Epoch: 9 [1845/3602 (51%)]	Loss: 6.731986	Accuracy: 57.446
+2021-09-28 13:16:49,977 - INFO - Epoch: 9 [2306/3602 (64%)]	Loss: 6.643960	Accuracy: 58.301
+2021-09-28 13:18:17,514 - INFO - Epoch: 9 [2767/3602 (77%)]	Loss: 6.572914	Accuracy: 59.050
+2021-09-28 13:19:44,926 - INFO - Epoch: 9 [3228/3602 (90%)]	Loss: 6.539828	Accuracy: 59.407
+2021-09-28 13:22:22,598 - CRITICAL - ***Validation metrics - Cross validation accuracy = 70.7826227129846 %, EER = 9.419934777175166 %
+2021-09-28 13:22:22,601 - CRITICAL - ***Test metrics - Test EER = 4.968412118471206 %
+2021-09-28 13:22:28,215 - INFO - Epoch: 10 [1/3602 (0%)]	Loss: 6.113114	Accuracy: 64.062
+2021-09-28 13:23:56,322 - INFO - Epoch: 10 [462/3602 (13%)]	Loss: 6.434420	Accuracy: 60.595
+2021-09-28 13:25:24,883 - INFO - Epoch: 10 [923/3602 (26%)]	Loss: 6.382254	Accuracy: 61.176
+2021-09-28 13:26:52,184 - INFO - Epoch: 10 [1384/3602 (38%)]	Loss: 6.315446	Accuracy: 61.787
+2021-09-28 13:28:18,810 - INFO - Epoch: 10 [1845/3602 (51%)]	Loss: 6.248892	Accuracy: 62.825
+2021-09-28 13:29:46,032 - INFO - Epoch: 10 [2306/3602 (64%)]	Loss: 6.230547	Accuracy: 63.003
+2021-09-28 13:31:12,492 - INFO - Epoch: 10 [2767/3602 (77%)]	Loss: 6.151692	Accuracy: 63.647
+2021-09-28 13:32:39,883 - INFO - Epoch: 10 [3228/3602 (90%)]	Loss: 6.121447	Accuracy: 63.818
+2021-09-28 13:35:09,811 - CRITICAL - ***Validation metrics - Cross validation accuracy = 76.82759732409124 %, EER = 8.535079352526248 %
+2021-09-28 13:35:09,811 - CRITICAL - ***Test metrics - Test EER = 4.355764278583406 %
+2021-09-28 13:35:14,693 - INFO - Epoch: 11 [1/3602 (0%)]	Loss: 5.795347	Accuracy: 64.844
+2021-09-28 13:36:43,125 - INFO - Epoch: 11 [462/3602 (13%)]	Loss: 6.010907	Accuracy: 65.083
+2021-09-28 13:38:10,389 - INFO - Epoch: 11 [923/3602 (26%)]	Loss: 5.960617	Accuracy: 65.517
+2021-09-28 13:39:37,552 - INFO - Epoch: 11 [1384/3602 (38%)]	Loss: 5.948345	Accuracy: 65.839
+2021-09-28 13:41:05,420 - INFO - Epoch: 11 [1845/3602 (51%)]	Loss: 5.952833	Accuracy: 65.583
+2021-09-28 13:42:33,222 - INFO - Epoch: 11 [2306/3602 (64%)]	Loss: 5.852942	Accuracy: 66.345
+2021-09-28 13:43:59,809 - INFO - Epoch: 11 [2767/3602 (77%)]	Loss: 5.794763	Accuracy: 67.055
+2021-09-28 13:45:27,145 - INFO - Epoch: 11 [3228/3602 (90%)]	Loss: 5.785804	Accuracy: 67.271
+2021-09-28 13:47:52,388 - CRITICAL - ***Validation metrics - Cross validation accuracy = 78.16152172160876 %, EER = 8.461170399178025 %
+2021-09-28 13:47:52,395 - CRITICAL - ***Test metrics - Test EER = 3.931333883203561 %
+2021-09-28 13:47:57,374 - INFO - Epoch: 12 [1/3602 (0%)]	Loss: 5.181997	Accuracy: 73.438
+2021-09-28 13:49:24,569 - INFO - Epoch: 12 [462/3602 (13%)]	Loss: 5.714124	Accuracy: 67.991
+2021-09-28 13:50:51,086 - INFO - Epoch: 12 [923/3602 (26%)]	Loss: 5.680078	Accuracy: 68.347
+2021-09-28 13:52:19,334 - INFO - Epoch: 12 [1384/3602 (38%)]	Loss: 5.610697	Accuracy: 68.936
+2021-09-28 13:53:46,169 - INFO - Epoch: 12 [1845/3602 (51%)]	Loss: 5.564812	Accuracy: 69.389
+2021-09-28 13:55:13,521 - INFO - Epoch: 12 [2306/3602 (64%)]	Loss: 5.561394	Accuracy: 69.409
+2021-09-28 13:56:39,856 - INFO - Epoch: 12 [2767/3602 (77%)]	Loss: 5.550766	Accuracy: 69.728
+2021-09-28 13:58:07,004 - INFO - Epoch: 12 [3228/3602 (90%)]	Loss: 5.478826	Accuracy: 70.367
+2021-09-28 14:00:34,783 - CRITICAL - ***Validation metrics - Cross validation accuracy = 80.93415007656968 %, EER = 8.0669775407589 %
+2021-09-28 14:00:34,783 - CRITICAL - ***Test metrics - Test EER = 3.7288312732092854 %
+2021-09-28 14:00:40,253 - INFO - Epoch: 13 [1/3602 (0%)]	Loss: 5.975396	Accuracy: 65.625
+2021-09-28 14:02:07,349 - INFO - Epoch: 13 [462/3602 (13%)]	Loss: 5.432648	Accuracy: 70.728
+2021-09-28 14:03:35,867 - INFO - Epoch: 13 [923/3602 (26%)]	Loss: 5.383484	Accuracy: 71.275
+2021-09-28 14:05:03,127 - INFO - Epoch: 13 [1384/3602 (38%)]	Loss: 5.340381	Accuracy: 71.519
+2021-09-28 14:06:30,946 - INFO - Epoch: 13 [1845/3602 (51%)]	Loss: 5.310717	Accuracy: 71.839
+2021-09-28 14:07:58,681 - INFO - Epoch: 13 [2306/3602 (64%)]	Loss: 5.271670	Accuracy: 72.119
+2021-09-28 14:09:25,597 - INFO - Epoch: 13 [2767/3602 (77%)]	Loss: 5.224176	Accuracy: 72.531
+2021-09-28 14:10:52,036 - INFO - Epoch: 13 [3228/3602 (90%)]	Loss: 5.197736	Accuracy: 72.561
+2021-09-28 14:13:17,432 - CRITICAL - ***Validation metrics - Cross validation accuracy = 82.98944144434593 %, EER = 7.8668640820836035 %
+2021-09-28 14:13:17,432 - CRITICAL - ***Test metrics - Test EER = 3.8455168398723205 %
+2021-09-28 14:13:23,127 - INFO - Epoch: 14 [1/3602 (0%)]	Loss: 5.672811	Accuracy: 67.969
+2021-09-28 14:14:50,656 - INFO - Epoch: 14 [462/3602 (13%)]	Loss: 5.119074	Accuracy: 73.717
+2021-09-28 14:16:17,684 - INFO - Epoch: 14 [923/3602 (26%)]	Loss: 5.096436	Accuracy: 73.585
+2021-09-28 14:17:45,846 - INFO - Epoch: 14 [1384/3602 (38%)]	Loss: 5.096015	Accuracy: 73.871
+2021-09-28 14:19:12,414 - INFO - Epoch: 14 [1845/3602 (51%)]	Loss: 5.025671	Accuracy: 74.380
+2021-09-28 14:20:40,460 - INFO - Epoch: 14 [2306/3602 (64%)]	Loss: 5.012486	Accuracy: 74.332
+2021-09-28 14:22:07,642 - INFO - Epoch: 14 [2767/3602 (77%)]	Loss: 4.951729	Accuracy: 75.273
+2021-09-28 14:23:34,350 - INFO - Epoch: 14 [3228/3602 (90%)]	Loss: 4.879470	Accuracy: 75.707
+2021-09-28 14:26:01,212 - CRITICAL - ***Validation metrics - Cross validation accuracy = 84.5974046909003 %, EER = 7.734711730242 %
+2021-09-28 14:26:01,219 - CRITICAL - ***Test metrics - Test EER = 3.496118624134456 %
+2021-09-28 14:26:06,894 - INFO - Epoch: 15 [1/3602 (0%)]	Loss: 5.337826	Accuracy: 78.906
+2021-09-28 14:27:34,580 - INFO - Epoch: 15 [462/3602 (13%)]	Loss: 4.930557	Accuracy: 75.010
+2021-09-28 14:29:01,508 - INFO - Epoch: 15 [923/3602 (26%)]	Loss: 4.814686	Accuracy: 76.134
+2021-09-28 14:30:28,534 - INFO - Epoch: 15 [1384/3602 (38%)]	Loss: 4.813369	Accuracy: 76.125
+2021-09-28 14:31:55,368 - INFO - Epoch: 15 [1845/3602 (51%)]	Loss: 4.758059	Accuracy: 76.788
+2021-09-28 14:33:22,740 - INFO - Epoch: 15 [2306/3602 (64%)]	Loss: 4.754592	Accuracy: 76.729
+2021-09-28 14:34:49,316 - INFO - Epoch: 15 [2767/3602 (77%)]	Loss: 4.744609	Accuracy: 76.810
+2021-09-28 14:36:16,497 - INFO - Epoch: 15 [3228/3602 (90%)]	Loss: 4.689768	Accuracy: 77.266
+2021-09-28 14:38:42,052 - CRITICAL - ***Validation metrics - Cross validation accuracy = 86.66478600789877 %, EER = 7.440438516492326 %
+2021-09-28 14:38:42,053 - CRITICAL - ***Test metrics - Test EER = 3.559654445476262 %
+2021-09-28 14:38:46,548 - INFO - Epoch: 16 [1/3602 (0%)]	Loss: 4.559913	Accuracy: 79.688
+2021-09-28 14:40:14,320 - INFO - Epoch: 16 [462/3602 (13%)]	Loss: 4.637043	Accuracy: 77.656
+2021-09-28 14:41:42,282 - INFO - Epoch: 16 [923/3602 (26%)]	Loss: 4.590702	Accuracy: 78.244
+2021-09-28 14:43:09,033 - INFO - Epoch: 16 [1384/3602 (38%)]	Loss: 4.597664	Accuracy: 77.920
+2021-09-28 14:44:36,051 - INFO - Epoch: 16 [1845/3602 (51%)]	Loss: 4.563761	Accuracy: 78.411
+2021-09-28 14:46:03,066 - INFO - Epoch: 16 [2306/3602 (64%)]	Loss: 4.511075	Accuracy: 78.801
+2021-09-28 14:47:29,806 - INFO - Epoch: 16 [2767/3602 (77%)]	Loss: 4.544096	Accuracy: 78.457
+2021-09-28 14:48:56,616 - INFO - Epoch: 16 [3228/3602 (90%)]	Loss: 4.490698	Accuracy: 78.793
+2021-09-28 14:51:29,809 - CRITICAL - ***Validation metrics - Cross validation accuracy = 87.3982429273797 %, EER = 7.40367697564263 %
+2021-09-28 14:51:29,809 - CRITICAL - ***Test metrics - Test EER = 3.4323786397892118 %
+2021-09-28 14:51:35,372 - INFO - Epoch: 17 [1/3602 (0%)]	Loss: 4.309620	Accuracy: 82.031
+2021-09-28 14:53:02,814 - INFO - Epoch: 17 [462/3602 (13%)]	Loss: 4.466361	Accuracy: 78.988
+2021-09-28 14:54:30,230 - INFO - Epoch: 17 [923/3602 (26%)]	Loss: 4.474247	Accuracy: 78.881
+2021-09-28 14:55:57,430 - INFO - Epoch: 17 [1384/3602 (38%)]	Loss: 4.520170	Accuracy: 78.620
+2021-09-28 14:57:24,774 - INFO - Epoch: 17 [1845/3602 (51%)]	Loss: 4.467019	Accuracy: 78.957
+2021-09-28 14:58:50,970 - INFO - Epoch: 17 [2306/3602 (64%)]	Loss: 4.435579	Accuracy: 79.082
+2021-09-28 15:00:17,728 - INFO - Epoch: 17 [2767/3602 (77%)]	Loss: 4.473511	Accuracy: 79.038
+2021-09-28 15:01:44,610 - INFO - Epoch: 17 [3228/3602 (90%)]	Loss: 4.482265	Accuracy: 78.750
+2021-09-28 15:04:20,055 - CRITICAL - ***Validation metrics - Cross validation accuracy = 87.59168211493511 %, EER = 7.310819688270562 %
+2021-09-28 15:04:20,056 - CRITICAL - ***Test metrics - Test EER = 3.4412191824266802 %
+2021-09-28 15:04:25,416 - INFO - Epoch: 18 [1/3602 (0%)]	Loss: 4.639028	Accuracy: 80.469
+2021-09-28 15:05:51,863 - INFO - Epoch: 18 [462/3602 (13%)]	Loss: 4.439962	Accuracy: 79.169
+2021-09-28 15:07:20,109 - INFO - Epoch: 18 [923/3602 (26%)]	Loss: 4.462914	Accuracy: 79.144
+2021-09-28 15:08:48,670 - INFO - Epoch: 18 [1384/3602 (38%)]	Loss: 4.463509	Accuracy: 79.127
+2021-09-28 15:10:15,893 - INFO - Epoch: 18 [1845/3602 (51%)]	Loss: 4.473930	Accuracy: 79.042
+2021-09-28 15:11:43,699 - INFO - Epoch: 18 [2306/3602 (64%)]	Loss: 4.517003	Accuracy: 78.422
+2021-09-28 15:13:10,414 - INFO - Epoch: 18 [2767/3602 (77%)]	Loss: 4.484254	Accuracy: 78.857
+2021-09-28 15:14:38,794 - INFO - Epoch: 18 [3228/3602 (90%)]	Loss: 4.509200	Accuracy: 78.840
+2021-09-28 15:17:11,639 - CRITICAL - ***Validation metrics - Cross validation accuracy = 87.61183203030548 %, EER = 7.378342638770014 %
+2021-09-28 15:17:11,646 - CRITICAL - ***Test metrics - Test EER = 3.4338166083838453 %
+2021-09-28 15:17:16,875 - INFO - Epoch: 19 [1/3602 (0%)]	Loss: 4.330573	Accuracy: 82.031
+2021-09-28 15:18:44,971 - INFO - Epoch: 19 [462/3602 (13%)]	Loss: 4.548260	Accuracy: 78.381
+2021-09-28 15:20:12,348 - INFO - Epoch: 19 [923/3602 (26%)]	Loss: 4.545095	Accuracy: 78.564
+2021-09-28 15:21:39,245 - INFO - Epoch: 19 [1384/3602 (38%)]	Loss: 4.550254	Accuracy: 78.513
+2021-09-28 15:23:06,686 - INFO - Epoch: 19 [1845/3602 (51%)]	Loss: 4.509716	Accuracy: 78.728
+2021-09-28 15:24:33,742 - INFO - Epoch: 19 [2306/3602 (64%)]	Loss: 4.533952	Accuracy: 78.583
+2021-09-28 15:26:00,000 - INFO - Epoch: 19 [2767/3602 (77%)]	Loss: 4.537223	Accuracy: 78.650
+2021-09-28 15:27:26,301 - INFO - Epoch: 19 [3228/3602 (90%)]	Loss: 4.574142	Accuracy: 78.391
+2021-09-28 15:30:00,381 - CRITICAL - ***Validation metrics - Cross validation accuracy = 87.28943338437979 %, EER = 7.473964279497916 %
+2021-09-28 15:30:00,381 - CRITICAL - ***Test metrics - Test EER = 3.4004147769244626 %
+2021-09-28 15:30:05,977 - INFO - Epoch: 20 [1/3602 (0%)]	Loss: 4.108702	Accuracy: 79.688
+2021-09-28 15:31:33,283 - INFO - Epoch: 20 [462/3602 (13%)]	Loss: 4.599609	Accuracy: 77.937
+2021-09-28 15:33:01,111 - INFO - Epoch: 20 [923/3602 (26%)]	Loss: 4.566121	Accuracy: 78.333
+2021-09-28 15:34:29,393 - INFO - Epoch: 20 [1384/3602 (38%)]	Loss: 4.607851	Accuracy: 78.161
+2021-09-28 15:35:56,349 - INFO - Epoch: 20 [1845/3602 (51%)]	Loss: 4.643475	Accuracy: 77.844
+2021-09-28 15:37:23,608 - INFO - Epoch: 20 [2306/3602 (64%)]	Loss: 4.644960	Accuracy: 77.725
+2021-09-28 15:38:49,786 - INFO - Epoch: 20 [2767/3602 (77%)]	Loss: 4.636503	Accuracy: 77.932
+2021-09-28 15:40:16,815 - INFO - Epoch: 20 [3228/3602 (90%)]	Loss: 4.654731	Accuracy: 77.522
+2021-09-28 15:42:49,581 - CRITICAL - ***Validation metrics - Cross validation accuracy = 86.62448617715806 %, EER = 7.32844022510797 %
+2021-09-28 15:42:49,582 - CRITICAL - ***Test metrics - Test EER = 3.3007936793823474 %
+2021-09-28 15:42:54,209 - INFO - Epoch: 21 [1/3602 (0%)]	Loss: 4.657393	Accuracy: 78.125
+2021-09-28 15:44:21,732 - INFO - Epoch: 21 [462/3602 (13%)]	Loss: 4.670048	Accuracy: 77.550
+2021-09-28 15:45:49,542 - INFO - Epoch: 21 [923/3602 (26%)]	Loss: 4.705004	Accuracy: 77.066
+2021-09-28 15:47:17,185 - INFO - Epoch: 21 [1384/3602 (38%)]	Loss: 4.694011	Accuracy: 77.110
+2021-09-28 15:48:43,727 - INFO - Epoch: 21 [1845/3602 (51%)]	Loss: 4.678046	Accuracy: 77.496
+2021-09-28 15:50:10,931 - INFO - Epoch: 21 [2306/3602 (64%)]	Loss: 4.725346	Accuracy: 77.206
+2021-09-28 15:51:38,083 - INFO - Epoch: 21 [2767/3602 (77%)]	Loss: 4.766476	Accuracy: 76.668
+2021-09-28 15:53:04,583 - INFO - Epoch: 21 [3228/3602 (90%)]	Loss: 4.751283	Accuracy: 77.090
+2021-09-28 15:55:35,150 - CRITICAL - ***Validation metrics - Cross validation accuracy = 86.37462722656565 %, EER = 7.407909095483349 %
+2021-09-28 15:55:35,151 - CRITICAL - ***Test metrics - Test EER = 3.4534625786259077 %
+2021-09-28 15:55:43,683 - INFO - Epoch: 22 [1/3602 (0%)]	Loss: 4.870255	Accuracy: 75.781
+2021-09-28 15:57:11,055 - INFO - Epoch: 22 [462/3602 (13%)]	Loss: 4.758929	Accuracy: 76.996
+2021-09-28 15:58:39,104 - INFO - Epoch: 22 [923/3602 (26%)]	Loss: 4.796539	Accuracy: 76.388
+2021-09-28 16:00:06,651 - INFO - Epoch: 22 [1384/3602 (38%)]	Loss: 4.819545	Accuracy: 76.435
+2021-09-28 16:01:33,795 - INFO - Epoch: 22 [1845/3602 (51%)]	Loss: 4.790359	Accuracy: 76.546
+2021-09-28 16:03:00,722 - INFO - Epoch: 22 [2306/3602 (64%)]	Loss: 4.803676	Accuracy: 76.759
+2021-09-28 16:04:28,190 - INFO - Epoch: 22 [2767/3602 (77%)]	Loss: 4.845908	Accuracy: 76.147
+2021-09-28 16:05:54,521 - INFO - Epoch: 22 [3228/3602 (90%)]	Loss: 4.843715	Accuracy: 76.164
+2021-09-28 16:08:18,759 - CRITICAL - ***Validation metrics - Cross validation accuracy = 86.03207866526961 %, EER = 7.262757088678186 %
+2021-09-28 16:08:18,760 - CRITICAL - ***Test metrics - Test EER = 3.416859577238314 %
+2021-09-28 16:08:22,861 - INFO - Epoch: 23 [1/3602 (0%)]	Loss: 5.209647	Accuracy: 73.438
+2021-09-28 16:09:49,691 - INFO - Epoch: 23 [462/3602 (13%)]	Loss: 4.848052	Accuracy: 76.200
+2021-09-28 16:11:17,158 - INFO - Epoch: 23 [923/3602 (26%)]	Loss: 4.840201	Accuracy: 76.324
+2021-09-28 16:12:44,615 - INFO - Epoch: 23 [1384/3602 (38%)]	Loss: 4.906362	Accuracy: 75.683
+2021-09-28 16:14:11,472 - INFO - Epoch: 23 [1845/3602 (51%)]	Loss: 4.889215	Accuracy: 75.874
+2021-09-28 16:15:38,559 - INFO - Epoch: 23 [2306/3602 (64%)]	Loss: 4.893839	Accuracy: 75.793
+2021-09-28 16:17:05,602 - INFO - Epoch: 23 [2767/3602 (77%)]	Loss: 4.932058	Accuracy: 75.332
+2021-09-28 16:18:32,110 - INFO - Epoch: 23 [3228/3602 (90%)]	Loss: 4.902389	Accuracy: 75.651
+2021-09-28 16:21:01,635 - CRITICAL - ***Validation metrics - Cross validation accuracy = 84.806963810752 %, EER = 7.443883425730757 %
+2021-09-28 16:21:01,636 - CRITICAL - ***Test metrics - Test EER = 3.372386143209848 %
+2021-09-28 16:21:08,592 - INFO - Epoch: 24 [1/3602 (0%)]	Loss: 4.739094	Accuracy: 72.656
+2021-09-28 16:22:35,882 - INFO - Epoch: 24 [462/3602 (13%)]	Loss: 4.934434	Accuracy: 75.576
+2021-09-28 16:24:03,693 - INFO - Epoch: 24 [923/3602 (26%)]	Loss: 4.939119	Accuracy: 75.434
+2021-09-28 16:25:31,226 - INFO - Epoch: 24 [1384/3602 (38%)]	Loss: 4.987934	Accuracy: 74.873
+2021-09-28 16:26:59,151 - INFO - Epoch: 24 [1845/3602 (51%)]	Loss: 4.981814	Accuracy: 75.120
+2021-09-28 16:28:25,930 - INFO - Epoch: 24 [2306/3602 (64%)]	Loss: 4.990203	Accuracy: 75.042
+2021-09-28 16:29:52,576 - INFO - Epoch: 24 [2767/3602 (77%)]	Loss: 4.976729	Accuracy: 75.014
+2021-09-28 16:31:19,128 - INFO - Epoch: 24 [3228/3602 (90%)]	Loss: 4.987042	Accuracy: 74.919
+2021-09-28 16:33:53,932 - CRITICAL - ***Validation metrics - Cross validation accuracy = 85.07294269364068 %, EER = 7.453534868992497 %
+2021-09-28 16:33:53,932 - CRITICAL - ***Test metrics - Test EER = 3.286272633006304 %
+2021-09-28 16:34:00,326 - INFO - Epoch: 25 [1/3602 (0%)]	Loss: 5.820051	Accuracy: 67.969
+2021-09-28 16:35:27,127 - INFO - Epoch: 25 [462/3602 (13%)]	Loss: 5.011714	Accuracy: 74.971
+2021-09-28 16:36:54,187 - INFO - Epoch: 25 [923/3602 (26%)]	Loss: 5.002755	Accuracy: 74.842
+2021-09-28 16:38:21,707 - INFO - Epoch: 25 [1384/3602 (38%)]	Loss: 4.948559	Accuracy: 75.302
+2021-09-28 16:39:49,466 - INFO - Epoch: 25 [1845/3602 (51%)]	Loss: 4.960739	Accuracy: 75.197
+2021-09-28 16:41:17,018 - INFO - Epoch: 25 [2306/3602 (64%)]	Loss: 4.911717	Accuracy: 75.802
+2021-09-28 16:42:43,664 - INFO - Epoch: 25 [2767/3602 (77%)]	Loss: 4.905755	Accuracy: 75.654
+2021-09-28 16:44:11,118 - INFO - Epoch: 25 [3228/3602 (90%)]	Loss: 4.891408	Accuracy: 75.800
+2021-09-28 16:46:42,811 - CRITICAL - ***Validation metrics - Cross validation accuracy = 85.24220198275167 %, EER = 7.539846221516306 %
+2021-09-28 16:46:42,819 - CRITICAL - ***Test metrics - Test EER = 3.220190328862861 %
+2021-09-28 16:46:52,751 - INFO - Epoch: 26 [1/3602 (0%)]	Loss: 5.049973	Accuracy: 75.000
+2021-09-28 16:48:20,021 - INFO - Epoch: 26 [462/3602 (13%)]	Loss: 4.870843	Accuracy: 76.008
+2021-09-28 16:49:47,843 - INFO - Epoch: 26 [923/3602 (26%)]	Loss: 4.841530	Accuracy: 76.107
+2021-09-28 16:51:14,530 - INFO - Epoch: 26 [1384/3602 (38%)]	Loss: 4.782026	Accuracy: 76.627
+2021-09-28 16:52:41,559 - INFO - Epoch: 26 [1845/3602 (51%)]	Loss: 4.797489	Accuracy: 76.327
+2021-09-28 16:54:08,743 - INFO - Epoch: 26 [2306/3602 (64%)]	Loss: 4.783529	Accuracy: 76.515
+2021-09-28 16:55:35,063 - INFO - Epoch: 26 [2767/3602 (77%)]	Loss: 4.736455	Accuracy: 77.047
+2021-09-28 16:57:01,579 - INFO - Epoch: 26 [3228/3602 (90%)]	Loss: 4.703729	Accuracy: 77.384
+2021-09-28 16:59:28,426 - CRITICAL - ***Validation metrics - Cross validation accuracy = 86.4108970742323 %, EER = 7.10761998860834 %
+2021-09-28 16:59:28,426 - CRITICAL - ***Test metrics - Test EER = 2.9406290712823546 %
+2021-09-28 16:59:33,918 - INFO - Epoch: 27 [1/3602 (0%)]	Loss: 4.247213	Accuracy: 86.719
+2021-09-28 17:01:00,989 - INFO - Epoch: 27 [462/3602 (13%)]	Loss: 4.707597	Accuracy: 77.435
+2021-09-28 17:02:29,008 - INFO - Epoch: 27 [923/3602 (26%)]	Loss: 4.731229	Accuracy: 77.091
+2021-09-28 17:03:56,369 - INFO - Epoch: 27 [1384/3602 (38%)]	Loss: 4.667564	Accuracy: 77.496
+2021-09-28 17:05:23,580 - INFO - Epoch: 27 [1845/3602 (51%)]	Loss: 4.637593	Accuracy: 77.889
+2021-09-28 17:06:50,945 - INFO - Epoch: 27 [2306/3602 (64%)]	Loss: 4.620730	Accuracy: 77.930
+2021-09-28 17:08:17,862 - INFO - Epoch: 27 [2767/3602 (77%)]	Loss: 4.606047	Accuracy: 78.259
+2021-09-28 17:09:44,255 - INFO - Epoch: 27 [3228/3602 (90%)]	Loss: 4.573389	Accuracy: 78.432
+2021-09-28 17:12:15,869 - CRITICAL - ***Validation metrics - Cross validation accuracy = 87.57959216571291 %, EER = 7.083607509963224 %
+2021-09-28 17:12:15,869 - CRITICAL - ***Test metrics - Test EER = 3.003403331450744 %
+2021-09-28 17:12:25,197 - INFO - Epoch: 28 [1/3602 (0%)]	Loss: 4.228282	Accuracy: 81.250
+2021-09-28 17:13:52,672 - INFO - Epoch: 28 [462/3602 (13%)]	Loss: 4.572129	Accuracy: 78.437
+2021-09-28 17:15:20,331 - INFO - Epoch: 28 [923/3602 (26%)]	Loss: 4.547131	Accuracy: 78.779
+2021-09-28 17:16:47,028 - INFO - Epoch: 28 [1384/3602 (38%)]	Loss: 4.500031	Accuracy: 79.054
+2021-09-28 17:18:14,309 - INFO - Epoch: 28 [1845/3602 (51%)]	Loss: 4.523246	Accuracy: 78.749
+2021-09-28 17:19:40,430 - INFO - Epoch: 28 [2306/3602 (64%)]	Loss: 4.500118	Accuracy: 79.120
+2021-09-28 17:21:07,065 - INFO - Epoch: 28 [2767/3602 (77%)]	Loss: 4.489760	Accuracy: 79.215
+2021-09-28 17:22:33,838 - INFO - Epoch: 28 [3228/3602 (90%)]	Loss: 4.483024	Accuracy: 79.255
+2021-09-28 17:25:00,192 - CRITICAL - ***Validation metrics - Cross validation accuracy = 88.37349883130491 %, EER = 6.883372516778384 %
+2021-09-28 17:25:00,192 - CRITICAL - ***Test metrics - Test EER = 3.0878726361538824 %
+2021-09-28 17:25:05,678 - INFO - Epoch: 29 [1/3602 (0%)]	Loss: 4.513374	Accuracy: 80.469
+2021-09-28 17:26:33,539 - INFO - Epoch: 29 [462/3602 (13%)]	Loss: 4.392626	Accuracy: 79.943
+2021-09-28 17:28:00,837 - INFO - Epoch: 29 [923/3602 (26%)]	Loss: 4.407181	Accuracy: 79.854
+2021-09-28 17:29:28,460 - INFO - Epoch: 29 [1384/3602 (38%)]	Loss: 4.352385	Accuracy: 79.935
+2021-09-28 17:30:56,779 - INFO - Epoch: 29 [1845/3602 (51%)]	Loss: 4.357001	Accuracy: 80.154
+2021-09-28 17:32:24,277 - INFO - Epoch: 29 [2306/3602 (64%)]	Loss: 4.367736	Accuracy: 79.891
+2021-09-28 17:33:50,250 - INFO - Epoch: 29 [2767/3602 (77%)]	Loss: 4.317077	Accuracy: 80.425
+2021-09-28 17:35:17,616 - INFO - Epoch: 29 [3228/3602 (90%)]	Loss: 4.298838	Accuracy: 80.660
+2021-09-28 17:37:44,711 - CRITICAL - ***Validation metrics - Cross validation accuracy = 89.10292576771178 %, EER = 6.80534905798032 %
+2021-09-28 17:37:44,711 - CRITICAL - ***Test metrics - Test EER = 2.823056925765388 %
+2021-09-28 17:37:49,512 - INFO - Epoch: 30 [1/3602 (0%)]	Loss: 4.545449	Accuracy: 81.250
+2021-09-28 17:39:15,941 - INFO - Epoch: 30 [462/3602 (13%)]	Loss: 4.269985	Accuracy: 80.770
+2021-09-28 17:40:42,508 - INFO - Epoch: 30 [923/3602 (26%)]	Loss: 4.238446	Accuracy: 81.059
+2021-09-28 17:42:09,452 - INFO - Epoch: 30 [1384/3602 (38%)]	Loss: 4.237378	Accuracy: 80.940
+2021-09-28 17:43:36,978 - INFO - Epoch: 30 [1845/3602 (51%)]	Loss: 4.217409	Accuracy: 81.106
+2021-09-28 17:45:03,877 - INFO - Epoch: 30 [2306/3602 (64%)]	Loss: 4.219046	Accuracy: 81.147
+2021-09-28 17:46:30,587 - INFO - Epoch: 30 [2767/3602 (77%)]	Loss: 4.200410	Accuracy: 81.147
+2021-09-28 17:47:57,817 - INFO - Epoch: 30 [3228/3602 (90%)]	Loss: 4.152348	Accuracy: 81.514
+2021-09-28 17:50:23,369 - CRITICAL - ***Validation metrics - Cross validation accuracy = 89.84041267026679 %, EER = 6.676977403254634 %
+2021-09-28 17:50:23,369 - CRITICAL - ***Test metrics - Test EER = 2.9611560411113276 %
+2021-09-28 17:50:29,422 - INFO - Epoch: 31 [1/3602 (0%)]	Loss: 3.930503	Accuracy: 83.594
+2021-09-28 17:51:57,715 - INFO - Epoch: 31 [462/3602 (13%)]	Loss: 4.139064	Accuracy: 81.762
+2021-09-28 17:53:25,863 - INFO - Epoch: 31 [923/3602 (26%)]	Loss: 4.147765	Accuracy: 81.714
+2021-09-28 17:54:52,593 - INFO - Epoch: 31 [1384/3602 (38%)]	Loss: 4.097222	Accuracy: 82.009
+2021-09-28 17:56:19,800 - INFO - Epoch: 31 [1845/3602 (51%)]	Loss: 4.064167	Accuracy: 82.233
+2021-09-28 17:57:46,458 - INFO - Epoch: 31 [2306/3602 (64%)]	Loss: 4.119302	Accuracy: 81.852
+2021-09-28 17:59:13,798 - INFO - Epoch: 31 [2767/3602 (77%)]	Loss: 4.043754	Accuracy: 82.540
+2021-09-28 18:00:40,388 - INFO - Epoch: 31 [3228/3602 (90%)]	Loss: 4.032532	Accuracy: 82.514
+2021-09-28 18:03:12,145 - CRITICAL - ***Validation metrics - Cross validation accuracy = 90.25953090997018 %, EER = 6.618958463787202 %
+2021-09-28 18:03:12,145 - CRITICAL - ***Test metrics - Test EER = 2.9958003617206694 %
+2021-09-28 18:03:21,468 - INFO - Epoch: 32 [1/3602 (0%)]	Loss: 4.271771	Accuracy: 80.469
+2021-09-28 18:04:49,605 - INFO - Epoch: 32 [462/3602 (13%)]	Loss: 4.034325	Accuracy: 82.531
+2021-09-28 18:06:16,526 - INFO - Epoch: 32 [923/3602 (26%)]	Loss: 4.019404	Accuracy: 82.650
+2021-09-28 18:07:44,700 - INFO - Epoch: 32 [1384/3602 (38%)]	Loss: 4.041631	Accuracy: 82.457
+2021-09-28 18:09:11,532 - INFO - Epoch: 32 [1845/3602 (51%)]	Loss: 4.028783	Accuracy: 82.404
+2021-09-28 18:10:39,132 - INFO - Epoch: 32 [2306/3602 (64%)]	Loss: 4.001738	Accuracy: 82.780
+2021-09-28 18:12:05,601 - INFO - Epoch: 32 [2767/3602 (77%)]	Loss: 3.942011	Accuracy: 83.282
+2021-09-28 18:13:33,014 - INFO - Epoch: 32 [3228/3602 (90%)]	Loss: 3.946822	Accuracy: 82.931
+2021-09-28 18:15:57,350 - CRITICAL - ***Validation metrics - Cross validation accuracy = 90.51341984363665 %, EER = 6.505882859268398 %
+2021-09-28 18:15:57,350 - CRITICAL - ***Test metrics - Test EER = 2.8627054601697273 %
+2021-09-28 18:16:02,371 - INFO - Epoch: 33 [1/3602 (0%)]	Loss: 3.538902	Accuracy: 90.625
+2021-09-28 18:17:29,266 - INFO - Epoch: 33 [462/3602 (13%)]	Loss: 3.953712	Accuracy: 83.060
+2021-09-28 18:18:57,211 - INFO - Epoch: 33 [923/3602 (26%)]	Loss: 3.940414	Accuracy: 83.138
+2021-09-28 18:20:24,617 - INFO - Epoch: 33 [1384/3602 (38%)]	Loss: 3.952623	Accuracy: 82.901
+2021-09-28 18:21:51,879 - INFO - Epoch: 33 [1845/3602 (51%)]	Loss: 3.978448	Accuracy: 82.762
+2021-09-28 18:23:19,202 - INFO - Epoch: 33 [2306/3602 (64%)]	Loss: 3.937689	Accuracy: 83.212
+2021-09-28 18:24:47,261 - INFO - Epoch: 33 [2767/3602 (77%)]	Loss: 3.963318	Accuracy: 83.084
+2021-09-28 18:26:14,377 - INFO - Epoch: 33 [3228/3602 (90%)]	Loss: 3.921267	Accuracy: 83.441
+2021-09-28 18:28:45,681 - CRITICAL - ***Validation metrics - Cross validation accuracy = 90.6061094543403 %, EER = 6.494494301117694 %
+2021-09-28 18:28:45,688 - CRITICAL - ***Test metrics - Test EER = 2.864623468389911 %
+2021-09-28 18:28:54,555 - INFO - Epoch: 34 [1/3602 (0%)]	Loss: 4.221049	Accuracy: 78.125
+2021-09-28 18:30:22,198 - INFO - Epoch: 34 [462/3602 (13%)]	Loss: 3.973312	Accuracy: 82.906
+2021-09-28 18:31:49,235 - INFO - Epoch: 34 [923/3602 (26%)]	Loss: 3.943760	Accuracy: 83.045
+2021-09-28 18:33:17,052 - INFO - Epoch: 34 [1384/3602 (38%)]	Loss: 3.963850	Accuracy: 82.955
+2021-09-28 18:34:44,122 - INFO - Epoch: 34 [1845/3602 (51%)]	Loss: 3.923575	Accuracy: 83.041
+2021-09-28 18:36:11,047 - INFO - Epoch: 34 [2306/3602 (64%)]	Loss: 3.943846	Accuracy: 82.950
+2021-09-28 18:37:38,865 - INFO - Epoch: 34 [2767/3602 (77%)]	Loss: 3.942875	Accuracy: 82.940
+2021-09-28 18:39:05,227 - INFO - Epoch: 34 [3228/3602 (90%)]	Loss: 3.951764	Accuracy: 83.018
+2021-09-28 18:41:40,915 - CRITICAL - ***Validation metrics - Cross validation accuracy = 90.50132989441444 %, EER = 6.513446260788935 %
+2021-09-28 18:41:40,922 - CRITICAL - ***Test metrics - Test EER = 2.8294242808922494 %
+2021-09-28 18:41:46,007 - INFO - Epoch: 35 [1/3602 (0%)]	Loss: 3.817199	Accuracy: 81.250
+2021-09-28 18:43:13,780 - INFO - Epoch: 35 [462/3602 (13%)]	Loss: 3.971366	Accuracy: 82.992
+2021-09-28 18:44:40,999 - INFO - Epoch: 35 [923/3602 (26%)]	Loss: 3.964749	Accuracy: 82.912
+2021-09-28 18:46:08,711 - INFO - Epoch: 35 [1384/3602 (38%)]	Loss: 3.943859	Accuracy: 83.192
+2021-09-28 18:47:35,396 - INFO - Epoch: 35 [1845/3602 (51%)]	Loss: 3.945845	Accuracy: 83.328
+2021-09-28 18:49:03,997 - INFO - Epoch: 35 [2306/3602 (64%)]	Loss: 3.971951	Accuracy: 82.843
+2021-09-28 18:50:31,210 - INFO - Epoch: 35 [2767/3602 (77%)]	Loss: 3.957051	Accuracy: 83.143
+2021-09-28 18:51:57,646 - INFO - Epoch: 35 [3228/3602 (90%)]	Loss: 3.934976	Accuracy: 83.246
+2021-09-28 18:54:22,167 - CRITICAL - ***Validation metrics - Cross validation accuracy = 90.29983074071089 %, EER = 6.62076211898902 %
+2021-09-28 18:54:22,167 - CRITICAL - ***Test metrics - Test EER = 3.0038088277778883 %
+2021-09-28 18:54:26,482 - INFO - Epoch: 36 [1/3602 (0%)]	Loss: 3.734305	Accuracy: 85.938
+2021-09-28 18:55:53,645 - INFO - Epoch: 36 [462/3602 (13%)]	Loss: 3.987082	Accuracy: 82.829
+2021-09-28 18:57:20,086 - INFO - Epoch: 36 [923/3602 (26%)]	Loss: 3.969033	Accuracy: 83.014
+2021-09-28 18:58:47,585 - INFO - Epoch: 36 [1384/3602 (38%)]	Loss: 3.994810	Accuracy: 82.860
+2021-09-28 19:00:15,308 - INFO - Epoch: 36 [1845/3602 (51%)]	Loss: 4.025392	Accuracy: 82.472
+2021-09-28 19:01:42,839 - INFO - Epoch: 36 [2306/3602 (64%)]	Loss: 3.991117	Accuracy: 83.045
+2021-09-28 19:03:09,269 - INFO - Epoch: 36 [2767/3602 (77%)]	Loss: 4.023576	Accuracy: 82.565
+2021-09-28 19:04:35,690 - INFO - Epoch: 36 [3228/3602 (90%)]	Loss: 4.004896	Accuracy: 82.787
+2021-09-28 19:07:01,131 - CRITICAL - ***Validation metrics - Cross validation accuracy = 90.3401305714516 %, EER = 6.6261886919646695 %
+2021-09-28 19:07:01,132 - CRITICAL - ***Test metrics - Test EER = 2.9020298672402065 %
+2021-09-28 19:07:06,264 - INFO - Epoch: 37 [1/3602 (0%)]	Loss: 4.566942	Accuracy: 79.688
+2021-09-28 19:08:33,635 - INFO - Epoch: 37 [462/3602 (13%)]	Loss: 4.063487	Accuracy: 82.265
+2021-09-28 19:10:00,560 - INFO - Epoch: 37 [923/3602 (26%)]	Loss: 4.029181	Accuracy: 82.643
+2021-09-28 19:11:28,457 - INFO - Epoch: 37 [1384/3602 (38%)]	Loss: 4.053506	Accuracy: 82.475
+2021-09-28 19:12:55,494 - INFO - Epoch: 37 [1845/3602 (51%)]	Loss: 4.046399	Accuracy: 82.548
+2021-09-28 19:14:22,861 - INFO - Epoch: 37 [2306/3602 (64%)]	Loss: 4.087578	Accuracy: 82.267
+2021-09-28 19:15:50,305 - INFO - Epoch: 37 [2767/3602 (77%)]	Loss: 4.127552	Accuracy: 82.035
+2021-09-28 19:17:17,062 - INFO - Epoch: 37 [3228/3602 (90%)]	Loss: 4.085969	Accuracy: 82.352
+2021-09-28 19:19:49,130 - CRITICAL - ***Validation metrics - Cross validation accuracy = 89.94519223019263 %, EER = 6.573127503591902 %
+2021-09-28 19:19:49,136 - CRITICAL - ***Test metrics - Test EER = 2.9745114281892286 %
+2021-09-28 19:19:58,086 - INFO - Epoch: 38 [1/3602 (0%)]	Loss: 4.161733	Accuracy: 82.031
+2021-09-28 19:21:25,369 - INFO - Epoch: 38 [462/3602 (13%)]	Loss: 4.097383	Accuracy: 82.211
+2021-09-28 19:22:52,547 - INFO - Epoch: 38 [923/3602 (26%)]	Loss: 4.096290	Accuracy: 82.179
+2021-09-28 19:24:19,722 - INFO - Epoch: 38 [1384/3602 (38%)]	Loss: 4.095380	Accuracy: 82.374
+2021-09-28 19:25:48,343 - INFO - Epoch: 38 [1845/3602 (51%)]	Loss: 4.140239	Accuracy: 81.750
+2021-09-28 19:27:15,188 - INFO - Epoch: 38 [2306/3602 (64%)]	Loss: 4.124389	Accuracy: 81.867
+2021-09-28 19:28:42,931 - INFO - Epoch: 38 [2767/3602 (77%)]	Loss: 4.143227	Accuracy: 81.730
+2021-09-28 19:30:10,579 - INFO - Epoch: 38 [3228/3602 (90%)]	Loss: 4.138167	Accuracy: 81.904
+2021-09-28 19:32:44,770 - CRITICAL - ***Validation metrics - Cross validation accuracy = 89.75981300878536 %, EER = 6.609137318288958 %
+2021-09-28 19:32:44,770 - CRITICAL - ***Test metrics - Test EER = 2.7498609091805903 %
+2021-09-28 19:32:49,582 - INFO - Epoch: 39 [1/3602 (0%)]	Loss: 3.971585	Accuracy: 78.906
+2021-09-28 19:34:16,737 - INFO - Epoch: 39 [462/3602 (13%)]	Loss: 4.149186	Accuracy: 81.765
+2021-09-28 19:35:43,748 - INFO - Epoch: 39 [923/3602 (26%)]	Loss: 4.179101	Accuracy: 81.582
+2021-09-28 19:37:10,446 - INFO - Epoch: 39 [1384/3602 (38%)]	Loss: 4.175546	Accuracy: 81.704
+2021-09-28 19:38:37,501 - INFO - Epoch: 39 [1845/3602 (51%)]	Loss: 4.183141	Accuracy: 81.452
+2021-09-28 19:40:04,363 - INFO - Epoch: 39 [2306/3602 (64%)]	Loss: 4.179632	Accuracy: 81.611
+2021-09-28 19:41:32,253 - INFO - Epoch: 39 [2767/3602 (77%)]	Loss: 4.211417	Accuracy: 81.174
+2021-09-28 19:42:59,546 - INFO - Epoch: 39 [3228/3602 (90%)]	Loss: 4.211843	Accuracy: 81.103
+2021-09-28 19:45:31,804 - CRITICAL - ***Validation metrics - Cross validation accuracy = 89.31651487063755 %, EER = 6.702828226360699 %
+2021-09-28 19:45:31,811 - CRITICAL - ***Test metrics - Test EER = 2.9715567191555907 %
+2021-09-28 19:45:37,886 - INFO - Epoch: 40 [1/3602 (0%)]	Loss: 4.603351	Accuracy: 78.906
+2021-09-28 19:47:05,561 - INFO - Epoch: 40 [462/3602 (13%)]	Loss: 4.236838	Accuracy: 81.047
+2021-09-28 19:48:32,837 - INFO - Epoch: 40 [923/3602 (26%)]	Loss: 4.199139	Accuracy: 81.496
+2021-09-28 19:50:00,301 - INFO - Epoch: 40 [1384/3602 (38%)]	Loss: 4.233052	Accuracy: 81.096
+2021-09-28 19:51:28,098 - INFO - Epoch: 40 [1845/3602 (51%)]	Loss: 4.232365	Accuracy: 81.067
+2021-09-28 19:52:55,387 - INFO - Epoch: 40 [2306/3602 (64%)]	Loss: 4.223338	Accuracy: 81.291
+2021-09-28 19:54:23,076 - INFO - Epoch: 40 [2767/3602 (77%)]	Loss: 4.269360	Accuracy: 80.806
+2021-09-28 19:55:51,230 - INFO - Epoch: 40 [3228/3602 (90%)]	Loss: 4.291403	Accuracy: 80.781
+2021-09-28 19:58:14,499 - CRITICAL - ***Validation metrics - Cross validation accuracy = 88.96993632626743 %, EER = 6.697620660293134 %
+2021-09-28 19:58:14,500 - CRITICAL - ***Test metrics - Test EER = 2.845554563391351 %
+2021-09-28 19:58:18,802 - INFO - Epoch: 41 [1/3602 (0%)]	Loss: 4.254510	Accuracy: 82.031
+2021-09-28 19:59:46,383 - INFO - Epoch: 41 [462/3602 (13%)]	Loss: 4.263753	Accuracy: 80.982
+2021-09-28 20:01:13,951 - INFO - Epoch: 41 [923/3602 (26%)]	Loss: 4.259272	Accuracy: 81.096
+2021-09-28 20:02:40,742 - INFO - Epoch: 41 [1384/3602 (38%)]	Loss: 4.305530	Accuracy: 80.611
+2021-09-28 20:04:08,196 - INFO - Epoch: 41 [1845/3602 (51%)]	Loss: 4.220897	Accuracy: 81.357
+2021-09-28 20:05:35,305 - INFO - Epoch: 41 [2306/3602 (64%)]	Loss: 4.244402	Accuracy: 81.065
+2021-09-28 20:07:02,349 - INFO - Epoch: 41 [2767/3602 (77%)]	Loss: 4.230212	Accuracy: 80.997
+2021-09-28 20:08:28,662 - INFO - Epoch: 41 [3228/3602 (90%)]	Loss: 4.218621	Accuracy: 81.306
+2021-09-28 20:11:03,384 - CRITICAL - ***Validation metrics - Cross validation accuracy = 89.4051744982671 %, EER = 6.573359433762863 %
+2021-09-28 20:11:03,384 - CRITICAL - ***Test metrics - Test EER = 2.9190891834711805 %
+2021-09-28 20:11:09,332 - INFO - Epoch: 42 [1/3602 (0%)]	Loss: 3.854725	Accuracy: 85.156
+2021-09-28 20:12:36,044 - INFO - Epoch: 42 [462/3602 (13%)]	Loss: 4.187399	Accuracy: 81.536
+2021-09-28 20:14:03,550 - INFO - Epoch: 42 [923/3602 (26%)]	Loss: 4.221962	Accuracy: 81.292
+2021-09-28 20:15:30,210 - INFO - Epoch: 42 [1384/3602 (38%)]	Loss: 4.203239	Accuracy: 81.411
+2021-09-28 20:16:57,591 - INFO - Epoch: 42 [1845/3602 (51%)]	Loss: 4.204532	Accuracy: 81.333
+2021-09-28 20:18:24,642 - INFO - Epoch: 42 [2306/3602 (64%)]	Loss: 4.176969	Accuracy: 81.531
+2021-09-28 20:19:52,134 - INFO - Epoch: 42 [2767/3602 (77%)]	Loss: 4.175625	Accuracy: 81.494
+2021-09-28 20:21:18,251 - INFO - Epoch: 42 [3228/3602 (90%)]	Loss: 4.163344	Accuracy: 81.653
+2021-09-28 20:23:52,012 - CRITICAL - ***Validation metrics - Cross validation accuracy = 89.63891351656324 %, EER = 6.6349503224009 %
+2021-09-28 20:23:52,012 - CRITICAL - ***Test metrics - Test EER = 2.8976377952755907 %
+2021-09-28 20:23:59,867 - INFO - Epoch: 43 [1/3602 (0%)]	Loss: 4.163555	Accuracy: 82.812
+2021-09-28 20:25:27,002 - INFO - Epoch: 43 [462/3602 (13%)]	Loss: 4.120234	Accuracy: 81.806
+2021-09-28 20:26:54,185 - INFO - Epoch: 43 [923/3602 (26%)]	Loss: 4.120572	Accuracy: 82.014
+2021-09-28 20:28:21,961 - INFO - Epoch: 43 [1384/3602 (38%)]	Loss: 4.088698	Accuracy: 82.404
+2021-09-28 20:29:49,139 - INFO - Epoch: 43 [1845/3602 (51%)]	Loss: 4.144244	Accuracy: 81.580
+2021-09-28 20:31:16,429 - INFO - Epoch: 43 [2306/3602 (64%)]	Loss: 4.125897	Accuracy: 81.896
+2021-09-28 20:32:43,333 - INFO - Epoch: 43 [2767/3602 (77%)]	Loss: 4.087582	Accuracy: 82.201
+2021-09-28 20:34:10,276 - INFO - Epoch: 43 [3228/3602 (90%)]	Loss: 4.073845	Accuracy: 82.253
+2021-09-28 20:36:44,209 - CRITICAL - ***Validation metrics - Cross validation accuracy = 89.97340211171112 %, EER = 6.596382565859152 %
+2021-09-28 20:36:44,210 - CRITICAL - ***Test metrics - Test EER = 2.9329406229980783 %
+2021-09-28 20:36:48,495 - INFO - Epoch: 44 [1/3602 (0%)]	Loss: 3.357966	Accuracy: 87.500
+2021-09-28 20:38:14,973 - INFO - Epoch: 44 [462/3602 (13%)]	Loss: 4.043796	Accuracy: 82.680
+2021-09-28 20:39:42,534 - INFO - Epoch: 44 [923/3602 (26%)]	Loss: 4.052871	Accuracy: 82.411
+2021-09-28 20:41:09,034 - INFO - Epoch: 44 [1384/3602 (38%)]	Loss: 4.008153	Accuracy: 82.729
+2021-09-28 20:42:36,421 - INFO - Epoch: 44 [1845/3602 (51%)]	Loss: 4.034649	Accuracy: 82.694
+2021-09-28 20:44:03,115 - INFO - Epoch: 44 [2306/3602 (64%)]	Loss: 4.035263	Accuracy: 82.638
+2021-09-28 20:45:30,668 - INFO - Epoch: 44 [2767/3602 (77%)]	Loss: 4.035920	Accuracy: 82.463
+2021-09-28 20:46:57,488 - INFO - Epoch: 44 [3228/3602 (90%)]	Loss: 4.008443	Accuracy: 82.806
+2021-09-28 20:49:28,410 - CRITICAL - ***Validation metrics - Cross validation accuracy = 90.50938986056259 %, EER = 6.407975184985953 %
+2021-09-28 20:49:28,410 - CRITICAL - ***Test metrics - Test EER = 2.846312104161038 %
+2021-09-28 20:49:34,270 - INFO - Epoch: 45 [1/3602 (0%)]	Loss: 4.895834	Accuracy: 75.781
+2021-09-28 20:51:01,366 - INFO - Epoch: 45 [462/3602 (13%)]	Loss: 3.959212	Accuracy: 83.128
+2021-09-28 20:52:28,312 - INFO - Epoch: 45 [923/3602 (26%)]	Loss: 3.988647	Accuracy: 82.868
+2021-09-28 20:53:55,705 - INFO - Epoch: 45 [1384/3602 (38%)]	Loss: 3.942158	Accuracy: 83.321
+2021-09-28 20:55:24,220 - INFO - Epoch: 45 [1845/3602 (51%)]	Loss: 3.971087	Accuracy: 82.973
+2021-09-28 20:56:51,554 - INFO - Epoch: 45 [2306/3602 (64%)]	Loss: 3.938770	Accuracy: 83.287
+2021-09-28 20:58:18,679 - INFO - Epoch: 45 [2767/3602 (77%)]	Loss: 3.914607	Accuracy: 83.545
+2021-09-28 20:59:45,565 - INFO - Epoch: 45 [3228/3602 (90%)]	Loss: 3.947746	Accuracy: 83.199
+2021-09-28 21:02:18,438 - CRITICAL - ***Validation metrics - Cross validation accuracy = 90.81566857419199 %, EER = 6.368117941105024 %
+2021-09-28 21:02:18,439 - CRITICAL - ***Test metrics - Test EER = 2.7055819583405807 %
+2021-09-28 21:02:25,824 - INFO - Epoch: 46 [1/3602 (0%)]	Loss: 4.053244	Accuracy: 83.594
+2021-09-28 21:03:53,405 - INFO - Epoch: 46 [462/3602 (13%)]	Loss: 3.902093	Accuracy: 83.368
+2021-09-28 21:05:21,306 - INFO - Epoch: 46 [923/3602 (26%)]	Loss: 3.914479	Accuracy: 83.565
+2021-09-28 21:06:48,264 - INFO - Epoch: 46 [1384/3602 (38%)]	Loss: 3.878017	Accuracy: 83.731
+2021-09-28 21:08:15,652 - INFO - Epoch: 46 [1845/3602 (51%)]	Loss: 3.880344	Accuracy: 83.502
+2021-09-28 21:09:42,701 - INFO - Epoch: 46 [2306/3602 (64%)]	Loss: 3.871996	Accuracy: 83.862
+2021-09-28 21:11:09,980 - INFO - Epoch: 46 [2767/3602 (77%)]	Loss: 3.849638	Accuracy: 83.919
+2021-09-28 21:12:37,038 - INFO - Epoch: 46 [3228/3602 (90%)]	Loss: 3.858197	Accuracy: 83.701
+2021-09-28 21:15:11,071 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.14209720319175 %, EER = 6.280364282514032 %
+2021-09-28 21:15:11,078 - CRITICAL - ***Test metrics - Test EER = 2.75683682124874 %
+2021-09-28 21:15:15,741 - INFO - Epoch: 47 [1/3602 (0%)]	Loss: 3.968991	Accuracy: 83.594
+2021-09-28 21:16:42,614 - INFO - Epoch: 47 [462/3602 (13%)]	Loss: 3.810013	Accuracy: 84.139
+2021-09-28 21:18:09,218 - INFO - Epoch: 47 [923/3602 (26%)]	Loss: 3.829132	Accuracy: 83.950
+2021-09-28 21:19:36,882 - INFO - Epoch: 47 [1384/3602 (38%)]	Loss: 3.789680	Accuracy: 84.348
+2021-09-28 21:21:03,655 - INFO - Epoch: 47 [1845/3602 (51%)]	Loss: 3.855407	Accuracy: 83.833
+2021-09-28 21:22:30,390 - INFO - Epoch: 47 [2306/3602 (64%)]	Loss: 3.768615	Accuracy: 84.524
+2021-09-28 21:23:57,368 - INFO - Epoch: 47 [2767/3602 (77%)]	Loss: 3.769882	Accuracy: 84.487
+2021-09-28 21:25:23,458 - INFO - Epoch: 47 [3228/3602 (90%)]	Loss: 3.774333	Accuracy: 84.307
+2021-09-28 21:27:55,846 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.25896671233981 %, EER = 6.260043850563685 %
+2021-09-28 21:27:55,847 - CRITICAL - ***Test metrics - Test EER = 2.632973577731605 %
+2021-09-28 21:28:02,617 - INFO - Epoch: 48 [1/3602 (0%)]	Loss: 3.939048	Accuracy: 83.594
+2021-09-28 21:29:29,169 - INFO - Epoch: 48 [462/3602 (13%)]	Loss: 3.753447	Accuracy: 84.544
+2021-09-28 21:30:56,570 - INFO - Epoch: 48 [923/3602 (26%)]	Loss: 3.772039	Accuracy: 84.489
+2021-09-28 21:32:24,657 - INFO - Epoch: 48 [1384/3602 (38%)]	Loss: 3.735859	Accuracy: 84.597
+2021-09-28 21:33:51,524 - INFO - Epoch: 48 [1845/3602 (51%)]	Loss: 3.749538	Accuracy: 84.582
+2021-09-28 21:35:19,489 - INFO - Epoch: 48 [2306/3602 (64%)]	Loss: 3.718355	Accuracy: 84.741
+2021-09-28 21:36:47,073 - INFO - Epoch: 48 [2767/3602 (77%)]	Loss: 3.723963	Accuracy: 84.872
+2021-09-28 21:38:14,699 - INFO - Epoch: 48 [3228/3602 (90%)]	Loss: 3.685780	Accuracy: 84.953
+2021-09-28 21:40:38,866 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.50479567985815 %, EER = 6.227596417254487 %
+2021-09-28 21:40:38,866 - CRITICAL - ***Test metrics - Test EER = 2.6884705928825534 %
+2021-09-28 21:40:43,337 - INFO - Epoch: 49 [1/3602 (0%)]	Loss: 3.617224	Accuracy: 87.500
+2021-09-28 21:42:10,357 - INFO - Epoch: 49 [462/3602 (13%)]	Loss: 3.710803	Accuracy: 84.804
+2021-09-28 21:43:37,173 - INFO - Epoch: 49 [923/3602 (26%)]	Loss: 3.743066	Accuracy: 84.616
+2021-09-28 21:45:04,387 - INFO - Epoch: 49 [1384/3602 (38%)]	Loss: 3.702211	Accuracy: 84.807
+2021-09-28 21:46:32,577 - INFO - Epoch: 49 [1845/3602 (51%)]	Loss: 3.689716	Accuracy: 84.924
+2021-09-28 21:48:00,404 - INFO - Epoch: 49 [2306/3602 (64%)]	Loss: 3.734225	Accuracy: 84.568
+2021-09-28 21:49:26,920 - INFO - Epoch: 49 [2767/3602 (77%)]	Loss: 3.701562	Accuracy: 84.922
+2021-09-28 21:50:53,576 - INFO - Epoch: 49 [3228/3602 (90%)]	Loss: 3.737072	Accuracy: 84.563
+2021-09-28 21:53:21,650 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.46046586604336 %, EER = 6.235627057016762 %
+2021-09-28 21:53:21,651 - CRITICAL - ***Test metrics - Test EER = 2.691442328011635 %
+2021-09-28 21:53:25,881 - INFO - Epoch: 50 [1/3602 (0%)]	Loss: 3.549050	Accuracy: 86.719
+2021-09-28 21:54:53,400 - INFO - Epoch: 50 [462/3602 (13%)]	Loss: 3.701373	Accuracy: 84.807
+2021-09-28 21:56:20,337 - INFO - Epoch: 50 [923/3602 (26%)]	Loss: 3.691953	Accuracy: 84.955
+2021-09-28 21:57:47,351 - INFO - Epoch: 50 [1384/3602 (38%)]	Loss: 3.723866	Accuracy: 84.877
+2021-09-28 21:59:14,578 - INFO - Epoch: 50 [1845/3602 (51%)]	Loss: 3.702486	Accuracy: 84.783
+2021-09-28 22:00:41,998 - INFO - Epoch: 50 [2306/3602 (64%)]	Loss: 3.683161	Accuracy: 84.978
+2021-09-28 22:02:08,687 - INFO - Epoch: 50 [2767/3602 (77%)]	Loss: 3.714667	Accuracy: 84.870
+2021-09-28 22:03:35,105 - INFO - Epoch: 50 [3228/3602 (90%)]	Loss: 3.755802	Accuracy: 84.561
+2021-09-28 22:05:59,260 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.4685258321915 %, EER = 6.237785383349808 %
+2021-09-28 22:05:59,260 - CRITICAL - ***Test metrics - Test EER = 2.650974910789063 %
+2021-09-28 22:06:03,508 - INFO - Epoch: 51 [1/3602 (0%)]	Loss: 3.951488	Accuracy: 82.812
+2021-09-28 22:07:30,251 - INFO - Epoch: 51 [462/3602 (13%)]	Loss: 3.729040	Accuracy: 84.597
+2021-09-28 22:08:57,229 - INFO - Epoch: 51 [923/3602 (26%)]	Loss: 3.714467	Accuracy: 85.007
+2021-09-28 22:10:24,146 - INFO - Epoch: 51 [1384/3602 (38%)]	Loss: 3.737567	Accuracy: 84.675
+2021-09-28 22:11:52,647 - INFO - Epoch: 51 [1845/3602 (51%)]	Loss: 3.712011	Accuracy: 84.970
+2021-09-28 22:13:19,667 - INFO - Epoch: 51 [2306/3602 (64%)]	Loss: 3.720611	Accuracy: 84.729
+2021-09-28 22:14:46,084 - INFO - Epoch: 51 [2767/3602 (77%)]	Loss: 3.736901	Accuracy: 84.714
+2021-09-28 22:16:12,761 - INFO - Epoch: 51 [3228/3602 (90%)]	Loss: 3.722138	Accuracy: 84.760
+2021-09-28 22:18:35,925 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.42419601837672 %, EER = 6.247552457322264 %
+2021-09-28 22:18:35,925 - CRITICAL - ***Test metrics - Test EER = 2.718469771290573 %
+2021-09-28 22:18:40,032 - INFO - Epoch: 52 [1/3602 (0%)]	Loss: 4.030283	Accuracy: 82.031
+2021-09-28 22:20:06,952 - INFO - Epoch: 52 [462/3602 (13%)]	Loss: 3.742099	Accuracy: 84.626
+2021-09-28 22:21:33,247 - INFO - Epoch: 52 [923/3602 (26%)]	Loss: 3.728784	Accuracy: 84.655
+2021-09-28 22:23:01,300 - INFO - Epoch: 52 [1384/3602 (38%)]	Loss: 3.715916	Accuracy: 84.870
+2021-09-28 22:24:29,437 - INFO - Epoch: 52 [1845/3602 (51%)]	Loss: 3.729040	Accuracy: 84.782
+2021-09-28 22:25:57,435 - INFO - Epoch: 52 [2306/3602 (64%)]	Loss: 3.755452	Accuracy: 84.428
+2021-09-28 22:27:25,154 - INFO - Epoch: 52 [2767/3602 (77%)]	Loss: 3.768019	Accuracy: 84.495
+2021-09-28 22:28:51,157 - INFO - Epoch: 52 [3228/3602 (90%)]	Loss: 3.716969	Accuracy: 84.699
+2021-09-28 22:31:16,042 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.46046586604336 %, EER = 6.297008513050341 %
+2021-09-28 22:31:16,049 - CRITICAL - ***Test metrics - Test EER = 2.616900842560533 %
+2021-09-28 22:31:20,696 - INFO - Epoch: 53 [1/3602 (0%)]	Loss: 3.804889	Accuracy: 82.812
+2021-09-28 22:32:48,302 - INFO - Epoch: 53 [462/3602 (13%)]	Loss: 3.781562	Accuracy: 84.370
+2021-09-28 22:34:15,740 - INFO - Epoch: 53 [923/3602 (26%)]	Loss: 3.754480	Accuracy: 84.675
+2021-09-28 22:35:41,994 - INFO - Epoch: 53 [1384/3602 (38%)]	Loss: 3.777748	Accuracy: 84.444
+2021-09-28 22:37:09,375 - INFO - Epoch: 53 [1845/3602 (51%)]	Loss: 3.791892	Accuracy: 84.489
+2021-09-28 22:38:37,050 - INFO - Epoch: 53 [2306/3602 (64%)]	Loss: 3.775298	Accuracy: 84.592
+2021-09-28 22:40:04,465 - INFO - Epoch: 53 [2767/3602 (77%)]	Loss: 3.774980	Accuracy: 84.416
+2021-09-28 22:41:31,499 - INFO - Epoch: 53 [3228/3602 (90%)]	Loss: 3.804620	Accuracy: 84.270
+2021-09-28 22:44:00,797 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.39598613685823 %, EER = 6.267555151409102 %
+2021-09-28 22:44:00,797 - CRITICAL - ***Test metrics - Test EER = 2.6660027844380845 %
+2021-09-28 22:44:05,890 - INFO - Epoch: 54 [1/3602 (0%)]	Loss: 3.291717	Accuracy: 89.844
+2021-09-28 22:45:33,589 - INFO - Epoch: 54 [462/3602 (13%)]	Loss: 3.808762	Accuracy: 84.056
+2021-09-28 22:47:00,085 - INFO - Epoch: 54 [923/3602 (26%)]	Loss: 3.774692	Accuracy: 84.475
+2021-09-28 22:48:26,636 - INFO - Epoch: 54 [1384/3602 (38%)]	Loss: 3.803680	Accuracy: 84.233
+2021-09-28 22:49:52,894 - INFO - Epoch: 54 [1845/3602 (51%)]	Loss: 3.831570	Accuracy: 83.984
+2021-09-28 22:51:19,787 - INFO - Epoch: 54 [2306/3602 (64%)]	Loss: 3.825940	Accuracy: 83.980
+2021-09-28 22:52:45,864 - INFO - Epoch: 54 [2767/3602 (77%)]	Loss: 3.803585	Accuracy: 84.134
+2021-09-28 22:54:13,454 - INFO - Epoch: 54 [3228/3602 (90%)]	Loss: 3.802777	Accuracy: 84.394
+2021-09-28 22:56:44,313 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.1340372370436 %, EER = 6.34803247340682 %
+2021-09-28 22:56:44,313 - CRITICAL - ***Test metrics - Test EER = 2.6271133799396904 %
+2021-09-28 22:56:50,375 - INFO - Epoch: 55 [1/3602 (0%)]	Loss: 3.396694	Accuracy: 87.500
+2021-09-28 22:58:17,882 - INFO - Epoch: 55 [462/3602 (13%)]	Loss: 3.811584	Accuracy: 84.056
+2021-09-28 22:59:45,405 - INFO - Epoch: 55 [923/3602 (26%)]	Loss: 3.819308	Accuracy: 84.258
+2021-09-28 23:01:13,088 - INFO - Epoch: 55 [1384/3602 (38%)]	Loss: 3.799655	Accuracy: 84.194
+2021-09-28 23:02:40,669 - INFO - Epoch: 55 [1845/3602 (51%)]	Loss: 3.817745	Accuracy: 84.167
+2021-09-28 23:04:07,476 - INFO - Epoch: 55 [2306/3602 (64%)]	Loss: 3.848176	Accuracy: 83.892
+2021-09-28 23:05:34,830 - INFO - Epoch: 55 [2767/3602 (77%)]	Loss: 3.848296	Accuracy: 84.029
+2021-09-28 23:07:01,743 - INFO - Epoch: 55 [3228/3602 (90%)]	Loss: 3.865433	Accuracy: 83.924
+2021-09-28 23:09:32,669 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.27508664463609 %, EER = 6.1702059005955086 %
+2021-09-28 23:09:32,670 - CRITICAL - ***Test metrics - Test EER = 2.698918187565363 %
+2021-09-28 23:09:39,439 - INFO - Epoch: 56 [1/3602 (0%)]	Loss: 3.630730	Accuracy: 85.156
+2021-09-28 23:11:06,671 - INFO - Epoch: 56 [462/3602 (13%)]	Loss: 3.865560	Accuracy: 83.806
+2021-09-28 23:12:33,663 - INFO - Epoch: 56 [923/3602 (26%)]	Loss: 3.848783	Accuracy: 83.967
+2021-09-28 23:14:00,532 - INFO - Epoch: 56 [1384/3602 (38%)]	Loss: 3.881629	Accuracy: 83.760
+2021-09-28 23:15:27,337 - INFO - Epoch: 56 [1845/3602 (51%)]	Loss: 3.867845	Accuracy: 83.960
+2021-09-28 23:16:54,831 - INFO - Epoch: 56 [2306/3602 (64%)]	Loss: 3.882164	Accuracy: 83.656
+2021-09-28 23:18:22,403 - INFO - Epoch: 56 [2767/3602 (77%)]	Loss: 3.857802	Accuracy: 83.967
+2021-09-28 23:19:49,266 - INFO - Epoch: 56 [3228/3602 (90%)]	Loss: 3.896493	Accuracy: 83.689
+2021-09-28 23:22:20,852 - CRITICAL - ***Validation metrics - Cross validation accuracy = 90.92447811719191 %, EER = 6.293012169695075 %
+2021-09-28 23:22:20,852 - CRITICAL - ***Test metrics - Test EER = 2.8252840818830056 %
+2021-09-28 23:22:28,139 - INFO - Epoch: 57 [1/3602 (0%)]	Loss: 4.862573	Accuracy: 75.000
+2021-09-28 23:23:55,130 - INFO - Epoch: 57 [462/3602 (13%)]	Loss: 3.874153	Accuracy: 83.745
+2021-09-28 23:25:22,433 - INFO - Epoch: 57 [923/3602 (26%)]	Loss: 3.897003	Accuracy: 83.580
+2021-09-28 23:26:48,999 - INFO - Epoch: 57 [1384/3602 (38%)]	Loss: 3.884459	Accuracy: 83.800
+2021-09-28 23:28:16,069 - INFO - Epoch: 57 [1845/3602 (51%)]	Loss: 3.869235	Accuracy: 83.809
+2021-09-28 23:29:42,945 - INFO - Epoch: 57 [2306/3602 (64%)]	Loss: 3.896877	Accuracy: 83.662
+2021-09-28 23:31:09,361 - INFO - Epoch: 57 [2767/3602 (77%)]	Loss: 3.884258	Accuracy: 83.773
+2021-09-28 23:32:36,040 - INFO - Epoch: 57 [3228/3602 (90%)]	Loss: 3.848533	Accuracy: 83.839
+2021-09-28 23:35:00,552 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.11791730474732 %, EER = 6.244750347368093 %
+2021-09-28 23:35:00,559 - CRITICAL - ***Test metrics - Test EER = 2.709243073823991 %
+2021-09-28 23:35:04,824 - INFO - Epoch: 58 [1/3602 (0%)]	Loss: 3.842891	Accuracy: 85.938
+2021-09-28 23:36:31,729 - INFO - Epoch: 58 [462/3602 (13%)]	Loss: 3.842251	Accuracy: 83.846
+2021-09-28 23:37:59,062 - INFO - Epoch: 58 [923/3602 (26%)]	Loss: 3.864720	Accuracy: 83.946
+2021-09-28 23:39:26,589 - INFO - Epoch: 58 [1384/3602 (38%)]	Loss: 3.861038	Accuracy: 83.839
+2021-09-28 23:40:53,802 - INFO - Epoch: 58 [1845/3602 (51%)]	Loss: 3.857808	Accuracy: 83.984
+2021-09-28 23:42:21,756 - INFO - Epoch: 58 [2306/3602 (64%)]	Loss: 3.849146	Accuracy: 83.892
+2021-09-28 23:43:48,862 - INFO - Epoch: 58 [2767/3602 (77%)]	Loss: 3.825271	Accuracy: 84.058
+2021-09-28 23:45:15,790 - INFO - Epoch: 58 [3228/3602 (90%)]	Loss: 3.813652	Accuracy: 84.277
+2021-09-28 23:47:40,729 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.31135649230274 %, EER = 6.178871223045972 %
+2021-09-28 23:47:40,736 - CRITICAL - ***Test metrics - Test EER = 2.6577483018261865 %
+2021-09-28 23:47:45,063 - INFO - Epoch: 59 [1/3602 (0%)]	Loss: 4.021639	Accuracy: 87.500
+2021-09-28 23:49:12,280 - INFO - Epoch: 59 [462/3602 (13%)]	Loss: 3.839839	Accuracy: 83.990
+2021-09-28 23:50:39,757 - INFO - Epoch: 59 [923/3602 (26%)]	Loss: 3.820362	Accuracy: 84.167
+2021-09-28 23:52:06,431 - INFO - Epoch: 59 [1384/3602 (38%)]	Loss: 3.818248	Accuracy: 84.068
+2021-09-28 23:53:33,851 - INFO - Epoch: 59 [1845/3602 (51%)]	Loss: 3.806945	Accuracy: 84.111
+2021-09-28 23:55:01,746 - INFO - Epoch: 59 [2306/3602 (64%)]	Loss: 3.818163	Accuracy: 84.056
+2021-09-28 23:56:28,961 - INFO - Epoch: 59 [2767/3602 (77%)]	Loss: 3.788066	Accuracy: 84.287
+2021-09-28 23:57:55,520 - INFO - Epoch: 59 [3228/3602 (90%)]	Loss: 3.786436	Accuracy: 84.275
+2021-09-29 00:00:19,708 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.42016603530266 %, EER = 6.183397175242648 %
+2021-09-29 00:00:19,709 - CRITICAL - ***Test metrics - Test EER = 2.6162135138880207 %
+2021-09-29 00:00:23,956 - INFO - Epoch: 60 [1/3602 (0%)]	Loss: 4.088488	Accuracy: 82.031
+2021-09-29 00:01:51,260 - INFO - Epoch: 60 [462/3602 (13%)]	Loss: 3.809187	Accuracy: 83.945
+2021-09-29 00:03:18,707 - INFO - Epoch: 60 [923/3602 (26%)]	Loss: 3.763436	Accuracy: 84.570
+2021-09-29 00:04:47,165 - INFO - Epoch: 60 [1384/3602 (38%)]	Loss: 3.765786	Accuracy: 84.516
+2021-09-29 00:06:13,787 - INFO - Epoch: 60 [1845/3602 (51%)]	Loss: 3.772867	Accuracy: 84.709
+2021-09-29 00:07:40,889 - INFO - Epoch: 60 [2306/3602 (64%)]	Loss: 3.775992	Accuracy: 84.433
+2021-09-29 00:09:07,709 - INFO - Epoch: 60 [2767/3602 (77%)]	Loss: 3.779362	Accuracy: 84.461
+2021-09-29 00:10:34,332 - INFO - Epoch: 60 [3228/3602 (90%)]	Loss: 3.753886	Accuracy: 84.599
+2021-09-29 00:13:02,517 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.51285564600629 %, EER = 6.196672913527466 %
+2021-09-29 00:13:02,517 - CRITICAL - ***Test metrics - Test EER = 2.5402131860722714 %
+2021-09-29 00:13:06,970 - INFO - Epoch: 61 [1/3602 (0%)]	Loss: 3.243774	Accuracy: 87.500
+2021-09-29 00:14:34,048 - INFO - Epoch: 61 [462/3602 (13%)]	Loss: 3.749606	Accuracy: 84.577
+2021-09-29 00:16:01,137 - INFO - Epoch: 61 [923/3602 (26%)]	Loss: 3.747941	Accuracy: 84.367
+2021-09-29 00:17:27,855 - INFO - Epoch: 61 [1384/3602 (38%)]	Loss: 3.758224	Accuracy: 84.775
+2021-09-29 00:18:55,335 - INFO - Epoch: 61 [1845/3602 (51%)]	Loss: 3.721577	Accuracy: 84.719
+2021-09-29 00:20:22,324 - INFO - Epoch: 61 [2306/3602 (64%)]	Loss: 3.764684	Accuracy: 84.421
+2021-09-29 00:21:49,233 - INFO - Epoch: 61 [2767/3602 (77%)]	Loss: 3.697377	Accuracy: 85.144
+2021-09-29 00:23:16,145 - INFO - Epoch: 61 [3228/3602 (90%)]	Loss: 3.721674	Accuracy: 84.675
+2021-09-29 00:25:45,626 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.72241476585798 %, EER = 6.153386430809226 %
+2021-09-29 00:25:45,632 - CRITICAL - ***Test metrics - Test EER = 2.674465181509787 %
+2021-09-29 00:25:50,545 - INFO - Epoch: 62 [1/3602 (0%)]	Loss: 4.050467	Accuracy: 84.375
+2021-09-29 00:27:17,450 - INFO - Epoch: 62 [462/3602 (13%)]	Loss: 3.708486	Accuracy: 84.827
+2021-09-29 00:28:46,006 - INFO - Epoch: 62 [923/3602 (26%)]	Loss: 3.706640	Accuracy: 84.734
+2021-09-29 00:30:12,994 - INFO - Epoch: 62 [1384/3602 (38%)]	Loss: 3.672826	Accuracy: 85.158
+2021-09-29 00:31:40,218 - INFO - Epoch: 62 [1845/3602 (51%)]	Loss: 3.676130	Accuracy: 85.216
+2021-09-29 00:33:07,441 - INFO - Epoch: 62 [2306/3602 (64%)]	Loss: 3.687906	Accuracy: 85.000
+2021-09-29 00:34:35,127 - INFO - Epoch: 62 [2767/3602 (77%)]	Loss: 3.643009	Accuracy: 85.239
+2021-09-29 00:36:01,299 - INFO - Epoch: 62 [3228/3602 (90%)]	Loss: 3.642784	Accuracy: 85.234
+2021-09-29 00:38:30,998 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.9440638349319 %, EER = 6.1149283189218275 %
+2021-09-29 00:38:30,998 - CRITICAL - ***Test metrics - Test EER = 2.6162576498372987 %
+2021-09-29 00:38:35,918 - INFO - Epoch: 63 [1/3602 (0%)]	Loss: 3.829504	Accuracy: 80.469
+2021-09-29 00:40:03,327 - INFO - Epoch: 63 [462/3602 (13%)]	Loss: 3.670541	Accuracy: 85.256
+2021-09-29 00:41:30,822 - INFO - Epoch: 63 [923/3602 (26%)]	Loss: 3.632630	Accuracy: 85.270
+2021-09-29 00:42:57,814 - INFO - Epoch: 63 [1384/3602 (38%)]	Loss: 3.662673	Accuracy: 85.258
+2021-09-29 00:44:24,716 - INFO - Epoch: 63 [1845/3602 (51%)]	Loss: 3.666255	Accuracy: 85.049
+2021-09-29 00:45:51,928 - INFO - Epoch: 63 [2306/3602 (64%)]	Loss: 3.651170	Accuracy: 85.251
+2021-09-29 00:47:20,512 - INFO - Epoch: 63 [2767/3602 (77%)]	Loss: 3.627455	Accuracy: 85.295
+2021-09-29 00:48:48,089 - INFO - Epoch: 63 [3228/3602 (90%)]	Loss: 3.652441	Accuracy: 85.353
+2021-09-29 00:51:11,458 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.9279439026356 %, EER = 6.08452911058927 %
+2021-09-29 00:51:11,459 - CRITICAL - ***Test metrics - Test EER = 2.6306987122331504 %
+2021-09-29 00:51:15,550 - INFO - Epoch: 64 [1/3602 (0%)]	Loss: 3.908632	Accuracy: 78.125
+2021-09-29 00:52:42,513 - INFO - Epoch: 64 [462/3602 (13%)]	Loss: 3.600076	Accuracy: 85.678
+2021-09-29 00:54:09,364 - INFO - Epoch: 64 [923/3602 (26%)]	Loss: 3.602985	Accuracy: 85.592
+2021-09-29 00:55:36,498 - INFO - Epoch: 64 [1384/3602 (38%)]	Loss: 3.621327	Accuracy: 85.614
+2021-09-29 00:57:04,460 - INFO - Epoch: 64 [1845/3602 (51%)]	Loss: 3.591104	Accuracy: 85.507
+2021-09-29 00:58:32,261 - INFO - Epoch: 64 [2306/3602 (64%)]	Loss: 3.631238	Accuracy: 85.439
+2021-09-29 00:59:59,195 - INFO - Epoch: 64 [2767/3602 (77%)]	Loss: 3.617913	Accuracy: 85.338
+2021-09-29 01:01:26,606 - INFO - Epoch: 64 [3228/3602 (90%)]	Loss: 3.603360	Accuracy: 85.529
+2021-09-29 01:03:49,446 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.94809381800596 %, EER = 6.082582712070517 %
+2021-09-29 01:03:49,446 - CRITICAL - ***Test metrics - Test EER = 2.587009119672436 %
+2021-09-29 01:03:53,472 - INFO - Epoch: 65 [1/3602 (0%)]	Loss: 3.290330	Accuracy: 89.062
+2021-09-29 01:05:21,476 - INFO - Epoch: 65 [462/3602 (13%)]	Loss: 3.624821	Accuracy: 85.343
+2021-09-29 01:06:49,119 - INFO - Epoch: 65 [923/3602 (26%)]	Loss: 3.622524	Accuracy: 85.455
+2021-09-29 01:08:16,591 - INFO - Epoch: 65 [1384/3602 (38%)]	Loss: 3.614903	Accuracy: 85.355
+2021-09-29 01:09:43,564 - INFO - Epoch: 65 [1845/3602 (51%)]	Loss: 3.607145	Accuracy: 85.507
+2021-09-29 01:11:10,478 - INFO - Epoch: 65 [2306/3602 (64%)]	Loss: 3.587893	Accuracy: 85.695
+2021-09-29 01:12:37,039 - INFO - Epoch: 65 [2767/3602 (77%)]	Loss: 3.580750	Accuracy: 85.683
+2021-09-29 01:14:04,311 - INFO - Epoch: 65 [3228/3602 (90%)]	Loss: 3.635885	Accuracy: 85.451
+2021-09-29 01:16:28,142 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.02063351333925 %, EER = 6.048034658306302 %
+2021-09-29 01:16:28,143 - CRITICAL - ***Test metrics - Test EER = 2.566126159819454 %
+2021-09-29 01:16:32,339 - INFO - Epoch: 66 [1/3602 (0%)]	Loss: 2.819208	Accuracy: 92.188
+2021-09-29 01:17:59,698 - INFO - Epoch: 66 [462/3602 (13%)]	Loss: 3.611357	Accuracy: 85.536
+2021-09-29 01:19:26,629 - INFO - Epoch: 66 [923/3602 (26%)]	Loss: 3.628309	Accuracy: 85.426
+2021-09-29 01:20:53,876 - INFO - Epoch: 66 [1384/3602 (38%)]	Loss: 3.598834	Accuracy: 85.444
+2021-09-29 01:22:22,317 - INFO - Epoch: 66 [1845/3602 (51%)]	Loss: 3.594083	Accuracy: 85.705
+2021-09-29 01:23:49,391 - INFO - Epoch: 66 [2306/3602 (64%)]	Loss: 3.613285	Accuracy: 85.455
+2021-09-29 01:25:15,896 - INFO - Epoch: 66 [2767/3602 (77%)]	Loss: 3.616264	Accuracy: 85.434
+2021-09-29 01:26:43,466 - INFO - Epoch: 66 [3228/3602 (90%)]	Loss: 3.604327	Accuracy: 85.600
+2021-09-29 01:29:08,693 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.97227371645039 %, EER = 6.032312600918878 %
+2021-09-29 01:29:08,693 - CRITICAL - ***Test metrics - Test EER = 2.5843503230437905 %
+2021-09-29 01:29:12,952 - INFO - Epoch: 67 [1/3602 (0%)]	Loss: 3.365805	Accuracy: 86.719
+2021-09-29 01:30:39,709 - INFO - Epoch: 67 [462/3602 (13%)]	Loss: 3.603012	Accuracy: 85.585
+2021-09-29 01:32:06,910 - INFO - Epoch: 67 [923/3602 (26%)]	Loss: 3.603869	Accuracy: 85.599
+2021-09-29 01:33:34,171 - INFO - Epoch: 67 [1384/3602 (38%)]	Loss: 3.589334	Accuracy: 85.685
+2021-09-29 01:35:01,145 - INFO - Epoch: 67 [1845/3602 (51%)]	Loss: 3.613377	Accuracy: 85.531
+2021-09-29 01:36:28,148 - INFO - Epoch: 67 [2306/3602 (64%)]	Loss: 3.647540	Accuracy: 85.361
+2021-09-29 01:37:55,508 - INFO - Epoch: 67 [2767/3602 (77%)]	Loss: 3.593467	Accuracy: 85.683
+2021-09-29 01:39:22,122 - INFO - Epoch: 67 [3228/3602 (90%)]	Loss: 3.640524	Accuracy: 85.348
+2021-09-29 01:41:46,256 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.02063351333925 %, EER = 6.11448418930719 %
+2021-09-29 01:41:46,256 - CRITICAL - ***Test metrics - Test EER = 2.5831977904885006 %
+2021-09-29 01:41:50,320 - INFO - Epoch: 68 [1/3602 (0%)]	Loss: 3.226461	Accuracy: 88.281
+2021-09-29 01:43:17,858 - INFO - Epoch: 68 [462/3602 (13%)]	Loss: 3.632345	Accuracy: 85.197
+2021-09-29 01:44:44,903 - INFO - Epoch: 68 [923/3602 (26%)]	Loss: 3.641560	Accuracy: 85.436
+2021-09-29 01:46:12,111 - INFO - Epoch: 68 [1384/3602 (38%)]	Loss: 3.605475	Accuracy: 85.693
+2021-09-29 01:47:39,179 - INFO - Epoch: 68 [1845/3602 (51%)]	Loss: 3.595591	Accuracy: 85.780
+2021-09-29 01:49:06,221 - INFO - Epoch: 68 [2306/3602 (64%)]	Loss: 3.629110	Accuracy: 85.288
+2021-09-29 01:50:33,193 - INFO - Epoch: 68 [2767/3602 (77%)]	Loss: 3.636405	Accuracy: 85.253
+2021-09-29 01:52:01,447 - INFO - Epoch: 68 [3228/3602 (90%)]	Loss: 3.636880	Accuracy: 85.421
+2021-09-29 01:54:25,886 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.97227371645039 %, EER = 6.071488776229687 %
+2021-09-29 01:54:25,887 - CRITICAL - ***Test metrics - Test EER = 2.5230670829162922 %
+2021-09-29 01:54:30,185 - INFO - Epoch: 69 [1/3602 (0%)]	Loss: 3.393408	Accuracy: 88.281
+2021-09-29 01:55:58,246 - INFO - Epoch: 69 [462/3602 (13%)]	Loss: 3.638706	Accuracy: 85.322
+2021-09-29 01:57:25,738 - INFO - Epoch: 69 [923/3602 (26%)]	Loss: 3.656920	Accuracy: 85.204
+2021-09-29 01:58:53,365 - INFO - Epoch: 69 [1384/3602 (38%)]	Loss: 3.624172	Accuracy: 85.446
+2021-09-29 02:00:19,924 - INFO - Epoch: 69 [1845/3602 (51%)]	Loss: 3.651475	Accuracy: 85.234
+2021-09-29 02:01:46,565 - INFO - Epoch: 69 [2306/3602 (64%)]	Loss: 3.626906	Accuracy: 85.505
+2021-09-29 02:03:13,436 - INFO - Epoch: 69 [2767/3602 (77%)]	Loss: 3.644151	Accuracy: 85.332
+2021-09-29 02:04:41,155 - INFO - Epoch: 69 [3228/3602 (90%)]	Loss: 3.626433	Accuracy: 85.499
+2021-09-29 02:07:04,249 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.92391391956154 %, EER = 6.157546911535816 %
+2021-09-29 02:07:04,249 - CRITICAL - ***Test metrics - Test EER = 2.60786842564153 %
+2021-09-29 02:07:09,283 - INFO - Epoch: 70 [1/3602 (0%)]	Loss: 3.274184	Accuracy: 86.719
+2021-09-29 02:08:36,194 - INFO - Epoch: 70 [462/3602 (13%)]	Loss: 3.670135	Accuracy: 85.182
+2021-09-29 02:10:03,074 - INFO - Epoch: 70 [923/3602 (26%)]	Loss: 3.643479	Accuracy: 85.275
+2021-09-29 02:11:30,375 - INFO - Epoch: 70 [1384/3602 (38%)]	Loss: 3.599290	Accuracy: 85.590
+2021-09-29 02:12:57,094 - INFO - Epoch: 70 [1845/3602 (51%)]	Loss: 3.608388	Accuracy: 85.461
+2021-09-29 02:14:23,734 - INFO - Epoch: 70 [2306/3602 (64%)]	Loss: 3.644099	Accuracy: 85.266
+2021-09-29 02:15:50,868 - INFO - Epoch: 70 [2767/3602 (77%)]	Loss: 3.669013	Accuracy: 85.104
+2021-09-29 02:17:17,644 - INFO - Epoch: 70 [3228/3602 (90%)]	Loss: 3.688060	Accuracy: 84.897
+2021-09-29 02:19:39,791 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.93600386878376 %, EER = 6.184079306364946 %
+2021-09-29 02:19:39,791 - CRITICAL - ***Test metrics - Test EER = 2.6144836474101982 %
+2021-09-29 02:19:43,831 - INFO - Epoch: 71 [1/3602 (0%)]	Loss: 3.455327	Accuracy: 86.719
+2021-09-29 02:21:11,300 - INFO - Epoch: 71 [462/3602 (13%)]	Loss: 3.663227	Accuracy: 85.261
+2021-09-29 02:22:39,991 - INFO - Epoch: 71 [923/3602 (26%)]	Loss: 3.660485	Accuracy: 85.251
+2021-09-29 02:24:06,785 - INFO - Epoch: 71 [1384/3602 (38%)]	Loss: 3.643667	Accuracy: 85.331
+2021-09-29 02:25:34,050 - INFO - Epoch: 71 [1845/3602 (51%)]	Loss: 3.626654	Accuracy: 85.438
+2021-09-29 02:27:01,576 - INFO - Epoch: 71 [2306/3602 (64%)]	Loss: 3.643231	Accuracy: 85.246
+2021-09-29 02:28:28,461 - INFO - Epoch: 71 [2767/3602 (77%)]	Loss: 3.650329	Accuracy: 85.075
+2021-09-29 02:29:55,352 - INFO - Epoch: 71 [3228/3602 (90%)]	Loss: 3.699953	Accuracy: 84.872
+2021-09-29 02:32:19,316 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.88361408882082 %, EER = 6.128309022107441 %
+2021-09-29 02:32:19,323 - CRITICAL - ***Test metrics - Test EER = 2.539826222734378 %
+2021-09-29 02:32:23,576 - INFO - Epoch: 72 [1/3602 (0%)]	Loss: 3.675371	Accuracy: 87.500
+2021-09-29 02:33:52,578 - INFO - Epoch: 72 [462/3602 (13%)]	Loss: 3.641270	Accuracy: 85.263
+2021-09-29 02:35:19,206 - INFO - Epoch: 72 [923/3602 (26%)]	Loss: 3.677791	Accuracy: 85.299
+2021-09-29 02:36:46,680 - INFO - Epoch: 72 [1384/3602 (38%)]	Loss: 3.683772	Accuracy: 85.027
+2021-09-29 02:38:13,858 - INFO - Epoch: 72 [1845/3602 (51%)]	Loss: 3.672341	Accuracy: 85.060
+2021-09-29 02:39:42,085 - INFO - Epoch: 72 [2306/3602 (64%)]	Loss: 3.691389	Accuracy: 85.126
+2021-09-29 02:41:11,529 - INFO - Epoch: 72 [2767/3602 (77%)]	Loss: 3.686175	Accuracy: 84.977
+2021-09-29 02:42:37,667 - INFO - Epoch: 72 [3228/3602 (90%)]	Loss: 3.645501	Accuracy: 85.321
+2021-09-29 02:45:02,043 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.89570403804304 %, EER = 6.020802512154372 %
+2021-09-29 02:45:02,043 - CRITICAL - ***Test metrics - Test EER = 2.493299217882357 %
+2021-09-29 02:45:06,283 - INFO - Epoch: 73 [1/3602 (0%)]	Loss: 3.309867	Accuracy: 86.719
+2021-09-29 02:46:33,578 - INFO - Epoch: 73 [462/3602 (13%)]	Loss: 3.679439	Accuracy: 85.110
+2021-09-29 02:48:01,667 - INFO - Epoch: 73 [923/3602 (26%)]	Loss: 3.682753	Accuracy: 85.027
+2021-09-29 02:49:29,234 - INFO - Epoch: 73 [1384/3602 (38%)]	Loss: 3.674750	Accuracy: 85.119
+2021-09-29 02:50:56,463 - INFO - Epoch: 73 [1845/3602 (51%)]	Loss: 3.707511	Accuracy: 84.804
+2021-09-29 02:52:24,539 - INFO - Epoch: 73 [2306/3602 (64%)]	Loss: 3.680359	Accuracy: 85.136
+2021-09-29 02:53:51,320 - INFO - Epoch: 73 [2767/3602 (77%)]	Loss: 3.694748	Accuracy: 85.116
+2021-09-29 02:55:17,727 - INFO - Epoch: 73 [3228/3602 (90%)]	Loss: 3.659563	Accuracy: 85.224
+2021-09-29 02:57:42,247 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.85540420730233 %, EER = 6.132661233167505 %
+2021-09-29 02:57:42,254 - CRITICAL - ***Test metrics - Test EER = 2.5974155230703655 %
+2021-09-29 02:57:46,411 - INFO - Epoch: 74 [1/3602 (0%)]	Loss: 3.841408	Accuracy: 82.812
+2021-09-29 02:59:13,352 - INFO - Epoch: 74 [462/3602 (13%)]	Loss: 3.678538	Accuracy: 85.097
+2021-09-29 03:00:40,601 - INFO - Epoch: 74 [923/3602 (26%)]	Loss: 3.648080	Accuracy: 85.270
+2021-09-29 03:02:07,623 - INFO - Epoch: 74 [1384/3602 (38%)]	Loss: 3.681142	Accuracy: 85.199
+2021-09-29 03:03:35,986 - INFO - Epoch: 74 [1845/3602 (51%)]	Loss: 3.703394	Accuracy: 84.929
+2021-09-29 03:05:03,481 - INFO - Epoch: 74 [2306/3602 (64%)]	Loss: 3.667902	Accuracy: 85.083
+2021-09-29 03:06:31,189 - INFO - Epoch: 74 [2767/3602 (77%)]	Loss: 3.679799	Accuracy: 85.068
+2021-09-29 03:07:58,639 - INFO - Epoch: 74 [3228/3602 (90%)]	Loss: 3.651116	Accuracy: 85.331
+2021-09-29 03:10:21,835 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.06093334407996 %, EER = 6.085003863758763 %
+2021-09-29 03:10:21,835 - CRITICAL - ***Test metrics - Test EER = 2.54496624930293 %
+2021-09-29 03:10:26,031 - INFO - Epoch: 75 [1/3602 (0%)]	Loss: 3.913745	Accuracy: 82.812
+2021-09-29 03:11:53,286 - INFO - Epoch: 75 [462/3602 (13%)]	Loss: 3.657071	Accuracy: 85.236
+2021-09-29 03:13:21,148 - INFO - Epoch: 75 [923/3602 (26%)]	Loss: 3.635465	Accuracy: 85.439
+2021-09-29 03:14:48,111 - INFO - Epoch: 75 [1384/3602 (38%)]	Loss: 3.665850	Accuracy: 85.156
+2021-09-29 03:16:15,793 - INFO - Epoch: 75 [1845/3602 (51%)]	Loss: 3.644686	Accuracy: 85.409
+2021-09-29 03:17:42,258 - INFO - Epoch: 75 [2306/3602 (64%)]	Loss: 3.633598	Accuracy: 85.448
+2021-09-29 03:19:09,342 - INFO - Epoch: 75 [2767/3602 (77%)]	Loss: 3.638424	Accuracy: 85.336
+2021-09-29 03:20:36,592 - INFO - Epoch: 75 [3228/3602 (90%)]	Loss: 3.667276	Accuracy: 85.149
+2021-09-29 03:23:01,099 - CRITICAL - ***Validation metrics - Cross validation accuracy = 91.95212380108003 %, EER = 6.071324990065126 %
+2021-09-29 03:23:01,106 - CRITICAL - ***Test metrics - Test EER = 2.5445273957971386 %
+2021-09-29 03:23:05,336 - INFO - Epoch: 76 [1/3602 (0%)]	Loss: 3.850996	Accuracy: 85.938
+2021-09-29 03:24:33,222 - INFO - Epoch: 76 [462/3602 (13%)]	Loss: 3.618883	Accuracy: 85.544
+2021-09-29 03:26:00,915 - INFO - Epoch: 76 [923/3602 (26%)]	Loss: 3.656259	Accuracy: 85.487
+2021-09-29 03:27:29,092 - INFO - Epoch: 76 [1384/3602 (38%)]	Loss: 3.669733	Accuracy: 85.224
+2021-09-29 03:28:56,445 - INFO - Epoch: 76 [1845/3602 (51%)]	Loss: 3.614811	Accuracy: 85.536
+2021-09-29 03:30:23,229 - INFO - Epoch: 76 [2306/3602 (64%)]	Loss: 3.630286	Accuracy: 85.324
+2021-09-29 03:31:50,505 - INFO - Epoch: 76 [2767/3602 (77%)]	Loss: 3.592491	Accuracy: 85.710
+2021-09-29 03:33:17,655 - INFO - Epoch: 76 [3228/3602 (90%)]	Loss: 3.633538	Accuracy: 85.497
+2021-09-29 03:35:41,342 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.02466349641331 %, EER = 6.098652171756576 %
+2021-09-29 03:35:41,342 - CRITICAL - ***Test metrics - Test EER = 2.46946037833506 %
+2021-09-29 03:35:45,486 - INFO - Epoch: 77 [1/3602 (0%)]	Loss: 3.682229	Accuracy: 85.156
+2021-09-29 03:37:13,588 - INFO - Epoch: 77 [462/3602 (13%)]	Loss: 3.627029	Accuracy: 85.507
+2021-09-29 03:38:40,838 - INFO - Epoch: 77 [923/3602 (26%)]	Loss: 3.590894	Accuracy: 85.744
+2021-09-29 03:40:08,053 - INFO - Epoch: 77 [1384/3602 (38%)]	Loss: 3.601072	Accuracy: 85.641
+2021-09-29 03:41:35,330 - INFO - Epoch: 77 [1845/3602 (51%)]	Loss: 3.603778	Accuracy: 85.592
+2021-09-29 03:43:02,362 - INFO - Epoch: 77 [2306/3602 (64%)]	Loss: 3.585430	Accuracy: 85.627
+2021-09-29 03:44:28,403 - INFO - Epoch: 77 [2767/3602 (77%)]	Loss: 3.602843	Accuracy: 85.543
+2021-09-29 03:45:55,354 - INFO - Epoch: 77 [3228/3602 (90%)]	Loss: 3.599780	Accuracy: 85.526
+2021-09-29 03:48:19,561 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.14153300556137 %, EER = 6.045826650049263 %
+2021-09-29 03:48:19,561 - CRITICAL - ***Test metrics - Test EER = 2.496748412562809 %
+2021-09-29 03:48:23,664 - INFO - Epoch: 78 [1/3602 (0%)]	Loss: 3.315952	Accuracy: 88.281
+2021-09-29 03:49:51,325 - INFO - Epoch: 78 [462/3602 (13%)]	Loss: 3.580523	Accuracy: 85.771
+2021-09-29 03:51:18,191 - INFO - Epoch: 78 [923/3602 (26%)]	Loss: 3.568186	Accuracy: 85.892
+2021-09-29 03:52:46,945 - INFO - Epoch: 78 [1384/3602 (38%)]	Loss: 3.602149	Accuracy: 85.593
+2021-09-29 03:54:13,688 - INFO - Epoch: 78 [1845/3602 (51%)]	Loss: 3.593674	Accuracy: 85.761
+2021-09-29 03:55:40,288 - INFO - Epoch: 78 [2306/3602 (64%)]	Loss: 3.567511	Accuracy: 85.907
+2021-09-29 03:57:07,264 - INFO - Epoch: 78 [2767/3602 (77%)]	Loss: 3.559479	Accuracy: 85.909
+2021-09-29 03:58:33,296 - INFO - Epoch: 78 [3228/3602 (90%)]	Loss: 3.536452	Accuracy: 86.046
+2021-09-29 04:00:57,411 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.1254130732651 %, EER = 6.021847989792348 %
+2021-09-29 04:00:57,418 - CRITICAL - ***Test metrics - Test EER = 2.511708254250488 %
+2021-09-29 04:01:01,625 - INFO - Epoch: 79 [1/3602 (0%)]	Loss: 3.149915	Accuracy: 89.062
+2021-09-29 04:02:29,032 - INFO - Epoch: 79 [462/3602 (13%)]	Loss: 3.578863	Accuracy: 85.627
+2021-09-29 04:03:56,052 - INFO - Epoch: 79 [923/3602 (26%)]	Loss: 3.566947	Accuracy: 86.060
+2021-09-29 04:05:22,467 - INFO - Epoch: 79 [1384/3602 (38%)]	Loss: 3.552995	Accuracy: 86.005
+2021-09-29 04:06:48,990 - INFO - Epoch: 79 [1845/3602 (51%)]	Loss: 3.573763	Accuracy: 85.756
+2021-09-29 04:08:15,966 - INFO - Epoch: 79 [2306/3602 (64%)]	Loss: 3.562060	Accuracy: 85.936
+2021-09-29 04:09:44,629 - INFO - Epoch: 79 [2767/3602 (77%)]	Loss: 3.544814	Accuracy: 86.280
+2021-09-29 04:11:10,792 - INFO - Epoch: 79 [3228/3602 (90%)]	Loss: 3.537464	Accuracy: 85.971
+2021-09-29 04:13:34,571 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.24631256548723 %, EER = 5.994591621317034 %
+2021-09-29 04:13:34,571 - CRITICAL - ***Test metrics - Test EER = 2.475650603375312 %
+2021-09-29 04:13:38,774 - INFO - Epoch: 80 [1/3602 (0%)]	Loss: 3.613715	Accuracy: 87.500
+2021-09-29 04:15:05,482 - INFO - Epoch: 80 [462/3602 (13%)]	Loss: 3.529712	Accuracy: 86.170
+2021-09-29 04:16:34,902 - INFO - Epoch: 80 [923/3602 (26%)]	Loss: 3.574966	Accuracy: 85.621
+2021-09-29 04:18:02,113 - INFO - Epoch: 80 [1384/3602 (38%)]	Loss: 3.536335	Accuracy: 85.990
+2021-09-29 04:19:28,730 - INFO - Epoch: 80 [1845/3602 (51%)]	Loss: 3.522593	Accuracy: 86.210
+2021-09-29 04:20:55,561 - INFO - Epoch: 80 [2306/3602 (64%)]	Loss: 3.564038	Accuracy: 85.726
+2021-09-29 04:22:22,660 - INFO - Epoch: 80 [2767/3602 (77%)]	Loss: 3.525318	Accuracy: 86.161
+2021-09-29 04:23:50,278 - INFO - Epoch: 80 [3228/3602 (90%)]	Loss: 3.523486	Accuracy: 86.268
+2021-09-29 04:26:14,924 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.29064237930201 %, EER = 5.980367680657688 %
+2021-09-29 04:26:14,924 - CRITICAL - ***Test metrics - Test EER = 2.520539203956289 %
+2021-09-29 04:26:19,046 - INFO - Epoch: 81 [1/3602 (0%)]	Loss: 2.841198	Accuracy: 91.406
+2021-09-29 04:27:46,403 - INFO - Epoch: 81 [462/3602 (13%)]	Loss: 3.547732	Accuracy: 85.834
+2021-09-29 04:29:13,380 - INFO - Epoch: 81 [923/3602 (26%)]	Loss: 3.552084	Accuracy: 85.973
+2021-09-29 04:30:41,394 - INFO - Epoch: 81 [1384/3602 (38%)]	Loss: 3.558803	Accuracy: 85.807
+2021-09-29 04:32:09,335 - INFO - Epoch: 81 [1845/3602 (51%)]	Loss: 3.536931	Accuracy: 86.197
+2021-09-29 04:33:37,640 - INFO - Epoch: 81 [2306/3602 (64%)]	Loss: 3.535524	Accuracy: 86.236
+2021-09-29 04:35:04,398 - INFO - Epoch: 81 [2767/3602 (77%)]	Loss: 3.522939	Accuracy: 86.087
+2021-09-29 04:36:32,205 - INFO - Epoch: 81 [3228/3602 (90%)]	Loss: 3.527938	Accuracy: 86.098
+2021-09-29 04:38:55,504 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.25437253163537 %, EER = 6.040275745887034 %
+2021-09-29 04:38:55,504 - CRITICAL - ***Test metrics - Test EER = 2.4992618883594235 %
+2021-09-29 04:38:59,752 - INFO - Epoch: 82 [1/3602 (0%)]	Loss: 3.526997	Accuracy: 85.938
+2021-09-29 04:40:27,366 - INFO - Epoch: 82 [462/3602 (13%)]	Loss: 3.550235	Accuracy: 86.002
+2021-09-29 04:41:57,464 - INFO - Epoch: 82 [923/3602 (26%)]	Loss: 3.525570	Accuracy: 86.315
+2021-09-29 04:43:24,709 - INFO - Epoch: 82 [1384/3602 (38%)]	Loss: 3.537982	Accuracy: 86.154
+2021-09-29 04:44:52,212 - INFO - Epoch: 82 [1845/3602 (51%)]	Loss: 3.554713	Accuracy: 85.836
+2021-09-29 04:46:19,302 - INFO - Epoch: 82 [2306/3602 (64%)]	Loss: 3.551829	Accuracy: 85.931
+2021-09-29 04:47:47,575 - INFO - Epoch: 82 [2767/3602 (77%)]	Loss: 3.496065	Accuracy: 86.410
+2021-09-29 04:49:14,120 - INFO - Epoch: 82 [3228/3602 (90%)]	Loss: 3.557762	Accuracy: 85.909
+2021-09-29 04:51:38,693 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.24631256548723 %, EER = 5.992914502376849 %
+2021-09-29 04:51:38,693 - CRITICAL - ***Test metrics - Test EER = 2.5062223143826934 %
+2021-09-29 04:51:42,911 - INFO - Epoch: 83 [1/3602 (0%)]	Loss: 4.304055	Accuracy: 78.906
+2021-09-29 04:53:09,995 - INFO - Epoch: 83 [462/3602 (13%)]	Loss: 3.552797	Accuracy: 86.007
+2021-09-29 04:54:37,271 - INFO - Epoch: 83 [923/3602 (26%)]	Loss: 3.537519	Accuracy: 85.999
+2021-09-29 04:56:04,217 - INFO - Epoch: 83 [1384/3602 (38%)]	Loss: 3.533296	Accuracy: 86.024
+2021-09-29 04:57:31,586 - INFO - Epoch: 83 [1845/3602 (51%)]	Loss: 3.524055	Accuracy: 86.102
+2021-09-29 04:58:58,412 - INFO - Epoch: 83 [2306/3602 (64%)]	Loss: 3.535389	Accuracy: 85.987
+2021-09-29 05:00:25,209 - INFO - Epoch: 83 [2767/3602 (77%)]	Loss: 3.524638	Accuracy: 86.144
+2021-09-29 05:01:52,383 - INFO - Epoch: 83 [3228/3602 (90%)]	Loss: 3.554560	Accuracy: 85.980
+2021-09-29 05:04:16,100 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.25437253163537 %, EER = 6.048990607046091 %
+2021-09-29 05:04:16,100 - CRITICAL - ***Test metrics - Test EER = 2.509904017441706 %
+2021-09-29 05:04:20,244 - INFO - Epoch: 84 [1/3602 (0%)]	Loss: 3.882128	Accuracy: 86.719
+2021-09-29 05:05:47,045 - INFO - Epoch: 84 [462/3602 (13%)]	Loss: 3.524252	Accuracy: 86.195
+2021-09-29 05:07:14,106 - INFO - Epoch: 84 [923/3602 (26%)]	Loss: 3.575862	Accuracy: 85.588
+2021-09-29 05:08:41,776 - INFO - Epoch: 84 [1384/3602 (38%)]	Loss: 3.534327	Accuracy: 86.021
+2021-09-29 05:10:08,797 - INFO - Epoch: 84 [1845/3602 (51%)]	Loss: 3.557360	Accuracy: 85.904
+2021-09-29 05:11:35,647 - INFO - Epoch: 84 [2306/3602 (64%)]	Loss: 3.579253	Accuracy: 85.807
+2021-09-29 05:13:02,503 - INFO - Epoch: 84 [2767/3602 (77%)]	Loss: 3.515284	Accuracy: 86.236
+2021-09-29 05:14:28,812 - INFO - Epoch: 84 [3228/3602 (90%)]	Loss: 3.526612	Accuracy: 86.122
+2021-09-29 05:16:52,815 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.29064237930201 %, EER = 6.020740400751588 %
+2021-09-29 05:16:52,815 - CRITICAL - ***Test metrics - Test EER = 2.46994111748627 %
+2021-09-29 05:16:57,003 - INFO - Epoch: 85 [1/3602 (0%)]	Loss: 3.571003	Accuracy: 85.156
+2021-09-29 05:18:24,222 - INFO - Epoch: 85 [462/3602 (13%)]	Loss: 3.541071	Accuracy: 85.921
+2021-09-29 05:19:51,230 - INFO - Epoch: 85 [923/3602 (26%)]	Loss: 3.520151	Accuracy: 86.236
+2021-09-29 05:21:18,499 - INFO - Epoch: 85 [1384/3602 (38%)]	Loss: 3.586692	Accuracy: 85.480
+2021-09-29 05:22:45,855 - INFO - Epoch: 85 [1845/3602 (51%)]	Loss: 3.531264	Accuracy: 86.121
+2021-09-29 05:24:12,742 - INFO - Epoch: 85 [2306/3602 (64%)]	Loss: 3.534073	Accuracy: 85.919
+2021-09-29 05:25:39,719 - INFO - Epoch: 85 [2767/3602 (77%)]	Loss: 3.512228	Accuracy: 86.361
+2021-09-29 05:27:06,987 - INFO - Epoch: 85 [3228/3602 (90%)]	Loss: 3.554506	Accuracy: 85.848
+2021-09-29 05:29:31,562 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.34303215926494 %, EER = 6.024182790917827 %
+2021-09-29 05:29:31,563 - CRITICAL - ***Test metrics - Test EER = 2.491155243955737 %
+2021-09-29 05:29:35,710 - INFO - Epoch: 86 [1/3602 (0%)]	Loss: 3.716157	Accuracy: 86.719
+2021-09-29 05:31:03,040 - INFO - Epoch: 86 [462/3602 (13%)]	Loss: 3.552569	Accuracy: 86.122
+2021-09-29 05:32:30,102 - INFO - Epoch: 86 [923/3602 (26%)]	Loss: 3.581661	Accuracy: 85.651
+2021-09-29 05:33:56,915 - INFO - Epoch: 86 [1384/3602 (38%)]	Loss: 3.562795	Accuracy: 85.956
+2021-09-29 05:35:24,690 - INFO - Epoch: 86 [1845/3602 (51%)]	Loss: 3.554849	Accuracy: 85.934
+2021-09-29 05:36:51,857 - INFO - Epoch: 86 [2306/3602 (64%)]	Loss: 3.557157	Accuracy: 85.915
+2021-09-29 05:38:19,390 - INFO - Epoch: 86 [2767/3602 (77%)]	Loss: 3.572667	Accuracy: 85.760
+2021-09-29 05:39:46,743 - INFO - Epoch: 86 [3228/3602 (90%)]	Loss: 3.569885	Accuracy: 85.992
+2021-09-29 05:42:11,136 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.35512210848715 %, EER = 6.031478830885811 %
+2021-09-29 05:42:11,136 - CRITICAL - ***Test metrics - Test EER = 2.4390388012786044 %
+2021-09-29 05:42:15,447 - INFO - Epoch: 87 [1/3602 (0%)]	Loss: 3.425616	Accuracy: 82.812
+2021-09-29 05:43:42,555 - INFO - Epoch: 87 [462/3602 (13%)]	Loss: 3.578409	Accuracy: 85.844
+2021-09-29 05:45:09,578 - INFO - Epoch: 87 [923/3602 (26%)]	Loss: 3.575614	Accuracy: 85.685
+2021-09-29 05:46:37,123 - INFO - Epoch: 87 [1384/3602 (38%)]	Loss: 3.541735	Accuracy: 85.902
+2021-09-29 05:48:04,580 - INFO - Epoch: 87 [1845/3602 (51%)]	Loss: 3.547471	Accuracy: 85.899
+2021-09-29 05:49:31,829 - INFO - Epoch: 87 [2306/3602 (64%)]	Loss: 3.552263	Accuracy: 85.987
+2021-09-29 05:50:58,491 - INFO - Epoch: 87 [2767/3602 (77%)]	Loss: 3.582500	Accuracy: 85.870
+2021-09-29 05:52:25,164 - INFO - Epoch: 87 [3228/3602 (90%)]	Loss: 3.562195	Accuracy: 85.848
+2021-09-29 05:54:49,294 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.39139195615378 %, EER = 6.021420978465537 %
+2021-09-29 05:54:49,294 - CRITICAL - ***Test metrics - Test EER = 2.4942449845881445 %
+2021-09-29 05:54:53,514 - INFO - Epoch: 88 [1/3602 (0%)]	Loss: 3.160404	Accuracy: 91.406
+2021-09-29 05:56:20,773 - INFO - Epoch: 88 [462/3602 (13%)]	Loss: 3.567456	Accuracy: 85.921
+2021-09-29 05:57:48,229 - INFO - Epoch: 88 [923/3602 (26%)]	Loss: 3.586558	Accuracy: 85.890
+2021-09-29 05:59:15,549 - INFO - Epoch: 88 [1384/3602 (38%)]	Loss: 3.576572	Accuracy: 85.709
+2021-09-29 06:00:42,678 - INFO - Epoch: 88 [1845/3602 (51%)]	Loss: 3.575913	Accuracy: 85.883
+2021-09-29 06:02:09,910 - INFO - Epoch: 88 [2306/3602 (64%)]	Loss: 3.585668	Accuracy: 85.732
+2021-09-29 06:03:37,290 - INFO - Epoch: 88 [2767/3602 (77%)]	Loss: 3.574988	Accuracy: 85.771
+2021-09-29 06:05:04,190 - INFO - Epoch: 88 [3228/3602 (90%)]	Loss: 3.570186	Accuracy: 85.821
+2021-09-29 06:07:27,548 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.29870234545015 %, EER = 5.939526977661505 %
+2021-09-29 06:07:27,549 - CRITICAL - ***Test metrics - Test EER = 2.5285155938422266 %
+2021-09-29 06:07:31,711 - INFO - Epoch: 89 [1/3602 (0%)]	Loss: 3.809463	Accuracy: 85.156
+2021-09-29 06:08:58,807 - INFO - Epoch: 89 [462/3602 (13%)]	Loss: 3.597434	Accuracy: 85.787
+2021-09-29 06:10:26,109 - INFO - Epoch: 89 [923/3602 (26%)]	Loss: 3.561671	Accuracy: 85.897
+2021-09-29 06:11:53,620 - INFO - Epoch: 89 [1384/3602 (38%)]	Loss: 3.572992	Accuracy: 85.949
+2021-09-29 06:13:21,502 - INFO - Epoch: 89 [1845/3602 (51%)]	Loss: 3.565128	Accuracy: 86.102
+2021-09-29 06:14:49,622 - INFO - Epoch: 89 [2306/3602 (64%)]	Loss: 3.566535	Accuracy: 85.766
+2021-09-29 06:16:16,587 - INFO - Epoch: 89 [2767/3602 (77%)]	Loss: 3.566836	Accuracy: 85.848
+2021-09-29 06:17:43,455 - INFO - Epoch: 89 [3228/3602 (90%)]	Loss: 3.567751	Accuracy: 85.944
+2021-09-29 06:20:07,346 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.2785524300798 %, EER = 5.996791846976143 %
+2021-09-29 06:20:07,346 - CRITICAL - ***Test metrics - Test EER = 2.5910029433464716 %
+2021-09-29 06:20:11,560 - INFO - Epoch: 90 [1/3602 (0%)]	Loss: 3.495562	Accuracy: 86.719
+2021-09-29 06:21:37,883 - INFO - Epoch: 90 [462/3602 (13%)]	Loss: 3.592590	Accuracy: 85.580
+2021-09-29 06:23:05,248 - INFO - Epoch: 90 [923/3602 (26%)]	Loss: 3.537324	Accuracy: 86.024
+2021-09-29 06:24:33,369 - INFO - Epoch: 90 [1384/3602 (38%)]	Loss: 3.533668	Accuracy: 86.163
+2021-09-29 06:25:59,911 - INFO - Epoch: 90 [1845/3602 (51%)]	Loss: 3.539029	Accuracy: 86.087
+2021-09-29 06:27:26,841 - INFO - Epoch: 90 [2306/3602 (64%)]	Loss: 3.569358	Accuracy: 85.815
+2021-09-29 06:28:53,362 - INFO - Epoch: 90 [2767/3602 (77%)]	Loss: 3.553761	Accuracy: 85.846
+2021-09-29 06:30:20,861 - INFO - Epoch: 90 [3228/3602 (90%)]	Loss: 3.580844	Accuracy: 85.961
+2021-09-29 06:32:45,105 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.32288224389458 %, EER = 6.033584412206132 %
+2021-09-29 06:32:45,112 - CRITICAL - ***Test metrics - Test EER = 2.577644155291687 %
+2021-09-29 06:32:49,164 - INFO - Epoch: 91 [1/3602 (0%)]	Loss: 3.249297	Accuracy: 87.500
+2021-09-29 06:34:16,333 - INFO - Epoch: 91 [462/3602 (13%)]	Loss: 3.540254	Accuracy: 86.060
+2021-09-29 06:35:42,847 - INFO - Epoch: 91 [923/3602 (26%)]	Loss: 3.582149	Accuracy: 85.851
+2021-09-29 06:37:10,300 - INFO - Epoch: 91 [1384/3602 (38%)]	Loss: 3.560135	Accuracy: 85.946
+2021-09-29 06:38:36,587 - INFO - Epoch: 91 [1845/3602 (51%)]	Loss: 3.545983	Accuracy: 86.093
+2021-09-29 06:40:03,564 - INFO - Epoch: 91 [2306/3602 (64%)]	Loss: 3.558946	Accuracy: 86.012
+2021-09-29 06:41:30,817 - INFO - Epoch: 91 [2767/3602 (77%)]	Loss: 3.563487	Accuracy: 85.904
+2021-09-29 06:42:57,646 - INFO - Epoch: 91 [3228/3602 (90%)]	Loss: 3.540469	Accuracy: 86.175
+2021-09-29 06:45:22,181 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.32288224389458 %, EER = 5.977875009138443 %
+2021-09-29 06:45:22,182 - CRITICAL - ***Test metrics - Test EER = 2.5025896065334923 %
+2021-09-29 06:45:26,371 - INFO - Epoch: 92 [1/3602 (0%)]	Loss: 3.165533	Accuracy: 86.719
+2021-09-29 06:46:53,559 - INFO - Epoch: 92 [462/3602 (13%)]	Loss: 3.537503	Accuracy: 86.009
+2021-09-29 06:48:20,755 - INFO - Epoch: 92 [923/3602 (26%)]	Loss: 3.544423	Accuracy: 85.932
+2021-09-29 06:49:47,652 - INFO - Epoch: 92 [1384/3602 (38%)]	Loss: 3.542888	Accuracy: 86.087
+2021-09-29 06:51:15,255 - INFO - Epoch: 92 [1845/3602 (51%)]	Loss: 3.576965	Accuracy: 85.873
+2021-09-29 06:52:42,751 - INFO - Epoch: 92 [2306/3602 (64%)]	Loss: 3.576055	Accuracy: 85.738
+2021-09-29 06:54:09,733 - INFO - Epoch: 92 [2767/3602 (77%)]	Loss: 3.550737	Accuracy: 86.039
+2021-09-29 06:55:36,082 - INFO - Epoch: 92 [3228/3602 (90%)]	Loss: 3.553040	Accuracy: 85.929
+2021-09-29 06:58:00,107 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.3873619730797 %, EER = 6.0014518136156365 %
+2021-09-29 06:58:00,107 - CRITICAL - ***Test metrics - Test EER = 2.4982170487673656 %
+2021-09-29 06:58:04,332 - INFO - Epoch: 93 [1/3602 (0%)]	Loss: 4.005827	Accuracy: 80.469
+2021-09-29 06:59:31,438 - INFO - Epoch: 93 [462/3602 (13%)]	Loss: 3.540321	Accuracy: 85.943
+2021-09-29 07:00:58,164 - INFO - Epoch: 93 [923/3602 (26%)]	Loss: 3.511044	Accuracy: 86.437
+2021-09-29 07:02:25,069 - INFO - Epoch: 93 [1384/3602 (38%)]	Loss: 3.516809	Accuracy: 86.193
+2021-09-29 07:03:52,400 - INFO - Epoch: 93 [1845/3602 (51%)]	Loss: 3.532923	Accuracy: 86.312
+2021-09-29 07:05:19,493 - INFO - Epoch: 93 [2306/3602 (64%)]	Loss: 3.540877	Accuracy: 86.049
+2021-09-29 07:06:47,900 - INFO - Epoch: 93 [2767/3602 (77%)]	Loss: 3.541156	Accuracy: 86.098
+2021-09-29 07:08:16,200 - INFO - Epoch: 93 [3228/3602 (90%)]	Loss: 3.533340	Accuracy: 86.183
+2021-09-29 07:10:40,896 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.40751188845007 %, EER = 5.995190500428494 %
+2021-09-29 07:10:40,896 - CRITICAL - ***Test metrics - Test EER = 2.4997544745424447 %
+2021-09-29 07:10:44,968 - INFO - Epoch: 94 [1/3602 (0%)]	Loss: 3.453841	Accuracy: 88.281
+2021-09-29 07:12:11,855 - INFO - Epoch: 94 [462/3602 (13%)]	Loss: 3.548253	Accuracy: 85.849
+2021-09-29 07:13:39,141 - INFO - Epoch: 94 [923/3602 (26%)]	Loss: 3.543612	Accuracy: 86.100
+2021-09-29 07:15:06,530 - INFO - Epoch: 94 [1384/3602 (38%)]	Loss: 3.529806	Accuracy: 86.185
+2021-09-29 07:16:33,192 - INFO - Epoch: 94 [1845/3602 (51%)]	Loss: 3.541185	Accuracy: 85.939
+2021-09-29 07:18:00,316 - INFO - Epoch: 94 [2306/3602 (64%)]	Loss: 3.553325	Accuracy: 85.870
+2021-09-29 07:19:27,337 - INFO - Epoch: 94 [2767/3602 (77%)]	Loss: 3.510656	Accuracy: 86.241
+2021-09-29 07:20:53,876 - INFO - Epoch: 94 [3228/3602 (90%)]	Loss: 3.500572	Accuracy: 86.359
+2021-09-29 07:23:18,137 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.45184170226484 %, EER = 6.029631909645172 %
+2021-09-29 07:23:18,144 - CRITICAL - ***Test metrics - Test EER = 2.4376957646738395 %
+2021-09-29 07:23:22,419 - INFO - Epoch: 95 [1/3602 (0%)]	Loss: 3.689530	Accuracy: 85.156
+2021-09-29 07:24:49,841 - INFO - Epoch: 95 [462/3602 (13%)]	Loss: 3.505454	Accuracy: 86.312
+2021-09-29 07:26:17,794 - INFO - Epoch: 95 [923/3602 (26%)]	Loss: 3.501482	Accuracy: 86.395
+2021-09-29 07:27:45,414 - INFO - Epoch: 95 [1384/3602 (38%)]	Loss: 3.519268	Accuracy: 86.214
+2021-09-29 07:29:12,267 - INFO - Epoch: 95 [1845/3602 (51%)]	Loss: 3.504993	Accuracy: 86.282
+2021-09-29 07:30:39,127 - INFO - Epoch: 95 [2306/3602 (64%)]	Loss: 3.530055	Accuracy: 86.082
+2021-09-29 07:32:06,366 - INFO - Epoch: 95 [2767/3602 (77%)]	Loss: 3.497661	Accuracy: 86.398
+2021-09-29 07:33:33,423 - INFO - Epoch: 95 [3228/3602 (90%)]	Loss: 3.531875	Accuracy: 86.217
+2021-09-29 07:35:56,313 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.47602160070927 %, EER = 6.002762958463875 %
+2021-09-29 07:35:56,314 - CRITICAL - ***Test metrics - Test EER = 2.485114265989353 %
+2021-09-29 07:36:00,555 - INFO - Epoch: 96 [1/3602 (0%)]	Loss: 3.867761	Accuracy: 84.375
+2021-09-29 07:37:27,676 - INFO - Epoch: 96 [462/3602 (13%)]	Loss: 3.513033	Accuracy: 86.214
+2021-09-29 07:38:55,364 - INFO - Epoch: 96 [923/3602 (26%)]	Loss: 3.513908	Accuracy: 86.237
+2021-09-29 07:40:22,881 - INFO - Epoch: 96 [1384/3602 (38%)]	Loss: 3.505236	Accuracy: 86.293
+2021-09-29 07:41:50,504 - INFO - Epoch: 96 [1845/3602 (51%)]	Loss: 3.505706	Accuracy: 86.265
+2021-09-29 07:43:17,823 - INFO - Epoch: 96 [2306/3602 (64%)]	Loss: 3.503760	Accuracy: 86.385
+2021-09-29 07:44:45,322 - INFO - Epoch: 96 [2767/3602 (77%)]	Loss: 3.501594	Accuracy: 86.390
+2021-09-29 07:46:11,834 - INFO - Epoch: 96 [3228/3602 (90%)]	Loss: 3.520092	Accuracy: 86.127
+2021-09-29 07:48:36,673 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.4437817361167 %, EER = 6.024720425391222 %
+2021-09-29 07:48:36,674 - CRITICAL - ***Test metrics - Test EER = 2.4769897130481864 %
+2021-09-29 07:48:40,866 - INFO - Epoch: 97 [1/3602 (0%)]	Loss: 3.453727	Accuracy: 82.812
+2021-09-29 07:50:07,415 - INFO - Epoch: 97 [462/3602 (13%)]	Loss: 3.476986	Accuracy: 86.492
+2021-09-29 07:51:34,300 - INFO - Epoch: 97 [923/3602 (26%)]	Loss: 3.505059	Accuracy: 86.290
+2021-09-29 07:53:02,709 - INFO - Epoch: 97 [1384/3602 (38%)]	Loss: 3.480496	Accuracy: 86.271
+2021-09-29 07:54:30,173 - INFO - Epoch: 97 [1845/3602 (51%)]	Loss: 3.463017	Accuracy: 86.592
+2021-09-29 07:55:58,186 - INFO - Epoch: 97 [2306/3602 (64%)]	Loss: 3.479859	Accuracy: 86.510
+2021-09-29 07:57:25,385 - INFO - Epoch: 97 [2767/3602 (77%)]	Loss: 3.503219	Accuracy: 86.370
+2021-09-29 07:58:51,601 - INFO - Epoch: 97 [3228/3602 (90%)]	Loss: 3.519210	Accuracy: 86.222
+2021-09-29 08:01:16,725 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.4437817361167 %, EER = 5.986594455908942 %
+2021-09-29 08:01:16,725 - CRITICAL - ***Test metrics - Test EER = 2.4673902843379527 %
+2021-09-29 08:01:20,897 - INFO - Epoch: 98 [1/3602 (0%)]	Loss: 3.465271	Accuracy: 85.156
+2021-09-29 08:02:48,081 - INFO - Epoch: 98 [462/3602 (13%)]	Loss: 3.511631	Accuracy: 86.241
+2021-09-29 08:04:16,548 - INFO - Epoch: 98 [923/3602 (26%)]	Loss: 3.523602	Accuracy: 86.310
+2021-09-29 08:05:43,639 - INFO - Epoch: 98 [1384/3602 (38%)]	Loss: 3.532260	Accuracy: 86.261
+2021-09-29 08:07:10,249 - INFO - Epoch: 98 [1845/3602 (51%)]	Loss: 3.499689	Accuracy: 86.365
+2021-09-29 08:08:37,822 - INFO - Epoch: 98 [2306/3602 (64%)]	Loss: 3.506440	Accuracy: 86.349
+2021-09-29 08:10:04,864 - INFO - Epoch: 98 [2767/3602 (77%)]	Loss: 3.527938	Accuracy: 86.087
+2021-09-29 08:11:30,799 - INFO - Epoch: 98 [3228/3602 (90%)]	Loss: 3.492297	Accuracy: 86.236
+2021-09-29 08:13:55,116 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.4437817361167 %, EER = 5.989429093152275 %
+2021-09-29 08:13:55,116 - CRITICAL - ***Test metrics - Test EER = 2.468292662582214 %
+2021-09-29 08:13:59,390 - INFO - Epoch: 99 [1/3602 (0%)]	Loss: 3.405538	Accuracy: 85.156
+2021-09-29 08:15:26,945 - INFO - Epoch: 99 [462/3602 (13%)]	Loss: 3.492272	Accuracy: 86.368
+2021-09-29 08:16:53,651 - INFO - Epoch: 99 [923/3602 (26%)]	Loss: 3.520775	Accuracy: 86.241
+2021-09-29 08:18:21,633 - INFO - Epoch: 99 [1384/3602 (38%)]	Loss: 3.513083	Accuracy: 86.127
+2021-09-29 08:19:48,726 - INFO - Epoch: 99 [1845/3602 (51%)]	Loss: 3.485148	Accuracy: 86.236
+2021-09-29 08:21:16,105 - INFO - Epoch: 99 [2306/3602 (64%)]	Loss: 3.502402	Accuracy: 86.290
+2021-09-29 08:22:42,808 - INFO - Epoch: 99 [2767/3602 (77%)]	Loss: 3.514483	Accuracy: 86.271
+2021-09-29 08:24:09,793 - INFO - Epoch: 99 [3228/3602 (90%)]	Loss: 3.483063	Accuracy: 86.287
+2021-09-29 08:26:34,023 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.39542193922786 %, EER = 6.014484848249092 %
+2021-09-29 08:26:34,030 - CRITICAL - ***Test metrics - Test EER = 2.4612766675034443 %
+2021-09-29 08:26:38,242 - INFO - Epoch: 100 [1/3602 (0%)]	Loss: 3.144391	Accuracy: 88.281
+2021-09-29 08:28:05,984 - INFO - Epoch: 100 [462/3602 (13%)]	Loss: 3.504954	Accuracy: 86.207
+2021-09-29 08:29:32,848 - INFO - Epoch: 100 [923/3602 (26%)]	Loss: 3.478622	Accuracy: 86.429
+2021-09-29 08:31:00,736 - INFO - Epoch: 100 [1384/3602 (38%)]	Loss: 3.528168	Accuracy: 85.980
+2021-09-29 08:32:27,916 - INFO - Epoch: 100 [1845/3602 (51%)]	Loss: 3.497925	Accuracy: 86.432
+2021-09-29 08:33:54,402 - INFO - Epoch: 100 [2306/3602 (64%)]	Loss: 3.479809	Accuracy: 86.507
+2021-09-29 08:35:20,950 - INFO - Epoch: 100 [2767/3602 (77%)]	Loss: 3.495003	Accuracy: 86.268
+2021-09-29 08:36:48,569 - INFO - Epoch: 100 [3228/3602 (90%)]	Loss: 3.500021	Accuracy: 86.331
+2021-09-29 08:39:12,383 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.43169178689449 %, EER = 6.012157677975043 %
+2021-09-29 08:39:12,383 - CRITICAL - ***Test metrics - Test EER = 2.46556888881011 %
+2021-09-29 08:39:16,550 - INFO - Epoch: 101 [1/3602 (0%)]	Loss: 3.181086	Accuracy: 89.062
+2021-09-29 08:40:44,017 - INFO - Epoch: 101 [462/3602 (13%)]	Loss: 3.469834	Accuracy: 86.580
+2021-09-29 08:42:11,704 - INFO - Epoch: 101 [923/3602 (26%)]	Loss: 3.532109	Accuracy: 86.044
+2021-09-29 08:43:39,378 - INFO - Epoch: 101 [1384/3602 (38%)]	Loss: 3.477021	Accuracy: 86.387
+2021-09-29 08:45:05,994 - INFO - Epoch: 101 [1845/3602 (51%)]	Loss: 3.495064	Accuracy: 86.356
+2021-09-29 08:46:33,111 - INFO - Epoch: 101 [2306/3602 (64%)]	Loss: 3.507525	Accuracy: 86.412
+2021-09-29 08:48:00,167 - INFO - Epoch: 101 [2767/3602 (77%)]	Loss: 3.507736	Accuracy: 86.239
+2021-09-29 08:49:27,835 - INFO - Epoch: 101 [3228/3602 (90%)]	Loss: 3.497630	Accuracy: 86.332
+2021-09-29 08:51:51,209 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.45587168533892 %, EER = 5.990656350770332 %
+2021-09-29 08:51:51,209 - CRITICAL - ***Test metrics - Test EER = 2.497166451175812 %
+2021-09-29 08:51:55,437 - INFO - Epoch: 102 [1/3602 (0%)]	Loss: 3.387953	Accuracy: 87.500
+2021-09-29 08:53:22,929 - INFO - Epoch: 102 [462/3602 (13%)]	Loss: 3.487381	Accuracy: 86.358
+2021-09-29 08:54:49,591 - INFO - Epoch: 102 [923/3602 (26%)]	Loss: 3.513277	Accuracy: 86.231
+2021-09-29 08:56:16,640 - INFO - Epoch: 102 [1384/3602 (38%)]	Loss: 3.512829	Accuracy: 86.361
+2021-09-29 08:57:42,987 - INFO - Epoch: 102 [1845/3602 (51%)]	Loss: 3.491549	Accuracy: 86.561
+2021-09-29 08:59:09,654 - INFO - Epoch: 102 [2306/3602 (64%)]	Loss: 3.509307	Accuracy: 86.432
+2021-09-29 09:00:36,636 - INFO - Epoch: 102 [2767/3602 (77%)]	Loss: 3.493035	Accuracy: 86.290
+2021-09-29 09:02:03,444 - INFO - Epoch: 102 [3228/3602 (90%)]	Loss: 3.480793	Accuracy: 86.480
+2021-09-29 09:04:28,030 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.41154187152414 %, EER = 6.013369210658079 %
+2021-09-29 09:04:28,030 - CRITICAL - ***Test metrics - Test EER = 2.4518534385265363 %
+2021-09-29 09:04:32,227 - INFO - Epoch: 103 [1/3602 (0%)]	Loss: 2.983703	Accuracy: 89.844
+2021-09-29 09:05:59,567 - INFO - Epoch: 103 [462/3602 (13%)]	Loss: 3.519292	Accuracy: 86.134
+2021-09-29 09:07:26,986 - INFO - Epoch: 103 [923/3602 (26%)]	Loss: 3.491563	Accuracy: 86.359
+2021-09-29 09:08:53,497 - INFO - Epoch: 103 [1384/3602 (38%)]	Loss: 3.517512	Accuracy: 86.217
+2021-09-29 09:10:20,470 - INFO - Epoch: 103 [1845/3602 (51%)]	Loss: 3.507846	Accuracy: 86.212
+2021-09-29 09:11:47,009 - INFO - Epoch: 103 [2306/3602 (64%)]	Loss: 3.488860	Accuracy: 86.358
+2021-09-29 09:13:13,639 - INFO - Epoch: 103 [2767/3602 (77%)]	Loss: 3.518567	Accuracy: 86.265
+2021-09-29 09:14:40,663 - INFO - Epoch: 103 [3228/3602 (90%)]	Loss: 3.483560	Accuracy: 86.282
+2021-09-29 09:17:04,929 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.42766180382043 %, EER = 5.998587568284234 %
+2021-09-29 09:17:04,936 - CRITICAL - ***Test metrics - Test EER = 2.487220101196739 %
+2021-09-29 09:17:09,148 - INFO - Epoch: 104 [1/3602 (0%)]	Loss: 3.207827	Accuracy: 87.500
+2021-09-29 09:18:36,919 - INFO - Epoch: 104 [462/3602 (13%)]	Loss: 3.504128	Accuracy: 86.171
+2021-09-29 09:20:04,092 - INFO - Epoch: 104 [923/3602 (26%)]	Loss: 3.521129	Accuracy: 85.953
+2021-09-29 09:21:30,745 - INFO - Epoch: 104 [1384/3602 (38%)]	Loss: 3.483878	Accuracy: 86.529
+2021-09-29 09:22:58,316 - INFO - Epoch: 104 [1845/3602 (51%)]	Loss: 3.512238	Accuracy: 86.139
+2021-09-29 09:24:25,215 - INFO - Epoch: 104 [2306/3602 (64%)]	Loss: 3.485199	Accuracy: 86.270
+2021-09-29 09:25:52,241 - INFO - Epoch: 104 [2767/3602 (77%)]	Loss: 3.528499	Accuracy: 86.054
+2021-09-29 09:27:19,416 - INFO - Epoch: 104 [3228/3602 (90%)]	Loss: 3.501105	Accuracy: 86.259
+2021-09-29 09:29:44,940 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.48811154993149 %, EER = 6.012552092884326 %
+2021-09-29 09:29:44,941 - CRITICAL - ***Test metrics - Test EER = 2.5121956858483805 %
+2021-09-29 09:29:49,107 - INFO - Epoch: 105 [1/3602 (0%)]	Loss: 3.115131	Accuracy: 89.062
+2021-09-29 09:31:16,515 - INFO - Epoch: 105 [462/3602 (13%)]	Loss: 3.519803	Accuracy: 86.239
+2021-09-29 09:32:43,719 - INFO - Epoch: 105 [923/3602 (26%)]	Loss: 3.500002	Accuracy: 86.244
+2021-09-29 09:34:11,371 - INFO - Epoch: 105 [1384/3602 (38%)]	Loss: 3.520990	Accuracy: 86.241
+2021-09-29 09:35:38,461 - INFO - Epoch: 105 [1845/3602 (51%)]	Loss: 3.488579	Accuracy: 86.456
+2021-09-29 09:37:05,783 - INFO - Epoch: 105 [2306/3602 (64%)]	Loss: 3.517098	Accuracy: 86.139
+2021-09-29 09:38:34,198 - INFO - Epoch: 105 [2767/3602 (77%)]	Loss: 3.530456	Accuracy: 86.253
+2021-09-29 09:40:02,194 - INFO - Epoch: 105 [3228/3602 (90%)]	Loss: 3.500760	Accuracy: 86.434
+2021-09-29 09:42:27,924 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.46393165148706 %, EER = 5.979335556287286 %
+2021-09-29 09:42:27,924 - CRITICAL - ***Test metrics - Test EER = 2.5056529163730934 %
+2021-09-29 09:42:32,084 - INFO - Epoch: 106 [1/3602 (0%)]	Loss: 3.160307	Accuracy: 92.188
+2021-09-29 09:43:59,086 - INFO - Epoch: 106 [462/3602 (13%)]	Loss: 3.524695	Accuracy: 86.171
+2021-09-29 09:45:26,155 - INFO - Epoch: 106 [923/3602 (26%)]	Loss: 3.525929	Accuracy: 86.185
+2021-09-29 09:46:53,688 - INFO - Epoch: 106 [1384/3602 (38%)]	Loss: 3.491143	Accuracy: 86.393
+2021-09-29 09:48:20,159 - INFO - Epoch: 106 [1845/3602 (51%)]	Loss: 3.522152	Accuracy: 86.241
+2021-09-29 09:49:47,191 - INFO - Epoch: 106 [2306/3602 (64%)]	Loss: 3.482380	Accuracy: 86.471
+2021-09-29 09:51:14,555 - INFO - Epoch: 106 [2767/3602 (77%)]	Loss: 3.482180	Accuracy: 86.600
+2021-09-29 09:52:40,786 - INFO - Epoch: 106 [3228/3602 (90%)]	Loss: 3.479651	Accuracy: 86.456
+2021-09-29 09:55:03,938 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.47602160070927 %, EER = 5.950152859147288 %
+2021-09-29 09:55:03,939 - CRITICAL - ***Test metrics - Test EER = 2.4516978552075153 %
+2021-09-29 09:55:08,132 - INFO - Epoch: 107 [1/3602 (0%)]	Loss: 2.941867	Accuracy: 88.281
+2021-09-29 09:56:34,252 - INFO - Epoch: 107 [462/3602 (13%)]	Loss: 3.530199	Accuracy: 86.231
+2021-09-29 09:58:01,510 - INFO - Epoch: 107 [923/3602 (26%)]	Loss: 3.510371	Accuracy: 86.160
+2021-09-29 09:59:27,786 - INFO - Epoch: 107 [1384/3602 (38%)]	Loss: 3.504203	Accuracy: 86.270
+2021-09-29 10:00:54,996 - INFO - Epoch: 107 [1845/3602 (51%)]	Loss: 3.502072	Accuracy: 86.221
+2021-09-29 10:02:21,498 - INFO - Epoch: 107 [2306/3602 (64%)]	Loss: 3.497421	Accuracy: 86.268
+2021-09-29 10:03:48,173 - INFO - Epoch: 107 [2767/3602 (77%)]	Loss: 3.486469	Accuracy: 86.393
+2021-09-29 10:05:15,036 - INFO - Epoch: 107 [3228/3602 (90%)]	Loss: 3.523810	Accuracy: 86.305
+2021-09-29 10:07:39,757 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.54453131296849 %, EER = 5.993599338796772 %
+2021-09-29 10:07:39,758 - CRITICAL - ***Test metrics - Test EER = 2.4646662486512354 %
+2021-09-29 10:07:44,036 - INFO - Epoch: 108 [1/3602 (0%)]	Loss: 3.470867	Accuracy: 86.719
+2021-09-29 10:09:10,862 - INFO - Epoch: 108 [462/3602 (13%)]	Loss: 3.519873	Accuracy: 86.115
+2021-09-29 10:10:37,865 - INFO - Epoch: 108 [923/3602 (26%)]	Loss: 3.488662	Accuracy: 86.229
+2021-09-29 10:12:04,975 - INFO - Epoch: 108 [1384/3602 (38%)]	Loss: 3.485356	Accuracy: 86.520
+2021-09-29 10:13:31,486 - INFO - Epoch: 108 [1845/3602 (51%)]	Loss: 3.498823	Accuracy: 86.229
+2021-09-29 10:14:58,797 - INFO - Epoch: 108 [2306/3602 (64%)]	Loss: 3.533062	Accuracy: 86.161
+2021-09-29 10:16:26,129 - INFO - Epoch: 108 [2767/3602 (77%)]	Loss: 3.515264	Accuracy: 86.290
+2021-09-29 10:17:52,434 - INFO - Epoch: 108 [3228/3602 (90%)]	Loss: 3.500890	Accuracy: 86.392
+2021-09-29 10:20:17,683 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.45184170226484 %, EER = 5.978794379712746 %
+2021-09-29 10:20:17,683 - CRITICAL - ***Test metrics - Test EER = 2.437172649079814 %
+2021-09-29 10:20:21,960 - INFO - Epoch: 109 [1/3602 (0%)]	Loss: 3.125180	Accuracy: 89.062
+2021-09-29 10:21:49,898 - INFO - Epoch: 109 [462/3602 (13%)]	Loss: 3.505560	Accuracy: 86.363
+2021-09-29 10:23:17,430 - INFO - Epoch: 109 [923/3602 (26%)]	Loss: 3.528480	Accuracy: 86.065
+2021-09-29 10:24:45,071 - INFO - Epoch: 109 [1384/3602 (38%)]	Loss: 3.494066	Accuracy: 86.393
+2021-09-29 10:26:11,706 - INFO - Epoch: 109 [1845/3602 (51%)]	Loss: 3.509500	Accuracy: 86.302
+2021-09-29 10:27:38,562 - INFO - Epoch: 109 [2306/3602 (64%)]	Loss: 3.490496	Accuracy: 86.505
+2021-09-29 10:29:06,217 - INFO - Epoch: 109 [2767/3602 (77%)]	Loss: 3.492858	Accuracy: 86.317
+2021-09-29 10:30:31,937 - INFO - Epoch: 109 [3228/3602 (90%)]	Loss: 3.511617	Accuracy: 86.339
+2021-09-29 10:32:56,273 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.5284113806722 %, EER = 6.000255833724279 %
+2021-09-29 10:32:56,280 - CRITICAL - ***Test metrics - Test EER = 2.5049086464073484 %
+2021-09-29 10:33:00,624 - INFO - Epoch: 110 [1/3602 (0%)]	Loss: 3.478840	Accuracy: 85.156
+2021-09-29 10:34:28,788 - INFO - Epoch: 110 [462/3602 (13%)]	Loss: 3.494643	Accuracy: 86.304
+2021-09-29 10:35:55,410 - INFO - Epoch: 110 [923/3602 (26%)]	Loss: 3.456039	Accuracy: 86.663
+2021-09-29 10:37:22,212 - INFO - Epoch: 110 [1384/3602 (38%)]	Loss: 3.464117	Accuracy: 86.656
+2021-09-29 10:38:50,609 - INFO - Epoch: 110 [1845/3602 (51%)]	Loss: 3.501993	Accuracy: 86.222
+2021-09-29 10:40:19,254 - INFO - Epoch: 110 [2306/3602 (64%)]	Loss: 3.469847	Accuracy: 86.651
+2021-09-29 10:41:46,354 - INFO - Epoch: 110 [2767/3602 (77%)]	Loss: 3.479987	Accuracy: 86.388
+2021-09-29 10:43:13,689 - INFO - Epoch: 110 [3228/3602 (90%)]	Loss: 3.491325	Accuracy: 86.231
+2021-09-29 10:45:37,275 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.51229144837592 %, EER = 5.9933185256620325 %
+2021-09-29 10:45:37,275 - CRITICAL - ***Test metrics - Test EER = 2.477209870080454 %
+2021-09-29 10:45:41,309 - INFO - Epoch: 111 [1/3602 (0%)]	Loss: 3.742574	Accuracy: 85.938
+2021-09-29 10:47:08,709 - INFO - Epoch: 111 [462/3602 (13%)]	Loss: 3.479141	Accuracy: 86.419
+2021-09-29 10:48:36,640 - INFO - Epoch: 111 [923/3602 (26%)]	Loss: 3.475922	Accuracy: 86.510
+2021-09-29 10:50:04,803 - INFO - Epoch: 111 [1384/3602 (38%)]	Loss: 3.511954	Accuracy: 86.109
+2021-09-29 10:51:33,080 - INFO - Epoch: 111 [1845/3602 (51%)]	Loss: 3.497407	Accuracy: 86.317
+2021-09-29 10:53:01,219 - INFO - Epoch: 111 [2306/3602 (64%)]	Loss: 3.501221	Accuracy: 86.222
+2021-09-29 10:54:27,319 - INFO - Epoch: 111 [2767/3602 (77%)]	Loss: 3.512816	Accuracy: 86.293
+2021-09-29 10:55:54,960 - INFO - Epoch: 111 [3228/3602 (90%)]	Loss: 3.506110	Accuracy: 86.336
+2021-09-29 10:58:17,885 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.57274119448698 %, EER = 5.976138548430939 %
+2021-09-29 10:58:17,886 - CRITICAL - ***Test metrics - Test EER = 2.4647754445309737 %
+2021-09-29 10:58:21,974 - INFO - Epoch: 112 [1/3602 (0%)]	Loss: 3.464852	Accuracy: 85.156
+2021-09-29 10:59:48,203 - INFO - Epoch: 112 [462/3602 (13%)]	Loss: 3.494579	Accuracy: 86.320
+2021-09-29 11:01:16,464 - INFO - Epoch: 112 [923/3602 (26%)]	Loss: 3.497566	Accuracy: 86.415
+2021-09-29 11:02:43,861 - INFO - Epoch: 112 [1384/3602 (38%)]	Loss: 3.495286	Accuracy: 86.273
+2021-09-29 11:04:10,700 - INFO - Epoch: 112 [1845/3602 (51%)]	Loss: 3.489338	Accuracy: 86.343
+2021-09-29 11:05:37,956 - INFO - Epoch: 112 [2306/3602 (64%)]	Loss: 3.469625	Accuracy: 86.493
+2021-09-29 11:07:04,798 - INFO - Epoch: 112 [2767/3602 (77%)]	Loss: 3.495431	Accuracy: 86.363
+2021-09-29 11:08:31,448 - INFO - Epoch: 112 [3228/3602 (90%)]	Loss: 3.479182	Accuracy: 86.483
+2021-09-29 11:10:55,681 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.51632143144998 %, EER = 5.970390422402479 %
+2021-09-29 11:10:55,681 - CRITICAL - ***Test metrics - Test EER = 2.4698927085614186 %
+2021-09-29 11:10:59,947 - INFO - Epoch: 113 [1/3602 (0%)]	Loss: 3.131471	Accuracy: 89.062
+2021-09-29 11:12:27,476 - INFO - Epoch: 113 [462/3602 (13%)]	Loss: 3.473451	Accuracy: 86.407
+2021-09-29 11:13:53,623 - INFO - Epoch: 113 [923/3602 (26%)]	Loss: 3.477429	Accuracy: 86.459
+2021-09-29 11:15:21,384 - INFO - Epoch: 113 [1384/3602 (38%)]	Loss: 3.466461	Accuracy: 86.485
+2021-09-29 11:16:47,747 - INFO - Epoch: 113 [1845/3602 (51%)]	Loss: 3.497880	Accuracy: 86.320
+2021-09-29 11:18:14,156 - INFO - Epoch: 113 [2306/3602 (64%)]	Loss: 3.482604	Accuracy: 86.556
+2021-09-29 11:19:41,545 - INFO - Epoch: 113 [2767/3602 (77%)]	Loss: 3.478882	Accuracy: 86.349
+2021-09-29 11:21:08,838 - INFO - Epoch: 113 [3228/3602 (90%)]	Loss: 3.503336	Accuracy: 86.298
+2021-09-29 11:23:32,124 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.50423148222778 %, EER = 5.992809685623195 %
+2021-09-29 11:23:32,124 - CRITICAL - ***Test metrics - Test EER = 2.4734812499936085 %
+2021-09-29 11:23:36,342 - INFO - Epoch: 114 [1/3602 (0%)]	Loss: 3.766186	Accuracy: 81.250
+2021-09-29 11:25:03,389 - INFO - Epoch: 114 [462/3602 (13%)]	Loss: 3.492232	Accuracy: 86.485
+2021-09-29 11:26:31,107 - INFO - Epoch: 114 [923/3602 (26%)]	Loss: 3.489488	Accuracy: 86.339
+2021-09-29 11:27:59,154 - INFO - Epoch: 114 [1384/3602 (38%)]	Loss: 3.502475	Accuracy: 86.283
+2021-09-29 11:29:26,240 - INFO - Epoch: 114 [1845/3602 (51%)]	Loss: 3.465297	Accuracy: 86.534
+2021-09-29 11:30:52,867 - INFO - Epoch: 114 [2306/3602 (64%)]	Loss: 3.473715	Accuracy: 86.481
+2021-09-29 11:32:19,627 - INFO - Epoch: 114 [2767/3602 (77%)]	Loss: 3.472288	Accuracy: 86.532
+2021-09-29 11:33:46,852 - INFO - Epoch: 114 [3228/3602 (90%)]	Loss: 3.473438	Accuracy: 86.358
+2021-09-29 11:36:10,391 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.49617151607963 %, EER = 5.982048374670745 %
+2021-09-29 11:36:10,391 - CRITICAL - ***Test metrics - Test EER = 2.4587443985006883 %
+2021-09-29 11:36:14,627 - INFO - Epoch: 115 [1/3602 (0%)]	Loss: 3.715873	Accuracy: 85.938
+2021-09-29 11:37:41,932 - INFO - Epoch: 115 [462/3602 (13%)]	Loss: 3.457579	Accuracy: 86.493
+2021-09-29 11:39:09,736 - INFO - Epoch: 115 [923/3602 (26%)]	Loss: 3.475608	Accuracy: 86.607
+2021-09-29 11:40:36,914 - INFO - Epoch: 115 [1384/3602 (38%)]	Loss: 3.489266	Accuracy: 86.441
+2021-09-29 11:42:04,501 - INFO - Epoch: 115 [1845/3602 (51%)]	Loss: 3.442452	Accuracy: 86.729
+2021-09-29 11:43:30,905 - INFO - Epoch: 115 [2306/3602 (64%)]	Loss: 3.481119	Accuracy: 86.481
+2021-09-29 11:44:58,287 - INFO - Epoch: 115 [2767/3602 (77%)]	Loss: 3.485299	Accuracy: 86.388
+2021-09-29 11:46:25,129 - INFO - Epoch: 115 [3228/3602 (90%)]	Loss: 3.486185	Accuracy: 86.592
+2021-09-29 11:48:49,568 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.54453131296849 %, EER = 5.959004251285506 %
+2021-09-29 11:48:49,568 - CRITICAL - ***Test metrics - Test EER = 2.4614470268072193 %
+2021-09-29 11:48:53,763 - INFO - Epoch: 116 [1/3602 (0%)]	Loss: 3.993064	Accuracy: 82.031
+2021-09-29 11:50:20,823 - INFO - Epoch: 116 [462/3602 (13%)]	Loss: 3.533601	Accuracy: 85.912
+2021-09-29 11:51:49,018 - INFO - Epoch: 116 [923/3602 (26%)]	Loss: 3.499129	Accuracy: 86.302
+2021-09-29 11:53:18,055 - INFO - Epoch: 116 [1384/3602 (38%)]	Loss: 3.506226	Accuracy: 86.354
+2021-09-29 11:54:44,901 - INFO - Epoch: 116 [1845/3602 (51%)]	Loss: 3.486539	Accuracy: 86.339
+2021-09-29 11:56:11,756 - INFO - Epoch: 116 [2306/3602 (64%)]	Loss: 3.481653	Accuracy: 86.405
+2021-09-29 11:57:38,455 - INFO - Epoch: 116 [2767/3602 (77%)]	Loss: 3.500260	Accuracy: 86.375
+2021-09-29 11:59:05,761 - INFO - Epoch: 116 [3228/3602 (90%)]	Loss: 3.474779	Accuracy: 86.488
+2021-09-29 12:01:29,162 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.48408156685741 %, EER = 6.003756014600331 %
+2021-09-29 12:01:29,169 - CRITICAL - ***Test metrics - Test EER = 2.4754825813485897 %
+2021-09-29 12:01:34,972 - INFO - Epoch: 117 [1/3602 (0%)]	Loss: 3.763384	Accuracy: 85.156
+2021-09-29 12:03:01,758 - INFO - Epoch: 117 [462/3602 (13%)]	Loss: 3.480563	Accuracy: 86.363
+2021-09-29 12:04:28,403 - INFO - Epoch: 117 [923/3602 (26%)]	Loss: 3.467105	Accuracy: 86.541
+2021-09-29 12:05:55,615 - INFO - Epoch: 117 [1384/3602 (38%)]	Loss: 3.498773	Accuracy: 86.292
+2021-09-29 12:07:23,239 - INFO - Epoch: 117 [1845/3602 (51%)]	Loss: 3.468538	Accuracy: 86.639
+2021-09-29 12:08:50,173 - INFO - Epoch: 117 [2306/3602 (64%)]	Loss: 3.489396	Accuracy: 86.627
+2021-09-29 12:10:17,294 - INFO - Epoch: 117 [2767/3602 (77%)]	Loss: 3.474726	Accuracy: 86.505
+2021-09-29 12:11:44,576 - INFO - Epoch: 117 [3228/3602 (90%)]	Loss: 3.486390	Accuracy: 86.432
+2021-09-29 12:14:09,250 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.52438139759813 %, EER = 5.97986431988376 %
+2021-09-29 12:14:09,251 - CRITICAL - ***Test metrics - Test EER = 2.470480610802713 %
+2021-09-29 12:14:13,331 - INFO - Epoch: 118 [1/3602 (0%)]	Loss: 3.618714	Accuracy: 87.500
+2021-09-29 12:15:40,363 - INFO - Epoch: 118 [462/3602 (13%)]	Loss: 3.490145	Accuracy: 86.282
+2021-09-29 12:17:07,947 - INFO - Epoch: 118 [923/3602 (26%)]	Loss: 3.472732	Accuracy: 86.705
+2021-09-29 12:18:34,617 - INFO - Epoch: 118 [1384/3602 (38%)]	Loss: 3.490211	Accuracy: 86.297
+2021-09-29 12:20:02,081 - INFO - Epoch: 118 [1845/3602 (51%)]	Loss: 3.486150	Accuracy: 86.385
+2021-09-29 12:21:29,202 - INFO - Epoch: 118 [2306/3602 (64%)]	Loss: 3.490705	Accuracy: 86.420
+2021-09-29 12:22:56,194 - INFO - Epoch: 118 [2767/3602 (77%)]	Loss: 3.475751	Accuracy: 86.656
+2021-09-29 12:24:22,147 - INFO - Epoch: 118 [3228/3602 (90%)]	Loss: 3.475246	Accuracy: 86.581
+2021-09-29 12:26:48,089 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.5284113806722 %, EER = 5.968879875425668 %
+2021-09-29 12:26:48,089 - CRITICAL - ***Test metrics - Test EER = 2.457823502412484 %
+2021-09-29 12:26:52,300 - INFO - Epoch: 119 [1/3602 (0%)]	Loss: 3.256078	Accuracy: 85.938
+2021-09-29 12:28:19,853 - INFO - Epoch: 119 [462/3602 (13%)]	Loss: 3.514536	Accuracy: 86.200
+2021-09-29 12:29:46,762 - INFO - Epoch: 119 [923/3602 (26%)]	Loss: 3.475516	Accuracy: 86.512
+2021-09-29 12:31:14,740 - INFO - Epoch: 119 [1384/3602 (38%)]	Loss: 3.478970	Accuracy: 86.371
+2021-09-29 12:32:41,677 - INFO - Epoch: 119 [1845/3602 (51%)]	Loss: 3.500177	Accuracy: 86.420
+2021-09-29 12:34:08,285 - INFO - Epoch: 119 [2306/3602 (64%)]	Loss: 3.511344	Accuracy: 86.160
+2021-09-29 12:35:35,382 - INFO - Epoch: 119 [2767/3602 (77%)]	Loss: 3.447848	Accuracy: 86.554
+2021-09-29 12:37:01,723 - INFO - Epoch: 119 [3228/3602 (90%)]	Loss: 3.504504	Accuracy: 86.210
+2021-09-29 12:39:27,585 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.48005158378335 %, EER = 5.95951102173915 %
+2021-09-29 12:39:27,592 - CRITICAL - ***Test metrics - Test EER = 2.4369491967881225 %
+2021-09-29 12:39:32,057 - INFO - Epoch: 120 [1/3602 (0%)]	Loss: 3.046639	Accuracy: 92.969
+2021-09-29 12:40:59,218 - INFO - Epoch: 120 [462/3602 (13%)]	Loss: 3.473564	Accuracy: 86.497
+2021-09-29 12:42:27,143 - INFO - Epoch: 120 [923/3602 (26%)]	Loss: 3.478254	Accuracy: 86.515
+2021-09-29 12:43:54,187 - INFO - Epoch: 120 [1384/3602 (38%)]	Loss: 3.483736	Accuracy: 86.388
+2021-09-29 12:45:21,288 - INFO - Epoch: 120 [1845/3602 (51%)]	Loss: 3.472001	Accuracy: 86.554
+2021-09-29 12:46:48,238 - INFO - Epoch: 120 [2306/3602 (64%)]	Loss: 3.503190	Accuracy: 86.353
+2021-09-29 12:48:15,757 - INFO - Epoch: 120 [2767/3602 (77%)]	Loss: 3.508336	Accuracy: 86.280
+2021-09-29 12:49:42,676 - INFO - Epoch: 120 [3228/3602 (90%)]	Loss: 3.483104	Accuracy: 86.461
+2021-09-29 12:52:08,950 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.46393165148706 %, EER = 5.970788332544474 %
+2021-09-29 12:52:08,951 - CRITICAL - ***Test metrics - Test EER = 2.4535951283823803 %
+2021-09-29 12:52:13,498 - INFO - Epoch: 121 [1/3602 (0%)]	Loss: 3.018303	Accuracy: 90.625
+2021-09-29 12:53:40,558 - INFO - Epoch: 121 [462/3602 (13%)]	Loss: 3.472788	Accuracy: 86.454
+2021-09-29 12:55:07,361 - INFO - Epoch: 121 [923/3602 (26%)]	Loss: 3.511027	Accuracy: 86.221
+2021-09-29 12:56:33,576 - INFO - Epoch: 121 [1384/3602 (38%)]	Loss: 3.498109	Accuracy: 86.478
+2021-09-29 12:58:01,028 - INFO - Epoch: 121 [1845/3602 (51%)]	Loss: 3.503670	Accuracy: 86.371
+2021-09-29 12:59:28,029 - INFO - Epoch: 121 [2306/3602 (64%)]	Loss: 3.501060	Accuracy: 86.385
+2021-09-29 13:00:54,531 - INFO - Epoch: 121 [2767/3602 (77%)]	Loss: 3.484416	Accuracy: 86.476
+2021-09-29 13:02:22,509 - INFO - Epoch: 121 [3228/3602 (90%)]	Loss: 3.481560	Accuracy: 86.304
+2021-09-29 13:04:48,964 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.55259127911663 %, EER = 5.9718352575210565 %
+2021-09-29 13:04:48,971 - CRITICAL - ***Test metrics - Test EER = 2.475508284390623 %
+2021-09-29 13:04:53,401 - INFO - Epoch: 122 [1/3602 (0%)]	Loss: 3.586809	Accuracy: 84.375
+2021-09-29 13:06:20,613 - INFO - Epoch: 122 [462/3602 (13%)]	Loss: 3.493646	Accuracy: 86.451
+2021-09-29 13:07:47,435 - INFO - Epoch: 122 [923/3602 (26%)]	Loss: 3.487946	Accuracy: 86.337
+2021-09-29 13:09:15,201 - INFO - Epoch: 122 [1384/3602 (38%)]	Loss: 3.461621	Accuracy: 86.646
+2021-09-29 13:10:42,521 - INFO - Epoch: 122 [1845/3602 (51%)]	Loss: 3.504541	Accuracy: 86.259
+2021-09-29 13:12:09,563 - INFO - Epoch: 122 [2306/3602 (64%)]	Loss: 3.471455	Accuracy: 86.410
+2021-09-29 13:13:36,850 - INFO - Epoch: 122 [2767/3602 (77%)]	Loss: 3.481533	Accuracy: 86.500
+2021-09-29 13:15:03,820 - INFO - Epoch: 122 [3228/3602 (90%)]	Loss: 3.503706	Accuracy: 86.319
+2021-09-29 13:17:28,732 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.46393165148706 %, EER = 5.952436593763632 %
+2021-09-29 13:17:28,732 - CRITICAL - ***Test metrics - Test EER = 2.4487516949828505 %
+2021-09-29 13:17:32,987 - INFO - Epoch: 123 [1/3602 (0%)]	Loss: 3.159023	Accuracy: 88.281
+2021-09-29 13:18:59,794 - INFO - Epoch: 123 [462/3602 (13%)]	Loss: 3.473153	Accuracy: 86.541
+2021-09-29 13:20:26,755 - INFO - Epoch: 123 [923/3602 (26%)]	Loss: 3.465178	Accuracy: 86.588
+2021-09-29 13:21:54,222 - INFO - Epoch: 123 [1384/3602 (38%)]	Loss: 3.467491	Accuracy: 86.471
+2021-09-29 13:23:21,453 - INFO - Epoch: 123 [1845/3602 (51%)]	Loss: 3.452479	Accuracy: 86.714
+2021-09-29 13:24:48,194 - INFO - Epoch: 123 [2306/3602 (64%)]	Loss: 3.487331	Accuracy: 86.446
+2021-09-29 13:26:15,595 - INFO - Epoch: 123 [2767/3602 (77%)]	Loss: 3.498727	Accuracy: 86.375
+2021-09-29 13:27:43,300 - INFO - Epoch: 123 [3228/3602 (90%)]	Loss: 3.481316	Accuracy: 86.553
+2021-09-29 13:30:14,853 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.54050132989441 %, EER = 6.00232948826402 %
+2021-09-29 13:30:14,853 - CRITICAL - ***Test metrics - Test EER = 2.4487516949828505 %
+2021-09-29 13:30:20,027 - INFO - Epoch: 124 [1/3602 (0%)]	Loss: 3.213356	Accuracy: 85.156
+2021-09-29 13:31:47,178 - INFO - Epoch: 124 [462/3602 (13%)]	Loss: 3.470449	Accuracy: 86.366
+2021-09-29 13:33:13,940 - INFO - Epoch: 124 [923/3602 (26%)]	Loss: 3.496796	Accuracy: 86.329
+2021-09-29 13:34:40,453 - INFO - Epoch: 124 [1384/3602 (38%)]	Loss: 3.506767	Accuracy: 86.312
+2021-09-29 13:36:07,216 - INFO - Epoch: 124 [1845/3602 (51%)]	Loss: 3.459232	Accuracy: 86.637
+2021-09-29 13:37:34,483 - INFO - Epoch: 124 [2306/3602 (64%)]	Loss: 3.477639	Accuracy: 86.387
+2021-09-29 13:39:01,168 - INFO - Epoch: 124 [2767/3602 (77%)]	Loss: 3.454389	Accuracy: 86.802
+2021-09-29 13:40:27,834 - INFO - Epoch: 124 [3228/3602 (90%)]	Loss: 3.477988	Accuracy: 86.344
+2021-09-29 13:42:52,566 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.54453131296849 %, EER = 5.949311566371801 %
+2021-09-29 13:42:52,573 - CRITICAL - ***Test metrics - Test EER = 2.484274479699431 %
+2021-09-29 13:42:58,064 - INFO - Epoch: 125 [1/3602 (0%)]	Loss: 3.109615	Accuracy: 91.406
+2021-09-29 13:44:25,970 - INFO - Epoch: 125 [462/3602 (13%)]	Loss: 3.472128	Accuracy: 86.531
+2021-09-29 13:45:52,765 - INFO - Epoch: 125 [923/3602 (26%)]	Loss: 3.491550	Accuracy: 86.385
+2021-09-29 13:47:19,853 - INFO - Epoch: 125 [1384/3602 (38%)]	Loss: 3.455086	Accuracy: 86.700
+2021-09-29 13:48:46,737 - INFO - Epoch: 125 [1845/3602 (51%)]	Loss: 3.497389	Accuracy: 86.293
+2021-09-29 13:50:14,142 - INFO - Epoch: 125 [2306/3602 (64%)]	Loss: 3.475342	Accuracy: 86.459
+2021-09-29 13:51:40,919 - INFO - Epoch: 125 [2767/3602 (77%)]	Loss: 3.466210	Accuracy: 86.466
+2021-09-29 13:53:07,799 - INFO - Epoch: 125 [3228/3602 (90%)]	Loss: 3.515482	Accuracy: 86.109
+2021-09-29 13:55:34,468 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.52035141452406 %, EER = 5.997313053155072 %
+2021-09-29 13:55:34,474 - CRITICAL - ***Test metrics - Test EER = 2.473382179944226 %
+2021-09-29 13:55:39,100 - INFO - Epoch: 126 [1/3602 (0%)]	Loss: 2.694886	Accuracy: 88.281
+2021-09-29 13:57:06,076 - INFO - Epoch: 126 [462/3602 (13%)]	Loss: 3.461736	Accuracy: 86.583
+2021-09-29 13:58:32,393 - INFO - Epoch: 126 [923/3602 (26%)]	Loss: 3.453031	Accuracy: 86.551
+2021-09-29 14:00:00,045 - INFO - Epoch: 126 [1384/3602 (38%)]	Loss: 3.468185	Accuracy: 86.549
+2021-09-29 14:01:27,442 - INFO - Epoch: 126 [1845/3602 (51%)]	Loss: 3.471836	Accuracy: 86.434
+2021-09-29 14:02:54,308 - INFO - Epoch: 126 [2306/3602 (64%)]	Loss: 3.481845	Accuracy: 86.502
+2021-09-29 14:04:21,381 - INFO - Epoch: 126 [2767/3602 (77%)]	Loss: 3.477865	Accuracy: 86.446
+2021-09-29 14:05:48,829 - INFO - Epoch: 126 [3228/3602 (90%)]	Loss: 3.469902	Accuracy: 86.644
+2021-09-29 14:08:19,492 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.56871121141292 %, EER = 5.959018570377325 %
+2021-09-29 14:08:19,499 - CRITICAL - ***Test metrics - Test EER = 2.4700220680120175 %
+2021-09-29 14:08:24,704 - INFO - Epoch: 127 [1/3602 (0%)]	Loss: 3.514485	Accuracy: 81.250
+2021-09-29 14:09:52,742 - INFO - Epoch: 127 [462/3602 (13%)]	Loss: 3.480358	Accuracy: 86.434
+2021-09-29 14:11:19,771 - INFO - Epoch: 127 [923/3602 (26%)]	Loss: 3.507481	Accuracy: 86.151
+2021-09-29 14:12:46,490 - INFO - Epoch: 127 [1384/3602 (38%)]	Loss: 3.468113	Accuracy: 86.470
+2021-09-29 14:14:13,635 - INFO - Epoch: 127 [1845/3602 (51%)]	Loss: 3.447701	Accuracy: 86.485
+2021-09-29 14:15:42,003 - INFO - Epoch: 127 [2306/3602 (64%)]	Loss: 3.512912	Accuracy: 86.175
+2021-09-29 14:17:09,164 - INFO - Epoch: 127 [2767/3602 (77%)]	Loss: 3.468869	Accuracy: 86.543
+2021-09-29 14:18:35,902 - INFO - Epoch: 127 [3228/3602 (90%)]	Loss: 3.468141	Accuracy: 86.592
+2021-09-29 14:21:10,839 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.56871121141292 %, EER = 5.968704595609882 %
+2021-09-29 14:21:10,846 - CRITICAL - ***Test metrics - Test EER = 2.454069288240143 %
+2021-09-29 14:21:16,713 - INFO - Epoch: 128 [1/3602 (0%)]	Loss: 3.477108	Accuracy: 89.062
+2021-09-29 14:22:44,286 - INFO - Epoch: 128 [462/3602 (13%)]	Loss: 3.498807	Accuracy: 86.278
+2021-09-29 14:24:11,022 - INFO - Epoch: 128 [923/3602 (26%)]	Loss: 3.479581	Accuracy: 86.451
+2021-09-29 14:25:38,557 - INFO - Epoch: 128 [1384/3602 (38%)]	Loss: 3.494035	Accuracy: 86.326
+2021-09-29 14:27:06,933 - INFO - Epoch: 128 [1845/3602 (51%)]	Loss: 3.471161	Accuracy: 86.565
+2021-09-29 14:28:34,129 - INFO - Epoch: 128 [2306/3602 (64%)]	Loss: 3.494851	Accuracy: 86.312
+2021-09-29 14:30:02,628 - INFO - Epoch: 128 [2767/3602 (77%)]	Loss: 3.489936	Accuracy: 86.371
+2021-09-29 14:31:32,134 - INFO - Epoch: 128 [3228/3602 (90%)]	Loss: 3.517083	Accuracy: 86.151
+2021-09-29 14:34:01,671 - CRITICAL - ***Validation metrics - Cross validation accuracy = 92.56065124526476 %, EER = 5.9578669558555815 %
+2021-09-29 14:34:01,671 - CRITICAL - ***Test metrics - Test EER = 2.4698189134808852 %
+2021-09-29 14:34:01,793 - INFO - |===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 0                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |   62961 KB |    4226 MB |    4493 TB |    4493 TB |
+|       from large pool |   39060 KB |    4199 MB |    4445 TB |    4445 TB |
+|       from small pool |   23901 KB |      30 MB |      47 TB |      47 TB |
+|---------------------------------------------------------------------------|
+| Active memory         |   62961 KB |    4226 MB |    4493 TB |    4493 TB |
+|       from large pool |   39060 KB |    4199 MB |    4445 TB |    4445 TB |
+|       from small pool |   23901 KB |      30 MB |      47 TB |      47 TB |
+|---------------------------------------------------------------------------|
+| GPU reserved memory   |    3942 MB |    5364 MB |    1515 GB |    1511 GB |
+|       from large pool |    3908 MB |    5334 MB |    1510 GB |    1506 GB |
+|       from small pool |      34 MB |      34 MB |       4 GB |       4 GB |
+|---------------------------------------------------------------------------|
+| Non-releasable memory |    1194 MB |    2131 MB |    5232 TB |    5232 TB |
+|       from large pool |    1191 MB |    2128 MB |    5174 TB |    5174 TB |
+|       from small pool |       2 MB |      10 MB |      57 TB |      57 TB |
+|---------------------------------------------------------------------------|
+| Allocations           |     712    |     916    |     920 M  |     920 M  |
+|       from large pool |       8    |     143    |     237 M  |     237 M  |
+|       from small pool |     704    |     785    |     683 M  |     683 M  |
+|---------------------------------------------------------------------------|
+| Active allocs         |     712    |     916    |     920 M  |     920 M  |
+|       from large pool |       8    |     143    |     237 M  |     237 M  |
+|       from small pool |     704    |     785    |     683 M  |     683 M  |
+|---------------------------------------------------------------------------|
+| GPU reserved segments |      26    |      26    |    3089    |    3063    |
+|       from large pool |       9    |      16    |     546    |     537    |
+|       from small pool |      17    |      17    |    2543    |    2526    |
+|---------------------------------------------------------------------------|
+| Non-releasable allocs |      52    |     115    |  516983 K  |  516983 K  |
+|       from large pool |       6    |      16    |   87269 K  |   87269 K  |
+|       from small pool |      46    |     108    |  429713 K  |  429713 K  |
+|===========================================================================|
+
+2021-09-29 14:34:01,794 - INFO - |===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 1                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Active memory         |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| GPU reserved memory   |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Non-releasable memory |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Allocations           |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Active allocs         |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| GPU reserved segments |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Non-releasable allocs |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|===========================================================================|
+
+2021-09-29 14:34:01,794 - CRITICAL - Best accuracy 0.0

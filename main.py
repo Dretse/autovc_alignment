@@ -20,8 +20,8 @@ if __name__ == "__main__":
 
     # Loading params
     parser = argparse.ArgumentParser()
-    parser.add_argument('--config', type=str, default='configs/800ep_model0_50more.yaml', help='yaml conf file for the experiment')
-    parser.add_argument('--logging', type=str, default='logs/800ep_model0_50more.log', help='log file for the experiment')
+    parser.add_argument('--config', type=str, default='configs/800ep_halfresnetAnthony.yaml', help='yaml conf file for the experiment')
+    parser.add_argument('--logging', type=str, default='logs/800ep_halfresnetAnthony.log', help='log file for the experiment')
     #parser.add_argument('--config', type=str, default='configs/500ep_neck16_emb10.yaml', help='yaml conf file for the experiment')
     #parser.add_argument('--logging', type=str, default='logs/500ep_neck16_emb10.log', help='log file for the experiment')
     args = parser.parse_args()
@@ -53,7 +53,7 @@ if __name__ == "__main__":
     checkpoint = torch.load(config["model"]["encoder_dir"], map_location=device)
     speaker_number = checkpoint["speaker_number"]
     model_archi = checkpoint["model_archi"]
-    print(config["model"]["encoder_dir"].split("/")[1][:4])
+    print(config["model"]["encoder_dir"].split("/")[1][:4], model_archi["model_type"], checkpoint["loss"], speaker_number)
     if(config["model"]["encoder_dir"].split("/")[1][:4]!="fast"):model_archi = model_archi["model_type"]
     Encoder = sidekit.nnet.xvector.Xtractor(speaker_number, model_archi=model_archi, loss=checkpoint["loss"])
     Encoder.load_state_dict(checkpoint["model_state_dict"])

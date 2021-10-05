@@ -309,7 +309,7 @@ class Solver(object):
                 logging.info(log)   
 
             """
-            if(epoch%10==0):#printing spectrums
+            if(False and epoch%10==0):#printing spectrums
                 self.print_spectrum("train", epoch)
                 self.print_spectrum("valid",   epoch)
                 #self.print_spectrum("eval",  epoch)"""

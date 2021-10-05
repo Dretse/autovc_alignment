@@ -5,7 +5,7 @@
 log_file: logs/training_resnet.log
 seed: 1988
 deterministic: false
-epochs: 1000
+epochs: 128
 lr: 0.001
 patience: 100
 
@@ -33,4 +33,4 @@ validation_frequency: 1
 # Save options
 tmp_model_name: models/tmp_model_2s_cuda_.pt
 best_model_name: models/best_model_2s_cuda_.pt
-checkpoint_frequency: 10
+checkpoint_frequency: 1

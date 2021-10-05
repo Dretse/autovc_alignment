@@ -35,7 +35,7 @@ if __name__ == "__main__":
 
     # Loading params
     parser = argparse.ArgumentParser()
-    parser.add_argument('--config', type=str, default='configs/training_resnet.yaml', help='yaml conf file for the experiment')
+    parser.add_argument('--config', type=str, default='configs/training_fastresnet.yaml', help='yaml conf file for the experiment')
     parser.add_argument('--num_expe', type=int, default=0, help='numero of the experiment')
     args = parser.parse_args()
 
@@ -44,7 +44,7 @@ if __name__ == "__main__":
         config = yaml.full_load(ymlfile)
     logging.info("Config loaded from :"+args.config)
     sidekit.nnet.xtrain(dataset_description=config["dataset_description"].strip(".yaml")+str(args.num_expe)+".yaml",
-           model_description=config["model_description"].strip(".yaml")+"l_half.yaml",
+           model_description=config["model_description"].strip(".yaml")+"_half.yaml",
            training_description=config["training_description"].strip(".yaml")+str(args.num_expe)+".yaml")
 
 
