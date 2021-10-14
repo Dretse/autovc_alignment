@@ -29,8 +29,7 @@ if __name__ == "__main__":
 
     # Loading params
     parser = argparse.ArgumentParser()
-    parser.add_argument('--config', type=str, default='configs/800ep_halfresnetAnthony.yaml', help='yaml conf file for the experiment')
-    #parser.add_argument('--logging', type=str, default='logs/300ep_neck8_f.log', help='log file for the experiment')
+    parser.add_argument('--config', type=str, default='configs/500ep_halfresnetAnthony.yaml', help='yaml conf file for the experiment')
     args = parser.parse_args()
 
     #logging param
@@ -59,7 +58,13 @@ if __name__ == "__main__":
     checkpoint = torch.load(config["model"]["encoder_dir"], map_location=device)
     speaker_number = checkpoint["speaker_number"]
     model_archi = checkpoint["model_archi"]["model_type"]
-    Encoder = sidekit.nnet.xvector.Xtractor(speaker_number, model_archi=model_archi, loss=checkpoint["loss"])
+    try:
+        model_archi = checkpoint["model_archi"]#["model_type"]
+        Encoder = sidekit.nnet.xvector.Xtractor(speaker_number, model_archi=model_archi, loss=checkpoint["loss"])
+    except:
+        model_archi = checkpoint["model_archi"]["model_type"]
+        Encoder = sidekit.nnet.xvector.Xtractor(speaker_number, model_archi=model_archi, loss=checkpoint["loss"])
+
     Encoder.load_state_dict(checkpoint["model_state_dict"])
     Encoder = Encoder.eval().cuda().to(device)
     logging.info("Encoder loaded from : "+config["model"]["encoder_dir"])
@@ -67,13 +72,14 @@ if __name__ == "__main__":
 
      # Generating Dataloader
     loader =  Loader(dataset)
-    scorers = Multi_scoring(loader, Encoder, device, dataset_name=config["dataset"])
+    encoder_name = config["model"]["encoder_dir"].split("/")[-1].strip(".pt")
+    scorers = Multi_scoring(loader, Encoder, device, dataset_name=config["dataset"], encoder_name=encoder_name)
 
     try :
         test_dataset_config = config["testing_dataset"]
     except :
         test_dataset_config = config["dataset"]
-    if(test_dataset_config != config["dataset"]):
+    if(True and test_dataset_config != config["dataset"]):
 	    #for using Vox1 as a test set
         with open("data/"+test_dataset_config+".yaml", "r") as ymlfile:
             test_dataset = yaml.full_load(ymlfile)
@@ -83,6 +89,7 @@ if __name__ == "__main__":
 
 
     # Initiating Solver
+    config["model"]["from_loading"] = True
     config["model"]["from_loading"] = True
     solver = Solver(loader.get_loaders(), config, dataset, Encoder, scorers = scorers)
     logging.info("solver initialized")
@@ -121,7 +128,9 @@ if __name__ == "__main__":
     scorers.EER_post_generator_evaluation("valid", Encoder, solver.G )
     scorers.EER_post_generator_evaluation("eval", Encoder, solver.G )
 
-    scorers.compute_TAR("train", Encoder, solver.G, 0.01)
+    #scorers.compute_TAR("train", Encoder, solver.G, 0.01)
+    scorers.compute_TAR("valid", Encoder, solver.G, 0.01)
+    scorers.compute_TAR("eval", Encoder, solver.G, 0.01)
     exit()
     scorers.compute_full_TAR(Encoder, solver.G, 0.01)
     scorers.compute_full_TAR(Encoder, solver.G, 0.02)

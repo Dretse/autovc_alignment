@@ -78,7 +78,7 @@ def precise_eer(negative_scores, positive_scores):
             jdx += 1
         last_score = score
     print(fnr, fpr, eer_threshold)
-    return eer
+    return min(eer, 1-eer)
 
 def eer(negatives, positives):
     """Logarithmic complexity EER computation
@@ -161,7 +161,7 @@ def eer(negatives, positives):
         eer_predicate = abs(tfr - tfa)
         eer = (tfr + tfa) / 2
     else:
-        return eer
+        return min(eer, 1-eer)
 
     tfr = p_index/pos_count
     tfa = (1+n_index)/neg_count
@@ -169,7 +169,7 @@ def eer(negatives, positives):
         eer_predicate = abs(tfr - tfa)
         eer = (tfr + tfa) / 2
     else:
-        return eer
+        return min(eer, 1-eer)
 
     while True:
         while negatives[n_index + 1] <= positives[p_index - 1]:
@@ -180,7 +180,7 @@ def eer(negatives, positives):
                 eer_predicate = abs(tfr - tfa)
                 eer = (tfr + tfa) / 2
             else:
-                return eer
+                return min(eer, 1-eer)
         while negatives[n_index + 1] > positives[p_index - 1]:
             n_index += 1
             tfr = p_index/pos_count
@@ -189,9 +189,9 @@ def eer(negatives, positives):
                 eer_predicate = abs(tfr - tfa)
                 eer = (tfr + tfa) / 2
             else:
-                return eer
+                return min(eer, 1-eer)
 
-    return eer
+    return min(eer, 1-eer)
 
 def eer_threshold(negative_scores, positive_scores):
     """Linear complexity EER threshold computation

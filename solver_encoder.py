@@ -8,6 +8,7 @@ import sidekit
 import os
 import logging
 import matplotlib.pyplot as plt
+from plotting_graphs import plot_graph
 
 class Solver(object):
 
@@ -35,9 +36,8 @@ class Solver(object):
         self.use_cuda = torch.cuda.is_available()
         self.device = torch.device('cuda' if self.use_cuda else 'cpu')
         logging.info("device used : "+ str(self.device))
-        self.log_step = config["training"]["log_step"]
         try : self.use_mean_emb = config["training"]["use_mean_embs"]
-        except : self.use_mean_emb = False
+        except : self.use_mean_emb = True
 
         try :
             self.clamp = config["training"]["clamping"]
@@ -97,7 +97,7 @@ class Solver(object):
                 self.load(self.loaddir)
                 
             except:
-                logging.error("No loading dir found. Using "+str(self.loaddir)+" by default")
+                logging.error("No loading dir found. Using "+str(self.savedir)+" by default")
                 self.loaddir = os.path.join(self.savedir, config["EXPE_NAME"]+".ckpt")
                 if(charge_iteration!=0): self.loaddir = self.loaddir[:-5]+"_"+str(charge_iteration)+".ckpt"
                 self.load(self.loaddir)
@@ -113,21 +113,21 @@ class Solver(object):
         self.scorers = scorers
         self.train_scorer, self.val_scorer, self.test_scorer = scorers.get_scorers()
 
-        #self.test_zeros()
+        self.EXPE_NAME = config["EXPE_NAME"]
             
     def build_model(self):
         
         self.G = Generator(self.dim_neck, self.dim_emb, self.dim_pre, self.freq)        
         self.g_optimizer = torch.optim.Adam(self.G.parameters(), 0.0001, weight_decay=self.weight_decay)
         """self.scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(self.g_optimizer, mode='min', 
-                factor=0.5, patience=1000, threshold=0.0001, verbose=True)"""
+                factor=0.5, patience=10, threshold=0.01, verbose=True, cooldown=50)"""
         self.G.eval().to(self.device)
         
     def reset_grad(self):
         """Reset the gradient buffers."""
         self.g_optimizer.zero_grad()
       
-    def do_iteration(self, x_real, emb_org, train=True, cd=False, emb=False, cs=True):
+    def do_iteration(self, x_real, emb_org, train=False, cd=False, emb=False, cs=True, update_lr=False):
         self.G = self.G.train()
 
         # Identity mapping loss
@@ -188,7 +188,7 @@ class Solver(object):
             g_loss.backward()
             if(self.clamp!=0):torch.nn.utils.clip_grad_norm_(self.G.parameters(), self.clamp)
             self.g_optimizer.step()
-        #self.scheduler.step(g_loss)
+            #if(update_lr): self.scheduler.step(g_loss)
 
         # Logging. 
         loss = {}
@@ -197,6 +197,7 @@ class Solver(object):
             loss['G/loss_id_psnt'] = g_loss_id_psnt.item()
             loss['G/loss_cd'] = g_loss_cd.item()
         loss['G/loss_emb'] = g_loss_emb.item()
+        loss['lr'] = self.g_optimizer.param_groups[0]["lr"]
         return loss
                 
 
@@ -214,13 +215,14 @@ class Solver(object):
         t = time.time()
         self.scorers.EER_post_generator_evaluation("valid", self.C, self.G)
         best_eer_tgt, _ = self.scorers.EER_post_generator_evaluation("eval", self.C, self.G)
+        self.scorers.EER_post_generator_evaluation("back_test", self.C, self.G)
         logging.info("time taken for eers computation : "+str(int(time.time() - t)))
         # Start training.
-        logging.info('Start training...')
+        logging.info('##################   Start training   #####################')
         start_time = time.time()
         for epoch in range(self.num_iters):
 
-            for data in data_loader:
+            for data_idx,data in enumerate(data_loader):
                 # =================================================================================== #
                 #                               1. Import the data                                    #
                 # =================================================================================== #
@@ -232,7 +234,7 @@ class Solver(object):
                     
                 #logging.info(x_real.shape, emb_org.shape)
                 #try:    
-                loss = self.do_iteration(x_real, emb_org, train=True, cd=epoch>=self.use_loss_cd, emb=epoch>=self.use_loss_emb, cs=epoch>=self.use_loss_cs)
+                loss = self.do_iteration(x_real, emb_org, train=True, cd=epoch>=self.use_loss_cd, emb=epoch>=self.use_loss_emb, cs=epoch>=self.use_loss_cs, update_lr=data_idx==0)
                 """except:
                     logging.error("Error happened during Training iteration number "+str(epoch))
                     exit()"""
@@ -247,7 +249,7 @@ class Solver(object):
             # Print out training information.
             et = time.time() - start_time
             et = str(datetime.timedelta(seconds=et))[:-7]
-            log = "Elapsed [{}], Epoch [{}/{}]\t".format(et, epoch+1, self.num_iters)
+            log = "Elapsed [{}], Epoch [{}/{}], lr:{}\t".format(et, epoch+1, self.num_iters,loss["lr"])
             for tag in keys:
                 log += ", {}: {:.4f}".format(tag, loss[tag])
             logging.info(str(log))
@@ -256,10 +258,11 @@ class Solver(object):
             t = time.time()
             self.scorers.EER_post_generator_evaluation("valid", self.C, self.G)
             eer_tgt, _ = self.scorers.EER_post_generator_evaluation("eval", self.C, self.G)
+            self.scorers.EER_post_generator_evaluation("back_test", self.C, self.G)
             #self.scorers.EER_post_generator_evaluation("train", self.C, self.G)
             logging.info("time taken for eers computation : "+str(int(time.time() - t)))
 
-            if(True): #Validation Loss
+            if(False): #Validation Loss
                 for val_data in val_loader:
                     voice, speaker = val_data
                     if(self.use_mean_emb): emb_org = torch.from_numpy(self.val_scorer.mean_embeddings[speaker]).float().to(self.device)
@@ -313,6 +316,9 @@ class Solver(object):
                 self.print_spectrum("train", epoch)
                 self.print_spectrum("valid",   epoch)
                 #self.print_spectrum("eval",  epoch)"""
+
+            if(epoch%10==9):#printing graphs
+                plot_graph(self.EXPE_NAME)
 
             # Saving network
             if(self.save_model or (epoch+1)%100==0):

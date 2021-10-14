@@ -20,8 +20,8 @@ if __name__ == "__main__":
 
     # Loading params
     parser = argparse.ArgumentParser()
-    parser.add_argument('--config', type=str, default='configs/800ep_halfresnetAnthony.yaml', help='yaml conf file for the experiment')
-    parser.add_argument('--logging', type=str, default='logs/800ep_halfresnetAnthony.log', help='log file for the experiment')
+    parser.add_argument('--config', type=str, default='configs/500ep_model0.yaml', help='yaml conf file for the experiment')
+    parser.add_argument('--logging', type=str, default='logs/500ep_model0.log', help='log file for the experiment')
     #parser.add_argument('--config', type=str, default='configs/500ep_neck16_emb10.yaml', help='yaml conf file for the experiment')
     #parser.add_argument('--logging', type=str, default='logs/500ep_neck16_emb10.log', help='log file for the experiment')
     args = parser.parse_args()
@@ -63,13 +63,14 @@ if __name__ == "__main__":
 
     # Generating Dataloader
     loader =  Loader(dataset)
-    scorers = Multi_scoring(loader, Encoder, device, dataset_name=config["dataset"])
+    encoder_name = config["model"]["encoder_dir"].split("/")[-1].strip(".pt")
+    scorers = Multi_scoring(loader, Encoder, device, dataset_name=config["dataset"], encoder_name=encoder_name)
 
     try :
         test_dataset_config = config["testing_dataset"]
     except :
         test_dataset_config = config["dataset"]
-    if(test_dataset_config != config["dataset"]):
+    if(True and test_dataset_config != config["dataset"]):
 	    #for using Vox1 as a test set
         with open("data/"+test_dataset_config+".yaml", "r") as ymlfile:
             test_dataset = yaml.full_load(ymlfile)

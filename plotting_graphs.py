@@ -7,13 +7,16 @@ def extract_from_file(filename, no_eer_tr=True):
     lines = f.readlines()
     f.close()
     #print(len(lines))
-    EERs = {"tgt_train":[], "tgt_valid":[], "tgt_eval":[], "src_train":[], "src_valid":[], "src_eval":[]}
+    EERs = {"tgt_train":[], "tgt_valid":[], "tgt_eval":[], "src_train":[], "src_valid":[], "src_eval":[], "src_back_test":[], "tgt_back_test":[]}
     losses = []
+
     use_eval_loss = False
     for line in lines:
-        if "Evaluation" in line: use_eval_loss = True
+        if "Evaluation" in line: 
+            use_eval_loss = True
+            break
 
-    print("evaluation used : ",use_eval_loss)
+    #print("evaluation used : ",use_eval_loss)
     for idx,line in enumerate(lines):
         try:
             if("EER" in line):
@@ -23,8 +26,10 @@ def extract_from_file(filename, no_eer_tr=True):
                 elif("source train" in line): EERs["src_train"].append(float(line.split(":")[1].split("%")[0]))
                 elif("target test" in line):  EERs["tgt_eval"].append(float(line.split(":")[1].split("%")[0]))
                 elif("source test" in line):  EERs["src_eval"].append(float(line.split(":")[1].split("%")[0]))
+                elif("target back_test" in line):  EERs["tgt_back_test"].append(float(line.split(":")[1].split("%")[0]))
+                elif("source back_test" in line):  EERs["src_back_test"].append(float(line.split(":")[1].split("%")[0]))
 
-            elif(line[:7]=="Elapsed"):
+            elif("Elapsed" in line):
                 loss = [float(i.split(":")[1]) for i in line.strip().split(']')[-1].split(',')[1:]]
             elif("Validation" in line):
                 loss += [float(i.split(":")[1]) for i in line.strip().split(']')[-1].split(',')[1:]]
@@ -33,10 +38,12 @@ def extract_from_file(filename, no_eer_tr=True):
                     losses.append(np.array(loss))
             elif("Evaluation" in line):
                 loss += [float(i.split(":")[1]) for i in line.strip().split(']')[-1].split(',')[1:]]
-                losses.append(np.array(loss))
+            
+            elif("ime taken" in line):losses.append(np.array(loss))
         except:
-            print("Error with line", idx)
-            print(line)
+            None
+            #print("Error with line", idx)
+            #print(line)
     losses_ = np.zeros((len(losses), np.max([len(i) for i in losses])))
     for i, loss in enumerate(losses):
         if(len(loss)==losses_.shape[1]):
@@ -47,33 +54,21 @@ def extract_from_file(filename, no_eer_tr=True):
             
     EERs = {key:np.array(list_) for key,list_ in EERs.items() if len(list_)>1}
     #print(losses)
-    print( losses_.shape, EERs.keys())
-    return EERs, losses_
+    #print( losses_.shape, EERs.keys())
+    return EERs, np.concatenate((losses_[:,1:],losses_[:,0][:,np.newaxis]),axis=1)
 
-
-if __name__=="__main__":
-
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--logfile', type=str, default='800ep_halfresnetAnthony', help='log file for the experiment')
-    args = parser.parse_args()
-    no_eer_tr = True
-    EERs, losses = extract_from_file("logs/"+args.logfile+".log", no_eer_tr=no_eer_tr)
-    """if(losses.shape[1]==8):
-        losses[:,2]*=10
-        losses[:,6]*=10
-        losses[:,3]*=100
-        losses[:,7]*=100
-    else:
-        losses[:,2]*=10
-        losses[:,5]*=10"""
-
+def plot_graph(logfile, no_eer_tr=True):
+    EERs, losses = extract_from_file("logs/"+logfile+".log", no_eer_tr=no_eer_tr)
     emb_loss = 1 if losses.shape[1]>9 else 0
 
     fig = plt.figure(figsize=(10,10))
     ax1 = fig.add_subplot(2+emb_loss, 1, 2+emb_loss)
-    X = np.arange(len(EERs["tgt_valid"]))
+    #X = np.arange(len(EERs["tgt_valid"]))
     for key, data in EERs.items():
-        ax1.plot(X, data, label="EER "+str(key))
+        try:
+            ax1.plot(data, label="EER "+str(key))
+        except:
+            print(key)
     ax1.set_title("EERs")
     ax1.legend(loc='center right')
 
@@ -82,10 +77,10 @@ if __name__=="__main__":
     ax2 = fig.add_subplot(2+emb_loss, 1, 1)
     ax2.plot(X, losses[:,0], label="train_loss_id", color="C0", linestyle="-")
     ax2.plot(X, losses[:,1], label="train_loss_id_psnt", color="C1", linestyle="-")
-    ax2.plot(X, losses[:,3+emb_loss], label="valid_loss_id", color="C2", linestyle="--")
-    ax2.plot(X, losses[:,4+emb_loss], label="valid_loss_id_psnt", color="C3", linestyle="--")
-    ax2.plot(X, losses[:,6+ 2*emb_loss], label="eval_loss_id", color="C4", linestyle="-")
-    ax2.plot(X, losses[:,7+ 2*emb_loss], label="eval_loss_id_psnt", color="C5", linestyle="-")
+    #ax2.plot(X, losses[:,3+emb_loss], label="valid_loss_id", color="C2", linestyle="--")
+    #ax2.plot(X, losses[:,4+emb_loss], label="valid_loss_id_psnt", color="C3", linestyle="--")
+    #ax2.plot(X, losses[:,6+ 2*emb_loss], label="eval_loss_id", color="C4", linestyle="-")
+    #ax2.plot(X, losses[:,7+ 2*emb_loss], label="eval_loss_id_psnt", color="C5", linestyle="-")
     
         
     ax2.plot(X, np.zeros_like(X), "k-")
@@ -99,38 +94,15 @@ if __name__=="__main__":
         ax2.plot(X, np.zeros_like(X), "k-")
         ax3.set_title("Losses emb")
         ax3.legend()
-    """ax3 = fig.add_subplot(312)
-    ax3.plot(X, losses[:,2], label="train_loss_cd", color="C2", linestyle="-")
-    ax3.plot(X, losses[:,losses.shape[1]//2 +2], label="valid_loss_cd", linestyle="--")
-    ax3.set_title("Losses cd")
-    ax3.legend()"""
-    """
-    ax4 = fig.add_subplot(311)
-    ax4.plot(X, losses[:,0], label="train_loss_id", color="C0", linestyle="-")
-    ax4.plot(X, losses[:,1], label="train_loss_id_psnt", color="C1", linestyle="-")
-    ax4.plot(X, losses[:,2], label="10Xtrain_loss_cd", color="C2", linestyle="-")
-    if(losses.shape[1]>6):
-        #ax4.plot(X, losses[:,3], label="100Xtrain_loss_emb", color="C3", linestyle="-")
-        ax4.plot(X, losses[:,4], label="valid_loss_id", color="C0", linestyle="--")
-        ax4.plot(X, losses[:,5], label="valid_loss_id_psnt", color="C1", linestyle="--")
-        ax4.plot(X, losses[:,6], label="10Xvalid_loss_cd", color="C2", linestyle="--")
-        #ax4.plot(X, losses[:,7], label="100Xvalid_loss_emb", color="C3", linestyle="--")
-    else:
-        ax4.plot(X, losses[:,3], label="valid_loss_id", color="C0", linestyle="--")
-        ax4.plot(X, losses[:,4], label="valid_loss_id_psnt", color="C1", linestyle="--")
-        ax4.plot(X, losses[:,5], label="10Xvalid_loss_cd", color="C2", linestyle="--")
-    
-    ax4.plot(X, np.zeros_like(X), "k-")
-    ax4.set_title("Losses")
-    ax4.legend()
-    """
-    """if(losses.shape[1]>6):
-        ax5 = fig.add_subplot(324)
-        ax5.plot(X, losses[:,3], label="train_loss_emb", color="C3", linestyle="-")
-        ax5.plot(X, losses[:,7], label="valid_loss_emb", linestyle="--")
-        ax5.plot(X, np.zeros_like(X), "k-")
-        ax5.set_title("Losses embeddings")
-        ax5.legend()"""
 
-    plt.savefig("graphs/"+args.logfile+".png")
+    plt.savefig("graphs/"+logfile+".png")
     #plt.show()
+
+
+if __name__=="__main__":
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--logfile', type=str, default='500ep_model0', help='log file for the experiment')
+    args = parser.parse_args()
+    plot_graph(args.logfile)
+    

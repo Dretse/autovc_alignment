@@ -8,7 +8,7 @@ from tqdm import tqdm
 import logging
 
 class Scoring():
-    def __init__(self, dataloader, dataset, device, name="test",dataset_name="VCTK", n_uttrs=1):
+    def __init__(self, dataloader, dataset, device, name="test",dataset_name="VCTK", n_uttrs=1, encoder_name="basemodel"):
         self.emb_dim = 256
         self.dataloader = dataloader
         self.dataset = dataset
@@ -20,10 +20,11 @@ class Scoring():
         self.n_uttrs = n_uttrs # WARNING : 0³ Complexity for this parameter and the number of users
         self.embeddings_gen = None
         self.NUSER_MAX = 10
+        self.encoder_name = encoder_name
 
         # definition of paths
-        self.users_path = "data/users_"+name+"_"+dataset_name+".npy"
-        self.embeddings_path = "data/embeddings_"+name+"_"+dataset_name+".npy"
+        self.users_path = "data/embeddings/users_"+name+"_"+dataset_name+"_"+self.encoder_name+".npy"
+        self.embeddings_path = "data/embeddings/embeddings_"+name+"_"+dataset_name+"_"+self.encoder_name+".npy"
 
     def extract_embeddings(self, encoder):
         if(os.path.exists(self.users_path) and os.path.exists(self.embeddings_path)):
@@ -38,7 +39,7 @@ class Scoring():
             with torch.no_grad():
                 for batch_idx, data in enumerate(self.dataloader):
 
-                    if self.name!="test":
+                    if self.name!="test" and self.name!="back_test":
                         voice, user = data[0].to(self.device), data[1]  
                     else:
                         try:
@@ -209,27 +210,27 @@ class Scoring():
 
 
 class Multi_scoring():
-    def __init__(self, loader, Encoder, device, name="test",dataset_name="VCTK", print_eers=False):
+    def __init__(self, loader, Encoder, device, name="test",dataset_name="VCTK", print_eers=False, encoder_name="basemodel"):
         logging.info("Initiating Scorers for "+dataset_name)
         self.Encoder = Encoder
         self.device = device
         self.dataset_name = dataset_name
         #Generation Scorers
-        self.train_scorer = Scoring(loader.get_dataloader("train"), loader.get_dataset("train"), device, name="train",dataset_name=dataset_name)
+        self.train_scorer = Scoring(loader.get_dataloader("train"), loader.get_dataset("train"), device, name="train",dataset_name=dataset_name, encoder_name=encoder_name)
         self.train_scorer.extract_embeddings(Encoder)
         if(print_eers):logging.info("EER on train set : "+str(self.train_scorer.compute_EER())+" %")
 
 
-        self.val_scorer = Scoring(loader.get_dataloader("valid"), loader.get_dataset("valid"), device, name="valid", dataset_name=dataset_name)
+        self.val_scorer = Scoring(loader.get_dataloader("valid"), loader.get_dataset("valid"), device, name="valid", dataset_name=dataset_name, encoder_name=encoder_name)
         self.val_scorer.extract_embeddings(Encoder)
         if(print_eers):logging.info("EER on val set : "+str(self.val_scorer.compute_EER())+" %")
 
         #Initiating scoring modules
-        self.test_scorer = Scoring(loader.get_dataloader("test"), loader.get_dataset("test"), device, name="test", dataset_name=dataset_name)
+        self.test_scorer = Scoring(loader.get_dataloader("test"), loader.get_dataset("test"), device, name="test", dataset_name=dataset_name, encoder_name=encoder_name)
         self.test_scorer.extract_embeddings(Encoder)
         self.test_dataset_name = dataset_name
 
-        self.back_test_scorer = Scoring(loader.get_dataloader("test"), loader.get_dataset("test"), device, name="test", dataset_name=dataset_name)
+        self.back_test_scorer = Scoring(loader.get_dataloader("test"), loader.get_dataset("test"), device, name="back_test", dataset_name=dataset_name, encoder_name=encoder_name)
         self.back_test_scorer.extract_embeddings(Encoder)
         if(print_eers):logging.info("EER on test set : "+str(self.test_scorer.compute_EER())+" %")
 
@@ -256,10 +257,12 @@ class Multi_scoring():
             return self.train_scorer
         elif(dataset_name=="valid"):
             return self.val_scorer
-        elif(dataset_name=="eval"):
+        elif(dataset_name=="eval" or dataset_name=="out_domain_test"):
             return self.test_scorer
+        elif(dataset_name=="back_test" or dataset_name=="in_domain_test"):
+            return self.back_test_scorer
         else:
-            logging.error("ERROR : scorer furnished not in {train, valid, eval}. laoder furnished :"+dataset_name)
+            logging.error("ERROR : scorer furnished not in {train, valid, eval, back_test}. laoder furnished :"+dataset_name)
             exit()
 
     def EER_post_generator_evaluation(self,loader_used, encoder, generator):
@@ -347,7 +350,7 @@ class Multi_scoring():
         negatives = scores[np.argwhere(self.src_mask == -1)][:, 0].astype(float)
         positives = scores[np.argwhere(self.src_mask == 1)][:, 0].astype(float)
         eer_src = 100*eer(negatives, positives)
-        logging.info("EER source "+source_dataset.name+" : "+str(eer_src)+" %")
+        logging.info("EER source "+target_dataset.name+" : "+str(eer_src)+" %")
 
         return eer_tgt, eer_src
 
